@@ -1,0 +1,14 @@
+name: datex
+description: Hippiest Dart datetime library.
+
+version: 0.0.1
+
+environment:
+  sdk: '>=2.7.0 <3.0.0'
+
+dependencies:
+  json_annotation:
+
+dev_dependencies:
+  json_serializable:
+  build_runner:

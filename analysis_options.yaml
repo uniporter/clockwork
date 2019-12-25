@@ -1,0 +1,11 @@
+linter:
+  rules:
+    - prefer_const_constructors
+    - prefer_const_declarations
+    - prefer_const_literals_to_create_immutables
+    - prefer_final_fields
+    - prefer_final_locals
+    - unnecessary_const
+    - prefer_conditional_assignment
+    - prefer_if_null_operators
+    - prefer_null_aware_operators
