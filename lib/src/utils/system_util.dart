@@ -31,12 +31,14 @@ extension IterableExtension<T> on Iterable<T> {
     void forEachX(ForEachLambda lambda) {
         final it = this.iterator;
         int currIndex = 0;
-        do lambda(it.current, currIndex++); while (it.moveNext());
+        while (it.moveNext()) {
+            lambda(it.current, currIndex++);
+        }
     }
 
     A foldX<A>(A initial, Folder<T, A> folder, [A Function(A) last]) {
         A curr = initial;
-        forEachX((elem, index) => curr = folder(curr, elem, index, this));
+        this.forEachX((elem, index) => curr = folder(curr, elem, index, this));
         return last == null ? curr : last(curr);
     }
 }

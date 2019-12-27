@@ -202,7 +202,7 @@ String hh(Timestamp ts) => pad(h, 2)(ts);
 
 /// Identified by `k`. Returns the hour number with range [1, 24].
 /// Example: 00:15: `24`, 13:15: `13`.
-String k(Timestamp ts) => ts.hour == 0 ? "24" : ts.hour.toString;
+String k(Timestamp ts) => ts.hour == 0 ? "24" : ts.hour.toString();
 
 /// Identified by `kk`. Returns the hour number padded to length 2 with range [1, 24].
 /// Example: 00:15: `24`, 13:15: `13`.

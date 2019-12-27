@@ -42,7 +42,7 @@ extension WeekdayExtension on Weekday {
     }
 
     /// Returns the name of the weekday in Upper Camel.
-    String toUpperCamel() => this.toString().replaceFirst("${this.runtimeType}:", '');
+    String toUpperCamel() => this.toString().replaceFirst("${this.runtimeType}.", '');
     /// Returns the two-lettered abbreviation of the weekday in Upper Camel.
     String toShortAbbr() => this.toUpperCamel().substring(0, 2);
     /// Returns the three-lettered abbreviation of the weekday in Upper Camel.
@@ -68,7 +68,7 @@ extension WeekdayISOExtension on WeekdayISO {
     }
 
     /// Returns the name of the weekday in Upper Camel.
-    String toUpperCamel() => this.toString().replaceFirst("${this.runtimeType}:", '');
+    String toUpperCamel() => this.toString().replaceFirst("${this.runtimeType}.", '');
     /// Returns the two-lettered abbreviation of the weekday in Upper Camel.
     String toShortAbbr() => this.toUpperCamel().substring(0, 2);
     /// Returns the three-lettered abbreviation of the weekday in Upper Camel.

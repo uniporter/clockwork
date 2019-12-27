@@ -16,6 +16,11 @@ class ParseResult {
     final FormatToken token;
 
     const ParseResult(this.start, this.end, this.token);
+
+    @override
+    String toString() {
+        return "Start: $start, End: $end, Token: ${token(Timestamp.nowUTC())}";
+    }
 }
 
 /// Records the order in which parsing is done, as well as the [Pattern] with which we determine which token it's placeholding for.
@@ -23,7 +28,7 @@ final Map<Pattern, Tokenizer> tokenMap = {
     // Escaped strings.
     RegExp(r"(\[[^\[\]]*\])"): lambdaTokenizer((match) => string(match.group(0).replaceAll(RegExp(r"[\[\]]"), ''))),
     // Whitespaces.
-    RegExp(r"((\s+))"): lambdaTokenizer((match) => space(match.end - match.start)),
+    RegExp(r"(\s+)"): lambdaTokenizer((match) => space(match.end - match.start)),
 
     // Month units.
     "MMMM": constTokenizer(MMMM),
@@ -113,9 +118,7 @@ class Format {
 
     const Format(this.tokens);
 
-    factory Format.parse(String str) {
-        return Format(_parseHelper(str, 0));
-    }
+    factory Format.parse(String str) => Format(_parseHelper(str, 0));
 
     static List<FormatToken> _parseHelper(String str, int progress) {
         if (str == '' || progress >= tokenMap.length) return [];
@@ -125,7 +128,7 @@ class Format {
             if (progress >= tokenMap.length) return [string(str)];
         }
 
-        final results = matches.map((match) => tokenMap.values.elementAt(progress)(match));
+        final results = matches.map((match) => tokenMap.values.elementAt(progress)(match)).toList();
         progress++;
 
         return results.foldX<List<FormatToken>>(
