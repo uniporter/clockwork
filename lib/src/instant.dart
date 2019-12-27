@@ -6,14 +6,13 @@ import 'package:datex/src/timezone.dart';
 class Instant implements Comparable<Instant> {
     final int _microSecondsSinceEpoch;
 
+    static const lol = "hI";
+
     const Instant(this._microSecondsSinceEpoch);
 
     factory Instant.epoch() => const Instant(0);
     factory Instant.now() => Instant(DateTime.now().microsecondsSinceEpoch);
     factory Instant.fromDateTime(DateTime val) => Instant(val.microsecondsSinceEpoch);
-    factory Instant.parse(String str, [String format]) {
-        
-    }
 
     /// Returns the number of microseconds since the Unix Epoch time, 1970-01-01T00:00:00Z (UTC).
     int microSecondsSinceEpoch() => _microSecondsSinceEpoch;

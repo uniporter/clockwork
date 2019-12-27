@@ -1,6 +1,6 @@
+import 'package:datex/src/units/conversion.dart';
 import 'package:datex/src/utils/exception.dart';
 import 'package:datex/src/utils/system_util.dart';
-import 'package:datex/src/utils/units.dart';
 
 class Interval implements Comparable<Interval> {
     /// Length of the interval in microseconds.

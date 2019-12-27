@@ -1,6 +1,10 @@
 import 'package:datex/src/utils/exception.dart';
 import 'package:datex/src/utils/settings.dart';
 
+Iterable<int> range(int bottom, int top) sync* {
+    for (int i = bottom; i < top; ++i) yield i;
+}
+
 /// Reports an error occurred within the DateX framework.
 ///
 /// The function will handle the error based on the [exceptionHandler] settings. If it's set to
@@ -17,5 +21,22 @@ Null error(DateXException exception) {
 
         default:
             throw CriticalErrorException();
+    }
+}
+
+typedef ForEachLambda<T> = void Function(T, int);
+typedef Folder<T, A> = A Function(A, T, int, Iterable<T>);
+
+extension IterableExtension<T> on Iterable<T> {
+    void forEachX(ForEachLambda lambda) {
+        final it = this.iterator;
+        int currIndex = 0;
+        do lambda(it.current, currIndex++); while (it.moveNext());
+    }
+
+    A foldX<A>(A initial, Folder<T, A> folder, [A Function(A) last]) {
+        A curr = initial;
+        forEachX((elem, index) => curr = folder(curr, elem, index, this));
+        return last == null ? curr : last(curr);
     }
 }

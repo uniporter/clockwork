@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:collection';
 
+import 'package:datex/src/units/conversion.dart';
 import 'package:datex/src/utils/exception.dart';
 import 'package:datex/src/utils/system_util.dart';
-import 'package:datex/src/utils/units.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'timezone.g.dart';

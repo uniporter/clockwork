@@ -1,10 +1,13 @@
 import 'package:datex/src/instant.dart';
 import 'package:datex/src/interval.dart';
 import 'package:datex/src/timezone.dart';
-import 'package:datex/src/util.dart';
+import 'package:datex/src/units/conversion.dart';
+import 'package:datex/src/units/length.dart';
+import 'package:datex/src/units/month.dart';
+import 'package:datex/src/units/weekday.dart';
 import 'package:datex/src/utils/exception.dart';
+import 'package:datex/src/utils/misc.dart';
 import 'package:datex/src/utils/system_util.dart';
-import 'package:datex/src/utils/units.dart';
 
 /// A timezone-aware instant. This is simply a container for a [TimeZone] and an [Instant] object, but provides most utility
 /// methods you will find for DateTime objects in other datetime libraries.
@@ -120,6 +123,9 @@ class Timestamp {
     /// Returns the [day] element in the [TimestampComponents] of the [Timestamp].
     int get day => components.day;
 
+    /// Returns the [hour] element in the [TimestampComponents] of the [Timestamp].
+    int get hour => components.hour;
+
     /// Returns the [minute] element in the [TimestampComponents] of the [Timestamp].
     int get minute => components.minute;
 
@@ -132,40 +138,91 @@ class Timestamp {
     /// Returns the [microsecond] element in the [TimestampComponents] of the [Timestamp].
     int get microsecond => components.microsecond;
 
-    /// Returns the corresponding [weekday] of the [Timestamp].
-    Weekday get weekday => Weekday.values[(daysSinceEpoch(components.year, components.month, components.day) + 3) % 7 + 1];
+    /// Returns the corresponding weekday of the [Timestamp].
+    Weekday get weekday => Weekday.values[(daysSinceEpoch(components.year, components.month, components.day) + 4) % 7 + 1];
+
+    /// Returns the corresponding ISO weekday of the [Timestamp].
+    WeekdayISO get weekdayISO => WeekdayISO.values[(daysSinceEpoch(components.year, components.month, components.day) + 3) % 7 + 1];
+
+    /// Returns the corresponding quarter of the [Timestamp].
+    int get quarter => (components.month - 1) ~/ 3 + 1;
+
+    /// Returns the number of days since the beginning of the year.
+    int get dayOfYear => range(1, components.month).fold(0, (counter, month) => counter += daysPerMonth(components.month, components.year)) + components.day;
+
+    /// Returns the week number of year according to the ISO8601 standard.
+    int get weekOfYearISO {
+        final isCurrLeapYear = isLeapYear(components.year);
+        final isPrevLeapYear = isLeapYear(components.year - 1);
+
+        final dayOfYearNumber = isCurrLeapYear && components.month > 2 ? dayOfYear + 1 : dayOfYear;
+        final jan1Weekday = startOf(Length.YEAR).weekdayISO;
+        final currWeekday = weekdayISO;
+
+        var weekNumber;
+        if (dayOfYearNumber <= (8 - jan1Weekday.index) && jan1Weekday > WeekdayISO.Thursday) {
+            if (jan1Weekday == WeekdayISO.Friday || jan1Weekday == WeekdayISO.Saturday && isPrevLeapYear) weekNumber = 53;
+            else weekNumber = 52;
+        } else if (daysPerYear(components.year) - dayOfYearNumber < 4 - currWeekday.index) weekNumber = 1;
+        else {
+            final j = dayOfYearNumber + (7 - currWeekday.index) + (jan1Weekday.index - 1);
+            weekNumber = j / 7;
+            if (jan1Weekday.index > 4) weekNumber -= 1;
+        }
+
+        return weekNumber;
+    }
+
+    /// Returns the week year number according to the ISO8601 standard.
+    int get weekYearISO {
+        final isCurrLeapYear = isLeapYear(components.year);
+
+        final dayOfYearNumber = isCurrLeapYear && components.month > 2 ? dayOfYear + 1 : dayOfYear;
+        final jan1Weekday = startOf(Length.YEAR).weekdayISO;
+        final currWeekday = weekdayISO;
+
+        int weekYear;
+        if (dayOfYearNumber <= 8 - jan1Weekday.index && jan1Weekday.index > 4) weekYear = components.year - 1;
+        else if (daysPerYear(components.year) - dayOfYearNumber < 4 - currWeekday.index) weekYear = components.year + 1;
+        else weekYear = components.year;
+
+        return weekYear;
+    }
+
+    /// Returns whether the [Timestamp] is in AM or PM.
+    bool get isPM => components.hour >= 12;
 
     /// Return a [Timestamp] at the start of [unit].
-    Timestamp startOf(TimeUnit unit) {
+    Timestamp startOf(Length unit) {
         if (unit == null) return error(InvalidArgumentException('unit'));
 
         return Timestamp.explicit(
             timezone,
-            unit >= TimeUnit.YEAR ? 0 : this.components.year,
-            unit >= TimeUnit.MONTH ? 0 : this.components.month,
-            unit >= TimeUnit.DAY ? 0 : this.components.day,
-            unit >= TimeUnit.HOUR ? 0 : this.components.hour,
-            unit >= TimeUnit.MINUTE ? 0 : this.components.minute,
-            unit >= TimeUnit.SECOND ? 0 : this.components.second,
-            unit >= TimeUnit.MILLISECOND ? 0 : this.components.millisecond,
-            unit >= TimeUnit.MICROSECOND ? 0 : this.components.microsecond,
+            unit >= Length.YEAR ? 0 : this.components.year,
+            unit >= Length.MONTH ? 0 : this.components.month,
+            unit >= Length.DAY ? 0 : this.components.day,
+            unit >= Length.HOUR ? 0 : this.components.hour,
+            unit >= Length.MINUTE ? 0 : this.components.minute,
+            unit >= Length.SECOND ? 0 : this.components.second,
+            unit >= Length.MILLISECOND ? 0 : this.components.millisecond,
+            unit >= Length.MICROSECOND ? 0 : this.components.microsecond,
         );
     }
 
     /// Return a [Timestamp] at the end of [unit].
-    Timestamp endOf(TimeUnit unit) {
+    Timestamp endOf(Length unit) {
         if (unit == null) return error(InvalidArgumentException('unit'));
 
         return Timestamp.explicit(
             timezone,
-            unit >= TimeUnit.YEAR ? 0 : this.components.year,
-            unit >= TimeUnit.MONTH ? 0 : this.components.month,
-            unit >= TimeUnit.DAY ? 0 : this.components.day,
-            unit >= TimeUnit.HOUR ? 0 : this.components.hour,
-            unit >= TimeUnit.MINUTE ? 0 : this.components.minute,
-            unit >= TimeUnit.SECOND ? 0 : this.components.second,
-            unit >= TimeUnit.MILLISECOND ? 0 : this.components.millisecond,
-            unit >= TimeUnit.MICROSECOND ? 0 : this.components.microsecond,
+            unit >= Length.YEAR ? 0 : this.components.year,
+            unit >= Length.MONTH ? 0 : this.components.month,
+            unit >= Length.DAY ? 0 : this.components.day,
+            unit >= Length.HOUR ? 0 : this.components.hour,
+            unit >= Length.MINUTE ? 0 : this.components.minute,
+            unit >= Length.SECOND ? 0 : this.components.second,
+            unit >= Length.MILLISECOND ? 0 : this.components.millisecond,
+            unit >= Length.MICROSECOND ? 0 : this.components.microsecond,
         );
     }
 
