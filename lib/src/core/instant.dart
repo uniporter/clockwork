@@ -1,6 +1,6 @@
-import 'package:datex/src/interval.dart';
-import 'package:datex/src/timestamp.dart';
-import 'package:datex/src/timezone.dart';
+import 'package:datex/src/core/interval.dart';
+import 'package:datex/src/core/timestamp.dart';
+import 'package:datex/src/core/timezone.dart';
 
 /// Represents an instant in the entire chronology of time. This object is timezone/location invariant.
 class Instant implements Comparable<Instant> {
@@ -27,10 +27,10 @@ class Instant implements Comparable<Instant> {
     Instant subtract(Interval dur) => this - dur;
 
     /// Returns a timestamp representing this instance of time in the `Etf/UTC` timezone.
-    Timestamp toTimestampUTC() => Timestamp(TimeZone.utc(), this);
+    Timestamp toTimestampUTC() => Timestamp.fromInstantUTC(this);
 
     /// Returns a timestamp representing this instance of time in the local timezone.
-    Timestamp toTimestampLocal() => Timestamp(TimeZone.local(), this);
+    Timestamp toTimestampLocal() => Timestamp.fromInstantLocal(this);
 
     /// Returns a timestamp representing this instance of time in `timezone`.
     Timestamp toTimestamp(TimeZone timezone) => Timestamp(timezone, this);

@@ -1,33 +1,16 @@
-import 'package:datex/src/utils/exception.dart';
-import 'package:datex/src/utils/settings.dart';
-
+/// Returns an [Iterable] that iterates through all integers from [bottom] inclusive to [top] exclusive.
 Iterable<int> range(int bottom, int top) sync* {
     for (int i = bottom; i < top; ++i) yield i;
 }
 
-/// Reports an error occurred within the DateX framework.
-///
-/// The function will handle the error based on the [exceptionHandler] settings. If it's set to
-/// [ExceptionHandler.SILENT], then the function will return [null]. If instead it's set to
-/// [ExceptionHandler.EXPLICIT], the function will throw the [exception]. Thus, you should always call
-/// this function by `return error(YOUR EXCEPTION HERE)`.
-Null error(DateXException exception) {
-    switch (exceptionHandler) {
-        case ExceptionHandler.EXPLICIT:
-            throw exception;
-
-        case ExceptionHandler.SILENT:
-            return null;
-
-        default:
-            throw CriticalErrorException();
-    }
-}
-
+/// Type signature for the inner lambda for [IterableExtension.forEach].
 typedef ForEachLambda<T> = void Function(T, int);
+/// Type signature for the inner lambda for [IterableExtension.foldX].
 typedef Folder<T, A> = A Function(A, T, int, Iterable<T>);
 
+/// An extension to existing methods of [Iterable].
 extension IterableExtension<T> on Iterable<T> {
+    /// Exhanced [Iterable.forEach] where the inner lambda also provides the index of the current item as a parameter.
     void forEachX(ForEachLambda lambda) {
         final it = this.iterator;
         int currIndex = 0;
@@ -36,9 +19,13 @@ extension IterableExtension<T> on Iterable<T> {
         }
     }
 
+    /// Exhanced [Iterable.fold] where the inner lambda also provides the index of the current item as well as the
+    /// [Iterable] being iterated over as parameters. An optional [last] parameter is also added to modify the reduced
+    /// value after the iteration is complete.
     A foldX<A>(A initial, Folder<T, A> folder, [A Function(A) last]) {
         A curr = initial;
         this.forEachX((elem, index) => curr = folder(curr, elem, index, this));
         return last == null ? curr : last(curr);
     }
 }
+

@@ -1,8 +1,8 @@
+import 'package:datex/src/format/formattable.dart';
 import 'package:datex/src/units/conversion.dart';
 import 'package:datex/src/utils/exception.dart';
-import 'package:datex/src/utils/system_util.dart';
 
-class Interval implements Comparable<Interval> {
+class Interval with IFormattable implements Comparable<Interval> {
     /// Length of the interval in microseconds.
     final int _len;
 
@@ -19,23 +19,27 @@ class Interval implements Comparable<Interval> {
 
     factory Interval.fromDuration(Duration duration) => Interval(microseconds: duration.inMicroseconds);
 
-    /// Returns the microsecond component of this Interval. Value's ranged between -999 and 999.
-    int microseconds() => _len.remainder(microsecondsPerMillisecond);
+    int get microsecond => _len % microsecondsPerMillisecond;
     /// Returns the number of microseconds spanned by this Interval.
     int asMicroseconds() => _len;
 
+    int get millisecond => _len % microsecondsPerSecond;
     /// Returns the number of milliseconds spanned by this Interval.
     double asMilliseconds() => _len / microsecondsPerMillisecond;
 
+    int get second => _len % microsecondsPerMinute;
     /// Returns the number of seconds spanned by this Interval.
     double asSeconds() => _len / microsecondsPerSecond;
 
+    int get minute => _len % microsecondsPerHour;
     /// Returns the number of minutes spanned by this Interval.
     double asMinutes() => _len / microsecondsPerMinute;
 
+    int get hour => _len % microsecondsPerDay;
     /// Returns the number of hours spanned by this Interval.
     double asHours() => _len / microsecondsPerHour;
 
+    int get day => _len ~/ microsecondsPerDay;
     /// Returns the number of days spanned by this Interval.
     double asDays() => _len / microsecondsPerDay;
 

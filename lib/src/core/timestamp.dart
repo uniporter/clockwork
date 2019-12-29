@@ -1,7 +1,10 @@
-import 'package:datex/src/instant.dart';
-import 'package:datex/src/interval.dart';
-import 'package:datex/src/timezone.dart';
+import 'package:datex/src/format/format.dart';
+import 'package:datex/src/format/formattable.dart';
+import 'package:datex/src/core/instant.dart';
+import 'package:datex/src/core/interval.dart';
+import 'package:datex/src/core/timezone.dart';
 import 'package:datex/src/units/conversion.dart';
+import 'package:datex/src/units/era.dart';
 import 'package:datex/src/units/length.dart';
 import 'package:datex/src/units/month.dart';
 import 'package:datex/src/units/weekday.dart';
@@ -11,9 +14,10 @@ import 'package:datex/src/utils/system_util.dart';
 
 /// A timezone-aware instant. This is simply a container for a [TimeZone] and an [Instant] object, but provides most utility
 /// methods you will find for DateTime objects in other datetime libraries.
-class Timestamp {
+class Timestamp with IFormattable {
     final TimeZone timezone;
     final Instant instant;
+
     /// Figuring out the components of the timestamp is a nontrivial amount of calculation, so we defer the calculation
     /// until absolutely necessary, that is, when some function that requires the calculation is called.
     TimestampComponents _components = null;
@@ -21,17 +25,17 @@ class Timestamp {
     Timestamp(this.timezone, this.instant, [this._components]);
 
     /// Returns a Timestamp set to present with the `Etc/UTC` timezone.
-    factory Timestamp.nowUTC() => Timestamp(TimeZone.utc(), Instant.now());
+    Timestamp.nowUTC() : timezone = TimeZone.utc(), instant = Instant.now();
 
     /// Returns a Timestamp set to present with the local timezone (as given by [TimeZone.local]). See that method
     /// for more precise definition on what is the local timezone.
-    factory Timestamp.nowLocal() => Timestamp(TimeZone.local(), Instant.now());
+    Timestamp.nowLocal() : timezone = TimeZone.local(), instant = Instant.now();
 
-    /// Returns a timestamp representing [i] in the `Etf/UTC` timezone. Wrapper around `i.toTimestampUTC`.
-    factory Timestamp.fromInstantUTC(Instant i) => i.toTimestampUTC();
+    /// Returns a timestamp representing [i] in the `Etf/UTC` timezone.
+    Timestamp.fromInstantUTC(Instant i) : timezone = TimeZone.utc(), instant = i;
 
-    /// Returns a timestamp representing [i] in the local timezone. Wrapper around `i.toTimestampLocal`.
-    factory Timestamp.fromInstantLocal(Instant i) => i.toTimestampLocal();
+    /// Returns a timestamp representing [i] in the local timezone.
+    Timestamp.fromInstantLocal(Instant i) : timezone = TimeZone.local(), instant = i;
 
     /// Returns a timestamp from the explicitly provided timezone and timestamp components.
     ///
@@ -114,28 +118,23 @@ class Timestamp {
         return _components;
     }
 
-    /// Returns the [year] element in the [TimestampComponents] of the [Timestamp].
+    /// Returns the era.
+    Era get era => components.year >= 1 ? Era.AD : Era.BC;
+
+    /// Returns the year.
     int get year => components.year;
 
-    /// Returns the [month] element in the [TimestampComponents] of the [Timestamp].
+    /// Returns the year of era.
+    int get yearOfEra => components.year >= 1 ? components.year : components.year.abs() + 1;
+
+    /// Returns the month.
     Month get month => Month.values[components.month];
 
-    /// Returns the [day] element in the [TimestampComponents] of the [Timestamp].
     int get day => components.day;
-
-    /// Returns the [hour] element in the [TimestampComponents] of the [Timestamp].
     int get hour => components.hour;
-
-    /// Returns the [minute] element in the [TimestampComponents] of the [Timestamp].
     int get minute => components.minute;
-
-    /// Returns the [second] element in the [TimestampComponents] of the [Timestamp].
     int get second => components.second;
-
-    /// Returns the [millisecond] element in the [TimestampComponents] of the [Timestamp].
     int get millisecond => components.millisecond;
-
-    /// Returns the [microsecond] element in the [TimestampComponents] of the [Timestamp].
     int get microsecond => components.microsecond;
 
     /// Returns the corresponding weekday of the [Timestamp].
@@ -225,6 +224,11 @@ class Timestamp {
             unit >= Length.MICROSECOND ? 0 : this.components.microsecond,
         );
     }
+
+    /// Returns a ISO8601 standard description of the [Timestamp].
+    String formatISO() => format(Format.ISO8601);
+
+    @override String toString() => formatISO();
 
     @override bool operator ==(covariant Timestamp other) => this.timezone == other.timezone && this.instant == other.instant;
     Timestamp operator +(Interval dur) => Timestamp(this.timezone, this.instant + dur);

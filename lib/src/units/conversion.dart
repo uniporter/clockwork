@@ -1,7 +1,6 @@
 import 'package:datex/src/units/month.dart';
 import 'package:datex/src/utils/exception.dart';
 import 'package:datex/src/utils/misc.dart';
-import 'package:datex/src/utils/system_util.dart';
 
 const int microsecondsPerMillisecond = 1000;
 const int millisecondsPerSecond = 1000;

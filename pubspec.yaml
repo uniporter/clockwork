@@ -8,7 +8,9 @@ environment:
 
 dependencies:
   json_annotation:
+  sum_types:
 
 dev_dependencies:
   json_serializable:
   build_runner:
+  sum_types_generator:
