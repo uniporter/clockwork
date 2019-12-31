@@ -1,9 +1,10 @@
 import 'dart:math';
 
-import 'package:datex/src/format/tokens/format_token.dart';
-import 'package:datex/src/format/tokens/utility.tokens.dart';
-import 'package:datex/src/core/interval.dart';
-import 'package:datex/src/units/conversion.dart';
+import 'package:clockwork/src/format/format.dart';
+import 'package:clockwork/src/format/tokens/format_token.dart';
+import 'package:clockwork/src/format/tokens/utility.tokens.dart';
+import 'package:clockwork/src/core/interval.dart';
+import 'package:clockwork/src/units/conversion.dart';
 
 /// Identified by `DD...`, where [len] is determined by the number of `D`. Returns the total days spanned by [i] padded to length [len].
 FormatToken<Interval> totalDays(int len) => (i) {
@@ -61,4 +62,10 @@ FormatToken<Interval> fracSecConstLength(int len) => (i) {
 FormatToken<Interval> fracSecMinLength(int len) => (i) {
     final remainder = i.millisecond * microsecondsPerMillisecond + i.microsecond;
     return (remainder ~/ pow(10, 6 - len)).toString();
+};
+
+/// Identified by `Zpattern`. The letter `Z` can only appear at the beginning of an interval expression. If the `Interval`
+/// is of length 0, then `Z` is returned. Otherwise the interval will be formatted as `pattern` and returned.
+FormatToken<Interval> Z(String pattern) => (i) {
+    return i.asMicroseconds() == 0 ? 'Z' : Format<Interval>.parse(pattern).format(i);
 };

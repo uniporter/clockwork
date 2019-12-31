@@ -1,10 +1,10 @@
-import 'package:datex/src/utils/exception.dart';
+import 'package:clockwork/src/utils/exception.dart';
 
-/// How DateX will handle exceptions.
+/// How Clockwork will handle exceptions.
 enum ExceptionHandler {
-    /// DateX will not throw any exceptions, but will return [null] to the caller function.
+    /// Clockwork will not throw any exceptions, but will return [null] to the caller function.
     SILENT,
-    /// DateX will explicitly throw the relevant exceptions for all functions.
+    /// Clockwork will explicitly throw the relevant exceptions for all functions.
     EXPLICIT,
 }
 

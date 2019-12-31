@@ -1,12 +1,10 @@
-import 'package:datex/src/core/interval.dart';
-import 'package:datex/src/core/timestamp.dart';
-import 'package:datex/src/core/timezone.dart';
+import 'package:clockwork/src/core/interval.dart';
+import 'package:clockwork/src/core/timestamp.dart';
+import 'package:clockwork/src/core/timezone.dart';
 
 /// Represents an instant in the entire chronology of time. This object is timezone/location invariant.
 class Instant implements Comparable<Instant> {
     final int _microSecondsSinceEpoch;
-
-    static const lol = "hI";
 
     const Instant(this._microSecondsSinceEpoch);
 

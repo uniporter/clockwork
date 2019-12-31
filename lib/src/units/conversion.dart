@@ -1,6 +1,6 @@
-import 'package:datex/src/units/month.dart';
-import 'package:datex/src/utils/exception.dart';
-import 'package:datex/src/utils/misc.dart';
+import 'package:clockwork/src/units/month.dart';
+import 'package:clockwork/src/utils/exception.dart';
+import 'package:clockwork/src/utils/misc.dart';
 
 const int microsecondsPerMillisecond = 1000;
 const int millisecondsPerSecond = 1000;

@@ -1,4 +1,4 @@
-import 'package:datex/src/format/format.dart';
+import 'package:clockwork/src/format/format.dart';
 
 /// All constructs that are formattable should include this mixin.
 mixin IFormattable {

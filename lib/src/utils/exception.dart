@@ -1,13 +1,13 @@
-import 'package:datex/src/utils/constants.dart';
-import 'package:datex/src/utils/settings.dart';
+import 'package:clockwork/src/utils/constants.dart';
+import 'package:clockwork/src/utils/settings.dart';
 
-/// Reports an error occurred within the DateX framework.
+/// Reports an error occurred within the Clockwork framework.
 ///
 /// The function will handle the error based on the [exceptionHandler] settings. If it's set to
 /// [ExceptionHandler.SILENT], then the function will return [null]. If instead it's set to
 /// [ExceptionHandler.EXPLICIT], the function will throw the [exception]. Thus, you should always call
 /// this function by `return error(YOUR EXCEPTION HERE)`.
-Null error(DateXException exception) {
+Null error(ClockworkException exception) {
     switch (exceptionHandler) {
         case ExceptionHandler.EXPLICIT:
             throw exception;
@@ -20,14 +20,14 @@ Null error(DateXException exception) {
     }
 }
 
-abstract class DateXException implements Exception {
+abstract class ClockworkException implements Exception {
     String _toStringHelper(String msg) => "$PACKAGE_NAME: ${this.runtimeType}: $msg";
 }
 
 /// Thrown when functions requiring some external data are called and those data haven't been loaded. For instance,
 /// most functions in the library requires timezone data provided by [TimeZoneData.initialize]. If any such function
 /// is called before [TimeZoneData.initialize] finishes, this exception will be thrown.
-class DataNotLoadedException extends DateXException {
+class DataNotLoadedException extends ClockworkException {
     final String dataName;
 
     DataNotLoadedException(this.dataName) {}
@@ -36,8 +36,8 @@ class DataNotLoadedException extends DateXException {
     String toString() => _toStringHelper("You need to load $dataName before using this function.");
 }
 
-/// Thrown when DateX functions are called with invalid arguments.
-class InvalidArgumentException extends DateXException {
+/// Thrown when Clockwork functions are called with invalid arguments.
+class InvalidArgumentException extends ClockworkException {
     final String argName;
 
     InvalidArgumentException(this.argName) {}
@@ -54,7 +54,7 @@ class InvalidArgumentException extends DateXException {
 /// every spring. In 2019, this occurred on `1am, March 10 2019 EST`, at which point all clocks jumped to 2am. Thus
 /// if any timestamp factory is called with parameters indicating the time of `1:30am, March 10 2019 EST`, this exception
 /// will be thrown.
-class TimestampNonexistentException extends DateXException {
+class TimestampNonexistentException extends ClockworkException {
     final String timestamp;
 
     TimestampNonexistentException(this.timestamp) {}
@@ -72,7 +72,7 @@ class TimestampNonexistentException extends DateXException {
 /// a parameter is given to any [Timestamp] factory that indicates the time of `1:30am, November 3 2019 EST`, it's not clear
 /// which specific instance in time, whether before or after the DST shift, is the parameter referring to, and this exception
 /// will be thrown.
-class AmbiguousTimestampException extends DateXException {
+class AmbiguousTimestampException extends ClockworkException {
     final String timestamp;
 
     AmbiguousTimestampException(this.timestamp) {}
@@ -81,11 +81,11 @@ class AmbiguousTimestampException extends DateXException {
     String toString() => _toStringHelper("More than one Timestamp instances can be represented by $timestamp.");
 }
 
-/// Thrown when states that DateX depend on for basic funcionalities are corrupted. When this exception is thrown
+/// Thrown when states that Clockwork depend on for basic funcionalities are corrupted. When this exception is thrown
 /// it's recommended that the user reloads the library entirely.
-class CriticalErrorException extends DateXException {
+class CriticalErrorException extends ClockworkException {
     CriticalErrorException() {}
 
     @override
-    String toString() => _toStringHelper("DateX internal states have been corrupted. Reload recommended.");
+    String toString() => _toStringHelper("Clockwork internal states have been corrupted. Reload recommended.");
 }

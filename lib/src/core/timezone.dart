@@ -3,8 +3,9 @@ import 'dart:collection';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:datex/src/units/conversion.dart';
-import 'package:datex/src/utils/exception.dart';
+import 'package:clockwork/src/core/interval.dart';
+import 'package:clockwork/src/units/conversion.dart';
+import 'package:clockwork/src/utils/exception.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'timezone.g.dart';
@@ -106,9 +107,7 @@ class TimeZone {
     ///
     /// The returned offset should be the difference in minutes between the timezoned timestamp and the utc timestamp. For instance, if at a given moment the
     /// UTC time is `08:00:00, Jan 1st, 2009` and the timezoned time is `08:30:00, Jan 1st, 2009`, then the function returns 30.
-    double offset(int microsecondsSinceEpoch) {
-        return -possibleOffsets[history.firstWhere((item) => item.until >= microsecondsSinceEpoch).index];
-    }
+    Interval offset(int microsecondsSinceEpoch) => Interval(minutes: -possibleOffsets[history.firstWhere((item) => item.until >= microsecondsSinceEpoch).index]);
 
     static List<TimeZoneHistory> _historyFromJson(List data) {
         return data.map<TimeZoneHistory>((datum) => TimeZoneHistory._fromJson(datum)).toList();

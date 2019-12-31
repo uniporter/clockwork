@@ -1,12 +1,14 @@
 import 'dart:math';
 
-import 'package:datex/src/format/tokens/utility.tokens.dart';
-import 'package:datex/src/core/timestamp.dart';
-import 'package:datex/src/units/conversion.dart';
-import 'package:datex/src/units/month.dart';
-import 'package:datex/src/units/weekday.dart';
-import 'package:datex/src/units/era.dart';
-import 'package:datex/src/format/tokens/format_token.dart';
+import 'package:clockwork/src/format/tokens/utility.tokens.dart';
+import 'package:clockwork/src/core/timestamp.dart';
+import 'package:clockwork/src/units/conversion.dart';
+import 'package:clockwork/src/units/month.dart';
+import 'package:clockwork/src/units/weekday.dart';
+import 'package:clockwork/src/units/era.dart';
+import 'package:clockwork/src/format/tokens/format_token.dart';
+import 'package:clockwork/src/format/format.dart';
+import 'package:clockwork/src/core/interval.dart';
 
 /// Identified by `M`. Displays the month of the timestamp as Arabic numbers.
 /// Example: January: `1`, December: `12`.
@@ -170,3 +172,8 @@ String X(Timestamp ts) => (ts.instant.microSecondsSinceEpoch() ~/ pow(10, 6)).to
 
 /// Identified by `x`. Returns the Unix timestamp in milliseconds.
 String x(Timestamp ts) => (ts.instant.microSecondsSinceEpoch() ~/ pow(10, 3)).toString();
+
+/// Identified by `o<tzPattern>`. Returns the timezone of [ts] formatted by [tzPattern].
+FormatToken<Timestamp> o(String tzPattern) {
+    return (ts) => Format<Interval>.parse(tzPattern).format(ts.timezone.offset(ts.instant.microSecondsSinceEpoch()));
+}

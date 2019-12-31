@@ -1,4 +1,4 @@
-name: datex
+name: clockwork
 description: Hippiest Dart datetime library.
 
 version: 0.0.1
@@ -8,9 +8,7 @@ environment:
 
 dependencies:
   json_annotation:
-  sum_types:
 
 dev_dependencies:
   json_serializable:
   build_runner:
-  sum_types_generator:

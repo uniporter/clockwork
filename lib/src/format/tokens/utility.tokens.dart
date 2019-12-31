@@ -1,5 +1,5 @@
-import 'package:datex/src/format/tokens/format_token.dart';
-import 'package:datex/src/format/formattable.dart';
+import 'package:clockwork/src/format/tokens/format_token.dart';
+import 'package:clockwork/src/format/formattable.dart';
 
 /// Returns a new token that's a clone of [t].
 FormatToken<T> alias<T extends IFormattable>(FormatToken<T> t) => t;

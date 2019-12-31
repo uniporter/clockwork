@@ -1,7 +1,8 @@
-import 'package:datex/src/format/formattable.dart';
-import 'package:datex/src/units/conversion.dart';
-import 'package:datex/src/utils/exception.dart';
+import 'package:clockwork/src/format/formattable.dart';
+import 'package:clockwork/src/units/conversion.dart';
+import 'package:clockwork/src/utils/exception.dart';
 
+/// Represents the length of a period of time.
 class Interval with IFormattable implements Comparable<Interval> {
     /// Length of the interval in microseconds.
     final int _len;
@@ -9,12 +10,12 @@ class Interval with IFormattable implements Comparable<Interval> {
     /// Default constructor. If no parameter is given, an interval of length 0 microseconds is returned.
     /// The parameters accept all integers.
     const Interval({
-        int days = 0,
-        int hours = 0,
-        int minutes = 0,
-        int seconds = 0,
-        int milliseconds = 0,
-        int microseconds = 0,
+        num days = 0,
+        num hours = 0,
+        num minutes = 0,
+        num seconds = 0,
+        num milliseconds = 0,
+        num microseconds = 0,
     }) : _len = days * microsecondsPerDay + hours * microsecondsPerHour + minutes * microsecondsPerMinute + seconds * microsecondsPerSecond + milliseconds * microsecondsPerMillisecond + microseconds;
 
     factory Interval.fromDuration(Duration duration) => Interval(microseconds: duration.inMicroseconds);

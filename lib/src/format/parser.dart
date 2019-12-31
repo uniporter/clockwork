@@ -1,10 +1,10 @@
-import 'package:datex/src/format/formattable.dart';
-import 'package:datex/src/format/tokens/format_token.dart';
-import 'package:datex/src/format/tokens/timestamp.tokens.dart' as TimestampToken;
-import 'package:datex/src/format/tokens/interval.tokens.dart' as IntervalToken;
-import 'package:datex/src/format/tokens/utility.tokens.dart';
-import 'package:datex/src/core/interval.dart';
-import 'package:datex/src/core/timestamp.dart';
+import 'package:clockwork/src/format/formattable.dart';
+import 'package:clockwork/src/format/tokens/format_token.dart';
+import 'package:clockwork/src/format/tokens/timestamp.tokens.dart' as TimestampToken;
+import 'package:clockwork/src/format/tokens/interval.tokens.dart' as IntervalToken;
+import 'package:clockwork/src/format/tokens/utility.tokens.dart';
+import 'package:clockwork/src/core/interval.dart';
+import 'package:clockwork/src/core/timestamp.dart';
 
 typedef Tokenizer<T extends IFormattable> = ParseResult<T> Function(Match);
 
@@ -29,6 +29,9 @@ final tokenMap = <Type, Map<Pattern, Tokenizer<IFormattable>>>{
         RegExp(r"(\[[^\[\]]*\])"): lambdaTokenizer((match) => string(match.group(0).replaceAll(RegExp(r"[\[\]]"), ''))),
         // Whitespaces.
         RegExp(r"(\s+)"): lambdaTokenizer((match) => space(match.end - match.start)),
+
+        // Timezone.
+        RegExp(r"o<(?<tzFmt>[^<>]*)>"): lambdaTokenizer((match) => TimestampToken.o((match as RegExpMatch).namedGroup('tzFmt'))),
 
         // Month units.
         "MMMM": constTokenizer(TimestampToken.MMMM),
@@ -78,12 +81,6 @@ final tokenMap = <Type, Map<Pattern, Tokenizer<IFormattable>>>{
         RegExp(r"(f+)"): lambdaTokenizer((match) => TimestampToken.fracSecConstLength(match.end - match.start)),
         RegExp(r"(F+)"): lambdaTokenizer((match) => TimestampToken.fracSecMinLength(match.end - match.start)),
 
-        // Timezone units.
-        "zz": constTokenizer(TimestampToken.zz),
-        "ZZ": constTokenizer(TimestampToken.ZZ),
-        "z": constTokenizer(TimestampToken.z),
-        "Z": constTokenizer(TimestampToken.Z),
-
         // Timestamp units.
         "X": constTokenizer(TimestampToken.X),
         "x": constTokenizer(TimestampToken.x),
@@ -93,6 +90,9 @@ final tokenMap = <Type, Map<Pattern, Tokenizer<IFormattable>>>{
         RegExp(r"(\[[^\[\]]*\])"): lambdaTokenizer((match) => string(match.group(0).replaceAll(RegExp(r"[\[\]]"), ''))),
         // Whitespaces.
         RegExp(r"(\s+)"): lambdaTokenizer((match) => space(match.end - match.start)),
+
+        // Z indicator.
+        RegExp(r"^Z(?<fmt>\w*)"): lambdaTokenizer((match) => IntervalToken.Z((match as RegExpMatch).namedGroup("fmt"))),
 
         // Day units.
         RegExp(r"(D+)"): lambdaTokenizer((match) => IntervalToken.totalDays(match.end - match.start)),

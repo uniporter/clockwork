@@ -1,10 +1,10 @@
-import 'package:datex/src/format/formattable.dart';
-import 'package:datex/src/format/parser.dart';
-import 'package:datex/src/format/tokens/format_token.dart';
-import 'package:datex/src/format/tokens/timestamp.tokens.dart' as TimestampToken;
-import 'package:datex/src/format/tokens/utility.tokens.dart';
-import 'package:datex/src/core/timestamp.dart';
-import 'package:datex/src/utils/system_util.dart';
+import 'package:clockwork/src/format/formattable.dart';
+import 'package:clockwork/src/format/parser.dart';
+import 'package:clockwork/src/format/tokens/format_token.dart';
+import 'package:clockwork/src/format/tokens/timestamp.tokens.dart' as TimestampToken;
+import 'package:clockwork/src/format/tokens/utility.tokens.dart';
+import 'package:clockwork/src/core/timestamp.dart';
+import 'package:clockwork/src/utils/system_util.dart';
 
 /// Describes a [Format] for a particular [IFormattable] object.
 class Format<T extends IFormattable> {

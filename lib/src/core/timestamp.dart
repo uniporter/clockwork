@@ -1,16 +1,16 @@
-import 'package:datex/src/format/format.dart';
-import 'package:datex/src/format/formattable.dart';
-import 'package:datex/src/core/instant.dart';
-import 'package:datex/src/core/interval.dart';
-import 'package:datex/src/core/timezone.dart';
-import 'package:datex/src/units/conversion.dart';
-import 'package:datex/src/units/era.dart';
-import 'package:datex/src/units/length.dart';
-import 'package:datex/src/units/month.dart';
-import 'package:datex/src/units/weekday.dart';
-import 'package:datex/src/utils/exception.dart';
-import 'package:datex/src/utils/misc.dart';
-import 'package:datex/src/utils/system_util.dart';
+import 'package:clockwork/src/format/format.dart';
+import 'package:clockwork/src/format/formattable.dart';
+import 'package:clockwork/src/core/instant.dart';
+import 'package:clockwork/src/core/interval.dart';
+import 'package:clockwork/src/core/timezone.dart';
+import 'package:clockwork/src/units/conversion.dart';
+import 'package:clockwork/src/units/era.dart';
+import 'package:clockwork/src/units/length.dart';
+import 'package:clockwork/src/units/month.dart';
+import 'package:clockwork/src/units/weekday.dart';
+import 'package:clockwork/src/utils/exception.dart';
+import 'package:clockwork/src/utils/misc.dart';
+import 'package:clockwork/src/utils/system_util.dart';
 
 /// A timezone-aware instant. This is simply a container for a [TimeZone] and an [Instant] object, but provides most utility
 /// methods you will find for DateTime objects in other datetime libraries.
@@ -263,7 +263,7 @@ class TimestampComponents {
     factory TimestampComponents.fromTimestamp(Timestamp ts) {
         /// This is the timezoned microsecond timestamp of [ts]. For instance, if a region has offset +01:00, the utc microsecondsSinceEpoch is `500`,
         /// then this variable is `500 + 1 * microsecondsPerHour`.
-        final microsecondsSinceEpoch = ts.instant.microSecondsSinceEpoch() + (ts.timezone.offset(ts.instant.microSecondsSinceEpoch()) * microsecondsPerMinute).truncate();
+        final microsecondsSinceEpoch = ts.instant.microSecondsSinceEpoch() + ts.timezone.offset(ts.instant.microSecondsSinceEpoch()).asMicroseconds();
         final microsecondsSinceInternalEpoch = microsecondsSinceEpoch + -(ts.timezone.possibleOffsets[ts.timezone.history.firstWhere((his) => his.until >= microsecondsSinceEpoch).index] * microsecondsPerMinute).truncate();
         final daysSinceEpoch = microsecondsSinceInternalEpoch ~/ microsecondsPerDay;
 

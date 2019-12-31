@@ -1,8 +1,8 @@
-import 'package:datex/src/units/conversion.dart';
-import 'package:datex/src/utils/exception.dart';
-import 'package:datex/src/core/timestamp.dart';
-import 'package:datex/src/core/timezone.dart';
-import 'package:datex/src/core/instant.dart';
+import 'package:clockwork/src/units/conversion.dart';
+import 'package:clockwork/src/utils/exception.dart';
+import 'package:clockwork/src/core/timestamp.dart';
+import 'package:clockwork/src/core/timezone.dart';
+import 'package:clockwork/src/core/instant.dart';
 
 final EPOCH = Timestamp(TimeZone.utc(), Instant.epoch(), const TimestampComponents(year: 1970, month: 1, day: 1));
 
