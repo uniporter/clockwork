@@ -8,8 +8,8 @@ import 'package:clockwork/src/utils/system_util.dart';
 
 /// Describes a [Format] for a particular [IFormattable] object.
 class Format<T extends IFormattable> {
-    /// The standard ISO8601 format: `YYYY-MM-DD[T]HH:MM:ss[Z]`.
-    static final ISO8601 = Format<Timestamp>([separated([TimestampToken.yyyy, TimestampToken.MM, TimestampToken.dd], '-'), string('T'), separated([TimestampToken.HH, TimestampToken.MM, TimestampToken.ss], ':'), string('Z')]);
+    /// The standard ISO8601 format: `YYYY-MM-DD[T]HH:MM:sso<Z+HH:MM>`.
+    static final ISO8601 = Format<Timestamp>([separated([TimestampToken.yyyy, TimestampToken.MM, TimestampToken.dd], '-'), string('T'), separated([TimestampToken.HH, TimestampToken.MM, TimestampToken.ss], ':'), TimestampToken.o("Z+HH:MM")]);
 
     final List<FormatToken<T>> tokens;
 

@@ -139,34 +139,6 @@ FormatToken<Timestamp> fracSecMinLength(int len) => (ts) {
     return (remainder ~/ pow(10, 6 - len)).toString();
 };
 
-/// Identified by `zz`. Returns the timezone abbreviation. Note: if the 3/4-lettered abbreviations aren't available for the particular
-/// timezone, then the timezone offset will be displayed instead.
-String zz(Timestamp ts) => ts.timezone.possibleAbbrs[ts.timezone.history.firstWhere((item) => item.until >= ts.instant.microSecondsSinceEpoch()).index];
-
-/// Identified by `z`. Returns the timezone abbreviation. Note: if the 3/4-lettered abbreviations aren't available for the particular
-/// timezone, then the timezone offset will be displayed instead.
-String z(Timestamp ts) => zz(ts);
-
-/// Identified by `Z`. Returns the timezone offset with the hour and minute part separated by `:`.
-String Z(Timestamp ts) {
-    final offset = ts.timezone.possibleOffsets[ts.timezone.history.firstWhere((item) => item.until >= ts.instant.microSecondsSinceEpoch()).index];
-    final sign = offset.sign;
-    final hourPart = (offset ~/ 60).abs();
-    final minutePart = (offset % 60).truncate().abs();
-
-    return "${sign >= 0 ? "+" : "-"}${hourPart.toString().padLeft(2, '0')}:${minutePart.toString().padLeft(2, '0')}}";
-}
-
-/// Identified by `ZZ`. Returns the timezone offset.
-String ZZ(Timestamp ts) {
-    final offset = ts.timezone.possibleOffsets[ts.timezone.history.firstWhere((item) => item.until >= ts.instant.microSecondsSinceEpoch()).index];
-    final sign = offset.sign;
-    final hourPart = (offset ~/ 60).abs();
-    final minutePart = (offset % 60).truncate().abs();
-
-    return "${sign >= 0 ? "+" : "-"}${hourPart.toString().padLeft(2, '0')}${minutePart.toString().padLeft(2, '0')}}";
-}
-
 /// Identified by `X`. Returns the Unix timestamp in seconds.
 String X(Timestamp ts) => (ts.instant.microSecondsSinceEpoch() ~/ pow(10, 6)).toString();
 
