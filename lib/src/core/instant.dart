@@ -1,6 +1,7 @@
 import 'package:clockwork/src/core/interval.dart';
 import 'package:clockwork/src/core/timestamp.dart';
 import 'package:clockwork/src/core/timezone.dart';
+import 'package:clockwork/src/core/clock.dart';
 
 /// Represents an instant in the entire chronology of time. This object is timezone/location invariant.
 class Instant implements Comparable<Instant> {
@@ -9,7 +10,7 @@ class Instant implements Comparable<Instant> {
     const Instant(this._microSecondsSinceEpoch);
 
     factory Instant.epoch() => const Instant(0);
-    factory Instant.now() => Instant(DateTime.now().microsecondsSinceEpoch);
+    factory Instant.now() => clock.now();
     factory Instant.fromDateTime(DateTime val) => Instant(val.microsecondsSinceEpoch);
 
     /// Returns the number of microseconds since the Unix Epoch time, 1970-01-01T00:00:00Z (UTC).
