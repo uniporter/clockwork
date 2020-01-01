@@ -12,7 +12,7 @@ TimeZone _$TimeZoneFromJson(Map<String, dynamic> json) {
     possibleOffsets:
         (json['offsets'] as List)?.map((e) => (e as num)?.toDouble())?.toList(),
     possibleAbbrs: (json['abbrs'] as List)?.map((e) => e as String)?.toList(),
-    history: TimeZone._historyFromJson(json['info']),
+    history: TimeZone._historyFromJson(json['info'] as List),
   );
 }
 

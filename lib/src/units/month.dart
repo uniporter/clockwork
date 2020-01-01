@@ -23,13 +23,13 @@ extension MonthExtension on Month {
     bool operator >=(Month other) => this.index >= other.index;
 
     Month operator +(Month other) {
-        if (other == Month.skip) error(InvalidArgumentException('other'));
+        if (other == Month.skip) throw InvalidArgumentException('other');
         final index = (this.index + other.index) % 12;
         return Month.values[index == Month.skip ? 1 : index];
     }
 
     Month operator -(Month other) {
-        if (other == Month.skip) error(InvalidArgumentException('other'));
+        if (other == Month.skip) throw InvalidArgumentException('other');
         final index = (this.index - other.index) % 12;
         return Month.values[index == Month.skip ? 12 : index];
     }

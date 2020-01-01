@@ -17,7 +17,7 @@ class Format<T extends IFormattable> {
     /// Returns a [Format] based on the description of [str].
     Format.parse(String str) : tokens = _parseHelper<T>(str, 0);
     /// Returns a [Format] by concatenating the [Format]s in [it].
-    Format.concat(Iterable<Format<T>> it) : tokens = [for (var format in it) ...?format.tokens];
+    Format.concat(Iterable<Format<T>> it) : tokens = [for (var format in it) ...format.tokens];
 
     static List<FormatToken> _parseHelper<T extends IFormattable>(String str, int progress) {
         if (str == '' || progress >= tokenMap[T].length) return [];

@@ -25,8 +25,8 @@ Iterable<int> nonLeapYearsSinceEpoch() sync* {
 
 /// Returns the number of days since the epoch corresponding to the given [year], [month], and [day].
 int daysSinceEpoch(int year, int month, int day) {
-    if (month <= 0 || month > 12) return error(InvalidArgumentException('month'));
-    if (day <= 0 || day > daysPerMonth(month, year)) return error(InvalidArgumentException('day'));
+    if (month <= 0 || month > 12) throw InvalidArgumentException('month');
+    if (day <= 0 || day > daysPerMonth(month, year)) throw InvalidArgumentException('day');
 
     if (month <= 2) year--; // Converts year to the internal year numbering which starts from March.
     final era = (year >= 0 ? year : year - 399) ~/ 400;

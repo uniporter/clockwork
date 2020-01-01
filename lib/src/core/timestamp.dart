@@ -20,9 +20,16 @@ class Timestamp with IFormattable {
 
     /// Figuring out the components of the timestamp is a nontrivial amount of calculation, so we defer the calculation
     /// until absolutely necessary, that is, when some function that requires the calculation is called.
-    TimestampComponents _components = null;
+    late final TimestampComponents _components;
 
-    Timestamp(this.timezone, this.instant, [this._components]);
+    bool _componentsInitialized = false;
+
+    Timestamp(this.timezone, this.instant, [TimestampComponents? components]) {
+        if (components != null) {
+            _components = components;
+            _componentsInitialized = true;
+        }
+    }
 
     /// Returns a Timestamp set to present with the `Etc/UTC` timezone.
     Timestamp.nowUTC() : timezone = TimeZone.utc(), instant = Instant.now();
@@ -43,15 +50,15 @@ class Timestamp with IFormattable {
     /// In this case [AmbiguousTimestampException] will be thrown. Othertimes the components are valid but the time actually
     /// doesn't exist, in which case [TimestampNonexistentException] will be thrown.
     factory Timestamp.explicit(TimeZone timezone, int year, int month, int day, [int hour = 0, int minute = 0, int second = 0, int millisecond = 0, int microsecond = 0]) {
-        if (timezone == null) return error(InvalidArgumentException('timezone'));
-        else if (year < 0) return error(InvalidArgumentException('year'));
-        else if (month <= 0 || month > 12) return error(InvalidArgumentException('month'));
-        else if (day <= 0 || day > daysPerMonth(month, year)) return error(InvalidArgumentException('day'));
-        else if (hour < 0 || hour > 23) return error(InvalidArgumentException('hour'));
-        else if (minute < 0 || minute > 59) return error(InvalidArgumentException('minute'));
-        else if (second < 0 || second > 59) return error(InvalidArgumentException('second'));
-        else if (millisecond < 0 || millisecond > 999) return error(InvalidArgumentException('millisecond'));
-        else if (microsecond < 0 || microsecond > 999) return error(InvalidArgumentException('microsecond'));
+        if (timezone == null) throw InvalidArgumentException('timezone');
+        else if (year < 0) throw InvalidArgumentException('year');
+        else if (month <= 0 || month > 12) throw InvalidArgumentException('month');
+        else if (day <= 0 || day > daysPerMonth(month, year)) throw InvalidArgumentException('day');
+        else if (hour < 0 || hour > 23) throw InvalidArgumentException('hour');
+        else if (minute < 0 || minute > 59) throw InvalidArgumentException('minute');
+        else if (second < 0 || second > 59) throw InvalidArgumentException('second');
+        else if (millisecond < 0 || millisecond > 999) throw InvalidArgumentException('millisecond');
+        else if (microsecond < 0 || microsecond > 999) throw InvalidArgumentException('microsecond');
 
         final surmisedComponents = TimestampComponents(
             year: year,
@@ -71,7 +78,7 @@ class Timestamp with IFormattable {
 
         final surmisedHistory2 = timezone.history.firstWhere((item) => item.until >= surmisedMicrosecondsSinceEpochUTC);
         final surmisedOffsetInMicroseconds2 = (timezone.possibleOffsets[surmisedHistory2.index] * microsecondsPerMinute).truncate();
-        if (surmisedOffsetInMicroseconds1 != surmisedOffsetInMicroseconds2) return error(TimestampNonexistentException("FUCKed"));
+        if (surmisedOffsetInMicroseconds1 != surmisedOffsetInMicroseconds2) throw TimestampNonexistentException("FUCKed");
 
         final surmisedHistory2Index = timezone.history.indexOf(surmisedHistory2);
         if (surmisedHistory2Index > 0) {
@@ -81,7 +88,7 @@ class Timestamp with IFormattable {
 
             final surmisedHistory4 = timezone.history.firstWhere((item) => item.until >= surmisedMicrosecondsSinceEpochUTC2);
             final surmisedOffsetInMicroseconds4 = (timezone.possibleOffsets[surmisedHistory4.index] * microsecondsPerMinute).truncate();
-            if (surmisedOffsetInMicroseconds3 == surmisedOffsetInMicroseconds4) return error(AmbiguousTimestampException("FUCKed"));
+            if (surmisedOffsetInMicroseconds3 == surmisedOffsetInMicroseconds4) throw AmbiguousTimestampException("FUCKed");
         }
 
         if (surmisedHistory2Index < timezone.history.length - 1) {
@@ -91,7 +98,7 @@ class Timestamp with IFormattable {
 
             final surmisedHistory6 = timezone.history.firstWhere((item) => item.until >= surmisedMicrosecondsSinceEpochUTC3);
             final surmisedOffsetInMicroseconds6 = (timezone.possibleOffsets[surmisedHistory6.index] * microsecondsPerMinute).truncate();
-            if (surmisedOffsetInMicroseconds5 == surmisedOffsetInMicroseconds6) return error(AmbiguousTimestampException("FUCKed"));
+            if (surmisedOffsetInMicroseconds5 == surmisedOffsetInMicroseconds6) throw AmbiguousTimestampException("FUCKed");
         }
 
         return Timestamp(
@@ -114,7 +121,7 @@ class Timestamp with IFormattable {
     Interval difference(Timestamp other) => this.instant.difference(other.instant);
 
     TimestampComponents get components {
-        if (_components == null) _findComponents();
+        if (!_componentsInitialized) _components = TimestampComponents.fromTimestamp(this);
         return _components;
     }
 
@@ -193,8 +200,6 @@ class Timestamp with IFormattable {
 
     /// Return a [Timestamp] at the start of [unit].
     Timestamp startOf(Length unit) {
-        if (unit == null) return error(InvalidArgumentException('unit'));
-
         return Timestamp.explicit(
             timezone,
             unit >= Length.YEAR ? 0 : this.components.year,
@@ -210,8 +215,6 @@ class Timestamp with IFormattable {
 
     /// Return a [Timestamp] at the end of [unit].
     Timestamp endOf(Length unit) {
-        if (unit == null) return error(InvalidArgumentException('unit'));
-
         return Timestamp.explicit(
             timezone,
             unit >= Length.YEAR ? 0 : this.components.year,
@@ -233,8 +236,6 @@ class Timestamp with IFormattable {
     @override bool operator ==(covariant Timestamp other) => this.timezone == other.timezone && this.instant == other.instant;
     Timestamp operator +(Interval dur) => Timestamp(this.timezone, this.instant + dur);
     Timestamp operator -(Interval dur) => Timestamp(this.timezone, this.instant - dur);
-
-    void _findComponents() => _components ??= TimestampComponents.fromTimestamp(this);
 }
 
 /// A struct that holds explicit information for the calendar composition of a [Timestamp].
@@ -249,9 +250,9 @@ class TimestampComponents {
     final int microsecond;
 
     const TimestampComponents({
-        this.year,
-        this.month,
-        this.day,
+        required this.year,
+        required this.month,
+        required this.day,
         this.hour = 0,
         this.minute = 0,
         this.second = 0,

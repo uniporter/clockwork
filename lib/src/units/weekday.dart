@@ -29,13 +29,13 @@ extension WeekdayExtension on Weekday {
     operator >=(Weekday other) => this.index >= other.index;
 
     Weekday operator +(Weekday other) {
-        if (other == Weekday.skip) error(InvalidArgumentException('other'));
+        if (other == Weekday.skip) throw InvalidArgumentException('other');
         final index = (this.index + other.index) % 7;
         return Weekday.values[index == Weekday.skip ? 1 : index];
     }
 
     Weekday operator -(Weekday other) {
-        if (other == Weekday.skip) error(InvalidArgumentException('other'));
+        if (other == Weekday.skip) throw InvalidArgumentException('other');
         final index = (this.index - other.index) % 7;
         return Weekday.values[index == Weekday.skip ? 7 : index];
     }
@@ -55,13 +55,13 @@ extension WeekdayISOExtension on WeekdayISO {
     operator >=(WeekdayISO other) => this.index >= other.index;
 
     WeekdayISO operator +(WeekdayISO other) {
-        if (other == WeekdayISO.skip) error(InvalidArgumentException('other'));
+        if (other == WeekdayISO.skip) throw InvalidArgumentException('other');
         final index = (this.index + other.index) % 7;
         return WeekdayISO.values[index == WeekdayISO.skip ? 1 : index];
     }
 
     WeekdayISO operator -(WeekdayISO other) {
-        if (other == WeekdayISO.skip) error(InvalidArgumentException('other'));
+        if (other == WeekdayISO.skip) throw InvalidArgumentException('other');
         final index = (this.index - other.index) % 7;
         return WeekdayISO.values[index == WeekdayISO.skip ? 7 : index];
     }

@@ -2,3 +2,4 @@
 .packages
 .vscode/
 *.lock
+.DS_Store

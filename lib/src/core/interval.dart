@@ -16,7 +16,7 @@ class Interval with IFormattable implements Comparable<Interval> {
         num seconds = 0,
         num milliseconds = 0,
         num microseconds = 0,
-    }) : _len = days * microsecondsPerDay + hours * microsecondsPerHour + minutes * microsecondsPerMinute + seconds * microsecondsPerSecond + milliseconds * microsecondsPerMillisecond + microseconds;
+    }) : _len = (days * microsecondsPerDay + hours * microsecondsPerHour + minutes * microsecondsPerMinute + seconds * microsecondsPerSecond + milliseconds * microsecondsPerMillisecond + microseconds) as int;
 
     factory Interval.fromDuration(Duration duration) => Interval(microseconds: duration.inMicroseconds);
 
@@ -60,5 +60,5 @@ class Interval with IFormattable implements Comparable<Interval> {
     Interval operator +(Interval other) => Interval(microseconds: this.asMicroseconds() + other.asMicroseconds());
     Interval operator -(Interval other) => Interval(microseconds: this.asMicroseconds() - other.asMicroseconds());
     Interval operator *(num factor) => Interval(microseconds: (this.asMicroseconds() * factor).round());
-    Interval operator ~/(num factor) => factor == 0 ? error(InvalidArgumentException('factor')) : Interval(microseconds: (this.asMicroseconds() / factor).round());
+    Interval operator ~/(num factor) => factor == 0 ? throw InvalidArgumentException('factor') : Interval(microseconds: (this.asMicroseconds() / factor).round());
 }

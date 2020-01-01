@@ -33,7 +33,7 @@ final int microsecondsPerNonLeapYear = microsecondsPerDay * daysPerNonLeapYear;
 int daysPerYear(int year) => isLeapYear(year) ? daysPerLeapYear : daysPerNonLeapYear;
 
 int microsecondsInMonth(int month, int year) {
-    if (month <= 0 || month > 12) return error(InvalidArgumentException('month'));
+    if (month <= 0 || month > 12) throw InvalidArgumentException('month');
 
     return microsecondsPerDay * daysPerMonth(month, year);
 }
@@ -46,7 +46,7 @@ int daysPerMonth(int month, int year) {
     const MONTHS_WITH_31_DAYS = [Month.January, Month.March, Month.May, Month.July, Month.August, Month.October, Month.December];
     const MONTHS_WITH_30_DAYS = [Month.April, Month.June, Month.September, Month.November];
 
-    if (month <= 0 || month > 12) return error(InvalidArgumentException('month'));
+    if (month <= 0 || month > 12) throw InvalidArgumentException('month');
 
     if (MONTHS_WITH_31_DAYS.contains(Month.values[month])) return 31;
     else if (MONTHS_WITH_30_DAYS.contains(Month.values[month])) return 30;

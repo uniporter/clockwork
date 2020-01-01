@@ -10,7 +10,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'timezone.g.dart';
 
-TimeZone _local;
+late TimeZone _local;
 
 /// Set local location.
 void setLocalLocation(String location) {
@@ -19,7 +19,7 @@ void setLocalLocation(String location) {
 
 abstract class TimeZoneData {
     static const TIME_ZONE_DATA = 'TimeZone Data';
-    static UnmodifiableMapView<String, TimeZone> data;
+    static late UnmodifiableMapView<String, TimeZone> data;
 
     /// All methods/classes annotated with `@NeedsTimeZoneData` can only be used when this bool is true. Otherwise a
     /// `DataNotLoadedException` will be thrown.
@@ -27,7 +27,6 @@ abstract class TimeZoneData {
 
     /// Load the timezone data from disc into memory. This is a very computationally expensive function.
     static Future<bool> initialize(String path, {String local: 'Etc/UTC'}) async {
-        if (path == null) return error(InvalidArgumentException('path'));
         assert(!timeZoneDataLoaded);    // We don't want the package to load for multiple times.
 
         final io = File(path);
@@ -46,7 +45,7 @@ abstract class TimeZoneData {
 
     /// Check if the timezone data has been loaded. Throws `DataNotLoadedException` if not.
     static bool checkIfLoaded() {
-        if (!timeZoneDataLoaded) return error(DataNotLoadedException(TIME_ZONE_DATA));
+        if (!timeZoneDataLoaded) throw DataNotLoadedException(TIME_ZONE_DATA);
         return true;
     }
 }
@@ -72,10 +71,10 @@ class TimeZone {
     final List<TimeZoneHistory> history;
 
     const TimeZone({
-        this.name,
-        this.possibleOffsets,
-        this.possibleAbbrs,
-        this.history,
+        required this.name,
+        required this.possibleOffsets,
+        required this.possibleAbbrs,
+        required this.history,
     });
 
     factory TimeZone._fromJson(Map<String, dynamic> json) => _$TimeZoneFromJson(json);
@@ -85,7 +84,7 @@ class TimeZone {
     factory TimeZone.parse(String name) {
         TimeZoneData.checkIfLoaded();
         final res = TimeZoneData.data[name];
-        if (res == null) return error(InvalidArgumentException(name));
+        if (res == null) throw InvalidArgumentException(name);
 
         return res;
     }
@@ -127,8 +126,8 @@ class TimeZoneHistory {
     final num until;
 
     const TimeZoneHistory({
-        this.index,
-        this.until,
+        required this.index,
+        required this.until,
     }) : assert(index != null && until != null);
 
     static num _untilFromJson(int data) => data == null ? double.infinity : data * microsecondsPerMillisecond;
