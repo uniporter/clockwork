@@ -3,6 +3,17 @@ Iterable<int> range(int bottom, int top) sync* {
     for (int i = bottom; i < top; ++i) yield i;
 }
 
+typedef Concept<T extends Conceptable> = bool Function(T);
+abstract class Conceptable {
+    void checkConcept(Set<Concept> concepts) {
+        if (!concepts.fold(true, (res, concept) => res && concept(this))) throw Exception();
+    }
+
+    Conceptable(Set<Concept> concepts) {
+        checkConcept(concepts);
+    }
+}
+
 /// An identity function. Since Dart does not allow const lambdas, we have to write a static function here.
 T identity<T>(T elem) => elem;
 

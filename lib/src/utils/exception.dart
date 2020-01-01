@@ -37,7 +37,7 @@ class InvalidArgumentException extends ClockworkException {
 class TimestampNonexistentException extends ClockworkException {
     final String timestamp;
 
-    TimestampNonexistentException(this.timestamp) {}
+    TimestampNonexistentException(this.timestamp);
 
     @override
     String toString() => _toStringHelper("$timestamp does not exist.");
