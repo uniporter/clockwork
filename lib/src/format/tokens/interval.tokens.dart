@@ -69,3 +69,13 @@ FormatToken<Interval> fracSecMinLength(int len) => (i) {
 FormatToken<Interval> Z(String pattern) => (i) {
     return i.asMicroseconds() == 0 ? 'Z' : Format<Interval>.parse(pattern).format(i);
 };
+
+/// Identified by `:`. The culture-specific time component separator.
+String separator(Interval ts) => ':';
+
+/// Identified by `.`. A culturally invariant period, unless it's immediately succeeded by fractional seconds `FFFFF...` and the fractional seconds
+/// of the `Interval` is 0, in which case no `.` will appear.
+FormatToken<Interval> dot(String pattern) => (i) {
+    if (i.microsecond == 0 && i.millisecond == 0 && RegExp(r"^(F+)").hasMatch(pattern)) return Format<Interval>.parse(pattern).format(i);
+    return ".${Format<Interval>.parse(pattern).format(i)}";
+};

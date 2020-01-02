@@ -30,8 +30,12 @@ final tokenMap = <Type, Map<Pattern, Tokenizer<IFormattable>>>{
         // Whitespaces.
         RegExp(r"(\s+)"): lambdaTokenizer((match) => space(match.end - match.start)),
 
+        // Dot token.
+        RegExp(r"\.(?<fmt>\w*)"): lambdaTokenizer((match) => TimestampToken.dot((match as RegExpMatch).namedGroup("fmt"))),
+
         // Timezone.
         RegExp(r"o<(?<tzFmt>[^<>]*)>"): lambdaTokenizer((match) => TimestampToken.o((match as RegExpMatch).namedGroup('tzFmt'))),
+        RegExp("x"): constTokenizer(TimestampToken.x),
 
         // Month units.
         "MMMM": constTokenizer(TimestampToken.MMMM),
@@ -81,15 +85,18 @@ final tokenMap = <Type, Map<Pattern, Tokenizer<IFormattable>>>{
         RegExp(r"(f+)"): lambdaTokenizer((match) => TimestampToken.fracSecConstLength(match.end - match.start)),
         RegExp(r"(F+)"): lambdaTokenizer((match) => TimestampToken.fracSecMinLength(match.end - match.start)),
 
-        // Timestamp units.
-        "X": constTokenizer(TimestampToken.X),
-        "x": constTokenizer(TimestampToken.x),
+        // Separators.
+        ":": constTokenizer(TimestampToken.timeSeparator),
+        "/": constTokenizer(TimestampToken.dateSeparator),
     },
     Interval: <Pattern, Tokenizer<Interval>>{
         // Escaped strings.
         RegExp(r"(\[[^\[\]]*\])"): lambdaTokenizer((match) => string(match.group(0).replaceAll(RegExp(r"[\[\]]"), ''))),
         // Whitespaces.
         RegExp(r"(\s+)"): lambdaTokenizer((match) => space(match.end - match.start)),
+
+        // Dot token.
+        RegExp(r"\.(?<fmt>\w*)"): lambdaTokenizer((match) => IntervalToken.dot((match as RegExpMatch).namedGroup("fmt"))),
 
         // Z indicator.
         RegExp(r"^Z(?<fmt>\w*)"): lambdaTokenizer((match) => IntervalToken.Z((match as RegExpMatch).namedGroup("fmt"))),
@@ -119,5 +126,8 @@ final tokenMap = <Type, Map<Pattern, Tokenizer<IFormattable>>>{
         // Sign indicators.
         "+": constTokenizer(IntervalToken.plus),
         "-": constTokenizer(IntervalToken.minus),
+
+        // Separators.
+        ":": constTokenizer(IntervalToken.separator),
     },
 };

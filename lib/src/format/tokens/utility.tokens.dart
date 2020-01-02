@@ -1,5 +1,6 @@
 import 'package:clockwork/src/format/tokens/format_token.dart';
 import 'package:clockwork/src/format/formattable.dart';
+import 'package:clockwork/src/locale/locale.dart';
 
 /// Returns a new token that's a clone of [t].
 FormatToken<T> alias<T extends IFormattable>(FormatToken<T> t) => t;
@@ -31,8 +32,13 @@ FormatToken string(String str) => (ts) => str;
 /// Returns a token that's a concatenation of tokens in [list].
 FormatToken<T> concat<T extends IFormattable>(Iterable<FormatToken<T>> list) => (ts) => list.map((token) => token(ts)).join();
 
-/// Returns a token that's a concatenation of tokens in [it] separated by [sep].
-FormatToken<T> separated<T extends IFormattable>(Iterable<FormatToken<T>> it, [String sep = '']) => (ts) {
-    final str = it.expand((elem) => [elem, string(sep)]).map((token) => token(ts)).join();
-    return str.substring(0, str.length - sep.length);
+/// Returns a token that's a concatenation of tokens in [it] separated by [sep]. By default we use the culture-specific time separator, normally
+/// represented with the token `:`.
+FormatToken<T> separated<T extends IFormattable>(Iterable<FormatToken<T>> it, [String? sep]) => (ts) {
+    final str = it.expand((elem) => [elem, string(sep ?? ':')]).map((token) => token(ts)).join();
+    return str.substring(0, str.length - (sep ?? ':').length);
 };
+
+/// Returns a [FormatToken] from a [LocaleDependentFormatToken] by using the current system locale, defined by [locale]. This function essentially
+/// curries away the locale parameter in [token].
+FormatToken<T> withCurrentLocale<T extends IFormattable>(LocaleDependentFormatToken<T> token) => (ts) => token(ts, locale);

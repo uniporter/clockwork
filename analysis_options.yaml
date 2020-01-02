@@ -2,7 +2,7 @@ analyzer:
   enable-experiment:
     - non-nullable
   exclude:
-    - lib/src/core/*.g.dart
+    - lib/src/**/*.g.dart
 linter:
   rules:
     - prefer_const_constructors

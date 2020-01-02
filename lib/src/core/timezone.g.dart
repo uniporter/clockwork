@@ -8,10 +8,9 @@ part of 'timezone.dart';
 
 TimeZone _$TimeZoneFromJson(Map<String, dynamic> json) {
   return TimeZone(
-    name: json['name'] as String,
-    possibleOffsets:
-        (json['offsets'] as List)?.map((e) => (e as num)?.toDouble())?.toList(),
-    possibleAbbrs: (json['abbrs'] as List)?.map((e) => e as String)?.toList(),
+    name: json['name'],
+    possibleOffsets: json['offsets'],
+    possibleAbbrs: json['abbrs'],
     history: TimeZone._historyFromJson(json['info'] as List),
   );
 }
@@ -25,7 +24,7 @@ Map<String, dynamic> _$TimeZoneToJson(TimeZone instance) => <String, dynamic>{
 
 TimeZoneHistory _$TimeZoneHistoryFromJson(Map<String, dynamic> json) {
   return TimeZoneHistory(
-    index: json['index'] as int,
+    index: json['index'],
     until: TimeZoneHistory._untilFromJson(json['until'] as int),
   );
 }

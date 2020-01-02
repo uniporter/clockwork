@@ -108,6 +108,9 @@ class TimeZone {
     /// UTC time is `08:00:00, Jan 1st, 2009` and the timezoned time is `08:30:00, Jan 1st, 2009`, then the function returns 30.
     Interval offset(int microsecondsSinceEpoch) => Interval(minutes: -possibleOffsets[history.firstWhere((item) => item.until >= microsecondsSinceEpoch).index]);
 
+    /// Returns the timezone abbreviation at [microsecondsSinceEpoch].
+    String abbr(int microsecondsSinceEpoch) => possibleAbbrs[history.firstWhere((item) => item.until >= microsecondsSinceEpoch).index];
+
     static List<TimeZoneHistory> _historyFromJson(List data) {
         return data.map<TimeZoneHistory>((datum) => TimeZoneHistory._fromJson(datum)).toList();
     }

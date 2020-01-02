@@ -3,12 +3,10 @@ import 'dart:math';
 import 'package:clockwork/src/format/tokens/utility.tokens.dart';
 import 'package:clockwork/src/core/timestamp.dart';
 import 'package:clockwork/src/units/conversion.dart';
-import 'package:clockwork/src/units/month.dart';
-import 'package:clockwork/src/units/weekday.dart';
-import 'package:clockwork/src/units/era.dart';
 import 'package:clockwork/src/format/tokens/format_token.dart';
 import 'package:clockwork/src/format/format.dart';
 import 'package:clockwork/src/core/interval.dart';
+import 'package:clockwork/src/calendar/gregorian.dart';
 
 /// Identified by `M`. Displays the month of the timestamp as Arabic numbers.
 /// Example: January: `1`, December: `12`.
@@ -139,13 +137,23 @@ FormatToken<Timestamp> fracSecMinLength(int len) => (ts) {
     return (remainder ~/ pow(10, 6 - len)).toString();
 };
 
-/// Identified by `X`. Returns the Unix timestamp in seconds.
-String X(Timestamp ts) => (ts.instant.microSecondsSinceEpoch() ~/ pow(10, 6)).toString();
-
-/// Identified by `x`. Returns the Unix timestamp in milliseconds.
-String x(Timestamp ts) => (ts.instant.microSecondsSinceEpoch() ~/ pow(10, 3)).toString();
+/// Identified by `x`. Returns the timezone abbreviation.
+String x(Timestamp ts) => ts.timezone.abbr(ts.instant.microSecondsSinceEpoch());
 
 /// Identified by `o<tzPattern>`. Returns the timezone of [ts] formatted by [tzPattern].
 FormatToken<Timestamp> o(String tzPattern) {
     return (ts) => Format<Interval>.parse(tzPattern).format(ts.timezone.offset(ts.instant.microSecondsSinceEpoch()));
 }
+
+/// Identified by `:`. The culture-specific time component separator.
+String timeSeparator(Timestamp ts) => ':';
+
+/// Identified by `/`. The culture-specific date component separator.
+String dateSeparator(Timestamp ts) => '/';
+
+/// Identified by `.`. A culturally invariant period, unless it's immediately succeeded by fractional seconds `FFFFF...` and the fractional seconds
+/// of the `Timestamp` is 0, in which case no `.` will appear.
+FormatToken<Timestamp> dot(String pattern) => (ts) {
+    if (ts.microsecond == 0 && ts.millisecond == 0 && RegExp(r"^(F+)").hasMatch(pattern)) return Format<Timestamp>.parse(pattern).format(ts);
+    return ".${Format<Timestamp>.parse(pattern).format(ts)}";
+};
