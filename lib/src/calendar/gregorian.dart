@@ -1,3 +1,4 @@
+import 'package:clockwork/src/calendar/calendar.dart';
 import 'package:clockwork/src/core/instant.dart';
 import 'package:clockwork/src/core/timestamp.dart';
 import 'package:clockwork/src/core/timezone.dart';
@@ -5,15 +6,20 @@ import 'package:clockwork/src/units/conversion.dart';
 import 'package:clockwork/src/utils/exception.dart';
 import 'package:clockwork/src/utils/system_util.dart';
 
-class GregorianCalendar {
+class GregorianCalendar extends Calendar {
+    final String name = 'gregorian';
+
+    static final GregorianCalendar _singleton = GregorianCalendar._internal();
+    factory GregorianCalendar() => _singleton;
+    GregorianCalendar._internal();
+
     /// Returns a timestamp from the explicitly provided timezone and timestamp components.
     ///
     /// Note: In certain cases a given TimestampComponents and a timezone alone do not suffice to determine an unique instant.
     /// In this case [AmbiguousTimestampException] will be thrown. Othertimes the components are valid but the time actually
     /// doesn't exist, in which case [TimestampNonexistentException] will be thrown.
-    static Timestamp fromComponents(TimeZone timezone, int year, Month month, int day, [int hour = 0, int minute = 0, int second = 0, int millisecond = 0, int microsecond = 0]) {
+    Timestamp fromComponents(TimeZone timezone, int year, Month month, int day, [int hour = 0, int minute = 0, int second = 0, int millisecond = 0, int microsecond = 0]) {
         if (timezone == null) throw InvalidArgumentException('timezone');
-        else if (year < 0) throw InvalidArgumentException('year');
         else if (month == Month.skip) throw InvalidArgumentException('month');
         else if (day <= 0 || day > daysPerMonth(month, year)) throw InvalidArgumentException('day');
         else if (hour < 0 || hour > 23) throw InvalidArgumentException('hour');
@@ -280,7 +286,7 @@ extension GregorianCalendarExtension on Timestamp {
 
     /// Return a [Timestamp] at the start of [unit].
     Timestamp startOf(Length unit) {
-        return GregorianCalendar.fromComponents(
+        return GregorianCalendar().fromComponents(
             timezone,
             unit >= Length.YEAR ? 0 : year,
             unit >= Length.MONTH ? Month.January : month,
@@ -295,7 +301,7 @@ extension GregorianCalendarExtension on Timestamp {
 
     /// Return a [Timestamp] at the end of [unit]. TODO: Implement
     Timestamp endOf(Length unit) {
-        return GregorianCalendar.fromComponents(
+        return GregorianCalendar().fromComponents(
             timezone,
             unit >= Length.YEAR ? 0 : year,
             unit >= Length.MONTH ? Month.January : month,

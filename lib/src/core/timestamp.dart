@@ -44,7 +44,6 @@ class Timestamp with IFormattable {
     /// Returns the difference between the underlying instant of the two timestamps.
     Interval difference(Timestamp other) => this.instant.difference(other.instant);
 
-
     int get zonedMicrosecondsSinceEpoch => instant.microSecondsSinceEpoch() + timezone.offset(instant.microSecondsSinceEpoch()).asMicroseconds();
 
     /// Returns the hour.

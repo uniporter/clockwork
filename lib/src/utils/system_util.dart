@@ -3,7 +3,6 @@ Iterable<int> range(int bottom, int top) sync* {
     for (int i = bottom; i < top; ++i) yield i;
 }
 
-
 /// An identity function. Since Dart does not allow const lambdas, we have to write a static function here.
 T identity<T>(T elem) => elem;
 
