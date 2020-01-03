@@ -10,11 +10,12 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'timezone.g.dart';
 
-late TimeZone _local;
+late TimeZone _localLocation;
 
+TimeZone get localLocation => _localLocation;
 /// Set local location.
-void setLocalLocation(String location) {
-    _local = TimeZone.parse(location);
+set localLocation(TimeZone location) {
+    _localLocation = location;
 }
 
 abstract class TimeZoneData {
@@ -39,7 +40,7 @@ abstract class TimeZoneData {
         ));
 
         timeZoneDataLoaded = true;
-        _local = TimeZone.parse(local);
+        localLocation = TimeZone.parse(local);
         return true;
     }
 
@@ -99,7 +100,7 @@ class TimeZone {
     /// haven't called `setLocalLocation()`, then the local timezone will be defaulted to `Etc/UTC`.
     factory TimeZone.local() {
         TimeZoneData.checkIfLoaded();
-        return _local;
+        return localLocation;
     }
 
     /// Returns the offset of the timezone at [microsecondsSinceEpoch].

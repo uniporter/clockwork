@@ -2,6 +2,7 @@ import 'package:clockwork/src/calendar/calendar.dart';
 import 'package:clockwork/src/core/instant.dart';
 import 'package:clockwork/src/core/timestamp.dart';
 import 'package:clockwork/src/core/timezone.dart';
+import 'package:clockwork/src/locale/locale.dart';
 import 'package:clockwork/src/units/conversion.dart';
 import 'package:clockwork/src/utils/exception.dart';
 import 'package:clockwork/src/utils/system_util.dart';
@@ -90,13 +91,63 @@ enum Era {
 }
 
 extension EraExtension on Era {
-    String toName() {
-        switch (this) {
-            case Era.AD: return "A.D.";
-            case Era.BC: return 'B.C.';
-            default: throw CriticalErrorException();
-        }
-    }
+    /// Returns the locale-sensitive name of the era.
+    String toName([Locale? locale])  => this == Era.AD ? nonNullLocale(locale).gregorianCalendar.eras.name.pre : nonNullLocale(locale).gregorianCalendar.eras.name.post;
+    /// Returns the locale-sensitive abbreviation of the era.
+    String toAbbr([Locale? locale])  => this == Era.AD ? nonNullLocale(locale).gregorianCalendar.eras.abbr.pre : nonNullLocale(locale).gregorianCalendar.eras.abbr.post;
+    /// Returns the locale-sensitive narrow name of the era.
+    String toNarrow([Locale? locale]) => this == Era.AD ? nonNullLocale(locale).gregorianCalendar.eras.narrow.pre : nonNullLocale(locale).gregorianCalendar.eras.narrow.post;
+
+    /// Returns the alternative locale-sensitive name of the era.
+    String toNameAlt([Locale? locale])  => this == Era.AD ? nonNullLocale(locale).gregorianCalendar.eras.name.preAlt : nonNullLocale(locale).gregorianCalendar.eras.name.postAlt;
+    /// Returns the alternative locale-sensitive abbreviation of the era.
+    String toAbbrAlt([Locale? locale])  => this == Era.AD ? nonNullLocale(locale).gregorianCalendar.eras.abbr.preAlt : nonNullLocale(locale).gregorianCalendar.eras.abbr.postAlt;
+    /// Returns the alternative locale-sensitive narrow name of the era.
+    String toNarrowAlt([Locale? locale]) => this == Era.AD ? nonNullLocale(locale).gregorianCalendar.eras.narrow.preAlt : nonNullLocale(locale).gregorianCalendar.eras.narrow.postAlt;
+}
+
+enum Quarter {
+    skip,
+    Spring,
+    Summer,
+    Fall,
+    Winter,
+}
+
+extension QuarterExtension on Quarter {
+    /// Returns the locale-sensitive abbreviated name of the month.
+    String toAbbr([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.quarters.format.abbreviated[this.index - 1];
+    /// Returns the locale-sensitive narrow name of the month.
+    String toNarrow([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.quarters.format.narrow[this.index - 1];
+    /// Returns the locale-sensitive abbreviated name of the month.
+    String toWide([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.quarters.format.wide[this.index - 1];
+    /// Returns the locale-sensitive abbreviated name of the month. If the locale doesn't contain this info, returns [null].
+    String? toShort([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.quarters.format.short?.elementAt(this.index - 1);
+    /// Returns the standalone, locale-sensitive abbreviated name of the month.
+    String toAbbrStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.quarters.standalone.abbreviated[this.index - 1];
+    /// Returns the standalone, locale-sensitive narrow name of the month.
+    String toNarrowStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.quarters.standalone.narrow[this.index - 1];
+    /// Returns the standalone, locale-sensitive abbreviated name of the month.
+    String toWideStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.quarters.standalone.wide[this.index - 1];
+    /// Returns the standalone, locale-sensitive abbreviated name of the month. If the locale doesn't contain this info, returns [null].
+    String? toShortStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.quarters.standalone.short?.elementAt(this.index - 1);
+}
+
+enum DayPeriod {
+    midnight,
+    noon,
+    morning1,
+    morning2,
+    afternoon1,
+    evening1,
+    night1,
+    afternoon2,
+    amAlt,
+    pmAlt,
+    night2,
+    evening2,
+    am,
+    pm,
 }
 
 enum Month {
@@ -133,13 +184,22 @@ extension MonthExtension on Month {
         return Month.values[index == Month.skip ? 12 : index];
     }
 
-    /// Returns the month's name in Upper Camel.
-    /// Example: January: `January`.
-    String toUpperCamel() => this.toString().replaceFirst("${this.runtimeType}.", '');
-
-    /// Returns the first three letters of the month's name in Upper Camel.
-    /// Example: January: `Jan`.
-    String toAbbr() => this.toUpperCamel().substring(0, 3);
+    /// Returns the locale-sensitive abbreviated name of the month.
+    String toAbbr([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.months.format.abbreviated[this.index - 1];
+    /// Returns the locale-sensitive narrow name of the month.
+    String toNarrow([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.months.format.narrow[this.index - 1];
+    /// Returns the locale-sensitive abbreviated name of the month.
+    String toWide([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.months.format.wide[this.index - 1];
+    /// Returns the locale-sensitive abbreviated name of the month. If the locale doesn't contain this info, returns [null].
+    String? toShort([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.months.format.short?.elementAt(this.index - 1);
+    /// Returns the standalone, locale-sensitive abbreviated name of the month.
+    String toAbbrStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.months.standalone.abbreviated[this.index - 1];
+    /// Returns the standalone, locale-sensitive narrow name of the month.
+    String toNarrowStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.months.standalone.narrow[this.index - 1];
+    /// Returns the standalone, locale-sensitive abbreviated name of the month.
+    String toWideStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.months.standalone.wide[this.index - 1];
+    /// Returns the standalone, locale-sensitive abbreviated name of the month. If the locale doesn't contain this info, returns [null].
+    String? toShortStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.months.standalone.short?.elementAt(this.index - 1);
 }
 
 enum Weekday {
@@ -182,12 +242,29 @@ extension WeekdayExtension on Weekday {
         return Weekday.values[index == Weekday.skip ? 7 : index];
     }
 
-    /// Returns the name of the weekday in Upper Camel.
-    String toUpperCamel() => this.toString().replaceFirst("${this.runtimeType}.", '');
-    /// Returns the two-lettered abbreviation of the weekday in Upper Camel.
-    String toShortAbbr() => this.toUpperCamel().substring(0, 2);
-    /// Returns the three-lettered abbreviation of the weekday in Upper Camel.
-    String toAbbr() => this.toUpperCamel().substring(0, 3);
+    /// Returns the ISO expression of the same weekday.
+    WeekdayISO toISO() {
+        if (this == Weekday.skip) return WeekdayISO.skip;
+        else if (this == Weekday.Sunday) return WeekdayISO.Sunday;
+        else return WeekdayISO.values[this.index - 1];
+    }
+
+    /// Returns the locale-sensitive abbreviated name of the weekday.
+    String toAbbr([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.format.abbreviated[this.index - 1];
+    /// Returns the locale-sensitive narrow name of the weekday.
+    String toNarrow([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.format.narrow[this.index - 1];
+    /// Returns the locale-sensitive abbreviated name of the weekday.
+    String toWide([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.format.wide[this.index - 1];
+    /// Returns the locale-sensitive abbreviated name of the weekday. If the locale doesn't contain this info, returns [null].
+    String? toShort([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.format.short?.elementAt(this.index - 1);
+    /// Returns the standalone, locale-sensitive abbreviated name of the weekday.
+    String toAbbrStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.standalone.abbreviated[this.index - 1];
+    /// Returns the standalone, locale-sensitive narrow name of the weekday.
+    String toNarrowStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.standalone.narrow[this.index - 1];
+    /// Returns the standalone, locale-sensitive abbreviated name of the weekday.
+    String toWideStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.standalone.wide[this.index - 1];
+    /// Returns the standalone, locale-sensitive abbreviated name of the weekday. If the locale doesn't contain this info, returns [null].
+    String? toShortStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.standalone.short?.elementAt(this.index - 1);
 }
 
 extension WeekdayISOExtension on WeekdayISO {
@@ -208,12 +285,29 @@ extension WeekdayISOExtension on WeekdayISO {
         return WeekdayISO.values[index == WeekdayISO.skip ? 7 : index];
     }
 
-    /// Returns the name of the weekday in Upper Camel.
-    String toUpperCamel() => this.toString().replaceFirst("${this.runtimeType}.", '');
-    /// Returns the two-lettered abbreviation of the weekday in Upper Camel.
-    String toShortAbbr() => this.toUpperCamel().substring(0, 2);
-    /// Returns the three-lettered abbreviation of the weekday in Upper Camel.
-    String toAbbr() => this.toUpperCamel().substring(0, 3);
+    /// Returns the default [Weekday] representation, where the week starts on Sunday.
+    Weekday toDefault() {
+        if (this == WeekdayISO.skip) return Weekday.skip;
+        else if (this == WeekdayISO.Sunday) return Weekday.Sunday;
+        else return Weekday.values[this.index + 1];
+    }
+
+    /// Returns the locale-sensitive abbreviated name of the weekday.
+    String toAbbr([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.format.abbreviated[this.toDefault().index - 1];
+    /// Returns the locale-sensitive narrow name of the weekday.
+    String toNarrow([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.format.narrow[this.toDefault().index - 1];
+    /// Returns the locale-sensitive abbreviated name of the weekday.
+    String toWide([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.format.wide[this.toDefault().index - 1];
+    /// Returns the locale-sensitive abbreviated name of the weekday. If the locale doesn't contain this info, returns [null].
+    String? toShort([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.format.short?.elementAt(this.toDefault().index - 1);
+    /// Returns the standalone, locale-sensitive abbreviated name of the weekday.
+    String toAbbrStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.standalone.abbreviated[this.toDefault().index - 1];
+    /// Returns the standalone, locale-sensitive narrow name of the weekday.
+    String toNarrowStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.standalone.narrow[this.toDefault().index - 1];
+    /// Returns the standalone, locale-sensitive abbreviated name of the weekday.
+    String toWideStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.standalone.wide[this.toDefault().index - 1];
+    /// Returns the standalone, locale-sensitive abbreviated name of the weekday. If the locale doesn't contain this info, returns [null].
+    String? toShortStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.weekdays.standalone.short?.elementAt(this.toDefault().index - 1);
 }
 
 Map<Timestamp, GregorianCalendarComponents> _componentsCache = {};
@@ -243,7 +337,7 @@ extension GregorianCalendarExtension on Timestamp {
     WeekdayISO get weekdayISO => WeekdayISO.values[(daysSinceEpoch(year, month, day) + 3) % 7 + 1];
 
     /// Returns the quarter.
-    int get quarter => (month.index - 1) ~ 3 + 1;
+    Quarter get quarter => Quarter.values[(month.index - 1) ~ 3 + 1];
 
     /// Returns the week number of year according to the ISO8601 standard.
     int get weekOfYearISO {
@@ -315,7 +409,7 @@ extension GregorianCalendarExtension on Timestamp {
     }
 
     /// Returns the number of days since the beginning of the year.
-    int get dayOfYear => range(1, month.index).fold(0, (counter, month) => counter += daysPerMonth(Month.values[month], year)) + day;
+    int get dayOfYear => IterableRange<int>(1, month.index, (i) => i++).fold(0, (counter, month) => counter += daysPerMonth(Month.values[month], year)) + day;
 
     /// Returns whether the [Timestamp] is in AM or PM.
     bool get isPM => hour >= 12;

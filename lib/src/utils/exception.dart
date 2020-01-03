@@ -4,6 +4,15 @@ abstract class ClockworkException implements Exception {
     String _toStringHelper(String msg) => "$PACKAGE_NAME: ${this.runtimeType}: $msg";
 }
 
+class GeneralException extends ClockworkException {
+    final String msg;
+
+    GeneralException(this.msg) {}
+
+    @override
+    String toString() => _toStringHelper(msg);
+}
+
 /// Thrown when functions requiring some external data are called and those data haven't been loaded. For instance,
 /// most functions in the library requires timezone data provided by [TimeZoneData.initialize]. If any such function
 /// is called before [TimeZoneData.initialize] finishes, this exception will be thrown.

@@ -1,6 +1,52 @@
-/// Returns an [Iterable] that iterates through all integers from [bottom] inclusive to [top] exclusive.
-Iterable<int> range(int bottom, int top) sync* {
-    for (int i = bottom; i < top; ++i) yield i;
+import 'dart:collection';
+
+class Range<T extends Comparable> {
+    final T floor;
+    final T ceiling;
+    final bool ceilingExclusive;
+
+    const Range(this.floor, this.ceiling, [this.ceilingExclusive = true]);
+
+    bool contains(T val) => ceilingExclusive ? (floor.compareTo(val) <= 0 && ceiling.compareTo(val) > 0)
+        : (floor.compareTo(val) <= 0 && ceiling.compareTo(val) >= 0);
+}
+
+class IterableRange<T extends Comparable> extends Range<T> with IterableMixin<T> {
+    final T floor;
+    final T ceiling;
+    final bool ceilingExclusive;
+
+    final T Function(T) _it;
+
+    IterableRange(this.floor, this.ceiling, this._it, [this.ceilingExclusive = true])
+        : super(floor, ceiling, ceilingExclusive);
+
+    Iterator<T> get iterator => _RangeIterator(this, _it);
+}
+
+class _RangeIterator<T extends Comparable> implements Iterator<T> {
+    T? _current = null;
+    final IterableRange<T> _range;
+    final T Function(T) _it;
+
+    bool _started = false;
+
+    _RangeIterator(this._range, this._it);
+
+    T? get current => _current;
+    bool moveNext() {
+        if (_current == null && !_started) {
+            _current = _range.floor;
+            _started = true;
+            return true;
+        } else if (_current == null && _started) {
+            return false;
+        } else {
+            final candidate = _it(_current as T);
+            _current = _range.contains(candidate) ? candidate : null;
+            return _current == null ? false : true;
+        }
+    }
 }
 
 /// An identity function. Since Dart does not allow const lambdas, we have to write a static function here.

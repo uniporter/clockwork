@@ -5,27 +5,26 @@ import 'package:clockwork/src/core/instant.dart';
 /// By default, all clockwork constructs use [DefaultClock], which uses Dart's native methods to find the
 /// current time. In production code you should stick with [DefaultClock]. However, when you're testing code,
 /// and need to manually manipulate the current time, you can implement this interface.
-abstract class IClock {
+abstract class Clock {
     /// Returns the current time as an [Instant].
     Instant now();
 }
 
-/// The default [IClock] that uses Dart's native methods to find the current time. Do not instantiate [DefaultClock]
-/// on your own. The constant, singleton instance of [DefaultClock] can be retrieved from [DEFAULT_CLOCK].
-class DefaultClock implements IClock {
-    const DefaultClock();
+/// The default [Clock] that uses Dart's native methods to find the current time. This is a singleton class.
+class DefaultClock implements Clock {
+    static final DefaultClock _singleton = DefaultClock._internal();
+    factory DefaultClock() => _singleton;
+    DefaultClock._internal();
+
     @override Instant now() => Instant(DateTime.now().microsecondsSinceEpoch);
 }
 
-/// Singleton instance of [DefaultClock]. You should never instantiate [DefaultClock].
-const DEFAULT_CLOCK = DefaultClock();
+Clock _clock = DefaultClock();
 
-IClock _clock = DEFAULT_CLOCK;
+/// The current [Clock] used by the system.
+Clock get clock => _clock;
 
-/// The current [IClock] used by the system.
-IClock get clock => _clock;
-
-/// Set the [IClock] used by the system to [clock].
-set setClock(IClock clock) {
+/// Set the [Clock] used by the system to [clock].
+set clock(Clock clock) {
     _clock = clock;
 }

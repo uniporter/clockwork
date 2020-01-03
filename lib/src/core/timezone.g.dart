@@ -15,12 +15,21 @@ TimeZone _$TimeZoneFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$TimeZoneToJson(TimeZone instance) => <String, dynamic>{
-      'name': instance.name,
-      'offsets': instance.possibleOffsets,
-      'abbrs': instance.possibleAbbrs,
-      'info': instance.history,
-    };
+Map<String, dynamic> _$TimeZoneToJson(TimeZone instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('offsets', instance.possibleOffsets);
+  writeNotNull('abbrs', instance.possibleAbbrs);
+  writeNotNull('info', instance.history?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 TimeZoneHistory _$TimeZoneHistoryFromJson(Map<String, dynamic> json) {
   return TimeZoneHistory(
@@ -29,8 +38,16 @@ TimeZoneHistory _$TimeZoneHistoryFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$TimeZoneHistoryToJson(TimeZoneHistory instance) =>
-    <String, dynamic>{
-      'index': instance.index,
-      'until': instance.until,
-    };
+Map<String, dynamic> _$TimeZoneHistoryToJson(TimeZoneHistory instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('index', instance.index);
+  val['until'] = instance.until;
+  return val;
+}
