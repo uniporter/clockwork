@@ -1,7 +1,7 @@
 import 'dart:collection';
 
 /// Represents a range of any [Comparable] types with a [floor] and a [ceiling].
-class Range<T extends Comparable<T>> {
+class Range<T extends Comparable> {
     final T floor;
     final T ceiling;
     final bool ceilingExclusive;
@@ -13,7 +13,7 @@ class Range<T extends Comparable<T>> {
 }
 
 /// Represents a [Range] that can also iterate through its elements from its [floor].
-class IterableRange<T extends Comparable<T>> extends Range<T> with IterableMixin<T> {
+class IterableRange<T extends Comparable> extends Range<T> with IterableMixin<T> {
     final T floor;
     final T ceiling;
     final bool ceilingExclusive;
@@ -26,7 +26,7 @@ class IterableRange<T extends Comparable<T>> extends Range<T> with IterableMixin
     Iterator<T> get iterator => _RangeIterator(this, _it);
 }
 
-class _RangeIterator<T extends Comparable<T>> implements Iterator<T> {
+class _RangeIterator<T extends Comparable> implements Iterator<T> {
     T? _current = null;
     final IterableRange<T> _range;
     final T Function(T) _it;
