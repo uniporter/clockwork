@@ -93,16 +93,12 @@ class DayPeriodsRule extends _InvariantDayPeriodsRule {
     final Range<int>? night1;
     @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
     final Range<int>? afternoon2;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson, name: 'am-alt-variant')
-    final Range<int>? amAlt;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson, name: 'pm-alt-variant')
-    final Range<int>? pmAlt;
     @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
     final Range<int>? night2;
     @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
     final Range<int>? evening2;
 
-    const DayPeriodsRule([this.midnight, this.noon, this.morning1, this.morning2, this.afternoon1, this.evening1, this.night1, this.afternoon2, this.amAlt, this.pmAlt, this.night2, this.evening2]);
+    const DayPeriodsRule([this.midnight, this.noon, this.morning1, this.morning2, this.afternoon1, this.evening1, this.night1, this.afternoon2, this.night2, this.evening2]);
 
     factory DayPeriodsRule.fromJson(Map<String, dynamic> json) => _$DayPeriodsRuleFromJson(json);
     Map<String, dynamic> toJson() => _$DayPeriodsRuleToJson(this);

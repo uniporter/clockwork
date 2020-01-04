@@ -41,10 +41,6 @@ DayPeriodsRule _$DayPeriodsRuleFromJson(Map<String, dynamic> json) {
     DayPeriodsRule._rangeFromJson(json['evening1'] as Map<String, dynamic>),
     DayPeriodsRule._rangeFromJson(json['night1'] as Map<String, dynamic>),
     DayPeriodsRule._rangeFromJson(json['afternoon2'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(
-        json['am-alt-variant'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(
-        json['pm-alt-variant'] as Map<String, dynamic>),
     DayPeriodsRule._rangeFromJson(json['night2'] as Map<String, dynamic>),
     DayPeriodsRule._rangeFromJson(json['evening2'] as Map<String, dynamic>),
   );
@@ -67,8 +63,6 @@ Map<String, dynamic> _$DayPeriodsRuleToJson(DayPeriodsRule instance) {
   writeNotNull('evening1', DayPeriodsRule._rangeToJson(instance.evening1));
   writeNotNull('night1', DayPeriodsRule._rangeToJson(instance.night1));
   writeNotNull('afternoon2', DayPeriodsRule._rangeToJson(instance.afternoon2));
-  writeNotNull('am-alt-variant', DayPeriodsRule._rangeToJson(instance.amAlt));
-  writeNotNull('pm-alt-variant', DayPeriodsRule._rangeToJson(instance.pmAlt));
   writeNotNull('night2', DayPeriodsRule._rangeToJson(instance.night2));
   writeNotNull('evening2', DayPeriodsRule._rangeToJson(instance.evening2));
   return val;

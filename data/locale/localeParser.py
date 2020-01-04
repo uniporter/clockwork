@@ -1,17 +1,6 @@
 import os
 import json
 
-defaultDayPeriodsRule = {
-    "am": {
-        "_from": "00:00",
-        "_before": "12:00"
-    },
-    "pm": {
-        "_from": "12:00",
-        "_before": "24:00",
-    },
-}
-
 # Load the day periods rule and makes sure that each locale has a corresponding entry.
 def loadDayPeriodsRule(localeNameList: list) -> dict:
     with open("raw/dayPeriods.json") as fp:
@@ -43,10 +32,7 @@ for dir in os.listdir('raw/dates/'):
                 "dayPeriods": parsed["dayPeriods"],
                 "eras": parsed["eras"]
             },
-            "dayPeriodsRules": {
-                **dayPeriodsRule[next(key for key in dayPeriodsRule.keys() if dir.startswith(key))],
-                **defaultDayPeriodsRule,
-            },
+            "dayPeriodsRules": dayPeriodsRule[next(key for key in dayPeriodsRule.keys() if dir.startswith(key))],
         })
 
 with open('res.json', "x") as fp:

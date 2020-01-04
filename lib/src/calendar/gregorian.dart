@@ -133,21 +133,92 @@ extension QuarterExtension on Quarter {
     String? toShortStandalone([Locale? locale]) => nonNullLocale(locale).gregorianCalendar.quarters.standalone.short?.elementAt(this.index - 1);
 }
 
+enum FixedDayPeriod {
+    AM,
+    PM
+}
+
+extension FixedDayPeriodExtension on FixedDayPeriod {
+    String? _map(DayPeriods dp, [bool alt = false]) {
+        switch (this) {
+            case FixedDayPeriod.AM:
+                return alt ? dp.amAlt : dp.am;
+            case FixedDayPeriod.PM:
+                return alt ? dp.pmAlt : dp.pm;
+            default:
+                return null;
+        }
+    }
+
+    /// Returns the locale-sensitive abbreviated name of the day period.
+    String toAbbr([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.format.abbreviated) as String;
+    /// Returns the locale-sensitive narrow name of the day period.
+    String toNarrow([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.format.narrow) as String;
+    /// Returns the locale-sensitive wide name of the day period.
+    String toWide([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.format.wide) as String;
+    /// Returns the standalone locale-sensitive abbreviated name of the day period.
+    String toAbbrStandalone([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.standalone.abbreviated) as String;
+    /// Returns the standalone locale-sensitive narrow name of the day period.
+    String toNarrowStandalone([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.standalone.narrow) as String;
+    /// Returns the standalone locale-sensitive wide name of the day period.
+    String toWideStandalone([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.standalone.wide) as String;
+
+    /// Returns the alternative locale-sensitive abbreviated name of the day period.
+    String? toAbbrAlt([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.format.abbreviated, true);
+    /// Returns the alternative locale-sensitive narrow name of the day period.
+    String? toNarrowAlt([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.format.narrow, true);
+    /// Returns the alternative locale-sensitive wide name of the day period.
+    String? toWideAlt([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.format.wide, true);
+    /// Returns the alternative standalone locale-sensitive abbreviated name of the day period.
+    String? toAbbrStandaloneAlt([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.standalone.abbreviated, true);
+    /// Returns the alternative standalone locale-sensitive narrow name of the day period.
+    String? toNarrowStandaloneAlt([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.standalone.narrow, true);
+    /// Returns the alternative standalone locale-sensitive wide name of the day period.
+    String? toWideStandaloneAlt([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.standalone.wide, true);
+}
+
 enum DayPeriod {
-    midnight,
-    noon,
-    morning1,
-    morning2,
-    afternoon1,
-    evening1,
-    night1,
-    afternoon2,
-    amAlt,
-    pmAlt,
-    night2,
-    evening2,
-    am,
-    pm,
+    Midnight,
+    Noon,
+    Morning1,
+    Morning2,
+    Afternoon1,
+    Evening1,
+    Night1,
+    Afternoon2,
+    Night2,
+    Evening2,
+}
+
+extension DayPeriodExtension on DayPeriod {
+    String? _map(DayPeriods dp) {
+        switch (this) {
+            case DayPeriod.Midnight: return dp.midnight;
+            case DayPeriod.Noon: return dp.noon;
+            case DayPeriod.Morning1: return dp.morning1;
+            case DayPeriod.Morning2: return dp.morning2;
+            case DayPeriod.Afternoon1: return dp.afternoon1;
+            case DayPeriod.Evening1: return dp.evening1;
+            case DayPeriod.Night1: return dp.night1;
+            case DayPeriod.Afternoon2: return dp.afternoon2;
+            case DayPeriod.Night2: return dp.night2;
+            case DayPeriod.Evening2: return dp.evening2;
+            default: return null;
+        }
+    }
+
+    /// Returns the locale-sensitive abbreviated name of the day period.
+    String? toAbbr([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.format.abbreviated);
+    /// Returns the locale-sensitive narrow name of the day period.
+    String? toNarrow([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.format.narrow) as String;
+    /// Returns the locale-sensitive wide name of the day period.
+    String? toWide([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.format.wide);
+    /// Returns the standalone locale-sensitive abbreviated name of the day period.
+    String? toAbbrStandalone([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.standalone.abbreviated);
+    /// Returns the standalone locale-sensitive narrow name of the day period.
+    String? toNarrowStandalone([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.standalone.narrow);
+    /// Returns the standalone locale-sensitive wide name of the day period.
+    String? toWideStandalone([Locale? locale]) => _map(nonNullLocale(locale).gregorianCalendar.dayPeriods.standalone.wide);
 }
 
 enum Month {
@@ -339,6 +410,14 @@ extension GregorianCalendarExtension on Timestamp {
     /// Returns the quarter.
     Quarter get quarter => Quarter.values[(month.index - 1) ~ 3 + 1];
 
+    /// Returns the fixed day period (AM/PM).
+    FixedDayPeriod get fixedDayPeriod => hour < 12 ? FixedDayPeriod.AM : FixedDayPeriod.PM;
+    /// Returns the day period. This is a locale-dependent getter. Currently the locale defaults to [currLocale], but we expect this to change.
+    DayPeriod get dayPeriod {
+        final minutesSinceMidnight = hour * minutesPerHour + minute;
+        return currLocale.dayPeriodsRule.keys.firstWhere((dayPeriod) => currLocale.dayPeriodsRule[dayPeriod].contains(minutesSinceMidnight));
+    }
+
     /// Returns the week number of year according to the ISO8601 standard.
     int get weekOfYearISO {
         final isCurrLeapYear = isLeapYear(year);
@@ -410,9 +489,6 @@ extension GregorianCalendarExtension on Timestamp {
 
     /// Returns the number of days since the beginning of the year.
     int get dayOfYear => IterableRange<int>(1, month.index, (i) => i++).fold(0, (counter, month) => counter += daysPerMonth(Month.values[month], year)) + day;
-
-    /// Returns whether the [Timestamp] is in AM or PM.
-    bool get isPM => hour >= 12;
 }
 
 /// A struct that holds the components specific to Gregorian calendars: [year], [month], and [day].
