@@ -1,7 +1,6 @@
 import 'package:clockwork/src/core/instant.dart';
 import 'package:clockwork/src/core/interval.dart';
 import 'package:clockwork/src/core/timezone.dart';
-import 'package:clockwork/src/format/format.dart';
 import 'package:clockwork/src/format/formattable.dart';
 import 'package:clockwork/src/units/conversion.dart';
 
@@ -56,11 +55,6 @@ class Timestamp with IFormattable {
     int get millisecond => (zonedMicrosecondsSinceEpoch % microsecondsPerSecond) ~/ microsecondsPerMillisecond;
     /// Returns the microsecond.
     int get microsecond => zonedMicrosecondsSinceEpoch % microsecondsPerMillisecond;
-
-    /// Returns a ISO8601 standard description of the [Timestamp].
-    String formatISO() => format(TimestampFormats.ISO8601);
-
-    @override String toString() => formatISO();
 
     @override bool operator ==(covariant Timestamp other) => this.timezone == other.timezone && this.instant == other.instant;
     Timestamp operator +(Interval dur) => Timestamp(this.timezone, this.instant + dur);

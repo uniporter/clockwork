@@ -1,8 +1,6 @@
 analyzer:
   enable-experiment:
     - non-nullable
-  exclude:
-    - lib/src/**/*.g.dart
 linter:
   rules:
     - prefer_const_constructors
