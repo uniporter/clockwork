@@ -8,6 +8,8 @@ environment:
 
 dependencies:
   json_annotation:
+  clockwork_gregorian_calendar:
+    path: ../clockwork-gregorian-calendar
 
 dev_dependencies:
   json_serializable:

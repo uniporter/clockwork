@@ -1,5 +1,5 @@
-import 'package:clockwork/src/calendar/gregorian.dart';
 import 'package:clockwork/src/core/timestamp.dart';
+import 'package:clockwork_gregorian_calendar/clockwork_gregorian_calendar.dart';
 
 Calendar _currCalendar = GregorianCalendar();
 /// Set the default [Calendar].

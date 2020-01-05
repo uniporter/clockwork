@@ -1,4 +1,4 @@
-import 'package:clockwork/src/calendar/gregorian.dart' as Gregorian;
+import 'package:clockwork_gregorian_calendar/clockwork_gregorian_calendar.dart' as Gregorian;
 import 'package:clockwork/src/locale/en.locale.dart';
 import 'package:clockwork/src/utils/exception.dart';
 import 'package:clockwork/src/utils/system_util.dart';
