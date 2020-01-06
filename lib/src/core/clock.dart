@@ -1,4 +1,4 @@
-import 'package:clockwork/src/core/instant.dart';
+import '../core/instant.dart';
 
 /// An interface that represents a clock. Its only function is to return the current time as an [Instant].
 ///

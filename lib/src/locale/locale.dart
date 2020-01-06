@@ -1,8 +1,9 @@
-import 'package:clockwork_gregorian_calendar/clockwork_gregorian_calendar.dart' as Gregorian;
-import 'package:clockwork/src/locale/en.locale.dart';
-import 'package:clockwork/src/utils/exception.dart';
-import 'package:clockwork/src/utils/system_util.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+import '../units/unit.dart';
+import '../utils/exception.dart';
+import '../utils/system_util.dart';
+import 'en.locale.dart';
 
 part 'locale.g.dart';
 
@@ -22,14 +23,14 @@ class Locale {
     @JsonKey(nullable: false)
     final GregorianCalendarData gregorianCalendar;
     @JsonKey(nullable: false, toJson: _dayPeriodsRuleToJson, fromJson: _dayPeriodsRuleFromJson)
-    final Map<Gregorian.DayPeriod, Range<int>> dayPeriodsRule;
+    final Map<DayPeriod, Range<int>> dayPeriodsRule;
 
     const Locale(this.gregorianCalendar, this.dayPeriodsRule);
 
     factory Locale.fromJson(Map<String, dynamic> json) => _$LocaleFromJson(json);
     Map<String, dynamic> toJson() => _$LocaleToJson(this);
 
-    static Map<Gregorian.DayPeriod, Range<int>> _dayPeriodsRuleFromJson(Map<String, Map<String, String>> json) {
+    static Map<DayPeriod, Range<int>> _dayPeriodsRuleFromJson(Map<String, Map<String, String>> json) {
         int _parseRangeValue(String val) {
             final components = val.split(':');
             final hours = int.parse(components.first);
@@ -41,13 +42,13 @@ class Locale {
         return json.map((key, val) {
             if (val.containsKey('at')) {
                 final at = _parseRangeValue(val['_at']);
-                final period = Gregorian.DayPeriod.values.firstWhere((val) => val.toString().split('.').last == key);
+                final period = DayPeriod.values.firstWhere((val) => val.toString().split('.').last == key);
                 return MapEntry(period, Range(at, at, false));
             } else if (val.containsKey('before') && val.containsKey('after')) {
                 key = key == 'am-alt-variant' ? 'amAlt' : key == 'pm-alt-variant' ? 'pmAlt' : key;
                 final from = _parseRangeValue(val['_from']);
                 final before = _parseRangeValue(val['_before']);
-                final period = Gregorian.DayPeriod.values.firstWhere((val) => val.toString().split('.').last == key);
+                final period = DayPeriod.values.firstWhere((val) => val.toString().split('.').last == key);
                 return MapEntry(period, Range(from, before));
             } else {
                 throw GeneralException("Invalid locale data: locale data contain invalid day period rules information and might have been corrupted.");
@@ -55,7 +56,7 @@ class Locale {
         });
     }
 
-    static Map<String, dynamic> _dayPeriodsRuleToJson(Map<Gregorian.DayPeriod, Range<int>> rule) {
+    static Map<String, dynamic> _dayPeriodsRuleToJson(Map<DayPeriod, Range<int>> rule) {
         return rule.map((period, range) {
             final periodNameLiteral = period.toString().split('.').last;
             final periodName = periodNameLiteral == 'amAlt' ? 'am-alt-variant' : periodNameLiteral == 'pmAlt' ? 'pm-alt-variant' : periodNameLiteral;

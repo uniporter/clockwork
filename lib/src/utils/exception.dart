@@ -1,7 +1,9 @@
-import 'package:clockwork/src/utils/constants.dart';
+import '../core/timestamp.dart';
+
+import 'constants.dart';
 
 abstract class ClockworkException implements Exception {
-    String _toStringHelper(String msg) => "$PACKAGE_NAME: ${this.runtimeType}: $msg";
+    String _toStringHelper(String msg) => "$PACKAGE_NAME: $runtimeType: $msg";
 }
 
 class GeneralException extends ClockworkException {
@@ -13,9 +15,7 @@ class GeneralException extends ClockworkException {
     String toString() => _toStringHelper(msg);
 }
 
-/// Thrown when functions requiring some external data are called and those data haven't been loaded. For instance,
-/// most functions in the library requires timezone data provided by [TimeZoneData.initialize]. If any such function
-/// is called before [TimeZoneData.initialize] finishes, this exception will be thrown.
+/// Thrown when functions requiring some external data are called and those data haven't been loaded.
 class DataNotLoadedException extends ClockworkException {
     final String dataName;
 
@@ -35,7 +35,7 @@ class InvalidArgumentException extends ClockworkException {
     String toString() => _toStringHelper("$argName is not in an valid format.");
 }
 
-/// Thrown when trying to parse an user-provided timestamp string or [TimestampComponents] and [TimeZone] pair where the
+/// Thrown when trying to create a [Timestamp] where the
 /// time indicated by the provided info doesn't actually exist. This is usually due to change of time offsets within the
 /// same timezone that results in a lapse in the timezone's calendar.
 ///
@@ -44,7 +44,7 @@ class InvalidArgumentException extends ClockworkException {
 /// if any timestamp factory is called with parameters indicating the time of `1:30am, March 10 2019 EST`, this exception
 /// will be thrown.
 class TimestampNonexistentException extends ClockworkException {
-    final String timestamp;
+    final Timestamp timestamp;
 
     TimestampNonexistentException(this.timestamp);
 
@@ -52,7 +52,7 @@ class TimestampNonexistentException extends ClockworkException {
     String toString() => _toStringHelper("$timestamp does not exist.");
 }
 
-/// Thrown when trying to parse an user-provided timestamp string or [TimestampComponents] and [TimeZone] pair where the
+/// Thrown when trying to create a [Timestamp] where the
 /// time indicated by the provided info points to more than one [Timestamp] instances. This is usually due to change of time
 /// offsets within the same timezone that results in a partial repetition in the timezone's calendar.
 ///
@@ -62,7 +62,7 @@ class TimestampNonexistentException extends ClockworkException {
 /// which specific instance in time, whether before or after the DST shift, is the parameter referring to, and this exception
 /// will be thrown.
 class AmbiguousTimestampException extends ClockworkException {
-    final String timestamp;
+    final Timestamp timestamp;
 
     AmbiguousTimestampException(this.timestamp) {}
 

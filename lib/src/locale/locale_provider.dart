@@ -1,9 +1,9 @@
-import 'dart:io';
 import 'dart:convert';
+import 'dart:io';
 
-import 'package:clockwork/src/locale/en.locale.dart';
-import 'package:clockwork/src/locale/locale.dart';
-import 'package:clockwork/src/utils/exception.dart';
+import '../utils/exception.dart';
+import 'en.locale.dart';
+import 'locale.dart';
 
 /// Provides locale data for the package.
 abstract class LocaleProvider {
@@ -11,7 +11,7 @@ abstract class LocaleProvider {
     void load(String localeName);
     /// Get the data for [localeName]. If such data isn't loaded, an exception is thrown.
     Locale call(String localeName);
-    /// Get the data for [localeName]. If such data isn't loaded, [null] is returned.
+    /// Get the data for [localeName]. If such data isn't loaded, null is returned.
     Locale operator [](String localeName);
 }
 
@@ -29,6 +29,7 @@ class DefaultLocaleProvider implements LocaleProvider {
         _dataPath = dataPath;
     }
 
+    @override
     void load(String localeName) async {
         if (data.containsKey(localeName)) return;
         else if (_dataPath == null) throw GeneralException("You haven't indicated a path from which we can load data. Use setDataPath()");
@@ -36,7 +37,7 @@ class DefaultLocaleProvider implements LocaleProvider {
         late final parsedObj;
 
         try {
-            final fp = File("${_dataPath}/$localeName.json");
+            final fp = File("$_dataPath/$localeName.json");
             parsedObj = json.decode(await fp.readAsString());
         } catch (e) {
             if (e is FileSystemException) throw InvalidArgumentException('localeName');
@@ -46,6 +47,6 @@ class DefaultLocaleProvider implements LocaleProvider {
         data[localeName] = Locale.fromJson(parsedObj);
     }
 
-    Locale call(String localeName) => data.containsKey(localeName) ? data[localeName] : throw DataNotLoadedException('Locale Data');
-    Locale operator [](String localeName) => data.containsKey(localeName) ? data[localeName] : null;
+    @override Locale call(String localeName) => data.containsKey(localeName) ? data[localeName] : throw DataNotLoadedException('Locale Data');
+    @override Locale operator [](String localeName) => data.containsKey(localeName) ? data[localeName] : null;
 }

@@ -1,7 +1,7 @@
-import 'package:clockwork/src/core/interval.dart';
-import 'package:clockwork/src/core/timestamp.dart';
-import 'package:clockwork/src/core/timezone.dart';
-import 'package:clockwork/src/core/clock.dart';
+import 'clock.dart';
+import 'interval.dart';
+import 'timestamp.dart';
+import 'timezone.dart';
 
 /// Represents an instant in the entire chronology of time. This object is timezone/location invariant.
 class Instant implements Comparable<Instant> {
@@ -14,10 +14,10 @@ class Instant implements Comparable<Instant> {
     factory Instant.fromDateTime(DateTime val) => Instant(val.microsecondsSinceEpoch);
 
     /// Returns the number of microseconds since the Unix Epoch time, 1970-01-01T00:00:00Z (UTC).
-    int microSecondsSinceEpoch() => _microSecondsSinceEpoch;
+    int microsecondsSinceEpoch() => _microSecondsSinceEpoch;
 
     /// Returns an `Interval` representing the difference of this from `other`.
-    Interval difference(Instant other) => Interval(microseconds: this.microSecondsSinceEpoch() - other.microSecondsSinceEpoch());
+    Interval difference(Instant other) => Interval(microseconds: microsecondsSinceEpoch() - other.microsecondsSinceEpoch());
 
     /// Returns `this + dur`. Wrapper for the `+` operator.
     Instant add(Interval dur) => this + dur;
@@ -34,12 +34,13 @@ class Instant implements Comparable<Instant> {
     /// Returns a timestamp representing this instance of time in `timezone`.
     Timestamp toTimestamp(TimeZone timezone) => Timestamp(timezone, this);
 
-    @override int compareTo(covariant Instant other) => this.microSecondsSinceEpoch().compareTo(other.microSecondsSinceEpoch());
-    @override bool operator ==(covariant Instant other) => this.microSecondsSinceEpoch() == other.microSecondsSinceEpoch();
-    bool operator >(Instant other) => this.microSecondsSinceEpoch() > other.microSecondsSinceEpoch();
-    bool operator >=(Instant other) => this.microSecondsSinceEpoch() >= other.microSecondsSinceEpoch();
-    bool operator <(Instant other) => this.microSecondsSinceEpoch() < other.microSecondsSinceEpoch();
-    bool operator <=(Instant other) => this.microSecondsSinceEpoch() <= other.microSecondsSinceEpoch();
-    Instant operator +(Interval dur) => Instant(this.microSecondsSinceEpoch() + dur.asMicroseconds());
-    Instant operator -(Interval dur) => Instant(this.microSecondsSinceEpoch() - dur.asMicroseconds());
+    @override int compareTo(covariant Instant other) => microsecondsSinceEpoch().compareTo(other.microsecondsSinceEpoch());
+    @override bool operator ==(covariant Instant other) => compareTo(other) == 0;
+    @override int get hashCode => microsecondsSinceEpoch().hashCode;
+    bool operator >(Instant other) => compareTo(other) > 0;
+    bool operator >=(Instant other) => compareTo(other) >= 0;
+    bool operator <(Instant other) => compareTo(other) < 0;
+    bool operator <=(Instant other) => compareTo(other) <= 0;
+    Instant operator +(Interval dur) => Instant(microsecondsSinceEpoch() + dur.asMicroseconds());
+    Instant operator -(Interval dur) => Instant(microsecondsSinceEpoch() - dur.asMicroseconds());
 }

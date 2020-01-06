@@ -3,10 +3,11 @@ import 'dart:collection';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:clockwork/src/core/interval.dart';
-import 'package:clockwork/src/units/conversion.dart';
-import 'package:clockwork/src/utils/exception.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+import '../units/unit.dart';
+import '../utils/exception.dart';
+import 'interval.dart';
 
 part 'timezone.g.dart';
 
@@ -116,7 +117,8 @@ class TimeZone {
         return data.map<TimeZoneHistory>((datum) => TimeZoneHistory._fromJson(datum)).toList();
     }
 
-    @override bool operator ==(covariant TimeZone other) => this.name == other.name;
+    @override bool operator ==(covariant TimeZone other) => name == other.name;
+    @override int get hashCode => name.hashCode;
 }
 
 /// Represents the specific offset/abbr information of the geographical timezone at a specific point in history.
@@ -134,7 +136,7 @@ class TimeZoneHistory {
         required this.until,
     }) : assert(index != null && until != null);
 
-    static num _untilFromJson(int data) => data == null ? double.infinity : data * microsecondsPerMillisecond;
+    static num _untilFromJson(int data) => data == null ? double.infinity : data * Millisecond.microsecondsPer;
 
     factory TimeZoneHistory._fromJson(Map<String, dynamic> json) => _$TimeZoneHistoryFromJson(json);
     Map<String, dynamic> toJson() => _$TimeZoneHistoryToJson(this);

@@ -10,6 +10,7 @@ dependencies:
   json_annotation:
   clockwork_gregorian_calendar:
     path: ../clockwork-gregorian-calendar
+  meta:
 
 dev_dependencies:
   json_serializable:

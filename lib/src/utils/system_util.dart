@@ -1,5 +1,30 @@
 import 'dart:collection';
 
+import 'exception.dart';
+
+/// An [int]-like data structure that imposes a range restriction on the kind of integers it can hold.
+class RangedValue implements Comparable<RangedValue> {
+    final int value;
+    final Range<num> range = const Range<num>(double.negativeInfinity, double.infinity);
+
+    RangedValue(this.value) {
+        if (!range.contains(value)) throw InvalidArgumentException('value');
+    }
+
+    /// Returns the underlying integer value of this.
+    int call() => value;
+
+    @override String toString() => value.toString();
+
+    @override bool operator ==(covariant RangedValue other) => value == other.value;
+    @override int get hashCode => value.hashCode;
+    @override int compareTo(covariant RangedValue other) => value.compareTo(other.value);
+    bool operator <(covariant RangedValue other) => value.compareTo(other.value) < 0;
+    bool operator >(covariant RangedValue other) => value.compareTo(other.value) > 0;
+    bool operator <=(covariant RangedValue other) => value.compareTo(other.value) <= 0;
+    bool operator >=(covariant RangedValue other) => value.compareTo(other.value) >= 0;
+}
+
 /// Represents a range of any [Comparable] types with a [floor] and a [ceiling].
 class Range<T extends Comparable> {
     final T floor;
@@ -14,16 +39,16 @@ class Range<T extends Comparable> {
 
 /// Represents a [Range] that can also iterate through its elements from its [floor].
 class IterableRange<T extends Comparable> extends Range<T> with IterableMixin<T> {
-    final T floor;
-    final T ceiling;
-    final bool ceilingExclusive;
+    @override final T floor;
+    @override final T ceiling;
+    @override final bool ceilingExclusive;
 
     final T Function(T) _it;
 
     IterableRange(this.floor, this.ceiling, this._it, [this.ceilingExclusive = true])
         : super(floor, ceiling, ceilingExclusive);
 
-    Iterator<T> get iterator => _RangeIterator(this, _it);
+    @override Iterator<T> get iterator => _RangeIterator(this, _it);
 }
 
 class _RangeIterator<T extends Comparable> implements Iterator<T> {
@@ -35,7 +60,8 @@ class _RangeIterator<T extends Comparable> implements Iterator<T> {
 
     _RangeIterator(this._range, this._it);
 
-    T? get current => _current;
+    @override T? get current => _current;
+    @override 
     bool moveNext() {
         if (_current == null && !_started) {
             _current = _range.floor;
@@ -54,16 +80,16 @@ class _RangeIterator<T extends Comparable> implements Iterator<T> {
 /// An identity function. Since Dart does not allow const lambdas, we have to write a static function here.
 T identity<T>(T elem) => elem;
 
-/// Type signature for the inner lambda for [IterableExtension.forEach].
+/// Type signature for the inner lambda for [Iterable<T>.forEachX].
 typedef ForEachLambda<T> = void Function(T, int);
-/// Type signature for the inner lambda for [IterableExtension.foldX].
+/// Type signature for the inner lambda for [Iterable<T>.foldX].
 typedef Folder<T, A> = A Function(A, T, int, Iterable<T>);
 
 /// An extension to existing methods of [Iterable].
 extension IterableExtension<T> on Iterable<T> {
     /// Exhanced [Iterable.forEach] where the inner lambda also provides the index of the current item as a parameter.
     void forEachX(ForEachLambda lambda) {
-        final it = this.iterator;
+        final it = iterator;
         int currIndex = 0;
         while (it.moveNext()) {
             lambda(it.current, currIndex++);
@@ -75,7 +101,7 @@ extension IterableExtension<T> on Iterable<T> {
     /// value after the iteration is complete.
      A foldX<A>(A initial, Folder<T, A> folder, [A Function(A)? last]) {
         A curr = initial;
-        this.forEachX((elem, index) => curr = folder(curr, elem, index, this));
+        forEachX((elem, index) => curr = folder(curr, elem, index, this));
         return last == null ? curr : last(curr);
     }
 }

@@ -1,14 +1,14 @@
-import 'package:clockwork/src/core/instant.dart';
-import 'package:clockwork/src/core/interval.dart';
-import 'package:clockwork/src/core/timezone.dart';
-import 'package:clockwork/src/format/formattable.dart';
-import 'package:clockwork/src/units/conversion.dart';
+import '../format/formattable.dart';
+import '../units/unit.dart';
+import 'instant.dart';
+import 'interval.dart';
+import 'timezone.dart';
 
 /// A timezone-aware instant. This is simply a container for a [TimeZone] and an [Instant] object, but provides most utility
-/// methods you will find for DateTime objects in other datetime libraries.
+/// methods you will find for [DateTime] objects in other datetime libraries.
 ///
 /// By default, [Timestamp] comes equipped with support for the Gregorian Calendar. This is hard-coded and cannot be removed. To add more calendar
-/// supports for [Timestamp], simply define an extension on [Timestamp], but make sure no naming conflicts occur.
+/// supports for [Timestamp], simply define an extension on [Timestamp], but make sure that no naming conflicts occur.
 class Timestamp with IFormattable {
     final TimeZone timezone;
     final Instant instant;
@@ -32,7 +32,7 @@ class Timestamp with IFormattable {
     Timestamp.epochUTC() : timezone = TimeZone.utc(), instant = Instant.epoch();
 
     /// Returns a new [Timestamp] of the same instant but in [newZone].
-    Timestamp switchTimeZone(TimeZone newZone) => this.instant.toTimestamp(newZone);
+    Timestamp switchTimeZone(TimeZone newZone) => instant.toTimestamp(newZone);
 
     /// Returns `this + dur`. Wrapper for the [+] operator.
     Timestamp add(Interval dur) => this + dur;
@@ -41,22 +41,23 @@ class Timestamp with IFormattable {
     Timestamp subtract(Interval dur) => this - dur;
 
     /// Returns the difference between the underlying instant of the two timestamps.
-    Interval difference(Timestamp other) => this.instant.difference(other.instant);
+    Interval difference(Timestamp other) => instant.difference(other.instant);
 
-    int get zonedMicrosecondsSinceEpoch => instant.microSecondsSinceEpoch() + timezone.offset(instant.microSecondsSinceEpoch()).asMicroseconds();
+    int get zonedMicrosecondsSinceEpoch => instant.microsecondsSinceEpoch() + timezone.offset(instant.microsecondsSinceEpoch()).asMicroseconds();
 
     /// Returns the hour.
-    int get hour => (zonedMicrosecondsSinceEpoch % microsecondsPerDay) ~/ microsecondsPerHour;
+    Hour get hour => Hour((zonedMicrosecondsSinceEpoch % Day.microsecondsPer) ~/ Hour.microsecondsPer);
     /// Returns the minute.
-    int get minute => (zonedMicrosecondsSinceEpoch % microsecondsPerHour) ~/ microsecondsPerMinute;
+    Minute get minute => Minute((zonedMicrosecondsSinceEpoch % Hour.microsecondsPer) ~/ Minute.microsecondsPer);
     /// Returns the second.
-    int get second => (zonedMicrosecondsSinceEpoch % microsecondsPerMinute) ~/ microsecondsPerSecond;
+    Second get second => Second((zonedMicrosecondsSinceEpoch % Minute.microsecondsPer) ~/ Second.microsecondsPer);
     /// Returns the millisecond.
-    int get millisecond => (zonedMicrosecondsSinceEpoch % microsecondsPerSecond) ~/ microsecondsPerMillisecond;
+    Millisecond get millisecond => Millisecond((zonedMicrosecondsSinceEpoch % Second.microsecondsPer) ~/ Millisecond.microsecondsPer);
     /// Returns the microsecond.
-    int get microsecond => zonedMicrosecondsSinceEpoch % microsecondsPerMillisecond;
+    Microsecond get microsecond => Microsecond(zonedMicrosecondsSinceEpoch % Millisecond.microsecondsPer);
 
-    @override bool operator ==(covariant Timestamp other) => this.timezone == other.timezone && this.instant == other.instant;
-    Timestamp operator +(Interval dur) => Timestamp(this.timezone, this.instant + dur);
-    Timestamp operator -(Interval dur) => Timestamp(this.timezone, this.instant - dur);
+    @override bool operator ==(covariant Timestamp other) => timezone == other.timezone && instant == other.instant;
+    @override int get hashCode => (timezone.hashCode ~/ 2) + (instant.hashCode ~/ 2);
+    Timestamp operator +(Interval dur) => Timestamp(timezone, instant + dur);
+    Timestamp operator -(Interval dur) => Timestamp(timezone, instant - dur);
 }
