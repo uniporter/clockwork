@@ -1,6 +1,7 @@
 import 'package:clockwork_gregorian_calendar/clockwork_gregorian_calendar.dart';
 
 import '../core/timestamp.dart';
+import '../locale/locale.dart';
 import '../units/unit.dart';
 
 Calendar _currCalendar = GregorianCalendar();
@@ -18,15 +19,16 @@ abstract class Calendar extends Object {
 
     const Calendar();
 
-    /// Returns the year of the era.
-    Year yearOfEra(Timestamp ts);
+    /// Returns the year of the era. If the calendar doesn't support years, the default implementation returns
+    /// the Gregorian year of era.
+    Year yearOfEra(Timestamp ts) => ts.yearOfEra;
 
-    /// Returns the year.
-    Year year(Timestamp ts);
+    /// Returns the year. If the calendar doesn't support years, the default implementation returns the Gregorian year.
+    Year year(Timestamp ts) => ts.year;
 
     /// Returns the week year of [ts] with respect to this [Calendar]. If the calendar doesn't support week years,
-    /// do not override this method: the default implementation returns the gregorian week year.
-    Year weekYear(Timestamp ts) => ts.weekyear;
+    /// the default implementation returns the gregorian week year.
+    Year weekYear(Timestamp ts, [Locale? locale]) => ts.weekYear(locale);
 
     /// Returns the cyclic year of [ts]. If the calendar doesn't support cyclic years, the default implementation returns
     /// the Gregorian year of era number.
@@ -44,10 +46,21 @@ abstract class Calendar extends Object {
     Era era(Timestamp ts) => ts.era;
 
     /// Returns the weekday of [ts]. If the calendar doesn't support weekdays, the default implementation returns the Gregorian weekday.
-    Weekday weekday(Timestamp ts) => ts.weekday;
+    Weekday weekday(Timestamp ts, [Locale? locale]) => ts.weekday(locale);
+
+    /// Returns the week of year of [ts]. If the calendar doesn't support week of year, the default implementation returns the Gregorian week of year.
+    /// If [locale] is not specified, we use the [currLocale].
+    Week weekOfYear(Timestamp ts, [Locale? locale]) => ts.weekOfYear(locale);
+
+    /// Returns the week of month of [ts]. If the calendar doesn't support week of month, the default implementation returns the Gregorian week of month.
+    /// If [locale] is not specified, we use the [currLocale].
+    Week weekOfMonth(Timestamp ts, [Locale? locale]) => ts.weekOfMonth(locale);
 
     /// Returns the day of [ts].
     Day day(Timestamp ts) => ts.day;
+
+    /// Returns the day of year of [ts].
+    Day dayOfYear(Timestamp ts) => ts.dayOfYear;
 
     /// Returns the month of [ts].
     Month month(Timestamp ts) => ts.month;
@@ -56,7 +69,7 @@ abstract class Calendar extends Object {
     FixedDayPeriod fixedDayPeriod(Timestamp ts) => ts.fixedDayPeriod;
 
     /// Returns the day period of [ts].
-    DayPeriod dayPeriod(Timestamp ts) => ts.dayPeriod;
+    DayPeriod? dayPeriod(Timestamp ts, [Locale? locale]) => ts.dayPeriod(locale);
 
     @override bool operator ==(covariant Calendar other) => name == other.name;
     @override int get hashCode => name.hashCode;

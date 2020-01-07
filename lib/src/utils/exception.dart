@@ -44,7 +44,7 @@ class InvalidArgumentException extends ClockworkException {
 /// if any timestamp factory is called with parameters indicating the time of `1:30am, March 10 2019 EST`, this exception
 /// will be thrown.
 class TimestampNonexistentException extends ClockworkException {
-    final Timestamp timestamp;
+    final String timestamp;
 
     TimestampNonexistentException(this.timestamp);
 

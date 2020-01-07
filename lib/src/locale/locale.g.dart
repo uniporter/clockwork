@@ -12,6 +12,7 @@ Locale _$LocaleFromJson(Map<String, dynamic> json) {
         json['gregorianCalendar'] as Map<String, dynamic>),
     Locale._dayPeriodsRuleFromJson(
         json['dayPeriodsRule'] as Map<String, Map<String, String>>),
+    WeekData.fromJson(json['weekData'] as Map<String, dynamic>),
   );
 }
 
@@ -28,45 +29,21 @@ Map<String, dynamic> _$LocaleToJson(Locale instance) {
 
   writeNotNull(
       'dayPeriodsRule', Locale._dayPeriodsRuleToJson(instance.dayPeriodsRule));
+  val['weekData'] = instance.weekData.toJson();
   return val;
 }
 
-DayPeriodsRule _$DayPeriodsRuleFromJson(Map<String, dynamic> json) {
-  return DayPeriodsRule(
-    DayPeriodsRule._rangeFromJson(json['midnight'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(json['noon'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(json['morning1'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(json['morning2'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(json['afternoon1'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(json['evening1'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(json['night1'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(json['afternoon2'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(json['night2'] as Map<String, dynamic>),
-    DayPeriodsRule._rangeFromJson(json['evening2'] as Map<String, dynamic>),
+WeekData _$WeekDataFromJson(Map<String, dynamic> json) {
+  return WeekData(
+    json['firstDayOfWeek'] as int,
+    json['minDaysOfWeek'] as int,
   );
 }
 
-Map<String, dynamic> _$DayPeriodsRuleToJson(DayPeriodsRule instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('midnight', DayPeriodsRule._rangeToJson(instance.midnight));
-  writeNotNull('noon', DayPeriodsRule._rangeToJson(instance.noon));
-  writeNotNull('morning1', DayPeriodsRule._rangeToJson(instance.morning1));
-  writeNotNull('morning2', DayPeriodsRule._rangeToJson(instance.morning2));
-  writeNotNull('afternoon1', DayPeriodsRule._rangeToJson(instance.afternoon1));
-  writeNotNull('evening1', DayPeriodsRule._rangeToJson(instance.evening1));
-  writeNotNull('night1', DayPeriodsRule._rangeToJson(instance.night1));
-  writeNotNull('afternoon2', DayPeriodsRule._rangeToJson(instance.afternoon2));
-  writeNotNull('night2', DayPeriodsRule._rangeToJson(instance.night2));
-  writeNotNull('evening2', DayPeriodsRule._rangeToJson(instance.evening2));
-  return val;
-}
+Map<String, dynamic> _$WeekDataToJson(WeekData instance) => <String, dynamic>{
+      'firstDayOfWeek': instance.firstDayOfWeek,
+      'minDaysOfWeek': instance.minDaysOfWeek,
+    };
 
 GregorianCalendarData _$GregorianCalendarDataFromJson(
     Map<String, dynamic> json) {

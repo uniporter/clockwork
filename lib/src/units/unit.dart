@@ -15,6 +15,7 @@ export 'month.dart';
 export 'quarter.dart';
 export 'second.dart';
 export 'unit.dart';
+export 'week.dart';
 export 'weekday.dart';
 export 'year.dart';
 
@@ -22,6 +23,8 @@ class Unit extends RangedValue {
     Unit(value) : super(value);
 
     final Unit Function(int value) builder = (value) => Unit(value);
+
+    int get size => (range.ceilingExclusive ? range.ceiling - range.floor : range.ceiling - range.floor + 1) as int;
 
     /// Prints the underlying [value] of this.
     @override String toString() => value.toString();

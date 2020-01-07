@@ -12,7 +12,7 @@ Locale _currLocale = en;
 set currLocale(Locale locale) {
     _currLocale = locale;
 }
-/// Retrieve the current [Locale].
+/// Retrieve the current [Locale].4
 Locale get currLocale => _currLocale;
 
 /// Transforms a possibly-null [locale] into a non-null [Locale]. If [locale] is null, then we return the [currLocale].
@@ -24,8 +24,10 @@ class Locale {
     final GregorianCalendarData gregorianCalendar;
     @JsonKey(nullable: false, toJson: _dayPeriodsRuleToJson, fromJson: _dayPeriodsRuleFromJson)
     final Map<DayPeriod, Range<int>> dayPeriodsRule;
+    @JsonKey(nullable: false)
+    final WeekData weekData;
 
-    const Locale(this.gregorianCalendar, this.dayPeriodsRule);
+    const Locale(this.gregorianCalendar, this.dayPeriodsRule, this.weekData);
 
     factory Locale.fromJson(Map<String, dynamic> json) => _$LocaleFromJson(json);
     Map<String, dynamic> toJson() => _$LocaleToJson(this);
@@ -69,66 +71,17 @@ class Locale {
     }
 }
 
-abstract class _InvariantDayPeriodsRule {
-    final Range<int> am = const Range(0, 720);
-    final Range<int> pm = const Range(720, 1440);
-
-    const _InvariantDayPeriodsRule();
-}
-
 @JsonSerializable()
-class DayPeriodsRule extends _InvariantDayPeriodsRule {
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
-    final Range<int>? midnight;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
-    final Range<int>? noon;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
-    final Range<int>? morning1;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
-    final Range<int>? morning2;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
-    final Range<int>? afternoon1;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
-    final Range<int>? evening1;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
-    final Range<int>? night1;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
-    final Range<int>? afternoon2;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
-    final Range<int>? night2;
-    @JsonKey(fromJson: _rangeFromJson, toJson: _rangeToJson)
-    final Range<int>? evening2;
+class WeekData {
+    @JsonKey(nullable: false)
+    final int firstDayOfWeek;
+    @JsonKey(nullable: false)
+    final int minDaysInWeek;
 
-    const DayPeriodsRule([this.midnight, this.noon, this.morning1, this.morning2, this.afternoon1, this.evening1, this.night1, this.afternoon2, this.night2, this.evening2]);
+    const WeekData(this.firstDayOfWeek, this.minDaysInWeek);
 
-    factory DayPeriodsRule.fromJson(Map<String, dynamic> json) => _$DayPeriodsRuleFromJson(json);
-    Map<String, dynamic> toJson() => _$DayPeriodsRuleToJson(this);
-
-    static Range<int> _rangeFromJson(Map<String, dynamic> json) {
-        int _parseRangeValue(String val) {
-            final components = val.split(':');
-            final hours = int.parse(components.first);
-            final minutes = int.parse(components[1]);
-
-            return hours * 60 + minutes;
-        }
-
-        if (json.containsKey('at')) {
-            final val = _parseRangeValue(json['at']);
-            return Range<int>(val, val, false);
-        } else if (json.containsKey('before') && json.containsKey('after')) {
-            return Range<int>(_parseRangeValue(json['from']), _parseRangeValue(json['before']));
-        } else {
-            throw GeneralException("Invalid locale data: locale data contain invalid day period rules information and might have been corrupted.");
-        }
-    }
-
-    static Map<String, String>? _rangeToJson(Range<int>? range) {
-        if (range == null) return null;
-        return (range.floor == range.ceiling)
-            ? {"at": "${range.floor ~/ 60}:${range.floor % 60}"}
-            : {"before": "${range.ceiling ~/ 60}:${range.ceiling % 60}", "from": "${range.floor ~/ 60}:${range.floor % 60}"};
-    }
+    factory WeekData.fromJson(Map<String, dynamic> json) => _$WeekDataFromJson(json);
+    Map<String, dynamic> toJson() => _$WeekDataToJson(this);
 }
 
 @JsonSerializable()
