@@ -46,7 +46,7 @@ abstract class Calendar extends Object {
     Era era(Timestamp ts) => ts.era;
 
     /// Returns the weekday of [ts]. If the calendar doesn't support weekdays, the default implementation returns the Gregorian weekday.
-    Weekday weekday(Timestamp ts, [Locale? locale]) => ts.weekday(locale);
+    Weekday weekday(Timestamp ts) => ts.weekday;
 
     /// Returns the week of year of [ts]. If the calendar doesn't support week of year, the default implementation returns the Gregorian week of year.
     /// If [locale] is not specified, we use the [currLocale].
@@ -66,10 +66,11 @@ abstract class Calendar extends Object {
     Month month(Timestamp ts) => ts.month;
 
     /// Returns the fixed day period (AM/PM) of [ts].
-    FixedDayPeriod fixedDayPeriod(Timestamp ts) => ts.fixedDayPeriod;
+    DayPeriod fixedDayPeriod(Timestamp ts) => ts.fixedDayPeriod;
 
-    /// Returns the day period of [ts].
-    DayPeriod? dayPeriod(Timestamp ts, [Locale? locale]) => ts.dayPeriod(locale);
+    /// Returns the flexible day period of [ts]. If the given locale doesn't support flexible day periods, then the
+    /// fixed day period is returned.
+    DayPeriod dayPeriod(Timestamp ts, [Locale? locale]) => ts.flexibleDayPeriod(locale) ?? ts.fixedDayPeriod;
 
     @override bool operator ==(covariant Calendar other) => name == other.name;
     @override int get hashCode => name.hashCode;

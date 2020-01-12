@@ -9,7 +9,7 @@ import 'timezone.dart';
 ///
 /// By default, [Timestamp] comes equipped with support for the Gregorian Calendar. This is hard-coded and cannot be removed. To add more calendar
 /// supports for [Timestamp], simply define an extension on [Timestamp], but make sure that no naming conflicts occur.
-class Timestamp with IFormattable {
+class Timestamp with Formattable {
     final TimeZone timezone;
     final Instant instant;
 

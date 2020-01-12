@@ -11,39 +11,18 @@ Locale _$LocaleFromJson(Map<String, dynamic> json) {
     GregorianCalendarData.fromJson(
         json['gregorianCalendar'] as Map<String, dynamic>),
     Locale._dayPeriodsRuleFromJson(
-        json['dayPeriodsRule'] as Map<String, Map<String, String>>),
+        json['dayPeriodsRules'] as Map<String, Map<String, String>>),
     WeekData.fromJson(json['weekData'] as Map<String, dynamic>),
+    Format.fromJson(json['format'] as Map<String, dynamic>),
   );
-}
-
-Map<String, dynamic> _$LocaleToJson(Locale instance) {
-  final val = <String, dynamic>{
-    'gregorianCalendar': instance.gregorianCalendar.toJson(),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull(
-      'dayPeriodsRule', Locale._dayPeriodsRuleToJson(instance.dayPeriodsRule));
-  val['weekData'] = instance.weekData.toJson();
-  return val;
 }
 
 WeekData _$WeekDataFromJson(Map<String, dynamic> json) {
   return WeekData(
     json['firstDayOfWeek'] as int,
-    json['minDaysOfWeek'] as int,
+    json['minDaysInWeek'] as int,
   );
 }
-
-Map<String, dynamic> _$WeekDataToJson(WeekData instance) => <String, dynamic>{
-      'firstDayOfWeek': instance.firstDayOfWeek,
-      'minDaysOfWeek': instance.minDaysOfWeek,
-    };
 
 GregorianCalendarData _$GregorianCalendarDataFromJson(
     Map<String, dynamic> json) {
@@ -56,28 +35,12 @@ GregorianCalendarData _$GregorianCalendarDataFromJson(
   );
 }
 
-Map<String, dynamic> _$GregorianCalendarDataToJson(
-        GregorianCalendarData instance) =>
-    <String, dynamic>{
-      'months': instance.months.toJson(),
-      'weekdays': instance.weekdays.toJson(),
-      'quarters': instance.quarters.toJson(),
-      'dayPeriods': instance.dayPeriods.toJson(),
-      'eras': instance.eras.toJson(),
-    };
-
 GeneralContext _$GeneralContextFromJson(Map<String, dynamic> json) {
   return GeneralContext(
     PropertyLength.fromJson(json['format'] as Map<String, dynamic>),
     PropertyLength.fromJson(json['stand-alone'] as Map<String, dynamic>),
   );
 }
-
-Map<String, dynamic> _$GeneralContextToJson(GeneralContext instance) =>
-    <String, dynamic>{
-      'format': instance.format.toJson(),
-      'stand-alone': instance.standalone.toJson(),
-    };
 
 DayPeriodsContext _$DayPeriodsContextFromJson(Map<String, dynamic> json) {
   return DayPeriodsContext(
@@ -86,12 +49,6 @@ DayPeriodsContext _$DayPeriodsContextFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$DayPeriodsContextToJson(DayPeriodsContext instance) =>
-    <String, dynamic>{
-      'format': instance.format.toJson(),
-      'stand-alone': instance.standalone.toJson(),
-    };
-
 DayPeriodsWidth _$DayPeriodsWidthFromJson(Map<String, dynamic> json) {
   return DayPeriodsWidth(
     DayPeriods.fromJson(json['abbreviated'] as Map<String, dynamic>),
@@ -99,13 +56,6 @@ DayPeriodsWidth _$DayPeriodsWidthFromJson(Map<String, dynamic> json) {
     DayPeriods.fromJson(json['wide'] as Map<String, dynamic>),
   );
 }
-
-Map<String, dynamic> _$DayPeriodsWidthToJson(DayPeriodsWidth instance) =>
-    <String, dynamic>{
-      'abbreviated': instance.abbreviated.toJson(),
-      'narrow': instance.narrow.toJson(),
-      'wide': instance.wide.toJson(),
-    };
 
 DayPeriods _$DayPeriodsFromJson(Map<String, dynamic> json) {
   return DayPeriods(
@@ -126,32 +76,6 @@ DayPeriods _$DayPeriodsFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$DayPeriodsToJson(DayPeriods instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('midnight', instance.midnight);
-  val['am'] = instance.am;
-  writeNotNull('noon', instance.noon);
-  val['pm'] = instance.pm;
-  writeNotNull('morning1', instance.morning1);
-  writeNotNull('morning2', instance.morning2);
-  writeNotNull('afternoon1', instance.afternoon1);
-  writeNotNull('evening1', instance.evening1);
-  writeNotNull('night1', instance.night1);
-  writeNotNull('afternoon2', instance.afternoon2);
-  writeNotNull('am-alt-variant', instance.amAlt);
-  writeNotNull('pm-alt-variant', instance.pmAlt);
-  writeNotNull('night2', instance.night2);
-  writeNotNull('evening2', instance.evening2);
-  return val;
-}
-
 Eras _$ErasFromJson(Map<String, dynamic> json) {
   return Eras(
     json['0'] as String,
@@ -161,13 +85,6 @@ Eras _$ErasFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$ErasToJson(Eras instance) => <String, dynamic>{
-      '0': instance.pre,
-      '1': instance.post,
-      '0-alt-variant': instance.preAlt,
-      '1-alt-variant': instance.postAlt,
-    };
-
 ErasWidth _$ErasWidthFromJson(Map<String, dynamic> json) {
   return ErasWidth(
     Eras.fromJson(json['eraNames'] as Map<String, dynamic>),
@@ -175,12 +92,6 @@ ErasWidth _$ErasWidthFromJson(Map<String, dynamic> json) {
     Eras.fromJson(json['eraNarrow'] as Map<String, dynamic>),
   );
 }
-
-Map<String, dynamic> _$ErasWidthToJson(ErasWidth instance) => <String, dynamic>{
-      'eraNames': instance.name.toJson(),
-      'eraAbbr': instance.abbr.toJson(),
-      'eraNarrow': instance.narrow.toJson(),
-    };
 
 PropertyLength _$PropertyLengthFromJson(Map<String, dynamic> json) {
   return PropertyLength(
@@ -191,19 +102,74 @@ PropertyLength _$PropertyLengthFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$PropertyLengthToJson(PropertyLength instance) {
-  final val = <String, dynamic>{
-    'abbreviated': instance.abbreviated,
-    'narrow': instance.narrow,
-    'wide': instance.wide,
-  };
+Format _$FormatFromJson(Map<String, dynamic> json) {
+  return Format(
+    FormatLength.fromJson(json['dateFormats'] as Map<String, dynamic>),
+    FormatLength.fromJson(json['timeFormats'] as Map<String, dynamic>),
+    FormatLength.fromJson(json['dateTimeFormats'] as Map<String, dynamic>),
+    BuiltInTimestampFormats.fromJson(json[''] as Map<String, dynamic>),
+  );
+}
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
+BuiltInTimestampFormats _$BuiltInTimestampFormatsFromJson(
+    Map<String, dynamic> json) {
+  return BuiltInTimestampFormats(
+    json['Bh'] as String,
+    json['Bhm'] as String,
+    json['Bhms'] as String,
+    json['d'] as String,
+    json['E'] as String,
+    json['EBhm'] as String,
+    json['EBhms'] as String,
+    json['Ed'] as String,
+    json['Ehm'] as String,
+    json['EHm'] as String,
+    json['Ehms'] as String,
+    json['EHms'] as String,
+    json['Gy'] as String,
+    json['GyMMM'] as String,
+    json['GyMMMd'] as String,
+    json['GyMMMEd'] as String,
+    json['h'] as String,
+    json['H'] as String,
+    json['hm'] as String,
+    json['Hm'] as String,
+    json['hms'] as String,
+    json['Hms'] as String,
+    json['hmsv'] as String,
+    json['Hmsv'] as String,
+    json['hmv'] as String,
+    json['Hmv'] as String,
+    json['M'] as String,
+    json['Md'] as String,
+    json['MEd'] as String,
+    json['MMM'] as String,
+    json['MMMd'] as String,
+    json['MMMEd'] as String,
+    json['MMMMd'] as String,
+    json['MMMMW-count-one'] as String,
+    json['MMMMW-count-other'] as String,
+    json['ms'] as String,
+    json['y'] as String,
+    json['yM'] as String,
+    json['yMd'] as String,
+    json['yMEd'] as String,
+    json['yMMM'] as String,
+    json['yMMMd'] as String,
+    json['yMMMEd'] as String,
+    json['yMMMM'] as String,
+    json['yQQQ'] as String,
+    json['yQQQQ'] as String,
+    json['yw-count-one'] as String,
+    json['yw-count-other'] as String,
+  );
+}
 
-  writeNotNull('short', instance.short);
-  return val;
+FormatLength _$FormatLengthFromJson(Map<String, dynamic> json) {
+  return FormatLength(
+    json['full'] as String,
+    json['long'] as String,
+    json['medium'] as String,
+    json['short'] as String,
+  );
 }

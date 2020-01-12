@@ -55,15 +55,18 @@ abstract class TimeZoneData {
 /// Represents a geographical TimeZone region as defined by the `tz` database.
 @JsonSerializable()
 class TimeZone {
+    @JsonKey(nullable: false)
     final String name;
     /// List of possible offsets of the timezone in minutes. This list must align in index with [possibleAbbrs].
     @JsonKey(
         name: 'offsets',
+        nullable: false,
     )
     final List<double> possibleOffsets;
     /// List of possible abbreviations of the different offsets of the timezone. This list must align in index with [possibleOffsets].
     @JsonKey(
         name: 'abbrs',
+        nullable: false,
     )
     final List<String> possibleAbbrs;
     @JsonKey(
@@ -72,15 +75,9 @@ class TimeZone {
     )
     final List<TimeZoneHistory> history;
 
-    const TimeZone({
-        required this.name,
-        required this.possibleOffsets,
-        required this.possibleAbbrs,
-        required this.history,
-    });
+    const TimeZone(this.name, this.possibleAbbrs, this.possibleOffsets, this.history);
 
     factory TimeZone._fromJson(Map<String, dynamic> json) => _$TimeZoneFromJson(json);
-    Map<String, dynamic> toJson() => _$TimeZoneToJson(this);
 
     /// Parse a timezone string. The string must be in the format of `Continent/Region`, i.e. `America/New_York`.
     factory TimeZone.parse(String name) {
@@ -124,20 +121,17 @@ class TimeZone {
 /// Represents the specific offset/abbr information of the geographical timezone at a specific point in history.
 @JsonSerializable()
 class TimeZoneHistory {
+    @JsonKey(nullable: false)
     final int index;
     @JsonKey(
-        includeIfNull: true,
         fromJson: _untilFromJson,
     )
     final num until;
 
-    const TimeZoneHistory({
-        required this.index,
-        required this.until,
-    }) : assert(index != null && until != null);
+    const TimeZoneHistory(this.index, this.until) : assert(index != null && until != null);
 
     static num _untilFromJson(int data) => data == null ? double.infinity : data * Millisecond.microsecondsPer;
 
     factory TimeZoneHistory._fromJson(Map<String, dynamic> json) => _$TimeZoneHistoryFromJson(json);
-    Map<String, dynamic> toJson() => _$TimeZoneHistoryToJson(this);
+
 }

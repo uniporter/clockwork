@@ -1,4 +1,4 @@
-import '../../clockwork.dart';
+import '../locale/locale.dart';
 
 enum DayPeriod {
     Midnight,
@@ -11,11 +11,15 @@ enum DayPeriod {
     Afternoon2,
     Night2,
     Evening2,
+    AM,
+    PM,
 }
 
 extension DayPeriodExtension on DayPeriod {
     String? _map(DayPeriods dp) {
         switch (this) {
+            case DayPeriod.AM: return dp.am;
+            case DayPeriod.PM: return dp.pm;
             case DayPeriod.Midnight: return dp.midnight;
             case DayPeriod.Noon: return dp.noon;
             case DayPeriod.Morning1: return dp.morning1;

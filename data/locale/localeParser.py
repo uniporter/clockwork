@@ -46,7 +46,7 @@ dayPeriodsRule = loadDayPeriodsRule(localeNames)
 weekData = loadWeekData(localeNames)
 
 for dir in os.listdir('raw/gregorian/'):
-    if dir == 'en':
+    if dir != 'en':
         continue
     with open(f"raw/gregorian/{dir}/ca-gregorian.json") as fp:
         parsed = json.load(fp)["main"][dir]["dates"]["calendars"]["gregorian"]

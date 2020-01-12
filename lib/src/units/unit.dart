@@ -6,7 +6,6 @@ import '../utils/system_util.dart';
 export 'day.dart';
 export 'day_period.dart';
 export 'era.dart';
-export 'fixed_day_period.dart';
 export 'hour.dart';
 export 'microsecond.dart';
 export 'millisecond.dart';
@@ -19,10 +18,12 @@ export 'week.dart';
 export 'weekday.dart';
 export 'year.dart';
 
+typedef UnitBuilder<U extends Unit> = U Function(int value);
+
 class Unit extends RangedValue {
     Unit(value) : super(value);
 
-    final Unit Function(int value) builder = (value) => Unit(value);
+    final UnitBuilder<Unit> builder = (value) => Unit(value);
 
     int get size => (range.ceilingExclusive ? range.ceiling - range.floor : range.ceiling - range.floor + 1) as int;
 
@@ -39,10 +40,10 @@ class Unit extends RangedValue {
     Unit operator +(dynamic other) {
         if (runtimeType == other.runtimeType) {
             final value = this.value + (other as Unit).value;
-            return range.contains(value) ? builder(value) : throw InvalidArgumentException('other');
+            return range.has(value) ? builder(value) : throw InvalidArgumentException('other');
         } else if (other is int) {
             final value = this.value + other;
-            return range.contains(value) ? builder(value) : throw InvalidArgumentException('other');
+            return range.has(value) ? builder(value) : throw InvalidArgumentException('other');
         } else throw InvalidArgumentException('other');
     }
 
@@ -56,10 +57,10 @@ class Unit extends RangedValue {
     Unit operator -(dynamic other) {
         if (runtimeType == other.runtimeType) {
             final value = this.value - (other as Unit).value;
-            return range.contains(value) ? builder(value) : throw InvalidArgumentException('other');
+            return range.has(value) ? builder(value) : throw InvalidArgumentException('other');
         } else if (other is int) {
             final value = this.value - other;
-            return range.contains(value) ? builder(value) : throw InvalidArgumentException('other');
+            return range.has(value) ? builder(value) : throw InvalidArgumentException('other');
         } else throw InvalidArgumentException('other');
     }
 
@@ -74,10 +75,10 @@ class Unit extends RangedValue {
         else if (other is int) return value.compareTo(other);
         else throw InvalidArgumentException('other');
     }
-    @override bool operator <(covariant dynamic other) => value.compareTo(other.value) < 0;
-    @override bool operator >(covariant dynamic other) => value.compareTo(other.value) > 0;
-    @override bool operator <=(covariant dynamic other) => value.compareTo(other.value) <= 0;
-    @override bool operator >=(covariant dynamic other) => value.compareTo(other.value) >= 0;
+    @override bool operator <(covariant dynamic other) => compareTo(other) < 0;
+    @override bool operator >(covariant dynamic other) => compareTo(other) > 0;
+    @override bool operator <=(covariant dynamic other) => compareTo(other) <= 0;
+    @override bool operator >=(covariant dynamic other) => compareTo(other) >= 0;
 
     /// A simple wrapper overload of the [runtimeType] getter by simply returning the superclass' implementation.
     /// We're only reimplementing this because we want to decorate this method with [nonVirtual] and this requires

@@ -1,22 +1,25 @@
+import 'package:meta/meta.dart';
+
 import '../format/formattable.dart';
 import '../units/unit.dart';
 import '../utils/exception.dart';
 
+@Immutable()
 /// Represents the length of a period of time.
-class Interval with IFormattable implements Comparable<Interval> {
+class Interval with Formattable implements Comparable<Interval> {
     /// Length of the interval in microseconds.
     final int _len;
 
     /// Default constructor. If no parameter is given, an interval of length 0 microseconds is returned.
     /// The parameters accept all integers.
-    const Interval({
+    Interval({
         num days = 0,
         num hours = 0,
         num minutes = 0,
         num seconds = 0,
         num milliseconds = 0,
         num microseconds = 0,
-    }) : _len = (days * Day.microsecondsPer + hours * Hour.microsecondsPer + minutes * Minute.microsecondsPer + seconds * Second.microsecondsPer + milliseconds * Millisecond.microsecondsPer + microseconds) as int;
+     }) : _len = (days * Day.microsecondsPer + hours * Hour.microsecondsPer + minutes * Minute.microsecondsPer + seconds * Second.microsecondsPer + milliseconds * Millisecond.microsecondsPer + microseconds).toInt();
 
     factory Interval.fromDuration(Duration duration) => Interval(microseconds: duration.inMicroseconds);
 

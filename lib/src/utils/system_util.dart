@@ -8,7 +8,7 @@ class RangedValue implements Comparable<RangedValue> {
     final Range<num> range = const Range<num>(double.negativeInfinity, double.infinity);
 
     RangedValue(this.value) {
-        if (!range.contains(value)) throw InvalidArgumentException('value');
+        if (!range.has(value)) throw InvalidArgumentException('value');
     }
 
     /// Returns the underlying integer value of this.
@@ -19,10 +19,10 @@ class RangedValue implements Comparable<RangedValue> {
     @override bool operator ==(covariant RangedValue other) => value == other.value;
     @override int get hashCode => value.hashCode;
     @override int compareTo(covariant RangedValue other) => value.compareTo(other.value);
-    bool operator <(covariant RangedValue other) => value.compareTo(other.value) < 0;
-    bool operator >(covariant RangedValue other) => value.compareTo(other.value) > 0;
-    bool operator <=(covariant RangedValue other) => value.compareTo(other.value) <= 0;
-    bool operator >=(covariant RangedValue other) => value.compareTo(other.value) >= 0;
+    bool operator <(covariant RangedValue other) => compareTo(other) < 0;
+    bool operator >(covariant RangedValue other) => compareTo(other) > 0;
+    bool operator <=(covariant RangedValue other) => compareTo(other) <= 0;
+    bool operator >=(covariant RangedValue other) => compareTo(other) >= 0;
 }
 
 /// Represents a range of any [Comparable] types with a [floor] and a [ceiling].
@@ -33,7 +33,7 @@ class Range<T extends Comparable> {
 
     const Range(this.floor, this.ceiling, [this.ceilingExclusive = true]);
 
-    bool contains(T val) => ceilingExclusive ? (floor.compareTo(val) <= 0 && ceiling.compareTo(val) > 0)
+    bool has(T val) => ceilingExclusive ? (floor.compareTo(val) <= 0 && ceiling.compareTo(val) > 0)
         : (floor.compareTo(val) <= 0 && ceiling.compareTo(val) >= 0);
 }
 
@@ -52,7 +52,7 @@ class IterableRange<T extends Comparable> extends Range<T> with IterableMixin<T>
 }
 
 class _RangeIterator<T extends Comparable> implements Iterator<T> {
-    T? _current = null;
+    T? _current;
     final IterableRange<T> _range;
     final T Function(T) _it;
 
@@ -61,7 +61,9 @@ class _RangeIterator<T extends Comparable> implements Iterator<T> {
     _RangeIterator(this._range, this._it);
 
     @override T? get current => _current;
-    @override 
+
+    @pragma("vm:prefer-inline")
+    @override
     bool moveNext() {
         if (_current == null && !_started) {
             _current = _range.floor;
@@ -71,7 +73,7 @@ class _RangeIterator<T extends Comparable> implements Iterator<T> {
             return false;
         } else {
             final candidate = _it(_current as T);
-            _current = _range.contains(candidate) ? candidate : null;
+            _current = _range.has(candidate) ? candidate : null;
             return _current == null ? false : true;
         }
     }

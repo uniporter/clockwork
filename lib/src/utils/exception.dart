@@ -1,5 +1,4 @@
 import '../core/timestamp.dart';
-
 import 'constants.dart';
 
 abstract class ClockworkException implements Exception {
@@ -32,7 +31,7 @@ class InvalidArgumentException extends ClockworkException {
     InvalidArgumentException(this.argName) {}
 
     @override
-    String toString() => _toStringHelper("$argName is not in an valid format.");
+    String toString() => _toStringHelper("$argName is not in a valid format.");
 }
 
 /// Thrown when trying to create a [Timestamp] where the
@@ -62,7 +61,7 @@ class TimestampNonexistentException extends ClockworkException {
 /// which specific instance in time, whether before or after the DST shift, is the parameter referring to, and this exception
 /// will be thrown.
 class AmbiguousTimestampException extends ClockworkException {
-    final Timestamp timestamp;
+    final String timestamp;
 
     AmbiguousTimestampException(this.timestamp) {}
 

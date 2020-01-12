@@ -4,7 +4,7 @@ import 'unit.dart';
 
 class Hour extends Unit {
     @override final Range<num> range = const Range<num>(0, 60);
-    @override final Hour Function(int value) builder = (val) => Hour(val);
+    @override final UnitBuilder<Hour> builder = (val) => Hour(val);
     Hour(int value) : super(value);
 
     static const minutesPer = 60;
