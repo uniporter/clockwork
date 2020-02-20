@@ -55,24 +55,12 @@ abstract class TimeZoneData {
 /// Represents a geographical TimeZone region as defined by the `tz` database.
 @JsonSerializable()
 class TimeZone {
-    @JsonKey(nullable: false)
     final String name;
     /// List of possible offsets of the timezone in minutes. This list must align in index with [possibleAbbrs].
-    @JsonKey(
-        name: 'offsets',
-        nullable: false,
-    )
     final List<double> possibleOffsets;
     /// List of possible abbreviations of the different offsets of the timezone. This list must align in index with [possibleOffsets].
-    @JsonKey(
-        name: 'abbrs',
-        nullable: false,
-    )
     final List<String> possibleAbbrs;
-    @JsonKey(
-        name: 'info',
-        fromJson: _historyFromJson,
-    )
+    @JsonKey(fromJson: _historyFromJson)
     final List<TimeZoneHistory> history;
 
     const TimeZone(this.name, this.possibleAbbrs, this.possibleOffsets, this.history);
@@ -110,6 +98,9 @@ class TimeZone {
     /// Returns the timezone abbreviation at [microsecondsSinceEpoch].
     String abbr(int microsecondsSinceEpoch) => possibleAbbrs[history.firstWhere((item) => item.until >= microsecondsSinceEpoch).index];
 
+    /// Returns whether the timezone is in Daylight Saving Time at [microsecondsSinceEpoch].
+    bool isDst(int microsecondsSinceEpoch) => history.firstWhere((item) => item.until >= microsecondsSinceEpoch).dst;
+
     static List<TimeZoneHistory> _historyFromJson(List data) {
         return data.map<TimeZoneHistory>((datum) => TimeZoneHistory._fromJson(datum)).toList();
     }
@@ -121,17 +112,14 @@ class TimeZone {
 /// Represents the specific offset/abbr information of the geographical timezone at a specific point in history.
 @JsonSerializable()
 class TimeZoneHistory {
-    @JsonKey(nullable: false)
     final int index;
-    @JsonKey(
-        fromJson: _untilFromJson,
-    )
+    @JsonKey(fromJson: _untilFromJson)
     final num until;
+    final bool dst;
 
-    const TimeZoneHistory(this.index, this.until) : assert(index != null && until != null);
+    const TimeZoneHistory(this.index, this.until, this.dst);
 
     static num _untilFromJson(int data) => data == null ? double.infinity : data * Millisecond.microsecondsPer;
 
     factory TimeZoneHistory._fromJson(Map<String, dynamic> json) => _$TimeZoneHistoryFromJson(json);
-
 }

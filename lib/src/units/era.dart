@@ -4,10 +4,10 @@ import 'unit.dart';
 
 abstract class Era extends Unit {
     @override final Range<num> range;
-    Era(int value, this.range) : super(value);
+    Era(int value, this.range, [num len = double.infinity]) : super(value, len);
 
-    @override Era operator +(dynamic other) => (super + other) as Era;
-    @override Era operator -(dynamic other) => (super - other) as Era;
+    @override Era operator +(int other) => (super + other) as Era;
+    @override Era operator -(int other) => (super - other) as Era;
 
     /// Returns the locale-sensitive name of the era.
     String toName([Locale? locale]);

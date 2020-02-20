@@ -1,0 +1,417 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "saus.",
+          "vas.",
+          "kov.",
+          "bal.",
+          "geg.",
+          "bir\u017e.",
+          "liep.",
+          "rugp.",
+          "rugs.",
+          "spal.",
+          "lapkr.",
+          "gruod."
+        ],
+        "narrow": [
+          "S",
+          "V",
+          "K",
+          "B",
+          "G",
+          "B",
+          "L",
+          "R",
+          "R",
+          "S",
+          "L",
+          "G"
+        ],
+        "wide": [
+          "sausio",
+          "vasario",
+          "kovo",
+          "baland\u017eio",
+          "gegu\u017e\u0117s",
+          "bir\u017eelio",
+          "liepos",
+          "rugpj\u016b\u010dio",
+          "rugs\u0117jo",
+          "spalio",
+          "lapkri\u010dio",
+          "gruod\u017eio"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "saus.",
+          "vas.",
+          "kov.",
+          "bal.",
+          "geg.",
+          "bir\u017e.",
+          "liep.",
+          "rugp.",
+          "rugs.",
+          "spal.",
+          "lapkr.",
+          "gruod."
+        ],
+        "narrow": [
+          "S",
+          "V",
+          "K",
+          "B",
+          "G",
+          "B",
+          "L",
+          "R",
+          "R",
+          "S",
+          "L",
+          "G"
+        ],
+        "wide": [
+          "sausis",
+          "vasaris",
+          "kovas",
+          "balandis",
+          "gegu\u017e\u0117",
+          "bir\u017eelis",
+          "liepa",
+          "rugpj\u016btis",
+          "rugs\u0117jis",
+          "spalis",
+          "lapkritis",
+          "gruodis"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "sk",
+          "pr",
+          "an",
+          "tr",
+          "kt",
+          "pn",
+          "\u0161t"
+        ],
+        "narrow": [
+          "S",
+          "P",
+          "A",
+          "T",
+          "K",
+          "P",
+          "\u0160"
+        ],
+        "short": [
+          "Sk",
+          "Pr",
+          "An",
+          "Tr",
+          "Kt",
+          "Pn",
+          "\u0160t"
+        ],
+        "wide": [
+          "sekmadienis",
+          "pirmadienis",
+          "antradienis",
+          "tre\u010diadienis",
+          "ketvirtadienis",
+          "penktadienis",
+          "\u0161e\u0161tadienis"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "sk",
+          "pr",
+          "an",
+          "tr",
+          "kt",
+          "pn",
+          "\u0161t"
+        ],
+        "narrow": [
+          "S",
+          "P",
+          "A",
+          "T",
+          "K",
+          "P",
+          "\u0160"
+        ],
+        "short": [
+          "Sk",
+          "Pr",
+          "An",
+          "Tr",
+          "Kt",
+          "Pn",
+          "\u0160t"
+        ],
+        "wide": [
+          "sekmadienis",
+          "pirmadienis",
+          "antradienis",
+          "tre\u010diadienis",
+          "ketvirtadienis",
+          "penktadienis",
+          "\u0161e\u0161tadienis"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "I k.",
+          "II k.",
+          "III k.",
+          "IV k."
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "I ketvirtis",
+          "II ketvirtis",
+          "III ketvirtis",
+          "IV ketvirtis"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "I ketv.",
+          "II ketv.",
+          "III ketv.",
+          "IV ketv."
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "I ketvirtis",
+          "II ketvirtis",
+          "III ketvirtis",
+          "IV ketvirtis"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "vidurnaktis",
+          "am": "prie\u0161piet",
+          "noon": "perpiet",
+          "pm": "popiet",
+          "morning1": "rytas",
+          "afternoon1": "popiet\u0117",
+          "evening1": "vakaras",
+          "night1": "naktis"
+        },
+        "narrow": {
+          "midnight": "vidurnaktis",
+          "am": "pr.\u00a0p.",
+          "noon": "perpiet",
+          "pm": "pop.",
+          "morning1": "rytas",
+          "afternoon1": "popiet\u0117",
+          "evening1": "vakaras",
+          "night1": "naktis"
+        },
+        "wide": {
+          "midnight": "vidurnaktis",
+          "am": "prie\u0161piet",
+          "noon": "perpiet",
+          "pm": "popiet",
+          "morning1": "rytas",
+          "afternoon1": "popiet\u0117",
+          "evening1": "vakaras",
+          "night1": "naktis"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "vidurnaktis",
+          "am": "prie\u0161piet",
+          "noon": "vidurdienis",
+          "pm": "popiet",
+          "morning1": "rytas",
+          "afternoon1": "diena",
+          "evening1": "vakaras",
+          "night1": "naktis"
+        },
+        "narrow": {
+          "midnight": "vidurnaktis",
+          "am": "pr.\u00a0p.",
+          "noon": "vidurdienis",
+          "pm": "pop.",
+          "morning1": "rytas",
+          "afternoon1": "diena",
+          "evening1": "vakaras",
+          "night1": "naktis"
+        },
+        "wide": {
+          "midnight": "vidurnaktis",
+          "am": "prie\u0161piet",
+          "noon": "vidurdienis",
+          "pm": "popiet",
+          "morning1": "rytas",
+          "afternoon1": "diena",
+          "evening1": "vakaras",
+          "night1": "naktis"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "prie\u0161 Krist\u0173",
+        "preAlt": "prie\u0161 m\u016bs\u0173 er\u0105",
+        "post": "po Kristaus",
+        "postAlt": "m\u016bs\u0173 eroje"
+      },
+      "abbr": {
+        "pre": "pr. Kr.",
+        "preAlt": "pr. m. e.",
+        "post": "po Kr.",
+        "postAlt": "m\u016bs\u0173 eroje"
+      },
+      "narrow": {
+        "pre": "pr. Kr.",
+        "preAlt": "pr. m. e.",
+        "post": "po Kr.",
+        "postAlt": "m\u016bs\u0173 eroje"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "18:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "24:00",
+      "_from": "18:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "12:00",
+      "_from": "06:00"
+    },
+    "night1": {
+      "_before": "06:00",
+      "_from": "00:00"
+    },
+    "noon": {
+      "_at": "12:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "y 'm'. MMMM d 'd'., EEEE",
+      "long": "y 'm'. MMMM d 'd'.",
+      "medium": "y-MM-dd",
+      "short": "y-MM-dd"
+    },
+    "time": {
+      "full": "HH:mm:ss zzzz",
+      "long": "HH:mm:ss z",
+      "medium": "HH:mm:ss",
+      "short": "HH:mm"
+    },
+    "datetime": {
+      "full": "HH:mm:ss zzzz y 'm'. MMMM d 'd'., EEEE",
+      "long": "HH:mm:ss z y 'm'. MMMM d 'd'.",
+      "medium": "HH:mm:ss y-MM-dd",
+      "short": "HH:mm y-MM-dd"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "dd",
+      "E": "ccc",
+      "EBhm": "h:mm B, E",
+      "EBhms": "h:mm:ss B, E",
+      "Ed": "d, E",
+      "Ehm": "hh:mm a, E",
+      "EHm": "HH:mm, E",
+      "Ehms": "hh:mm:ss a, E",
+      "EHms": "HH:mm:ss, E",
+      "Gy": "y 'm'. G",
+      "GyMMM": "y-MM G",
+      "GyMMMd": "y-MM-dd G",
+      "GyMMMEd": "y-MM-dd G, E",
+      "GyMMMM": "y 'm'. G, LLLL",
+      "GyMMMMd": "y 'm'. G MMMM d 'd'.",
+      "GyMMMMEd": "y 'm'. G MMMM d 'd'., E",
+      "h": "hh a",
+      "H": "HH",
+      "hm": "hh:mm a",
+      "Hm": "HH:mm",
+      "hms": "hh:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "hh:mm:ss a; v",
+      "Hmsv": "HH:mm:ss; v",
+      "hmv": "hh:mm a; v",
+      "Hmv": "HH:mm; v",
+      "M": "MM",
+      "Md": "MM-d",
+      "MEd": "MM-dd, E",
+      "MMdd": "MM-dd",
+      "MMM": "MM",
+      "MMMd": "MM-dd",
+      "MMMEd": "MM-dd, E",
+      "MMMM": "LLLL",
+      "MMMMd": "MMMM d 'd'.",
+      "MMMMEd": "MMMM d 'd'., E",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "y-MM",
+      "yMd": "y-MM-dd",
+      "yMEd": "y-MM-dd, E",
+      "yMMM": "y-MM",
+      "yMMMd": "y-MM-dd",
+      "yMMMEd": "y-MM-dd, E",
+      "yMMMM": "y 'm'. LLLL",
+      "yMMMMd": "y 'm'. MMMM d 'd'.",
+      "yMMMMEd": "y 'm'. MMMM d 'd'., E",
+      "yQQQ": "y QQQ",
+      "yQQQQ": "y QQQQ",
+      "MMMMWCountOther": "MMMM W 'sav'.",
+      "MMMMWCountOne": "MMMM W 'sav'.",
+      "MMMMWCountFew": "MMMM W 'sav'.",
+      "MMMMWCountMany": "MMMM W 'sav'.",
+      "ywCountOther": "Y w 'sav'.",
+      "ywCountOne": "Y w 'sav'.",
+      "ywCountFew": "Y w 'sav'.",
+      "ywCountMany": "Y w 'sav'."
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "Laikas: {0}",
+      "regionDaylight": "Vasaros laikas: {0}",
+      "regionStandard": "\u017diemos laikas: {0}"
+    }
+  }
+}

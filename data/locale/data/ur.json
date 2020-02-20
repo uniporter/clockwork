@@ -1,0 +1,406 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "\u062c\u0646\u0648\u0631\u06cc",
+          "\u0641\u0631\u0648\u0631\u06cc",
+          "\u0645\u0627\u0631\u0686",
+          "\u0627\u067e\u0631\u06cc\u0644",
+          "\u0645\u0626\u06cc",
+          "\u062c\u0648\u0646",
+          "\u062c\u0648\u0644\u0627\u0626\u06cc",
+          "\u0627\u06af\u0633\u062a",
+          "\u0633\u062a\u0645\u0628\u0631",
+          "\u0627\u06a9\u062a\u0648\u0628\u0631",
+          "\u0646\u0648\u0645\u0628\u0631",
+          "\u062f\u0633\u0645\u0628\u0631"
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "J",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "\u062c\u0646\u0648\u0631\u06cc",
+          "\u0641\u0631\u0648\u0631\u06cc",
+          "\u0645\u0627\u0631\u0686",
+          "\u0627\u067e\u0631\u06cc\u0644",
+          "\u0645\u0626\u06cc",
+          "\u062c\u0648\u0646",
+          "\u062c\u0648\u0644\u0627\u0626\u06cc",
+          "\u0627\u06af\u0633\u062a",
+          "\u0633\u062a\u0645\u0628\u0631",
+          "\u0627\u06a9\u062a\u0648\u0628\u0631",
+          "\u0646\u0648\u0645\u0628\u0631",
+          "\u062f\u0633\u0645\u0628\u0631"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u062c\u0646\u0648\u0631\u06cc",
+          "\u0641\u0631\u0648\u0631\u06cc",
+          "\u0645\u0627\u0631\u0686",
+          "\u0627\u067e\u0631\u06cc\u0644",
+          "\u0645\u0626\u06cc",
+          "\u062c\u0648\u0646",
+          "\u062c\u0648\u0644\u0627\u0626\u06cc",
+          "\u0627\u06af\u0633\u062a",
+          "\u0633\u062a\u0645\u0628\u0631",
+          "\u0627\u06a9\u062a\u0648\u0628\u0631",
+          "\u0646\u0648\u0645\u0628\u0631",
+          "\u062f\u0633\u0645\u0628\u0631"
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "J",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "\u062c\u0646\u0648\u0631\u06cc",
+          "\u0641\u0631\u0648\u0631\u06cc",
+          "\u0645\u0627\u0631\u0686",
+          "\u0627\u067e\u0631\u06cc\u0644",
+          "\u0645\u0626\u06cc",
+          "\u062c\u0648\u0646",
+          "\u062c\u0648\u0644\u0627\u0626\u06cc",
+          "\u0627\u06af\u0633\u062a",
+          "\u0633\u062a\u0645\u0628\u0631",
+          "\u0627\u06a9\u062a\u0648\u0628\u0631",
+          "\u0646\u0648\u0645\u0628\u0631",
+          "\u062f\u0633\u0645\u0628\u0631"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "\u0627\u062a\u0648\u0627\u0631",
+          "\u067e\u06cc\u0631",
+          "\u0645\u0646\u06af\u0644",
+          "\u0628\u062f\u06be",
+          "\u062c\u0645\u0639\u0631\u0627\u062a",
+          "\u062c\u0645\u0639\u06c1",
+          "\u06c1\u0641\u062a\u06c1"
+        ],
+        "narrow": [
+          "S",
+          "M",
+          "T",
+          "W",
+          "T",
+          "F",
+          "S"
+        ],
+        "short": [
+          "\u0627\u062a\u0648\u0627\u0631",
+          "\u067e\u06cc\u0631",
+          "\u0645\u0646\u06af\u0644",
+          "\u0628\u062f\u06be",
+          "\u062c\u0645\u0639\u0631\u0627\u062a",
+          "\u062c\u0645\u0639\u06c1",
+          "\u06c1\u0641\u062a\u06c1"
+        ],
+        "wide": [
+          "\u0627\u062a\u0648\u0627\u0631",
+          "\u067e\u06cc\u0631",
+          "\u0645\u0646\u06af\u0644",
+          "\u0628\u062f\u06be",
+          "\u062c\u0645\u0639\u0631\u0627\u062a",
+          "\u062c\u0645\u0639\u06c1",
+          "\u06c1\u0641\u062a\u06c1"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u0627\u062a\u0648\u0627\u0631",
+          "\u067e\u06cc\u0631",
+          "\u0645\u0646\u06af\u0644",
+          "\u0628\u062f\u06be",
+          "\u062c\u0645\u0639\u0631\u0627\u062a",
+          "\u062c\u0645\u0639\u06c1",
+          "\u06c1\u0641\u062a\u06c1"
+        ],
+        "narrow": [
+          "S",
+          "M",
+          "T",
+          "W",
+          "T",
+          "F",
+          "S"
+        ],
+        "short": [
+          "\u0627\u062a\u0648\u0627\u0631",
+          "\u067e\u06cc\u0631",
+          "\u0645\u0646\u06af\u0644",
+          "\u0628\u062f\u06be",
+          "\u062c\u0645\u0639\u0631\u0627\u062a",
+          "\u062c\u0645\u0639\u06c1",
+          "\u06c1\u0641\u062a\u06c1"
+        ],
+        "wide": [
+          "\u0627\u062a\u0648\u0627\u0631",
+          "\u067e\u06cc\u0631",
+          "\u0645\u0646\u06af\u0644",
+          "\u0628\u062f\u06be",
+          "\u062c\u0645\u0639\u0631\u0627\u062a",
+          "\u062c\u0645\u0639\u06c1",
+          "\u06c1\u0641\u062a\u06c1"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "\u067e\u06c1\u0644\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u062f\u0648\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u062a\u06cc\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u0686\u0648\u062a\u0647\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "\u067e\u06c1\u0644\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u062f\u0648\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u062a\u06cc\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u0686\u0648\u062a\u0647\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u067e\u06c1\u0644\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u062f\u0648\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u062a\u06cc\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u0686\u0648\u062a\u0647\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "\u067e\u06c1\u0644\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u062f\u0648\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u062a\u06cc\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc",
+          "\u0686\u0648\u062a\u0647\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "\u0622\u062f\u06be\u06cc \u0631\u0627\u062a",
+          "am": "AM",
+          "pm": "PM",
+          "morning1": "\u0635\u0628\u062d",
+          "afternoon1": "\u062f\u0648\u067e\u06c1\u0631",
+          "afternoon2": "\u0633\u06c1 \u067e\u06c1\u0631",
+          "evening1": "\u0634\u0627\u0645",
+          "night1": "\u0631\u0627\u062a"
+        },
+        "narrow": {
+          "midnight": "\u0622\u062f\u06be\u06cc \u0631\u0627\u062a",
+          "am": "a",
+          "pm": "p",
+          "morning1": "\u0635\u0628\u062d",
+          "afternoon1": "\u062f\u0648\u067e\u06c1\u0631",
+          "afternoon2": "\u0633\u06c1 \u067e\u06c1\u0631",
+          "evening1": "\u0634\u0627\u0645",
+          "night1": "\u0631\u0627\u062a"
+        },
+        "wide": {
+          "midnight": "\u0622\u062f\u06be\u06cc \u0631\u0627\u062a",
+          "am": "AM",
+          "pm": "PM",
+          "morning1": "\u0635\u0628\u062d \u0645\u06cc\u06ba",
+          "afternoon1": "\u062f\u0648\u067e\u06c1\u0631 \u0645\u06cc\u06ba",
+          "afternoon2": "\u0633\u06c1 \u067e\u06c1\u0631",
+          "evening1": "\u0634\u0627\u0645 \u0645\u06cc\u06ba",
+          "night1": "\u0631\u0627\u062a \u0645\u06cc\u06ba"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "\u0622\u062f\u06be\u06cc \u0631\u0627\u062a",
+          "am": "AM",
+          "pm": "PM",
+          "morning1": "\u0635\u0628\u062d",
+          "afternoon1": "\u062f\u0648\u067e\u06c1\u0631",
+          "afternoon2": "\u0633\u06c1 \u067e\u06c1\u0631",
+          "evening1": "\u0634\u0627\u0645",
+          "night1": "\u0631\u0627\u062a"
+        },
+        "narrow": {
+          "midnight": "\u0622\u062f\u06be\u06cc \u0631\u0627\u062a",
+          "am": "AM",
+          "pm": "PM",
+          "morning1": "\u0635\u0628\u062d",
+          "afternoon1": "\u062f\u0648\u067e\u06c1\u0631",
+          "afternoon2": "\u0633\u06c1 \u067e\u06c1\u0631",
+          "evening1": "\u0634\u0627\u0645",
+          "night1": "\u0631\u0627\u062a"
+        },
+        "wide": {
+          "midnight": "\u0622\u062f\u06be\u06cc \u0631\u0627\u062a",
+          "am": "AM",
+          "pm": "PM",
+          "morning1": "\u0635\u0628\u062d",
+          "afternoon1": "\u062f\u0648\u067e\u06c1\u0631",
+          "afternoon2": "\u0633\u06c1 \u067e\u06c1\u0631",
+          "evening1": "\u0634\u0627\u0645",
+          "night1": "\u0631\u0627\u062a"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "\u0642\u0628\u0644 \u0645\u0633\u06cc\u062d",
+        "preAlt": "\u0639\u0627\u0645 \u062f\u0648\u0631 \u0633\u06d2 \u0642\u0628\u0644",
+        "post": "\u0639\u06cc\u0633\u0648\u06cc",
+        "postAlt": "\u0639\u0627\u0645 \u062f\u0648\u0631"
+      },
+      "abbr": {
+        "pre": "\u0642\u0628\u0644 \u0645\u0633\u06cc\u062d",
+        "preAlt": "BCE",
+        "post": "\u0639\u06cc\u0633\u0648\u06cc",
+        "postAlt": "CE"
+      },
+      "narrow": {
+        "pre": "\u0642\u0628\u0644 \u0645\u0633\u06cc\u062d",
+        "preAlt": "BCE",
+        "post": "\u0639\u06cc\u0633\u0648\u06cc",
+        "postAlt": "CE"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "16:00",
+      "_from": "12:00"
+    },
+    "afternoon2": {
+      "_before": "18:00",
+      "_from": "16:00"
+    },
+    "evening1": {
+      "_before": "20:00",
+      "_from": "18:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "12:00",
+      "_from": "04:00"
+    },
+    "night1": {
+      "_before": "04:00",
+      "_from": "20:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "EEEE\u060c d MMMM\u060c y",
+      "long": "d MMMM\u060c y",
+      "medium": "d MMM\u060c y",
+      "short": "d/M/yy"
+    },
+    "time": {
+      "full": "h:mm:ss a zzzz",
+      "long": "h:mm:ss a z",
+      "medium": "h:mm:ss a",
+      "short": "h:mm a"
+    },
+    "datetime": {
+      "full": "h:mm:ss a zzzz EEEE\u060c d MMMM\u060c y",
+      "long": "h:mm:ss a z d MMMM\u060c y",
+      "medium": "h:mm:ss a d MMM\u060c y",
+      "short": "h:mm a d/M/yy"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "d E",
+      "Ehm": "E h:mm a",
+      "EHm": "E HH:mm",
+      "Ehms": "E h:mm:ss a",
+      "EHms": "E HH:mm:ss",
+      "Gy": "y G",
+      "GyMMM": "MMM y G",
+      "GyMMMd": "d MMM\u060c y G",
+      "GyMMMEd": "E\u060c d MMM\u060c y G",
+      "h": "h a",
+      "H": "HH",
+      "hm": "h:mm a",
+      "Hm": "HH:mm",
+      "hms": "h:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a v",
+      "Hmsv": "HH:mm:ss v",
+      "hmv": "h:mm a v",
+      "Hmv": "HH:mm v",
+      "M": "L",
+      "Md": "d/M",
+      "MEd": "E\u060c d/M",
+      "MMM": "LLL",
+      "MMMd": "d MMM",
+      "MMMEd": "E\u060c d MMM",
+      "MMMMd": "d MMMM",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "M/y",
+      "yMd": "d/M/y",
+      "yMEd": "E\u060c d/M/y",
+      "yMMM": "MMM y",
+      "yMMMd": "d MMM\u060c y",
+      "yMMMEd": "E\u060c d MMM\u060c y",
+      "yMMMM": "MMMM y",
+      "yQQQ": "QQQ y",
+      "yQQQQ": "QQQQ y",
+      "MMMMWCountOther": "MMMM \u06a9\u0627 \u06c1\u0641\u062a\u06c1 W",
+      "MMMMWCountOne": "MMMM \u06a9\u0627 \u06c1\u0641\u062a\u06c1 W",
+      "ywCountOther": "Y \u06a9\u0627 w \u06c1\u0641\u062a\u06c1",
+      "ywCountOne": "Y \u06a9\u0627 w \u06c1\u0641\u062a\u06c1"
+    },
+    "timezone": {
+      "gmt": "GMT {0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "{0} \u0648\u0642\u062a",
+      "regionDaylight": "{0} \u0688\u06d2 \u0644\u0627\u0626\u0679 \u0679\u0627\u0626\u0645",
+      "regionStandard": "{0} \u0645\u0639\u06cc\u0627\u0631\u06cc \u0648\u0642\u062a"
+    }
+  }
+}

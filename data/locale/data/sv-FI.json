@@ -1,0 +1,414 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "jan.",
+          "feb.",
+          "mars",
+          "apr.",
+          "maj",
+          "juni",
+          "juli",
+          "aug.",
+          "sep.",
+          "okt.",
+          "nov.",
+          "dec."
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "J",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "januari",
+          "februari",
+          "mars",
+          "april",
+          "maj",
+          "juni",
+          "juli",
+          "augusti",
+          "september",
+          "oktober",
+          "november",
+          "december"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "jan.",
+          "feb.",
+          "mars",
+          "apr.",
+          "maj",
+          "juni",
+          "juli",
+          "aug.",
+          "sep.",
+          "okt.",
+          "nov.",
+          "dec."
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "J",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "januari",
+          "februari",
+          "mars",
+          "april",
+          "maj",
+          "juni",
+          "juli",
+          "augusti",
+          "september",
+          "oktober",
+          "november",
+          "december"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "s\u00f6n",
+          "m\u00e5n",
+          "tis",
+          "ons",
+          "tors",
+          "fre",
+          "l\u00f6r"
+        ],
+        "narrow": [
+          "S",
+          "M",
+          "T",
+          "O",
+          "T",
+          "F",
+          "L"
+        ],
+        "short": [
+          "s\u00f6",
+          "m\u00e5",
+          "ti",
+          "on",
+          "to",
+          "fr",
+          "l\u00f6"
+        ],
+        "wide": [
+          "s\u00f6ndag",
+          "m\u00e5ndag",
+          "tisdag",
+          "onsdag",
+          "torsdag",
+          "fredag",
+          "l\u00f6rdag"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "s\u00f6n",
+          "m\u00e5n",
+          "tis",
+          "ons",
+          "tors",
+          "fre",
+          "l\u00f6r"
+        ],
+        "narrow": [
+          "S",
+          "M",
+          "T",
+          "O",
+          "T",
+          "F",
+          "L"
+        ],
+        "short": [
+          "s\u00f6",
+          "m\u00e5",
+          "ti",
+          "on",
+          "to",
+          "fr",
+          "l\u00f6"
+        ],
+        "wide": [
+          "s\u00f6ndag",
+          "m\u00e5ndag",
+          "tisdag",
+          "onsdag",
+          "torsdag",
+          "fredag",
+          "l\u00f6rdag"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1:a kvartalet",
+          "2:a kvartalet",
+          "3:e kvartalet",
+          "4:e kvartalet"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1:a kvartalet",
+          "2:a kvartalet",
+          "3:e kvartalet",
+          "4:e kvartalet"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "midnatt",
+          "am": "fm",
+          "pm": "em",
+          "morning1": "p\u00e5 morg.",
+          "morning2": "p\u00e5 f\u00f6rm.",
+          "afternoon1": "p\u00e5 efterm.",
+          "evening1": "p\u00e5 kv\u00e4llen",
+          "night1": "p\u00e5 natten"
+        },
+        "narrow": {
+          "midnight": "midn.",
+          "am": "fm",
+          "pm": "em",
+          "morning1": "p\u00e5 morg.",
+          "morning2": "p\u00e5 f\u00f6rm.",
+          "afternoon1": "p\u00e5 efterm.",
+          "evening1": "p\u00e5 kv\u00e4llen",
+          "night1": "p\u00e5 natten"
+        },
+        "wide": {
+          "midnight": "midnatt",
+          "am": "fm",
+          "pm": "em",
+          "morning1": "p\u00e5 morgonen",
+          "morning2": "p\u00e5 f\u00f6rmiddagen",
+          "afternoon1": "p\u00e5 eftermiddagen",
+          "evening1": "p\u00e5 kv\u00e4llen",
+          "night1": "p\u00e5 natten"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "midnatt",
+          "am": "f.m.",
+          "pm": "e.m.",
+          "morning1": "morgon",
+          "morning2": "f\u00f6rm.",
+          "afternoon1": "efterm.",
+          "evening1": "kv\u00e4ll",
+          "night1": "natt"
+        },
+        "narrow": {
+          "midnight": "midn.",
+          "am": "fm",
+          "pm": "em",
+          "morning1": "morg.",
+          "morning2": "f\u00f6rm.",
+          "afternoon1": "efterm.",
+          "evening1": "kv\u00e4ll",
+          "night1": "natt"
+        },
+        "wide": {
+          "midnight": "midnatt",
+          "am": "f\u00f6rmiddag",
+          "pm": "eftermiddag",
+          "morning1": "morgon",
+          "morning2": "f\u00f6rmiddag",
+          "afternoon1": "eftermiddag",
+          "evening1": "kv\u00e4ll",
+          "night1": "natt"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "f\u00f6re Kristus",
+        "preAlt": "f\u00f6re v\u00e4sterl\u00e4ndsk tider\u00e4kning",
+        "post": "efter Kristus",
+        "postAlt": "v\u00e4sterl\u00e4ndsk tider\u00e4kning"
+      },
+      "abbr": {
+        "pre": "f.Kr.",
+        "preAlt": "f.v.t.",
+        "post": "e.Kr.",
+        "postAlt": "v.t."
+      },
+      "narrow": {
+        "pre": "f.Kr.",
+        "preAlt": "f.v.t.",
+        "post": "e.Kr.",
+        "postAlt": "v.t."
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "18:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "24:00",
+      "_from": "18:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "10:00",
+      "_from": "05:00"
+    },
+    "morning2": {
+      "_before": "12:00",
+      "_from": "10:00"
+    },
+    "night1": {
+      "_before": "05:00",
+      "_from": "00:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 4,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "EEEE d MMMM y",
+      "long": "d MMMM y",
+      "medium": "d MMM y",
+      "short": "y-MM-dd"
+    },
+    "time": {
+      "full": "'kl'. HH:mm:ss zzzz",
+      "full-alt-variant": "'kl'. HH.mm.ss zzzz",
+      "long": "HH:mm:ss z",
+      "long-alt-variant": "HH.mm.ss z",
+      "medium": "HH:mm:ss",
+      "medium-alt-variant": "HH.mm.ss",
+      "short": "HH:mm",
+      "short-alt-variant": "HH.mm"
+    },
+    "datetime": {
+      "full": "'kl'. HH:mm:ss zzzz EEEE d MMMM y",
+      "long": "HH:mm:ss z d MMMM y",
+      "medium": "HH:mm:ss d MMM y",
+      "short": "HH:mm y-MM-dd"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h.mm B",
+      "Bhms": "h.mm.ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h.mm B",
+      "EBhms": "E h.mm.ss B",
+      "Ed": "E d",
+      "Ehm": "E h.mm a",
+      "EHm": "E HH.mm",
+      "Ehms": "E h.mm.ss a",
+      "EHms": "E HH.mm.ss",
+      "Gy": "y G",
+      "GyMMM": "MMM y G",
+      "GyMMMd": "d MMM y G",
+      "GyMMMEd": "E d MMM y G",
+      "h": "h a",
+      "H": "HH",
+      "hm": "h.mm a",
+      "Hm": "HH.mm",
+      "hms": "h.mm.ss a",
+      "Hms": "HH.mm.ss",
+      "hmsv": "h.mm.ss a v",
+      "Hmsv": "HH.mm.ss v",
+      "hmv": "h.mm a v",
+      "Hmv": "HH.mm v",
+      "M": "L",
+      "Md": "d.M",
+      "MEd": "E d.M",
+      "MMd": "d.M",
+      "MMdd": "dd.MM",
+      "MMM": "LLL",
+      "MMMd": "d MMM",
+      "MMMEd": "E d MMM",
+      "MMMMd": "d MMMM",
+      "MMMMEd": "E d MMMM",
+      "ms": "mm.ss",
+      "y": "y",
+      "yM": "y-MM",
+      "yMd": "y-MM-dd",
+      "yMEd": "E, y-MM-dd",
+      "yMM": "y-MM",
+      "yMMM": "MMM y",
+      "yMMMd": "d MMM y",
+      "yMMMEd": "E d MMM y",
+      "yMMMM": "MMMM y",
+      "yQQQ": "QQQ y",
+      "yQQQQ": "QQQQ y",
+      "MMMMWCountOther": "'vecka' W 'i' MMMM",
+      "MMMMWCountOne": "'vecka' W 'i' MMMM",
+      "ywCountOther": "'vecka' w, Y",
+      "ywCountOne": "'vecka' w, Y"
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "{0}tid",
+      "regionDaylight": "{0} (sommartid)",
+      "regionStandard": "{0} (normaltid)"
+    }
+  }
+}

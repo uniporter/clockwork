@@ -5,10 +5,10 @@ import 'unit.dart';
 abstract class Quarter extends Unit {
     @override final Range<num> range;
 
-    Quarter(int value, this.range) : super(value);
+    Quarter(int value, this.range, [num len = double.infinity]) : super(value, len);
 
-    @override Quarter operator +(dynamic other) => (super + other) as Quarter;
-    @override Quarter operator -(dynamic other) => (super - other) as Quarter;
+    @override Quarter operator +(int other) => (super + other) as Quarter;
+    @override Quarter operator -(int other) => (super - other) as Quarter;
 
     /// Returns the locale-sensitive abbreviated name of the month.
     String toAbbr([Locale? locale]);

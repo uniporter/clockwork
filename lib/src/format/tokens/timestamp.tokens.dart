@@ -3,6 +3,7 @@ import 'dart:math';
 import '../../core/timestamp.dart' show Timestamp;
 import '../../units/unit.dart';
 import 'format_token.dart' show StatefulToken;
+import 'utility.tokens.dart';
 
 StatefulToken<Timestamp> G = StatefulToken((ts, c, l) => c.era(ts).toAbbr(l), 'G');
 StatefulToken<Timestamp> GG = G.clone('GG');
@@ -160,3 +161,67 @@ StatefulToken<Timestamp> SPlus(int len) => StatefulToken((ts, _, __) {
 }, 'SPlus');
 
 // TODO StatefulToken<Timestamp> A
+
+StatefulToken<Timestamp> Z = xxxx.clone('Z');
+StatefulToken<Timestamp> ZZ = xxxx.clone('ZZ');
+StatefulToken<Timestamp> ZZZ = xxxx.clone('ZZZ');
+StatefulToken<Timestamp> ZZZZ = OOOO.clone('ZZZZ');
+StatefulToken<Timestamp> ZZZZZ = XXXXX.clone('ZZZZZ');
+
+
+StatefulToken<Timestamp> OOOO = StatefulToken((ts, _, l) => l.format.timezone.gmt(XXXXX(ts, _, l) as String));
+
+StatefulToken<Timestamp> X = x.conditional(string('Z'), (str) => str == '+00');
+StatefulToken<Timestamp> XX = xx.conditional(string('Z'), (str) => str == '+0000');
+StatefulToken<Timestamp> XXX = xxx.conditional(string('Z'), (str) => str == '+00:00');
+StatefulToken<Timestamp> XXXX = xxxx.conditional(string('Z'), (str) => str == '+0000');
+StatefulToken<Timestamp> XXXXX = xxxxx.conditional(string('Z'), (str) => str == '+00:00');
+
+StatefulToken<Timestamp> x = StatefulToken((ts, _, __) {
+    final offset = ts.timezone.offset(ts.instant.microsecondsSinceEpoch());
+    final sb = StringBuffer()
+        ..write(offset.sign >= 0 ? '+' : '-')
+        ..write(offset.hour.toString().padLeft(2, '0'))
+        ..write(offset.minute == 0 ? '' : offset.minute.toString().padLeft(2, '0'));
+    return sb.toString();
+});
+
+StatefulToken<Timestamp> xx = StatefulToken((ts, _, __) {
+    final offset = ts.timezone.offset(ts.instant.microsecondsSinceEpoch());
+    final sb = StringBuffer()
+        ..write(offset.sign >= 0 ? '+' : '-')
+        ..write(offset.hour.toString().padLeft(2, '0'))
+        ..write(offset.minute.toString().padLeft(2, '0'));
+    return sb.toString();
+});
+
+StatefulToken<Timestamp> xxx = StatefulToken((ts, _, __) {
+    final offset = ts.timezone.offset(ts.instant.microsecondsSinceEpoch());
+    final sb = StringBuffer()
+        ..write(offset.sign >= 0 ? '+' : '-')
+        ..write(offset.hour.toString().padLeft(2, '0'))
+        ..write(':')
+        ..write(offset.minute.toString().padLeft(2, '0'));
+    return sb.toString();
+});
+
+StatefulToken<Timestamp> xxxx = StatefulToken((ts, _, __) {
+    final offset = ts.timezone.offset(ts.instant.microsecondsSinceEpoch());
+    final sb = StringBuffer()
+        ..write(offset.sign >= 0 ? '+' : '-')
+        ..write(offset.hour.toString().padLeft(2, '0'))
+        ..write(offset.minute.toString().padLeft(2, '0'))
+        ..write(offset.second == 0 ? '' : offset.second.toString().padLeft(2, '0'));
+    return sb.toString();
+});
+
+StatefulToken<Timestamp> xxxxx = StatefulToken((ts, _, __) {
+    final offset = ts.timezone.offset(ts.instant.microsecondsSinceEpoch());
+    final sb = StringBuffer()
+        ..write(offset.sign >= 0 ? '+' : '-')
+        ..write(offset.hour.toString().padLeft(2, '0'))
+        ..write(':')
+        ..write(offset.minute.toString().padLeft(2, '0'))
+        ..write(offset.second == 0 ? '' : offset.second.toString().padLeft(2, '0').padLeft(3, ':'));
+    return sb.toString();
+});

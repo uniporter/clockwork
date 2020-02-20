@@ -4,10 +4,10 @@ import 'unit.dart';
 
 abstract class Month extends Unit {
     @override final Range<num> range;
-    Month(int value, this.range): super(value);
+    Month(int value, this.range, [num len = double.infinity]) : super(value, len);
 
-    @override Month operator +(dynamic other) => (super + other) as Month;
-    @override Month operator -(dynamic other) => (super - other) as Month;
+    @override Month operator +(int other) => (super + other) as Month;
+    @override Month operator -(int other) => (super - other) as Month;
 
     /// Returns the locale-sensitive abbreviated name of the month.
     String toAbbr([Locale? locale]);

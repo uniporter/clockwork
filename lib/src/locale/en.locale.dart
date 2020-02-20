@@ -49,7 +49,7 @@ final Locale en = Locale.fromJson(
             "December"
           ]
         },
-        "stand-alone": {
+        "standalone": {
           "abbreviated": [
             "Jan",
             "Feb",
@@ -133,7 +133,7 @@ final Locale en = Locale.fromJson(
             "Saturday"
           ]
         },
-        "stand-alone": {
+        "standalone": {
           "abbreviated": [
             "Sun",
             "Mon",
@@ -193,7 +193,7 @@ final Locale en = Locale.fromJson(
             "4th quarter"
           ]
         },
-        "stand-alone": {
+        "standalone": {
           "abbreviated": [
             "Q1",
             "Q2",
@@ -219,101 +219,101 @@ final Locale en = Locale.fromJson(
           "abbreviated": {
             "midnight": "midnight",
             "am": "AM",
-            "am-alt-variant": "am",
             "noon": "noon",
             "pm": "PM",
-            "pm-alt-variant": "pm",
             "morning1": "in the morning",
             "afternoon1": "in the afternoon",
             "evening1": "in the evening",
-            "night1": "at night"
+            "night1": "at night",
+            "amAlt": "am",
+            "pmAlt": "pm"
           },
           "narrow": {
             "midnight": "mi",
             "am": "a",
-            "am-alt-variant": "am",
             "noon": "n",
             "pm": "p",
-            "pm-alt-variant": "pm",
             "morning1": "in the morning",
             "afternoon1": "in the afternoon",
             "evening1": "in the evening",
-            "night1": "at night"
+            "night1": "at night",
+            "amAlt": "am",
+            "pmAlt": "pm"
           },
           "wide": {
             "midnight": "midnight",
             "am": "AM",
-            "am-alt-variant": "am",
             "noon": "noon",
             "pm": "PM",
-            "pm-alt-variant": "pm",
             "morning1": "in the morning",
             "afternoon1": "in the afternoon",
             "evening1": "in the evening",
-            "night1": "at night"
+            "night1": "at night",
+            "amAlt": "am",
+            "pmAlt": "pm"
           }
         },
-        "stand-alone": {
+        "standalone": {
           "abbreviated": {
             "midnight": "midnight",
             "am": "AM",
-            "am-alt-variant": "am",
             "noon": "noon",
             "pm": "PM",
-            "pm-alt-variant": "pm",
             "morning1": "morning",
             "afternoon1": "afternoon",
             "evening1": "evening",
-            "night1": "night"
+            "night1": "night",
+            "amAlt": "am",
+            "pmAlt": "pm"
           },
           "narrow": {
             "midnight": "midnight",
             "am": "AM",
-            "am-alt-variant": "am",
             "noon": "noon",
             "pm": "PM",
-            "pm-alt-variant": "pm",
             "morning1": "morning",
             "afternoon1": "afternoon",
             "evening1": "evening",
-            "night1": "night"
+            "night1": "night",
+            "amAlt": "am",
+            "pmAlt": "pm"
           },
           "wide": {
             "midnight": "midnight",
             "am": "AM",
-            "am-alt-variant": "am",
             "noon": "noon",
             "pm": "PM",
-            "pm-alt-variant": "pm",
             "morning1": "morning",
             "afternoon1": "afternoon",
             "evening1": "evening",
-            "night1": "night"
+            "night1": "night",
+            "amAlt": "am",
+            "pmAlt": "pm"
           }
         }
       },
       "eras": {
-        "eraNames": {
-          "0": "Before Christ",
-          "0-alt-variant": "Before Common Era",
-          "1": "Anno Domini",
-          "1-alt-variant": "Common Era"
+        "name": {
+          "pre": "Before Christ",
+          "preAlt": "Before Common Era",
+          "post": "Anno Domini",
+          "postAlt": "Common Era"
         },
-        "eraAbbr": {
-          "0": "BC",
-          "0-alt-variant": "BCE",
-          "1": "AD",
-          "1-alt-variant": "CE"
+        "abbr": {
+          "pre": "BC",
+          "preAlt": "BCE",
+          "post": "AD",
+          "postAlt": "CE"
         },
-        "eraNarrow": {
-          "0": "B",
-          "0-alt-variant": "BCE",
-          "1": "A",
-          "1-alt-variant": "CE"
+        "narrow": {
+          "pre": "B",
+          "preAlt": "BCE",
+          "post": "A",
+          "postAlt": "CE"
         }
       }
     },
-    "dayPeriodsRules": {
+    "dayPeriodsRule": {
       "afternoon1": {
         "_before": "18:00",
         "_from": "12:00"
@@ -340,5 +340,75 @@ final Locale en = Locale.fromJson(
     "weekData": {
       "minDaysInWeek": 1,
       "firstDayOfWeek": 2
+    },
+    "format": {
+      "date": {
+        "full": "EEEE, MMMM d, y",
+        "long": "MMMM d, y",
+        "medium": "MMM d, y",
+        "short": "M/d/yy"
+      },
+      "time": {
+        "full": "h:mm:ss a zzzz",
+        "long": "h:mm:ss a z",
+        "medium": "h:mm:ss a",
+        "short": "h:mm a"
+      },
+      "datetime": {
+        "full": "h:mm:ss a zzzz 'at' EEEE, MMMM d, y",
+        "long": "h:mm:ss a z 'at' MMMM d, y",
+        "medium": "h:mm:ss a, MMM d, y",
+        "short": "h:mm a, M/d/yy"
+      },
+      "builtIn": {
+        "Bh": "h B",
+        "Bhm": "h:mm B",
+        "Bhms": "h:mm:ss B",
+        "d": "d",
+        "E": "ccc",
+        "EBhm": "E h:mm B",
+        "EBhms": "E h:mm:ss B",
+        "Ed": "d E",
+        "Ehm": "E h:mm a",
+        "EHm": "E HH:mm",
+        "Ehms": "E h:mm:ss a",
+        "EHms": "E HH:mm:ss",
+        "Gy": "y G",
+        "GyMMM": "MMM y G",
+        "GyMMMd": "MMM d, y G",
+        "GyMMMEd": "E, MMM d, y G",
+        "h": "h a",
+        "H": "HH",
+        "hm": "h:mm a",
+        "Hm": "HH:mm",
+        "hms": "h:mm:ss a",
+        "Hms": "HH:mm:ss",
+        "hmsv": "h:mm:ss a v",
+        "Hmsv": "HH:mm:ss v",
+        "hmv": "h:mm a v",
+        "Hmv": "HH:mm v",
+        "M": "L",
+        "Md": "M/d",
+        "MEd": "E, M/d",
+        "MMM": "LLL",
+        "MMMd": "MMM d",
+        "MMMEd": "E, MMM d",
+        "MMMMd": "MMMM d",
+        "ms": "mm:ss",
+        "y": "y",
+        "yM": "M/y",
+        "yMd": "M/d/y",
+        "yMEd": "E, M/d/y",
+        "yMMM": "MMM y",
+        "yMMMd": "MMM d, y",
+        "yMMMEd": "E, MMM d, y",
+        "yMMMM": "MMMM y",
+        "yQQQ": "QQQ y",
+        "yQQQQ": "QQQQ y",
+        "yw": "'week' w 'of' Y",
+        "ywAlt": "'week' w 'of' Y",
+        "MMMMW": "'week' W 'of' MMMM",
+        "MMMMWAlt": "'week' W 'of' MMMM"
+      }
     }
   });

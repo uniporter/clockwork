@@ -1,0 +1,348 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "\u00fdan",
+          "few",
+          "mart",
+          "apr",
+          "ma\u00fd",
+          "i\u00fdun",
+          "i\u00fdul",
+          "awg",
+          "sen",
+          "okt",
+          "no\u00fd",
+          "dek"
+        ],
+        "narrow": [
+          "\u00dd",
+          "F",
+          "M",
+          "A",
+          "M",
+          "I",
+          "I",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "\u00fdanwar",
+          "fewral",
+          "mart",
+          "aprel",
+          "ma\u00fd",
+          "i\u00fdun",
+          "i\u00fdul",
+          "awgust",
+          "sent\u00fdabr",
+          "okt\u00fdabr",
+          "no\u00fdabr",
+          "dekabr"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u00ddan",
+          "Few",
+          "Mar",
+          "Apr",
+          "Ma\u00fd",
+          "I\u00fdun",
+          "I\u00fdul",
+          "Awg",
+          "Sen",
+          "Okt",
+          "No\u00fd",
+          "Dek"
+        ],
+        "narrow": [
+          "\u00dd",
+          "F",
+          "M",
+          "A",
+          "M",
+          "I",
+          "I",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "\u00ddanwar",
+          "Fewral",
+          "Mart",
+          "Aprel",
+          "Ma\u00fd",
+          "I\u00fdun",
+          "I\u00fdul",
+          "Awgust",
+          "Sent\u00fdabr",
+          "Okt\u00fdabr",
+          "No\u00fdabr",
+          "Dekabr"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "\u00fdek",
+          "du\u015f",
+          "si\u015f",
+          "\u00e7ar",
+          "pen",
+          "ann",
+          "\u015fen"
+        ],
+        "narrow": [
+          "\u00dd",
+          "D",
+          "S",
+          "\u00c7",
+          "P",
+          "A",
+          "\u015e"
+        ],
+        "short": [
+          "\u00fdb",
+          "db",
+          "sb",
+          "\u00e7b",
+          "pb",
+          "an",
+          "\u015fb"
+        ],
+        "wide": [
+          "\u00fdek\u015fenbe",
+          "du\u015fenbe",
+          "si\u015fenbe",
+          "\u00e7ar\u015fenbe",
+          "pen\u015fenbe",
+          "anna",
+          "\u015fenbe"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u00ddek",
+          "Du\u015f",
+          "Si\u015f",
+          "\u00c7ar",
+          "Pen",
+          "Ann",
+          "\u015een"
+        ],
+        "narrow": [
+          "\u00dd",
+          "D",
+          "S",
+          "\u00c7",
+          "P",
+          "A",
+          "\u015e"
+        ],
+        "short": [
+          "\u00ddb",
+          "Db",
+          "Sb",
+          "\u00c7b",
+          "Pb",
+          "An",
+          "\u015eb"
+        ],
+        "wide": [
+          "\u00ddek\u015fenbe",
+          "Du\u015fenbe",
+          "Si\u015fenbe",
+          "\u00c7ar\u015fenbe",
+          "Pen\u015fenbe",
+          "Anna",
+          "\u015eenbe"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "1\u00c7",
+          "2\u00c7",
+          "3\u00c7",
+          "4\u00c7"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1-nji \u00e7\u00e4r\u00fdek",
+          "2-nji \u00e7\u00e4r\u00fdek",
+          "3-nji \u00e7\u00e4r\u00fdek",
+          "4-nji \u00e7\u00e4r\u00fdek"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "1\u00c7",
+          "2\u00c7",
+          "3\u00c7",
+          "4\u00c7"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1-nji \u00e7\u00e4r\u00fdek",
+          "2-nji \u00e7\u00e4r\u00fdek",
+          "3-nji \u00e7\u00e4r\u00fdek",
+          "4-nji \u00e7\u00e4r\u00fdek"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "am": "go.\u00f6\u0148",
+          "pm": "go.so\u0148"
+        },
+        "narrow": {
+          "am": "\u00f6\u0148",
+          "pm": "so\u0148"
+        },
+        "wide": {
+          "am": "g\u00fcnortadan \u00f6\u0148",
+          "pm": "g\u00fcnortadan so\u0148"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "am": "g.\u00f6\u0148",
+          "pm": "g.so\u0148"
+        },
+        "narrow": {
+          "am": "\u00f6\u0148",
+          "pm": "so\u0148"
+        },
+        "wide": {
+          "am": "g\u00fcnortadan \u00f6\u0148",
+          "pm": "g\u00fcnortadan so\u0148"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "Isadan \u00f6\u0148",
+        "preAlt": "Bizi\u0148 eramyzdan \u00f6\u0148",
+        "post": "Isadan so\u0148",
+        "postAlt": "Bizi\u0148 eramyz"
+      },
+      "abbr": {
+        "pre": "B.e.\u00f6\u0148",
+        "preAlt": "b.e.\u00f6\u0148",
+        "post": "B.e.",
+        "postAlt": "b.e."
+      },
+      "narrow": {
+        "pre": "B.e.\u00f6\u0148",
+        "preAlt": "b.e.\u00f6\u0148",
+        "post": "B.e.",
+        "postAlt": "b.e."
+      }
+    }
+  },
+  "dayPeriodsRule": {},
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "d MMMM y EEEE",
+      "long": "d MMMM y",
+      "medium": "d MMM y",
+      "short": "dd.MM.y"
+    },
+    "time": {
+      "full": "HH:mm:ss zzzz",
+      "long": "HH:mm:ss z",
+      "medium": "HH:mm:ss",
+      "short": "HH:mm"
+    },
+    "datetime": {
+      "full": "HH:mm:ss zzzz d MMMM y EEEE",
+      "long": "HH:mm:ss z d MMMM y",
+      "medium": "HH:mm:ss d MMM y",
+      "short": "HH:mm dd.MM.y"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "d E",
+      "Ehm": "E h:mm a",
+      "EHm": "E HH:mm",
+      "Ehms": "E h:mm:ss a",
+      "EHms": "E HH:mm:ss",
+      "Gy": "G y",
+      "GyMMM": "G y MMM",
+      "GyMMMd": "G y MMM d",
+      "GyMMMEd": "G y MMM d, E",
+      "h": "h a",
+      "H": "HH",
+      "hm": "h:mm a",
+      "Hm": "HH:mm",
+      "hms": "h:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a v",
+      "Hmsv": "HH:mm:ss v",
+      "hmv": "h:mm a v",
+      "Hmv": "HH:mm v",
+      "M": "L",
+      "Md": "dd.MM",
+      "MEd": "dd.MM E",
+      "MMM": "LLL",
+      "MMMd": "d MMM",
+      "MMMEd": "d MMM E",
+      "MMMMd": "d MMMM",
+      "MMMMEd": "d MMMM E",
+      "mmss": "mm:ss",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "MM.y",
+      "yMd": "dd.MM.y",
+      "yMEd": "dd.MM.y E",
+      "yMMM": "MMM y",
+      "yMMMd": "d MMM y",
+      "yMMMEd": "d MMM y E",
+      "yMMMM": "MMMM y",
+      "yQQQ": "y QQQ",
+      "yQQQQ": "y QQQQ",
+      "MMMMWCountOther": "'hepde' W, MMMM",
+      "MMMMWCountOne": "'hepde' W, MMMM",
+      "ywCountOther": "'hepde' w, Y",
+      "ywCountOne": "'hepde' w, Y"
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "{0} wagty",
+      "regionDaylight": "{0} tomusky wagty",
+      "regionStandard": "{0} standart wagty"
+    }
+  }
+}

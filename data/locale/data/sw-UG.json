@@ -1,0 +1,416 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "Jan",
+          "Feb",
+          "Mac",
+          "Apr",
+          "Mei",
+          "Jun",
+          "Jul",
+          "Ago",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Des"
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "J",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "Januari",
+          "Februari",
+          "Machi",
+          "Aprili",
+          "Mei",
+          "Juni",
+          "Julai",
+          "Agosti",
+          "Septemba",
+          "Oktoba",
+          "Novemba",
+          "Desemba"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Jan",
+          "Feb",
+          "Mac",
+          "Apr",
+          "Mei",
+          "Jun",
+          "Jul",
+          "Ago",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Des"
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "J",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "Januari",
+          "Februari",
+          "Machi",
+          "Aprili",
+          "Mei",
+          "Juni",
+          "Julai",
+          "Agosti",
+          "Septemba",
+          "Oktoba",
+          "Novemba",
+          "Desemba"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "Jumapili",
+          "Jumatatu",
+          "Jumanne",
+          "Jumatano",
+          "Alhamisi",
+          "Ijumaa",
+          "Jumamosi"
+        ],
+        "narrow": [
+          "S",
+          "M",
+          "T",
+          "W",
+          "T",
+          "F",
+          "S"
+        ],
+        "short": [
+          "Jumapili",
+          "Jumatatu",
+          "Jumanne",
+          "Jumatano",
+          "Alhamisi",
+          "Ijumaa",
+          "Jumamosi"
+        ],
+        "wide": [
+          "Jumapili",
+          "Jumatatu",
+          "Jumanne",
+          "Jumatano",
+          "Alhamisi",
+          "Ijumaa",
+          "Jumamosi"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Jumapili",
+          "Jumatatu",
+          "Jumanne",
+          "Jumatano",
+          "Alhamisi",
+          "Ijumaa",
+          "Jumamosi"
+        ],
+        "narrow": [
+          "S",
+          "M",
+          "T",
+          "W",
+          "T",
+          "F",
+          "S"
+        ],
+        "short": [
+          "Jumapili",
+          "Jumatatu",
+          "Jumanne",
+          "Jumatano",
+          "Alhamisi",
+          "Ijumaa",
+          "Jumamosi"
+        ],
+        "wide": [
+          "Jumapili",
+          "Jumatatu",
+          "Jumanne",
+          "Jumatano",
+          "Alhamisi",
+          "Ijumaa",
+          "Jumamosi"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "Robo ya 1",
+          "Robo ya 2",
+          "Robo ya 3",
+          "Robo ya 4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "Robo ya 1",
+          "Robo ya 2",
+          "Robo ya 3",
+          "Robo ya 4"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Robo ya 1",
+          "Robo ya 2",
+          "Robo ya 3",
+          "Robo ya 4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "Robo ya 1",
+          "Robo ya 2",
+          "Robo ya 3",
+          "Robo ya 4"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "saa sita za usiku",
+          "am": "AM",
+          "noon": "adhuhuri",
+          "pm": "PM",
+          "morning1": "alfajiri",
+          "morning2": "asubuhi",
+          "afternoon1": "mchana",
+          "evening1": "jioni",
+          "night1": "usiku"
+        },
+        "narrow": {
+          "midnight": "usiku",
+          "am": "am",
+          "noon": "mchana",
+          "pm": "pm",
+          "morning1": "alfajiri",
+          "morning2": "asubuhi",
+          "afternoon1": "mchana",
+          "evening1": "jioni",
+          "night1": "usiku"
+        },
+        "wide": {
+          "midnight": "saa sita za usiku",
+          "am": "AM",
+          "noon": "saa sita za mchana",
+          "pm": "PM",
+          "morning1": "alfajiri",
+          "morning2": "asubuhi",
+          "afternoon1": "mchana",
+          "evening1": "jioni",
+          "night1": "usiku"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "saa sita za usiku",
+          "am": "AM",
+          "noon": "adhuhuri",
+          "pm": "PM",
+          "morning1": "alfajiri",
+          "morning2": "asubuhi",
+          "afternoon1": "alasiri",
+          "evening1": "jioni",
+          "night1": "usiku"
+        },
+        "narrow": {
+          "midnight": "saa sita za usiku",
+          "am": "AM",
+          "noon": "saa sita za mchana",
+          "pm": "PM",
+          "morning1": "alfajiri",
+          "morning2": "asubuhi",
+          "afternoon1": "mchana",
+          "evening1": "jioni",
+          "night1": "usiku"
+        },
+        "wide": {
+          "midnight": "saa sita za usiku",
+          "am": "AM",
+          "noon": "saa sita za mchana",
+          "pm": "PM",
+          "morning1": "alfajiri",
+          "morning2": "asubuhi",
+          "afternoon1": "mchana",
+          "evening1": "jioni",
+          "night1": "usiku"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "Kabla ya Kristo",
+        "preAlt": "BCE",
+        "post": "Baada ya Kristo",
+        "postAlt": "CE"
+      },
+      "abbr": {
+        "pre": "KK",
+        "preAlt": "BCE",
+        "post": "BK",
+        "postAlt": "CE"
+      },
+      "narrow": {
+        "pre": "KK",
+        "preAlt": "BCE",
+        "post": "BK",
+        "postAlt": "CE"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "16:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "19:00",
+      "_from": "16:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "07:00",
+      "_from": "04:00"
+    },
+    "morning2": {
+      "_before": "12:00",
+      "_from": "07:00"
+    },
+    "night1": {
+      "_before": "04:00",
+      "_from": "19:00"
+    },
+    "noon": {
+      "_at": "12:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "EEEE, d MMMM y",
+      "long": "d MMMM y",
+      "medium": "d MMM y",
+      "short": "dd/MM/y"
+    },
+    "time": {
+      "full": "HH:mm:ss zzzz",
+      "long": "HH:mm:ss z",
+      "medium": "HH:mm:ss",
+      "short": "HH:mm"
+    },
+    "datetime": {
+      "full": "HH:mm:ss zzzz EEEE, d MMMM y",
+      "long": "HH:mm:ss z d MMMM y",
+      "medium": "HH:mm:ss d MMM y",
+      "short": "HH:mm dd/MM/y"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "E d",
+      "Ehm": "E h:mm a",
+      "EHm": "E HH:mm",
+      "Ehms": "E h:mm:ss a",
+      "EHms": "E HH:mm:ss",
+      "Gy": "y G",
+      "GyMMM": "MMM y G",
+      "GyMMMd": "d MMM y G",
+      "GyMMMEd": "E, d MMM y G",
+      "h": "h a",
+      "H": "HH",
+      "hm": "h:mm a",
+      "Hm": "HH:mm",
+      "hms": "h:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a v",
+      "Hmsv": "HH:mm:ss v",
+      "hmv": "h:mm a v",
+      "Hmv": "HH:mm v",
+      "M": "L",
+      "Md": "d/M",
+      "MEd": "E, d/M",
+      "MMM": "LLL",
+      "MMMd": "d MMM",
+      "MMMEd": "E, d MMM",
+      "MMMMd": "d MMMM",
+      "MMMMEd": "E, d MMMM",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "M/y",
+      "yMd": "d/M/y",
+      "yMEd": "E, d/M/y",
+      "yMMM": "MMM y",
+      "yMMMd": "d MMM y",
+      "yMMMEd": "E, d MMM y",
+      "yMMMM": "MMMM y",
+      "yQQQ": "y QQQ",
+      "yQQQQ": "QQQQ y",
+      "MMMMWCountOther": "'wiki' W 'ya' MMMM",
+      "MMMMWCountOne": "'wiki' W 'ya' MMMM",
+      "ywCountOther": "'wiki' w 'ya' Y",
+      "ywCountOne": "'wiki' w 'ya' Y"
+    },
+    "timezone": {
+      "gmt": "GMT {0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "Saa za {0}",
+      "regionDaylight": "Saa za Mchana za {0}",
+      "regionStandard": "Saa za wastani za {0}"
+    }
+  }
+}

@@ -11,7 +11,7 @@ Locale _$LocaleFromJson(Map<String, dynamic> json) {
     GregorianCalendarData.fromJson(
         json['gregorianCalendar'] as Map<String, dynamic>),
     Locale._dayPeriodsRuleFromJson(
-        json['dayPeriodsRules'] as Map<String, Map<String, String>>),
+        json['dayPeriodsRule'] as Map<String, Map<String, String>>),
     WeekData.fromJson(json['weekData'] as Map<String, dynamic>),
     Format.fromJson(json['format'] as Map<String, dynamic>),
   );
@@ -38,14 +38,14 @@ GregorianCalendarData _$GregorianCalendarDataFromJson(
 GeneralContext _$GeneralContextFromJson(Map<String, dynamic> json) {
   return GeneralContext(
     PropertyLength.fromJson(json['format'] as Map<String, dynamic>),
-    PropertyLength.fromJson(json['stand-alone'] as Map<String, dynamic>),
+    PropertyLength.fromJson(json['standalone'] as Map<String, dynamic>),
   );
 }
 
 DayPeriodsContext _$DayPeriodsContextFromJson(Map<String, dynamic> json) {
   return DayPeriodsContext(
     DayPeriodsWidth.fromJson(json['format'] as Map<String, dynamic>),
-    DayPeriodsWidth.fromJson(json['stand-alone'] as Map<String, dynamic>),
+    DayPeriodsWidth.fromJson(json['standalone'] as Map<String, dynamic>),
   );
 }
 
@@ -69,8 +69,8 @@ DayPeriods _$DayPeriodsFromJson(Map<String, dynamic> json) {
     json['evening1'] as String,
     json['night1'] as String,
     json['afternoon2'] as String,
-    json['am-alt-variant'] as String,
-    json['pm-alt-variant'] as String,
+    json['amAlt'] as String,
+    json['pmAlt'] as String,
     json['night2'] as String,
     json['evening2'] as String,
   );
@@ -78,18 +78,18 @@ DayPeriods _$DayPeriodsFromJson(Map<String, dynamic> json) {
 
 Eras _$ErasFromJson(Map<String, dynamic> json) {
   return Eras(
-    json['0'] as String,
-    json['1'] as String,
-    json['0-alt-variant'] as String,
-    json['1-alt-variant'] as String,
+    json['pre'] as String,
+    json['post'] as String,
+    json['preAlt'] as String,
+    json['postAlt'] as String,
   );
 }
 
 ErasWidth _$ErasWidthFromJson(Map<String, dynamic> json) {
   return ErasWidth(
-    Eras.fromJson(json['eraNames'] as Map<String, dynamic>),
-    Eras.fromJson(json['eraAbbr'] as Map<String, dynamic>),
-    Eras.fromJson(json['eraNarrow'] as Map<String, dynamic>),
+    Eras.fromJson(json['name'] as Map<String, dynamic>),
+    Eras.fromJson(json['abbr'] as Map<String, dynamic>),
+    Eras.fromJson(json['narrow'] as Map<String, dynamic>),
   );
 }
 
@@ -104,10 +104,21 @@ PropertyLength _$PropertyLengthFromJson(Map<String, dynamic> json) {
 
 Format _$FormatFromJson(Map<String, dynamic> json) {
   return Format(
-    FormatLength.fromJson(json['dateFormats'] as Map<String, dynamic>),
-    FormatLength.fromJson(json['timeFormats'] as Map<String, dynamic>),
-    FormatLength.fromJson(json['dateTimeFormats'] as Map<String, dynamic>),
-    BuiltInTimestampFormats.fromJson(json[''] as Map<String, dynamic>),
+    FormatLength.fromJson(json['date'] as Map<String, dynamic>),
+    FormatLength.fromJson(json['time'] as Map<String, dynamic>),
+    FormatLength.fromJson(json['datetime'] as Map<String, dynamic>),
+    BuiltInTimestampFormats.fromJson(json['builtIn'] as Map<String, dynamic>),
+    TimezoneFormat.fromJson(json['timezone'] as Map<String, dynamic>),
+  );
+}
+
+TimezoneFormat _$TimezoneFormatFromJson(Map<String, dynamic> json) {
+  return TimezoneFormat(
+    TimezoneFormat._patternFromJson(json['gmt'] as String),
+    json['gmtZero'] as String,
+    TimezoneFormat._patternFromJson(json['region'] as String),
+    TimezoneFormat._patternFromJson(json['regionDaylight'] as String),
+    TimezoneFormat._patternFromJson(json['regionStandard'] as String),
   );
 }
 
@@ -127,6 +138,7 @@ BuiltInTimestampFormats _$BuiltInTimestampFormatsFromJson(
     json['Ehms'] as String,
     json['EHms'] as String,
     json['Gy'] as String,
+    json['GyM'] as String,
     json['GyMMM'] as String,
     json['GyMMMd'] as String,
     json['GyMMMEd'] as String,
@@ -147,8 +159,10 @@ BuiltInTimestampFormats _$BuiltInTimestampFormatsFromJson(
     json['MMMd'] as String,
     json['MMMEd'] as String,
     json['MMMMd'] as String,
-    json['MMMMW-count-one'] as String,
-    json['MMMMW-count-other'] as String,
+    json['MMMMWCountOne'] as String,
+    json['MMMMWCountTwo'] as String,
+    json['MMMMWCountFew'] as String,
+    json['MMMMWCountOther'] as String,
     json['ms'] as String,
     json['y'] as String,
     json['yM'] as String,
@@ -160,8 +174,50 @@ BuiltInTimestampFormats _$BuiltInTimestampFormatsFromJson(
     json['yMMMM'] as String,
     json['yQQQ'] as String,
     json['yQQQQ'] as String,
-    json['yw-count-one'] as String,
-    json['yw-count-other'] as String,
+    json['ywCountOne'] as String,
+    json['ywCountTwo'] as String,
+    json['ywCountFew'] as String,
+    json['ywCountOther'] as String,
+    json['GyMMMMd'] as String,
+    json['MMMMEd'] as String,
+    json['MMMMWCountMany'] as String,
+    json['mmss'] as String,
+    json['yMMMMd'] as String,
+    json['ywCountMany'] as String,
+    json['MMdd'] as String,
+    json['yMM'] as String,
+    json['HHmmZ'] as String,
+    json['yMMMMEEEEd'] as String,
+    json['MMd'] as String,
+    json['yMMdd'] as String,
+    json['GyMMMM'] as String,
+    json['GyMMMMEd'] as String,
+    json['yMMMMEd'] as String,
+    json['MMMMWCountZero'] as String,
+    json['ywCountZero'] as String,
+    json['hmsvvvv'] as String,
+    json['Hmsvvvv'] as String,
+    json['yMMMEEEEd'] as String,
+    json['EEEEd'] as String,
+    json['GyMMMEEEEd'] as String,
+    json['HHmmss'] as String,
+    json['MEEEEd'] as String,
+    json['MMMEEEEd'] as String,
+    json['yMEEEEd'] as String,
+    json['MMMdd'] as String,
+    json['MMMMdd'] as String,
+    json['MdAlt'] as String,
+    json['MEdAlt'] as String,
+    json['MMddAlt'] as String,
+    json['yMAlt'] as String,
+    json['yMdAlt'] as String,
+    json['yMEdAlt'] as String,
+    json['Mdd'] as String,
+    json['MMMM'] as String,
+    json['yMMMMccccd'] as String,
+    json['yQ'] as String,
+    json['HHmm'] as String,
+    json['MMMMEEEEd'] as String,
   );
 }
 

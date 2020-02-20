@@ -27,11 +27,12 @@ class DataNotLoadedException extends ClockworkException {
 /// Thrown when Clockwork functions are called with invalid arguments.
 class InvalidArgumentException extends ClockworkException {
     final String argName;
+    final String meta;
 
-    InvalidArgumentException(this.argName) {}
+    InvalidArgumentException(this.argName, [this.meta = '']) {}
 
     @override
-    String toString() => _toStringHelper("$argName is not in a valid format.");
+    String toString() => _toStringHelper("$argName is not in a valid format. $meta");
 }
 
 /// Thrown when trying to create a [Timestamp] where the

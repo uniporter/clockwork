@@ -1,10 +1,11 @@
-/// This file implements the default [Parser] used for parsing format pattern strings.
+import '../core/interval.dart';
 import '../core/timestamp.dart';
 import '../utils/exception.dart';
 import '../utils/system_util.dart';
 import 'format.dart';
 import 'formattable.dart';
 import 'tokens/format_token.dart';
+import 'tokens/interval.tokens.dart' as IntervalTokens;
 import 'tokens/timestamp.tokens.dart' as TimestampTokens;
 import 'tokens/utility.tokens.dart';
 
@@ -25,7 +26,7 @@ abstract class Parser {
     Format<F> parse<F extends Formattable>(String pattern);
 }
 
-/// Default token-based format parser. Unless you have some special requests, you should use this [Parser]. This is a singleton class.
+/// Default token-based format parser. Unless you have some special requests, you should use this parser. This is a singleton class.
 class DefaultParser implements Parser {
     static final DefaultParser _singleton = DefaultParser._internal();
     factory DefaultParser() => _singleton;
@@ -48,6 +49,21 @@ class DefaultParser implements Parser {
     /// process goes through all the passes by the order defined here. Thus, you should make sure that all tokens in each pass do not conflict with
     /// each other.
     static final Map<Type, List<Map<String, _PatternSpec>>> tokenMap = {
+        Interval: <Map<String, _PatternSpec<Interval>>>[
+            {
+                "str": _PatternSpec(RegExp(r"<[^<>]*?>"), "str", lambdaTokenizer((match) => string(match.input.substring(match.start, match.end)))),
+                "space": _PatternSpec(RegExp(r"\s+?"), "space", lambdaTokenizer((match) => space(match.end - match.start))),
+            },
+            {
+                "HH": _PatternSpec("HH", "HH", constTokenizer(IntervalTokens.HH)),
+                "mm": _PatternSpec("mm", "mm", constTokenizer(IntervalTokens.mm)),
+                "+": _PatternSpec("+", "+", constTokenizer(IntervalTokens.plus)),
+            },
+            {
+                "H": _PatternSpec("H", "H", constTokenizer(IntervalTokens.H)),
+                "m": _PatternSpec("m", "m", constTokenizer(IntervalTokens.m)),
+            },
+        ],
         Timestamp: <Map<String, _PatternSpec<Timestamp>>>[
             {
                 "str": _PatternSpec(RegExp(r"<[^<>]*?>"), "str", lambdaTokenizer((match) => string(match.input.substring(match.start, match.end)))),
@@ -79,6 +95,9 @@ class DefaultParser implements Parser {
                 "mm": _PatternSpec("mm", "mm", constTokenizer(TimestampTokens.mm)),
                 "ss": _PatternSpec("ss", "ss", constTokenizer(TimestampTokens.ss)),
                 "SPlus": _PatternSpec("S+", "SPlus", lambdaTokenizer((match) => TimestampTokens.SPlus(match.end - match.start))),
+                "XXXXX": _PatternSpec("XXXXX", "XXXXX", constTokenizer(TimestampTokens.XXXXX)),
+                "xxxxx": _PatternSpec("xxxxx", "xxxxx", constTokenizer(TimestampTokens.xxxxx)),
+                "ZZZZZ": _PatternSpec("ZZZZZ", "ZZZZZ", constTokenizer(TimestampTokens.ZZZZZ)),
             },
             {
                 "GGGG": _PatternSpec("GGGG", "GGGG", constTokenizer(TimestampTokens.GGGG)),
@@ -104,6 +123,9 @@ class DefaultParser implements Parser {
                 "K": _PatternSpec("K", "K", constTokenizer(TimestampTokens.K)),
                 "m": _PatternSpec("m", "m", constTokenizer(TimestampTokens.m)),
                 "s": _PatternSpec("s", "s", constTokenizer(TimestampTokens.s)),
+                "XXXX": _PatternSpec("XXXX", "XXXX", constTokenizer(TimestampTokens.XXXX)),
+                "xxxx": _PatternSpec("xxxx", "xxxx", constTokenizer(TimestampTokens.xxxx)),
+                "ZZZZ": _PatternSpec("ZZZZ", "ZZZZ", constTokenizer(TimestampTokens.ZZZZ)),
             },
             {
                 "GGG": _PatternSpec("GGG", "GGG", constTokenizer(TimestampTokens.GGG)),
@@ -121,6 +143,9 @@ class DefaultParser implements Parser {
                 "aaa": _PatternSpec("aaa", "aaa", constTokenizer(TimestampTokens.aaa)),
                 "bbb": _PatternSpec("bbb", "bbb", constTokenizer(TimestampTokens.bbb)),
                 "BBB": _PatternSpec("BBB", "BBB", constTokenizer(TimestampTokens.BBB)),
+                "XXX": _PatternSpec("XXX", "XXX", constTokenizer(TimestampTokens.XXX)),
+                "xxx": _PatternSpec("xxx", "xxx", constTokenizer(TimestampTokens.xxx)),
+                "ZZZ": _PatternSpec("ZZZ", "ZZZ", constTokenizer(TimestampTokens.ZZZ)),
             },
             {
                 "GG": _PatternSpec("GG", "GG", constTokenizer(TimestampTokens.GG)),
@@ -135,6 +160,9 @@ class DefaultParser implements Parser {
                 "aa": _PatternSpec("aa", "aa", constTokenizer(TimestampTokens.aa)),
                 "bb": _PatternSpec("bb", "bb", constTokenizer(TimestampTokens.bb)),
                 "BB": _PatternSpec("BB", "BB", constTokenizer(TimestampTokens.BB)),
+                "XX": _PatternSpec("XX", "XX", constTokenizer(TimestampTokens.XX)),
+                "xx": _PatternSpec("xx", "xx", constTokenizer(TimestampTokens.xx)),
+                "ZZ": _PatternSpec("ZZ", "ZZ", constTokenizer(TimestampTokens.ZZ)),
             },
             {
                 "G": _PatternSpec("G", "G", constTokenizer(TimestampTokens.G)),
@@ -149,6 +177,9 @@ class DefaultParser implements Parser {
                 "a": _PatternSpec("a", "a", constTokenizer(TimestampTokens.a)),
                 "b": _PatternSpec("b", "b", constTokenizer(TimestampTokens.b)),
                 "B": _PatternSpec("B", "B", constTokenizer(TimestampTokens.B)),
+                "X": _PatternSpec("X", "X", constTokenizer(TimestampTokens.X)),
+                "x": _PatternSpec("x", "x", constTokenizer(TimestampTokens.x)),
+                "Z": _PatternSpec("Z", "Z", constTokenizer(TimestampTokens.Z)),
             }
         ],
     };

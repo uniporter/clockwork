@@ -8,11 +8,16 @@ class RangedValue implements Comparable<RangedValue> {
     final Range<num> range = const Range<num>(double.negativeInfinity, double.infinity);
 
     RangedValue(this.value) {
-        if (!range.has(value)) throw InvalidArgumentException('value');
+        if (!range.has(value)) throw InvalidArgumentException('value', 'REQUIRES: ${range.floor} <= val ${range.ceilingExclusive ? "<" : "<="} ${range.ceiling}, HAS: $value');
     }
 
     /// Returns the underlying integer value of this.
     int call() => value;
+
+    /// Returns the 0-indexed underlying value of this.
+    ///
+    /// This getter subtracts [this.range.floor] from the underlying index to accommodate other systems with indices starting from 0.
+    int get index => (this() - range.floor).toInt();
 
     @override String toString() => value.toString();
 
@@ -66,9 +71,10 @@ class _RangeIterator<T extends Comparable> implements Iterator<T> {
     @override
     bool moveNext() {
         if (_current == null && !_started) {
-            _current = _range.floor;
+            final movable = _range.has(_range.floor);
+            _current = movable ? _range.floor : null;
             _started = true;
-            return true;
+            return movable;
         } else if (_current == null && _started) {
             return false;
         } else {
@@ -107,4 +113,3 @@ extension IterableExtension<T> on Iterable<T> {
         return last == null ? curr : last(curr);
     }
 }
-

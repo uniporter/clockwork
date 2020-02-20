@@ -88,6 +88,13 @@ class StatefulToken<F extends Formattable> {
         return StatefulToken((f, c, l) => this(f, c, l) ?? fallbacks.map((token) => token(f, c, l)).firstWhere((res) => res != null));
     }
 
+    /// Returns a [StatefulToken] that behaves like this if the output of this on a [Formattable] meets [condition]. If not, the output of
+    /// [alt] on the [Formattable] is returned.
+    StatefulToken<F> conditional(StatefulToken<F> alt, bool Function(String?) condition) => StatefulToken((F f, Calendar c, Locale l) {
+        final res = this(f, c, l);
+        return condition(res) ? res : alt(f, c, l);
+    });
+
     @override String toString() => identifier;
 }
 

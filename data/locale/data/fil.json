@@ -1,0 +1,417 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "Ene",
+          "Peb",
+          "Mar",
+          "Abr",
+          "May",
+          "Hun",
+          "Hul",
+          "Ago",
+          "Set",
+          "Okt",
+          "Nob",
+          "Dis"
+        ],
+        "narrow": [
+          "Ene",
+          "Peb",
+          "Mar",
+          "Abr",
+          "May",
+          "Hun",
+          "Hul",
+          "Ago",
+          "Set",
+          "Okt",
+          "Nob",
+          "Dis"
+        ],
+        "wide": [
+          "Enero",
+          "Pebrero",
+          "Marso",
+          "Abril",
+          "Mayo",
+          "Hunyo",
+          "Hulyo",
+          "Agosto",
+          "Setyembre",
+          "Oktubre",
+          "Nobyembre",
+          "Disyembre"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Ene",
+          "Peb",
+          "Mar",
+          "Abr",
+          "May",
+          "Hun",
+          "Hul",
+          "Ago",
+          "Set",
+          "Okt",
+          "Nob",
+          "Dis"
+        ],
+        "narrow": [
+          "E",
+          "P",
+          "M",
+          "A",
+          "M",
+          "Hun",
+          "Hul",
+          "Ago",
+          "Set",
+          "Okt",
+          "Nob",
+          "Dis"
+        ],
+        "wide": [
+          "Enero",
+          "Pebrero",
+          "Marso",
+          "Abril",
+          "Mayo",
+          "Hunyo",
+          "Hulyo",
+          "Agosto",
+          "Setyembre",
+          "Oktubre",
+          "Nobyembre",
+          "Disyembre"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "Lin",
+          "Lun",
+          "Mar",
+          "Miy",
+          "Huw",
+          "Biy",
+          "Sab"
+        ],
+        "narrow": [
+          "Lin",
+          "Lun",
+          "Mar",
+          "Miy",
+          "Huw",
+          "Biy",
+          "Sab"
+        ],
+        "short": [
+          "Li",
+          "Lu",
+          "Ma",
+          "Mi",
+          "Hu",
+          "Bi",
+          "Sa"
+        ],
+        "wide": [
+          "Linggo",
+          "Lunes",
+          "Martes",
+          "Miyerkules",
+          "Huwebes",
+          "Biyernes",
+          "Sabado"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Lin",
+          "Lun",
+          "Mar",
+          "Miy",
+          "Huw",
+          "Biy",
+          "Sab"
+        ],
+        "narrow": [
+          "Lin",
+          "Lun",
+          "Mar",
+          "Miy",
+          "Huw",
+          "Biy",
+          "Sab"
+        ],
+        "short": [
+          "Li",
+          "Lu",
+          "Ma",
+          "Mi",
+          "Hu",
+          "Bi",
+          "Sa"
+        ],
+        "wide": [
+          "Linggo",
+          "Lunes",
+          "Martes",
+          "Miyerkules",
+          "Huwebes",
+          "Biyernes",
+          "Sabado"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "ika-1 quarter",
+          "ika-2 quarter",
+          "ika-3 quarter",
+          "ika-4 na quarter"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "ika-1 quarter",
+          "ika-2 quarter",
+          "ika-3 quarter",
+          "ika-4 na quarter"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "hatinggabi",
+          "am": "AM",
+          "noon": "tanghaling-tapat",
+          "pm": "PM",
+          "morning1": "nang umaga",
+          "morning2": "madaling-araw",
+          "afternoon1": "tanghali",
+          "evening1": "ng hapon",
+          "night1": "gabi"
+        },
+        "narrow": {
+          "midnight": "hatinggabi",
+          "am": "am",
+          "noon": "tanghaling-tapat",
+          "pm": "pm",
+          "morning1": "umaga",
+          "morning2": "madaling-araw",
+          "afternoon1": "sa hapon",
+          "evening1": "sa gabi",
+          "night1": "gabi"
+        },
+        "wide": {
+          "midnight": "hatinggabi",
+          "am": "AM",
+          "noon": "tanghaling-tapat",
+          "pm": "PM",
+          "morning1": "nang umaga",
+          "morning2": "madaling-araw",
+          "afternoon1": "tanghali",
+          "evening1": "ng hapon",
+          "night1": "ng gabi"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "hatinggabi",
+          "am": "AM",
+          "noon": "tanghaling-tapat",
+          "pm": "PM",
+          "morning1": "umaga",
+          "morning2": "madaling-araw",
+          "afternoon1": "tanghali",
+          "evening1": "hapon",
+          "night1": "gabi"
+        },
+        "narrow": {
+          "midnight": "hatinggabi",
+          "am": "AM",
+          "noon": "tanghaling-tapat",
+          "pm": "PM",
+          "morning1": "umaga",
+          "morning2": "madaling-araw",
+          "afternoon1": "tanghali",
+          "evening1": "gabi",
+          "night1": "gabi"
+        },
+        "wide": {
+          "midnight": "hatinggabi",
+          "am": "AM",
+          "noon": "tanghaling-tapat",
+          "pm": "PM",
+          "morning1": "umaga",
+          "morning2": "madaling-araw",
+          "afternoon1": "tanghali",
+          "evening1": "hapon",
+          "night1": "gabi"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "Before Christ",
+        "preAlt": "Before Common Era",
+        "post": "Anno Domini",
+        "postAlt": "Common Era"
+      },
+      "abbr": {
+        "pre": "BC",
+        "preAlt": "BCE",
+        "post": "AD",
+        "postAlt": "CE"
+      },
+      "narrow": {
+        "pre": "BC",
+        "preAlt": "BCE",
+        "post": "AD",
+        "postAlt": "CE"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "18:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "23:00",
+      "_from": "18:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "10:00",
+      "_from": "05:00"
+    },
+    "morning2": {
+      "_before": "12:00",
+      "_from": "10:00"
+    },
+    "night1": {
+      "_before": "05:00",
+      "_from": "23:00"
+    },
+    "noon": {
+      "_at": "12:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "EEEE, MMMM d, y",
+      "long": "MMMM d, y",
+      "medium": "MMM d, y",
+      "short": "M/d/yy"
+    },
+    "time": {
+      "full": "h:mm:ss a zzzz",
+      "long": "h:mm:ss a z",
+      "medium": "h:mm:ss a",
+      "short": "h:mm a"
+    },
+    "datetime": {
+      "full": "h:mm:ss a zzzz 'nang' EEEE, MMMM d, y",
+      "long": "h:mm:ss a z 'nang' MMMM d, y",
+      "medium": "h:mm:ss a, MMM d, y",
+      "short": "h:mm a, M/d/yy"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "d E",
+      "Ehm": "E h:mm a",
+      "EHm": "E HH:mm",
+      "Ehms": "E h:mm:ss a",
+      "EHms": "E HH:mm:ss",
+      "Gy": "G y",
+      "GyMMM": "MMM y G",
+      "GyMMMd": "MMM d, y G",
+      "GyMMMEd": "E, MMM d, y G",
+      "h": "h a",
+      "H": "HH",
+      "hm": "h:mm a",
+      "Hm": "HH:mm",
+      "hms": "h:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a v",
+      "Hmsv": "HH:mm:ss v",
+      "hmv": "h:mm a v",
+      "Hmv": "HH:mm v",
+      "M": "L",
+      "Md": "M/d",
+      "MEd": "E, M/d",
+      "MMM": "LLL",
+      "MMMd": "MMM d",
+      "MMMEd": "E, MMM d",
+      "MMMMd": "MMMM d",
+      "MMMMEd": "E, MMMM d",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "M/y",
+      "yMd": "M/d/y",
+      "yMEd": "E, M/d/y",
+      "yMM": "MM/y",
+      "yMMM": "MMM y",
+      "yMMMd": "MMM d, y",
+      "yMMMEd": "E, MMM d, y",
+      "yMMMM": "MMMM y",
+      "yQQQ": "QQQ y",
+      "yQQQQ": "QQQQ y",
+      "MMMMWCountOther": "'linggo' W 'ng' MMMM",
+      "MMMMWCountOne": "'ika'-W 'linggo' 'ng' MMMM",
+      "ywCountOther": "'linggo' w 'ng' Y",
+      "ywCountOne": "'ika'-w 'linggo' 'ng' Y"
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "Oras sa {0}",
+      "regionDaylight": "Daylight Time ng {0}",
+      "regionStandard": "Standard na Oras sa {0}"
+    }
+  }
+}

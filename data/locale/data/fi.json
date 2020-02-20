@@ -1,0 +1,422 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "tammik.",
+          "helmik.",
+          "maalisk.",
+          "huhtik.",
+          "toukok.",
+          "kes\u00e4k.",
+          "hein\u00e4k.",
+          "elok.",
+          "syysk.",
+          "lokak.",
+          "marrask.",
+          "jouluk."
+        ],
+        "narrow": [
+          "T",
+          "H",
+          "M",
+          "H",
+          "T",
+          "K",
+          "H",
+          "E",
+          "S",
+          "L",
+          "M",
+          "J"
+        ],
+        "wide": [
+          "tammikuuta",
+          "helmikuuta",
+          "maaliskuuta",
+          "huhtikuuta",
+          "toukokuuta",
+          "kes\u00e4kuuta",
+          "hein\u00e4kuuta",
+          "elokuuta",
+          "syyskuuta",
+          "lokakuuta",
+          "marraskuuta",
+          "joulukuuta"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "tammi",
+          "helmi",
+          "maalis",
+          "huhti",
+          "touko",
+          "kes\u00e4",
+          "hein\u00e4",
+          "elo",
+          "syys",
+          "loka",
+          "marras",
+          "joulu"
+        ],
+        "narrow": [
+          "T",
+          "H",
+          "M",
+          "H",
+          "T",
+          "K",
+          "H",
+          "E",
+          "S",
+          "L",
+          "M",
+          "J"
+        ],
+        "wide": [
+          "tammikuu",
+          "helmikuu",
+          "maaliskuu",
+          "huhtikuu",
+          "toukokuu",
+          "kes\u00e4kuu",
+          "hein\u00e4kuu",
+          "elokuu",
+          "syyskuu",
+          "lokakuu",
+          "marraskuu",
+          "joulukuu"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "su",
+          "ma",
+          "ti",
+          "ke",
+          "to",
+          "pe",
+          "la"
+        ],
+        "narrow": [
+          "S",
+          "M",
+          "T",
+          "K",
+          "T",
+          "P",
+          "L"
+        ],
+        "short": [
+          "su",
+          "ma",
+          "ti",
+          "ke",
+          "to",
+          "pe",
+          "la"
+        ],
+        "wide": [
+          "sunnuntaina",
+          "maanantaina",
+          "tiistaina",
+          "keskiviikkona",
+          "torstaina",
+          "perjantaina",
+          "lauantaina"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "su",
+          "ma",
+          "ti",
+          "ke",
+          "to",
+          "pe",
+          "la"
+        ],
+        "narrow": [
+          "S",
+          "M",
+          "T",
+          "K",
+          "T",
+          "P",
+          "L"
+        ],
+        "short": [
+          "su",
+          "ma",
+          "ti",
+          "ke",
+          "to",
+          "pe",
+          "la"
+        ],
+        "wide": [
+          "sunnuntai",
+          "maanantai",
+          "tiistai",
+          "keskiviikko",
+          "torstai",
+          "perjantai",
+          "lauantai"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "1. nelj.",
+          "2. nelj.",
+          "3. nelj.",
+          "4. nelj."
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1. nelj\u00e4nnes",
+          "2. nelj\u00e4nnes",
+          "3. nelj\u00e4nnes",
+          "4. nelj\u00e4nnes"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "1. nelj.",
+          "2. nelj.",
+          "3. nelj.",
+          "4. nelj."
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1. nelj\u00e4nnes",
+          "2. nelj\u00e4nnes",
+          "3. nelj\u00e4nnes",
+          "4. nelj\u00e4nnes"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "keskiy\u00f6ll\u00e4",
+          "am": "ap.",
+          "noon": "keskip.",
+          "pm": "ip.",
+          "morning1": "aamulla",
+          "morning2": "aamup.",
+          "afternoon1": "iltap.",
+          "evening1": "illalla",
+          "night1": "y\u00f6ll\u00e4"
+        },
+        "narrow": {
+          "midnight": "ky.",
+          "am": "ap.",
+          "noon": "kp.",
+          "pm": "ip.",
+          "morning1": "aamulla",
+          "morning2": "ap.",
+          "afternoon1": "ip.",
+          "evening1": "illalla",
+          "night1": "y\u00f6ll\u00e4"
+        },
+        "wide": {
+          "midnight": "keskiy\u00f6ll\u00e4",
+          "am": "ap.",
+          "noon": "keskip\u00e4iv\u00e4ll\u00e4",
+          "pm": "ip.",
+          "morning1": "aamulla",
+          "morning2": "aamup\u00e4iv\u00e4ll\u00e4",
+          "afternoon1": "iltap\u00e4iv\u00e4ll\u00e4",
+          "evening1": "illalla",
+          "night1": "y\u00f6ll\u00e4"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "keskiy\u00f6",
+          "am": "ap.",
+          "noon": "keskip.",
+          "pm": "ip.",
+          "morning1": "aamu",
+          "morning2": "aamup.",
+          "afternoon1": "iltap.",
+          "evening1": "ilta",
+          "night1": "y\u00f6"
+        },
+        "narrow": {
+          "midnight": "ky.",
+          "am": "ap.",
+          "noon": "kp.",
+          "pm": "ip.",
+          "morning1": "aamu",
+          "morning2": "ap.",
+          "afternoon1": "ip.",
+          "evening1": "ilta",
+          "night1": "y\u00f6"
+        },
+        "wide": {
+          "midnight": "keskiy\u00f6",
+          "am": "ap.",
+          "noon": "keskip\u00e4iv\u00e4",
+          "pm": "ip.",
+          "morning1": "aamu",
+          "morning2": "aamup\u00e4iv\u00e4",
+          "afternoon1": "iltap\u00e4iv\u00e4",
+          "evening1": "ilta",
+          "night1": "y\u00f6"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "ennen Kristuksen syntym\u00e4\u00e4",
+        "preAlt": "ennen ajanlaskun alkua",
+        "post": "j\u00e4lkeen Kristuksen syntym\u00e4n",
+        "postAlt": "j\u00e4lkeen ajanlaskun alun"
+      },
+      "abbr": {
+        "pre": "eKr.",
+        "preAlt": "eaa.",
+        "post": "jKr.",
+        "postAlt": "jaa."
+      },
+      "narrow": {
+        "pre": "eKr",
+        "preAlt": "eaa",
+        "post": "jKr",
+        "postAlt": "jaa"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "18:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "23:00",
+      "_from": "18:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "10:00",
+      "_from": "05:00"
+    },
+    "morning2": {
+      "_before": "12:00",
+      "_from": "10:00"
+    },
+    "night1": {
+      "_before": "05:00",
+      "_from": "23:00"
+    },
+    "noon": {
+      "_at": "12:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "cccc d. MMMM y",
+      "long": "d. MMMM y",
+      "medium": "d.M.y",
+      "short": "d.M.y"
+    },
+    "time": {
+      "full": "H.mm.ss zzzz",
+      "long": "H.mm.ss z",
+      "medium": "H.mm.ss",
+      "short": "H.mm"
+    },
+    "datetime": {
+      "full": "H.mm.ss zzzz 'klo' cccc d. MMMM y",
+      "long": "H.mm.ss z 'klo' d. MMMM y",
+      "medium": "H.mm.ss 'klo' d.M.y",
+      "short": "H.mm d.M.y"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h.mm B",
+      "Bhms": "h.mm.ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h.mm B",
+      "EBhms": "E h.mm.ss B",
+      "Ed": "E d.",
+      "Ehm": "E h.mm a",
+      "EHm": "E H.mm",
+      "Ehms": "E h.mm.ss a",
+      "EHms": "E H.mm.ss",
+      "Gy": "y G",
+      "GyMMM": "LLL y G",
+      "GyMMMd": "d. MMM y G",
+      "GyMMMEd": "E d. MMM y G",
+      "GyMMMMd": "d. MMMM y G",
+      "GyMMMMEd": "E d. MMMM y G",
+      "h": "h a",
+      "H": "H",
+      "hm": "h.mm a",
+      "Hm": "H.mm",
+      "hms": "h.mm.ss a",
+      "Hms": "H.mm.ss",
+      "hmsv": "h.mm.ss a v",
+      "Hmsv": "H.mm.ss v",
+      "hmv": "h.mm a v",
+      "Hmv": "H.mm v",
+      "M": "L",
+      "Md": "d.M.",
+      "MEd": "E d.M.",
+      "MMM": "LLL",
+      "MMMd": "d. MMM",
+      "MMMEd": "ccc d. MMM",
+      "MMMMd": "d. MMMM",
+      "MMMMEd": "ccc d. MMMM",
+      "ms": "m.ss",
+      "y": "y",
+      "yM": "L.y",
+      "yMd": "d.M.y",
+      "yMEd": "E d.M.y",
+      "yMM": "M.y",
+      "yMMM": "LLL y",
+      "yMMMd": "d. MMM y",
+      "yMMMEd": "E d. MMM y",
+      "yMMMM": "LLLL y",
+      "yMMMMccccd": "cccc d. MMMM y",
+      "yMMMMd": "d. MMMM y",
+      "yMMMMEd": "E d. MMMM y",
+      "yQQQ": "QQQ y",
+      "yQQQQ": "QQQQ y",
+      "MMMMWCountOther": "LLLL'n' W. 'viikko'",
+      "MMMMWCountOne": "LLLL'n' W. 'viikko'",
+      "ywCountOther": "'vuoden' Y 'viikko' w",
+      "ywCountOne": "'vuoden' Y 'viikko' w"
+    },
+    "timezone": {
+      "gmt": "UTC{0}+H.m.s",
+      "gmtZero": "UTC",
+      "region": "aikavy\u00f6hyke: {0}",
+      "regionDaylight": "{0} (kes\u00e4aika)",
+      "regionStandard": "{0} (normaaliaika)"
+    }
+  }
+}

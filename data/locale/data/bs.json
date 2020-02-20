@@ -1,0 +1,410 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "jan",
+          "feb",
+          "mar",
+          "apr",
+          "maj",
+          "jun",
+          "jul",
+          "aug",
+          "sep",
+          "okt",
+          "nov",
+          "dec"
+        ],
+        "narrow": [
+          "j",
+          "f",
+          "m",
+          "a",
+          "m",
+          "j",
+          "j",
+          "a",
+          "s",
+          "o",
+          "n",
+          "d"
+        ],
+        "wide": [
+          "januar",
+          "februar",
+          "mart",
+          "april",
+          "maj",
+          "juni",
+          "juli",
+          "august",
+          "septembar",
+          "oktobar",
+          "novembar",
+          "decembar"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "jan",
+          "feb",
+          "mar",
+          "apr",
+          "maj",
+          "jun",
+          "jul",
+          "aug",
+          "sep",
+          "okt",
+          "nov",
+          "dec"
+        ],
+        "narrow": [
+          "j",
+          "f",
+          "m",
+          "a",
+          "m",
+          "j",
+          "j",
+          "a",
+          "s",
+          "o",
+          "n",
+          "d"
+        ],
+        "wide": [
+          "januar",
+          "februar",
+          "mart",
+          "april",
+          "maj",
+          "juni",
+          "juli",
+          "august",
+          "septembar",
+          "oktobar",
+          "novembar",
+          "decembar"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "ned",
+          "pon",
+          "uto",
+          "sri",
+          "\u010det",
+          "pet",
+          "sub"
+        ],
+        "narrow": [
+          "N",
+          "P",
+          "U",
+          "S",
+          "\u010c",
+          "P",
+          "S"
+        ],
+        "short": [
+          "ned",
+          "pon",
+          "uto",
+          "sri",
+          "\u010det",
+          "pet",
+          "sub"
+        ],
+        "wide": [
+          "nedjelja",
+          "ponedjeljak",
+          "utorak",
+          "srijeda",
+          "\u010detvrtak",
+          "petak",
+          "subota"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "ned",
+          "pon",
+          "uto",
+          "sri",
+          "\u010det",
+          "pet",
+          "sub"
+        ],
+        "narrow": [
+          "n",
+          "p",
+          "u",
+          "s",
+          "\u010d",
+          "p",
+          "s"
+        ],
+        "short": [
+          "ned",
+          "pon",
+          "uto",
+          "sri",
+          "\u010det",
+          "pet",
+          "sub"
+        ],
+        "wide": [
+          "nedjelja",
+          "ponedjeljak",
+          "utorak",
+          "srijeda",
+          "\u010detvrtak",
+          "petak",
+          "subota"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "KV1",
+          "KV2",
+          "KV3",
+          "KV4"
+        ],
+        "narrow": [
+          "1.",
+          "2.",
+          "3.",
+          "4."
+        ],
+        "wide": [
+          "Prvi kvartal",
+          "Drugi kvartal",
+          "Tre\u0107i kvartal",
+          "\u010cetvrti kvartal"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "KV1",
+          "KV2",
+          "KV3",
+          "KV4"
+        ],
+        "narrow": [
+          "1.",
+          "2.",
+          "3.",
+          "4."
+        ],
+        "wide": [
+          "Prvi kvartal",
+          "Drugi kvartal",
+          "Tre\u0107i kvartal",
+          "\u010cetvrti kvartal"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "pono\u0107",
+          "am": "AM",
+          "noon": "podne",
+          "pm": "PM",
+          "morning1": "ujutro",
+          "afternoon1": "poslijepodne",
+          "evening1": "nave\u010der",
+          "night1": "po no\u0107i"
+        },
+        "narrow": {
+          "midnight": "pono\u0107",
+          "am": "prijepodne",
+          "noon": "podne",
+          "pm": "popodne",
+          "morning1": "ujutro",
+          "afternoon1": "poslijepodne",
+          "evening1": "nave\u010der",
+          "night1": "po no\u0107i"
+        },
+        "wide": {
+          "midnight": "pono\u0107",
+          "am": "prijepodne",
+          "noon": "podne",
+          "pm": "popodne",
+          "morning1": "ujutro",
+          "afternoon1": "poslijepodne",
+          "evening1": "nave\u010der",
+          "night1": "po no\u0107i"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "pono\u0107",
+          "am": "AM",
+          "noon": "podne",
+          "pm": "PM",
+          "morning1": "ujutro",
+          "afternoon1": "poslijepodne",
+          "evening1": "nave\u010der",
+          "night1": "po no\u0107i"
+        },
+        "narrow": {
+          "midnight": "pono\u0107",
+          "am": "prijepodne",
+          "noon": "podne",
+          "pm": "popodne",
+          "morning1": "ujutro",
+          "afternoon1": "poslijepodne",
+          "evening1": "nave\u010der",
+          "night1": "po no\u0107i"
+        },
+        "wide": {
+          "midnight": "pono\u0107",
+          "am": "prijepodne",
+          "noon": "podne",
+          "pm": "popodne",
+          "morning1": "ujutro",
+          "afternoon1": "poslijepodne",
+          "evening1": "nave\u010der",
+          "night1": "po no\u0107i"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "prije nove ere",
+        "preAlt": "P.n.e.",
+        "post": "nove ere",
+        "postAlt": "Nove ere"
+      },
+      "abbr": {
+        "pre": "p. n. e.",
+        "preAlt": "p.n.e.",
+        "post": "n. e.",
+        "postAlt": "n.e."
+      },
+      "narrow": {
+        "pre": "p.n.e.",
+        "preAlt": "p.n.e.",
+        "post": "n.e.",
+        "postAlt": "n.e."
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "18:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "21:00",
+      "_from": "18:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "12:00",
+      "_from": "04:00"
+    },
+    "night1": {
+      "_before": "04:00",
+      "_from": "21:00"
+    },
+    "noon": {
+      "_at": "12:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "EEEE, d. MMMM y.",
+      "long": "d. MMMM y.",
+      "medium": "d. MMM y.",
+      "short": "d. M. y."
+    },
+    "time": {
+      "full": "HH:mm:ss zzzz",
+      "long": "HH:mm:ss z",
+      "medium": "HH:mm:ss",
+      "short": "HH:mm"
+    },
+    "datetime": {
+      "full": "HH:mm:ss zzzz 'u' EEEE, d. MMMM y.",
+      "long": "HH:mm:ss z 'u' d. MMMM y.",
+      "medium": "HH:mm:ss d. MMM y.",
+      "short": "HH:mm d. M. y."
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d.",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "E, d.",
+      "Ehm": "E h:mm a",
+      "EHm": "E HH:mm",
+      "Ehms": "E h:mm:ss a",
+      "EHms": "E HH:mm:ss",
+      "Gy": "y. G",
+      "GyMMM": "MMM y. G",
+      "GyMMMd": "d. MMM y. G",
+      "GyMMMEd": "E, d. MMM y. G",
+      "h": "h a",
+      "H": "HH",
+      "hm": "hh:mm a",
+      "Hm": "HH:mm",
+      "hms": "hh:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a (v)",
+      "Hmsv": "HH:mm:ss (v)",
+      "hmv": "h:mm a (v)",
+      "Hmv": "HH:mm (v)",
+      "M": "L",
+      "Md": "d.M.",
+      "MEd": "E, d.M.",
+      "MMdd": "d. M.",
+      "MMM": "LLL",
+      "MMMd": "d. MMM",
+      "MMMEd": "E, d. MMM",
+      "MMMMd": "d. MMMM",
+      "MMMMEd": "E, d. MMMM",
+      "ms": "mm:ss",
+      "y": "y.",
+      "yM": "MM/y",
+      "yMd": "d.M.y.",
+      "yMEd": "E, d.M.y.",
+      "yMM": "M/y",
+      "yMMM": "MMM y.",
+      "yMMMd": "d. MMM y.",
+      "yMMMEd": "E, d. MMM y.",
+      "yMMMM": "LLLL y.",
+      "yQQQ": "QQQ y.",
+      "yQQQQ": "QQQQ y.",
+      "MMMMWCountOther": "W. 'sedmica' 'mjesec' MMMM",
+      "MMMMWCountOne": "W. 'sedmica' 'mjesec' MMMM",
+      "MMMMWCountFew": "W. 'sedmica' 'mjesec' MMMM",
+      "ywCountOther": "w. 'sedmica' 'u' Y.",
+      "ywCountOne": "w. 'sedmica' 'u' Y.",
+      "ywCountFew": "w. 'sedmica' 'u' Y."
+    },
+    "timezone": {
+      "gmt": "GMT {0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "{0}",
+      "regionDaylight": "{0}, ljetno vrijeme",
+      "regionStandard": "{0}, standardno vrijeme"
+    }
+  }
+}

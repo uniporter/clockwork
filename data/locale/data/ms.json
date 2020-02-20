@@ -1,0 +1,396 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "Jan",
+          "Feb",
+          "Mac",
+          "Apr",
+          "Mei",
+          "Jun",
+          "Jul",
+          "Ogo",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Dis"
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "J",
+          "O",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "Januari",
+          "Februari",
+          "Mac",
+          "April",
+          "Mei",
+          "Jun",
+          "Julai",
+          "Ogos",
+          "September",
+          "Oktober",
+          "November",
+          "Disember"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Jan",
+          "Feb",
+          "Mac",
+          "Apr",
+          "Mei",
+          "Jun",
+          "Jul",
+          "Ogo",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Dis"
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "J",
+          "O",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "Januari",
+          "Februari",
+          "Mac",
+          "April",
+          "Mei",
+          "Jun",
+          "Julai",
+          "Ogos",
+          "September",
+          "Oktober",
+          "November",
+          "Disember"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "Ahd",
+          "Isn",
+          "Sel",
+          "Rab",
+          "Kha",
+          "Jum",
+          "Sab"
+        ],
+        "narrow": [
+          "A",
+          "I",
+          "S",
+          "R",
+          "K",
+          "J",
+          "S"
+        ],
+        "short": [
+          "Ah",
+          "Is",
+          "Se",
+          "Ra",
+          "Kh",
+          "Ju",
+          "Sa"
+        ],
+        "wide": [
+          "Ahad",
+          "Isnin",
+          "Selasa",
+          "Rabu",
+          "Khamis",
+          "Jumaat",
+          "Sabtu"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Ahd",
+          "Isn",
+          "Sel",
+          "Rab",
+          "Kha",
+          "Jum",
+          "Sab"
+        ],
+        "narrow": [
+          "A",
+          "I",
+          "S",
+          "R",
+          "K",
+          "J",
+          "S"
+        ],
+        "short": [
+          "Ah",
+          "Is",
+          "Se",
+          "Ra",
+          "Kh",
+          "Ju",
+          "Sa"
+        ],
+        "wide": [
+          "Ahad",
+          "Isnin",
+          "Selasa",
+          "Rabu",
+          "Khamis",
+          "Jumaat",
+          "Sabtu"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "Suku pertama",
+          "Suku Ke-2",
+          "Suku Ke-3",
+          "Suku Ke-4"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "Suku pertama",
+          "Suku Ke-2",
+          "Suku Ke-3",
+          "Suku Ke-4"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "am": "PG",
+          "pm": "PTG",
+          "morning1": "pagi",
+          "morning2": "pagi",
+          "afternoon1": "tengah hari",
+          "evening1": "petang",
+          "night1": "malam"
+        },
+        "narrow": {
+          "am": "a",
+          "pm": "p",
+          "morning1": "pagi",
+          "morning2": "pagi",
+          "afternoon1": "tengah hari",
+          "evening1": "petang",
+          "night1": "malam"
+        },
+        "wide": {
+          "am": "PG",
+          "pm": "PTG",
+          "morning1": "tengah malam",
+          "morning2": "pagi",
+          "afternoon1": "tengah hari",
+          "evening1": "petang",
+          "night1": "malam"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "am": "PG",
+          "pm": "PTG",
+          "morning1": "tengah malam",
+          "morning2": "pagi",
+          "afternoon1": "tengah hari",
+          "evening1": "petang",
+          "night1": "malam"
+        },
+        "narrow": {
+          "am": "a",
+          "pm": "p",
+          "morning1": "pagi",
+          "morning2": "pagi",
+          "afternoon1": "tengah hari",
+          "evening1": "petang",
+          "night1": "malam"
+        },
+        "wide": {
+          "am": "PG",
+          "pm": "PTG",
+          "morning1": "tengah malam",
+          "morning2": "pagi",
+          "afternoon1": "tengah hari",
+          "evening1": "petang",
+          "night1": "malam"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "S.M.",
+        "preAlt": "BCE",
+        "post": "TM",
+        "postAlt": "CE"
+      },
+      "abbr": {
+        "pre": "S.M.",
+        "preAlt": "BCE",
+        "post": "TM",
+        "postAlt": "CE"
+      },
+      "narrow": {
+        "pre": "S.M.",
+        "preAlt": "BCE",
+        "post": "TM",
+        "postAlt": "CE"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "14:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "19:00",
+      "_from": "14:00"
+    },
+    "morning1": {
+      "_before": "01:00",
+      "_from": "00:00"
+    },
+    "morning2": {
+      "_before": "12:00",
+      "_from": "01:00"
+    },
+    "night1": {
+      "_before": "24:00",
+      "_from": "19:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "EEEE, d MMMM y",
+      "long": "d MMMM y",
+      "medium": "d MMM y",
+      "short": "d/MM/yy"
+    },
+    "time": {
+      "full": "h:mm:ss a zzzz",
+      "long": "h:mm:ss a z",
+      "medium": "h:mm:ss a",
+      "short": "h:mm a"
+    },
+    "datetime": {
+      "full": "h:mm:ss a zzzz EEEE, d MMMM y",
+      "long": "h:mm:ss a z d MMMM y",
+      "medium": "h:mm:ss a, d MMM y",
+      "short": "h:mm a, d/MM/yy"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "d E",
+      "Ehm": "E h:mm a",
+      "EHm": "E HH:mm",
+      "Ehms": "E h:mm:ss a",
+      "EHms": "E HH:mm:ss",
+      "Gy": "y G",
+      "GyMMM": "MMM y G",
+      "GyMMMd": "d MMM y G",
+      "GyMMMEd": "E, d MMM y G",
+      "h": "h a",
+      "H": "HH",
+      "hm": "h:mm a",
+      "Hm": "HH:mm",
+      "hms": "h:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a v",
+      "Hmsv": "HH:mm:ss v",
+      "hmv": "h:mm a v",
+      "Hmv": "HH:mm v",
+      "M": "L",
+      "Md": "d-M",
+      "MEd": "E, d-M",
+      "MMdd": "dd/MM",
+      "MMM": "LLL",
+      "MMMd": "d MMM",
+      "MMMEd": "E, d MMM",
+      "MMMMd": "d MMMM",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "M-y",
+      "yMd": "d/M/y",
+      "yMEd": "E, d/M/y",
+      "yMMM": "MMM y",
+      "yMMMd": "d MMM y",
+      "yMMMEd": "E, d MMM y",
+      "yMMMM": "MMMM y",
+      "yQQQ": "QQQ y",
+      "yQQQQ": "QQQQ y",
+      "MMMMWCountOther": "'week' W 'of' MMMM",
+      "ywCountOther": "'week' w 'of' Y"
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "Waktu {0}",
+      "regionDaylight": "Waktu Siang {0}",
+      "regionStandard": "Waktu Piawai {0}"
+    }
+  }
+}

@@ -21,7 +21,9 @@ export 'year.dart';
 typedef UnitBuilder<U extends Unit> = U Function(int value);
 
 class Unit extends RangedValue {
-    Unit(value) : super(value);
+    final num len;
+
+    Unit(value, [this.len = double.infinity]) : super(value);
 
     final UnitBuilder<Unit> builder = (value) => Unit(value);
 
@@ -30,21 +32,16 @@ class Unit extends RangedValue {
     /// Prints the underlying [value] of this.
     @override String toString() => value.toString();
 
-    /// Adds this with another [Unit] or [int].
+    /// Adds this with another [Unit].
     ///
     /// The operation will throw an [InvalidArgumentException] if the result is not within [range].
     ///
     /// Note: Since currently Dart doesn't have union types, we cannot specify the type of the argument (ideally
     /// we will make it `int | covariant Unit`). The function will thus throw exceptions if [other] is of
     /// neither type.
-    Unit operator +(dynamic other) {
-        if (runtimeType == other.runtimeType) {
-            final value = this.value + (other as Unit).value;
-            return range.has(value) ? builder(value) : throw InvalidArgumentException('other');
-        } else if (other is int) {
-            final value = this.value + other;
-            return range.has(value) ? builder(value) : throw InvalidArgumentException('other');
-        } else throw InvalidArgumentException('other');
+    Unit operator +(int other) {
+        final value = ((this.value + other - 1) % len + 1).toInt();
+        return range.has(value) ? builder(value) : throw InvalidArgumentException('other');
     }
 
     /// Subtract another [Unit] or [int] from this.
@@ -54,14 +51,9 @@ class Unit extends RangedValue {
     /// Note: Since currently Dart doesn't have union types, we cannot specify the type of the argument (ideally
     /// we will make it `int | covariant Unit`). The function will thus throw exceptions if [other] is of
     /// neither type.
-    Unit operator -(dynamic other) {
-        if (runtimeType == other.runtimeType) {
-            final value = this.value - (other as Unit).value;
-            return range.has(value) ? builder(value) : throw InvalidArgumentException('other');
-        } else if (other is int) {
-            final value = this.value - other;
-            return range.has(value) ? builder(value) : throw InvalidArgumentException('other');
-        } else throw InvalidArgumentException('other');
+    Unit operator -(int other) {
+        final value = ((this.value - other - 1) % len + 1).toInt();
+        return range.has(value) ? builder(value) : throw InvalidArgumentException('other');
     }
 
     /// Compare the value of this with [other].

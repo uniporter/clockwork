@@ -1,0 +1,405 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "yan",
+          "fev",
+          "mar",
+          "apr",
+          "may",
+          "iyn",
+          "iyl",
+          "avg",
+          "sen",
+          "okt",
+          "noy",
+          "dek"
+        ],
+        "narrow": [
+          "Y",
+          "F",
+          "M",
+          "A",
+          "M",
+          "I",
+          "I",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "yanvar",
+          "fevral",
+          "mart",
+          "aprel",
+          "may",
+          "iyun",
+          "iyul",
+          "avgust",
+          "sentabr",
+          "oktabr",
+          "noyabr",
+          "dekabr"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Yan",
+          "Fev",
+          "Mar",
+          "Apr",
+          "May",
+          "Iyn",
+          "Iyl",
+          "Avg",
+          "Sen",
+          "Okt",
+          "Noy",
+          "Dek"
+        ],
+        "narrow": [
+          "Y",
+          "F",
+          "M",
+          "A",
+          "M",
+          "I",
+          "I",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "Yanvar",
+          "Fevral",
+          "Mart",
+          "Aprel",
+          "May",
+          "Iyun",
+          "Iyul",
+          "Avgust",
+          "Sentabr",
+          "Oktabr",
+          "Noyabr",
+          "Dekabr"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "Yak",
+          "Dush",
+          "Sesh",
+          "Chor",
+          "Pay",
+          "Jum",
+          "Shan"
+        ],
+        "narrow": [
+          "Y",
+          "D",
+          "S",
+          "C",
+          "P",
+          "J",
+          "S"
+        ],
+        "short": [
+          "Ya",
+          "Du",
+          "Se",
+          "Ch",
+          "Pa",
+          "Ju",
+          "Sh"
+        ],
+        "wide": [
+          "yakshanba",
+          "dushanba",
+          "seshanba",
+          "chorshanba",
+          "payshanba",
+          "juma",
+          "shanba"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Yak",
+          "Dush",
+          "Sesh",
+          "Chor",
+          "Pay",
+          "Jum",
+          "Shan"
+        ],
+        "narrow": [
+          "Y",
+          "D",
+          "S",
+          "C",
+          "P",
+          "J",
+          "S"
+        ],
+        "short": [
+          "Ya",
+          "Du",
+          "Se",
+          "Ch",
+          "Pa",
+          "Ju",
+          "Sh"
+        ],
+        "wide": [
+          "yakshanba",
+          "dushanba",
+          "seshanba",
+          "chorshanba",
+          "payshanba",
+          "juma",
+          "shanba"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "1-ch",
+          "2-ch",
+          "3-ch",
+          "4-ch"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1-chorak",
+          "2-chorak",
+          "3-chorak",
+          "4-chorak"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "1-ch",
+          "2-ch",
+          "3-ch",
+          "4-ch"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1-chorak",
+          "2-chorak",
+          "3-chorak",
+          "4-chorak"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "yarim tun",
+          "am": "TO",
+          "noon": "tush payti",
+          "pm": "TK",
+          "morning1": "ertalab",
+          "afternoon1": "kunduzi",
+          "evening1": "kechqurun",
+          "night1": "kechasi"
+        },
+        "narrow": {
+          "midnight": "yarim tun",
+          "am": "TO",
+          "noon": "tush payti",
+          "pm": "TK",
+          "morning1": "ertalab",
+          "afternoon1": "kunduzi",
+          "evening1": "kechqurun",
+          "night1": "kechasi"
+        },
+        "wide": {
+          "midnight": "yarim tun",
+          "am": "TO",
+          "noon": "tush payti",
+          "pm": "TK",
+          "morning1": "ertalab",
+          "afternoon1": "kunduzi",
+          "evening1": "kechqurun",
+          "night1": "kechasi"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "yarim tun",
+          "am": "TO",
+          "noon": "tush payti",
+          "pm": "TK",
+          "morning1": "ertalab",
+          "afternoon1": "kunduzi",
+          "evening1": "kechqurun",
+          "night1": "kechasi"
+        },
+        "narrow": {
+          "midnight": "yarim tun",
+          "am": "TO",
+          "noon": "tush payti",
+          "pm": "TK",
+          "morning1": "ertalab",
+          "afternoon1": "kunduzi",
+          "evening1": "kechqurun",
+          "night1": "kechasi"
+        },
+        "wide": {
+          "midnight": "yarim tun",
+          "am": "TO",
+          "noon": "tush payti",
+          "pm": "TK",
+          "morning1": "ertalab",
+          "afternoon1": "kunduzi",
+          "evening1": "kechqurun",
+          "night1": "kechasi"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "miloddan avvalgi",
+        "preAlt": "eramizdan avvalgi",
+        "post": "milodiy",
+        "postAlt": "mil."
+      },
+      "abbr": {
+        "pre": "m.a.",
+        "preAlt": "e.a.",
+        "post": "milodiy",
+        "postAlt": "mil."
+      },
+      "narrow": {
+        "pre": "m.a.",
+        "preAlt": "e.a.",
+        "post": "milodiy",
+        "postAlt": "mil."
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "18:00",
+      "_from": "11:00"
+    },
+    "evening1": {
+      "_before": "22:00",
+      "_from": "18:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "11:00",
+      "_from": "06:00"
+    },
+    "night1": {
+      "_before": "06:00",
+      "_from": "22:00"
+    },
+    "noon": {
+      "_at": "12:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "EEEE, d-MMMM, y",
+      "long": "d-MMMM, y",
+      "medium": "d-MMM, y",
+      "short": "dd/MM/yy"
+    },
+    "time": {
+      "full": "H:mm:ss (zzzz)",
+      "long": "H:mm:ss (z)",
+      "medium": "HH:mm:ss",
+      "short": "HH:mm"
+    },
+    "datetime": {
+      "full": "H:mm:ss (zzzz), EEEE, d-MMMM, y",
+      "long": "H:mm:ss (z), d-MMMM, y",
+      "medium": "HH:mm:ss, d-MMM, y",
+      "short": "HH:mm, dd/MM/yy"
+    },
+    "builtIn": {
+      "Bh": "B h",
+      "Bhm": "B h:mm",
+      "Bhms": "B h:mm:ss",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E, B h:mm",
+      "EBhms": "E, B h:mm:ss",
+      "Ed": "d, E",
+      "Ehm": "E, h:mm a",
+      "EHm": "E, HH:mm",
+      "Ehms": "E, h:mm:ss a",
+      "EHms": "E, HH:mm:ss",
+      "Gy": "G y",
+      "GyMMM": "MMM, G y",
+      "GyMMMd": "d-MMM, G y",
+      "GyMMMEd": "E, d-MMM, G y",
+      "h": "h a",
+      "H": "HH",
+      "hm": "h:mm a",
+      "Hm": "HH:mm",
+      "hms": "h:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a (v)",
+      "Hmsv": "HH:mm:ss (v)",
+      "hmv": "h:mm a (v)",
+      "Hmv": "HH:mm (v)",
+      "M": "LL",
+      "Md": "dd/MM",
+      "MEd": "E, dd/MM",
+      "MMM": "LLL",
+      "MMMd": "d-MMM",
+      "MMMEd": "E, d-MMM",
+      "MMMMd": "d-MMMM",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "MM.y",
+      "yMd": "dd/MM/y",
+      "yMEd": "E, dd/MM/y",
+      "yMMM": "MMM, y",
+      "yMMMd": "d-MMM, y",
+      "yMMMEd": "E, d-MMM, y",
+      "yMMMM": "MMMM, y",
+      "yQQQ": "y, QQQ",
+      "yQQQQ": "y, QQQQ",
+      "MMMMWCountOther": "MMMM, W-'hafta'",
+      "MMMMWCountOne": "MMMM, W-'hafta'",
+      "ywCountOther": "Y, w-'hafta'",
+      "ywCountOne": "Y, w-'hafta'"
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "{0}",
+      "regionDaylight": "{0} (+1)",
+      "regionStandard": "{0} (+0)"
+    }
+  }
+}

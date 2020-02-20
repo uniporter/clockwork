@@ -1,0 +1,405 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "\u1303\u1295\u12e9",
+          "\u134c\u1265\u1229",
+          "\u121b\u122d\u127d",
+          "\u12a4\u1355\u122a",
+          "\u121c\u12ed",
+          "\u1301\u1295",
+          "\u1301\u120b\u12ed",
+          "\u12a6\u1308\u1235",
+          "\u1234\u1355\u1274",
+          "\u12a6\u12ad\u1276",
+          "\u1296\u126c\u121d",
+          "\u12f2\u1234\u121d"
+        ],
+        "narrow": [
+          "\u1303",
+          "\u134c",
+          "\u121b",
+          "\u12a4",
+          "\u121c",
+          "\u1301",
+          "\u1301",
+          "\u12a6",
+          "\u1234",
+          "\u12a6",
+          "\u1296",
+          "\u12f2"
+        ],
+        "wide": [
+          "\u1303\u1295\u12e9\u12c8\u122a",
+          "\u134c\u1265\u1229\u12c8\u122a",
+          "\u121b\u122d\u127d",
+          "\u12a4\u1355\u122a\u120d",
+          "\u121c\u12ed",
+          "\u1301\u1295",
+          "\u1301\u120b\u12ed",
+          "\u12a6\u1308\u1235\u1275",
+          "\u1234\u1355\u1274\u121d\u1260\u122d",
+          "\u12a6\u12ad\u1276\u1260\u122d",
+          "\u1296\u126c\u121d\u1260\u122d",
+          "\u12f2\u1234\u121d\u1260\u122d"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u1303\u1295\u12e9",
+          "\u134c\u1265\u1229",
+          "\u121b\u122d\u127d",
+          "\u12a4\u1355\u122a",
+          "\u121c\u12ed",
+          "\u1301\u1295",
+          "\u1301\u120b\u12ed",
+          "\u12a6\u1308\u1235",
+          "\u1234\u1355\u1274",
+          "\u12a6\u12ad\u1276",
+          "\u1296\u126c\u121d",
+          "\u12f2\u1234\u121d"
+        ],
+        "narrow": [
+          "\u1303",
+          "\u134c",
+          "\u121b",
+          "\u12a4",
+          "\u121c",
+          "\u1301",
+          "\u1301",
+          "\u12a6",
+          "\u1234",
+          "\u12a6",
+          "\u1296",
+          "\u12f2"
+        ],
+        "wide": [
+          "\u1303\u1295\u12e9\u12c8\u122a",
+          "\u134c\u1265\u1229\u12c8\u122a",
+          "\u121b\u122d\u127d",
+          "\u12a4\u1355\u122a\u120d",
+          "\u121c\u12ed",
+          "\u1301\u1295",
+          "\u1301\u120b\u12ed",
+          "\u12a6\u1308\u1235\u1275",
+          "\u1234\u1355\u1274\u121d\u1260\u122d",
+          "\u12a6\u12ad\u1276\u1260\u122d",
+          "\u1296\u126c\u121d\u1260\u122d",
+          "\u12f2\u1234\u121d\u1260\u122d"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "\u12a5\u1211\u12f5",
+          "\u1230\u129e",
+          "\u121b\u12ad\u1230",
+          "\u1228\u1261\u12d5",
+          "\u1210\u1219\u1235",
+          "\u12d3\u122d\u1265",
+          "\u1245\u12f3\u121c"
+        ],
+        "narrow": [
+          "\u12a5",
+          "\u1230",
+          "\u121b",
+          "\u1228",
+          "\u1210",
+          "\u12d3",
+          "\u1245"
+        ],
+        "short": [
+          "\u12a5",
+          "\u1230",
+          "\u121b",
+          "\u1228",
+          "\u1210",
+          "\u12d3",
+          "\u1245"
+        ],
+        "wide": [
+          "\u12a5\u1211\u12f5",
+          "\u1230\u129e",
+          "\u121b\u12ad\u1230\u129e",
+          "\u1228\u1261\u12d5",
+          "\u1210\u1219\u1235",
+          "\u12d3\u122d\u1265",
+          "\u1245\u12f3\u121c"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u12a5\u1211\u12f5",
+          "\u1230\u129e",
+          "\u121b\u12ad\u1230",
+          "\u1228\u1261\u12d5",
+          "\u1210\u1219\u1235",
+          "\u12d3\u122d\u1265",
+          "\u1245\u12f3\u121c"
+        ],
+        "narrow": [
+          "\u12a5",
+          "\u1230",
+          "\u121b",
+          "\u1228",
+          "\u1210",
+          "\u12d3",
+          "\u1245"
+        ],
+        "short": [
+          "\u12a5",
+          "\u1230",
+          "\u121b",
+          "\u1228",
+          "\u1210",
+          "\u12d3",
+          "\u1245"
+        ],
+        "wide": [
+          "\u12a5\u1211\u12f5",
+          "\u1230\u129e",
+          "\u121b\u12ad\u1230\u129e",
+          "\u1228\u1261\u12d5",
+          "\u1210\u1219\u1235",
+          "\u12d3\u122d\u1265",
+          "\u1245\u12f3\u121c"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "\u1229\u12651",
+          "\u1229\u12652",
+          "\u1229\u12653",
+          "\u1229\u12654"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1\u129b\u12cd \u1229\u1265",
+          "2\u129b\u12cd \u1229\u1265",
+          "3\u129b\u12cd \u1229\u1265",
+          "4\u129b\u12cd \u1229\u1265"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u1229\u12651",
+          "\u1229\u12652",
+          "\u1229\u12653",
+          "\u1229\u12654"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1\u129b\u12cd \u1229\u1265",
+          "2\u129b\u12cd \u1229\u1265",
+          "3\u129b\u12cd \u1229\u1265",
+          "4\u129b\u12cd \u1229\u1265"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "\u12a5\u12a9\u1208 \u120c\u120a\u1275",
+          "am": "\u1325\u12cb\u1275",
+          "noon": "\u1240\u1275\u122d",
+          "pm": "\u12a8\u1230\u12d3\u1275",
+          "morning1": "\u1325\u12cb\u12751",
+          "afternoon1": "\u12a8\u1230\u12d3\u1275 7",
+          "evening1": "\u121b\u12731",
+          "night1": "\u120c\u120a\u12751"
+        },
+        "narrow": {
+          "midnight": "\u12a5\u12a9\u1208 \u120c\u120a\u1275",
+          "am": "\u1320",
+          "noon": "\u1240",
+          "pm": "\u12a8",
+          "morning1": "\u1325\u12cb\u12751",
+          "afternoon1": "\u12a8\u1230\u12d3\u12751",
+          "evening1": "\u121b\u12731",
+          "night1": "\u120c\u120a\u12751"
+        },
+        "wide": {
+          "midnight": "\u12a5\u12a9\u1208 \u120c\u120a\u1275",
+          "am": "\u1325\u12cb\u1275",
+          "noon": "\u1240\u1275\u122d",
+          "pm": "\u12a8\u1230\u12d3\u1275",
+          "morning1": "\u1325\u12cb\u12751",
+          "afternoon1": "\u12a8\u1230\u12d3\u1275 7 \u1230\u12d3\u1275",
+          "evening1": "\u121b\u12731",
+          "night1": "\u120c\u120a\u12751"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "\u12a5\u12a9\u1208 \u120c\u120a\u1275",
+          "am": "\u1325\u12cb\u1275",
+          "noon": "\u1240\u1275\u122d",
+          "pm": "\u12a8\u1230\u12d3\u1275",
+          "morning1": "\u1325\u12cb\u12751",
+          "afternoon1": "\u12a8\u1230\u12d3\u1275 \u1260\u128b\u120b",
+          "evening1": "\u121b\u1273",
+          "night1": "\u120c\u120a\u1275"
+        },
+        "narrow": {
+          "midnight": "\u12a5\u12a9\u1208 \u120c\u120a\u1275",
+          "am": "\u1320",
+          "noon": "\u1240\u1275\u122d",
+          "pm": "\u12a8",
+          "morning1": "\u1325\u12cb\u1275",
+          "afternoon1": "\u12a8\u1230\u12d3\u1275 \u1260\u128b\u120b",
+          "evening1": "\u121b\u1273",
+          "night1": "\u120c\u120a\u1275"
+        },
+        "wide": {
+          "midnight": "\u12a5\u12a9\u1208 \u120c\u120a\u1275",
+          "am": "\u1325\u12cb\u1275",
+          "noon": "\u1240\u1275\u122d",
+          "pm": "\u12a8\u1230\u12d3\u1275",
+          "morning1": "\u1325\u12cb\u12751",
+          "afternoon1": "\u12a8\u1230\u12d3\u1275 \u1260\u128b\u120b",
+          "evening1": "\u121b\u1273",
+          "night1": "\u120c\u120a\u1275"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "\u12d3\u1218\u1270 \u12d3\u1208\u121d",
+        "preAlt": "\u12d3/\u12d3",
+        "post": "\u12d3\u1218\u1270 \u121d\u1215\u1228\u1275",
+        "postAlt": "\u12d3/\u121d"
+      },
+      "abbr": {
+        "pre": "\u12d3/\u12d3",
+        "preAlt": "BCE",
+        "post": "\u12d3/\u121d",
+        "postAlt": "CE"
+      },
+      "narrow": {
+        "pre": "\u12d3/\u12d3",
+        "preAlt": "BCE",
+        "post": "\u12d3/\u121d",
+        "postAlt": "CE"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "18:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "24:00",
+      "_from": "18:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "12:00",
+      "_from": "06:00"
+    },
+    "night1": {
+      "_before": "06:00",
+      "_from": "00:00"
+    },
+    "noon": {
+      "_at": "12:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "y MMMM d, EEEE",
+      "long": "d MMMM y",
+      "medium": "d MMM y",
+      "short": "dd/MM/y"
+    },
+    "time": {
+      "full": "h:mm:ss a zzzz",
+      "long": "h:mm:ss a z",
+      "medium": "h:mm:ss a",
+      "short": "h:mm a"
+    },
+    "datetime": {
+      "full": "h:mm:ss a zzzz y MMMM d, EEEE",
+      "long": "h:mm:ss a z d MMMM y",
+      "medium": "h:mm:ss a d MMM y",
+      "short": "h:mm a dd/MM/y"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "E d",
+      "Ehm": "E h:mm a",
+      "EHm": "E HH:mm",
+      "Ehms": "E h:mm:ss a",
+      "EHms": "E HH:mm:ss",
+      "Gy": "y G",
+      "GyMMM": "MMM y G",
+      "GyMMMd": "G y MMM d",
+      "GyMMMEd": "G y MMM d, E",
+      "h": "h a",
+      "H": "H",
+      "hm": "h:mm a",
+      "Hm": "HH:mm",
+      "hms": "h:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a v",
+      "Hmsv": "HH:mm:ss v",
+      "hmv": "h:mm a v",
+      "Hmv": "HH:mm v",
+      "M": "L",
+      "Md": "M/d",
+      "MEd": "E\u1363 M/d",
+      "MMM": "LLL",
+      "MMMd": "MMM d",
+      "MMMEd": "E\u1363 MMM d",
+      "MMMMd": "MMMM d",
+      "MMMMEd": "E\u1363 MMMM d",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "M/y",
+      "yMd": "d/M/y",
+      "yMEd": "E\u1363 d/M/y",
+      "yMMM": "MMM y",
+      "yMMMd": "d MMM y",
+      "yMMMEd": "E\u1363 MMM d y",
+      "yMMMM": "MMMM y",
+      "yQQQ": "QQQ y",
+      "yQQQQ": "QQQQ y",
+      "MMMMWCountOther": "'week' W 'of' MMMM",
+      "ywCountOther": "'week' w 'of' Y",
+      "ywCountOne": "'week' w 'of' Y"
+    },
+    "timezone": {
+      "gmt": "\u1302 \u12a4\u121d \u1272{0}+Hms",
+      "gmtZero": "\u1302 \u12a4\u121d \u1272",
+      "region": "{0} \u130a\u12dc",
+      "regionDaylight": "{0} \u12e8\u1240\u1295 \u1265\u122d\u1203\u1295 \u1230\u12d3\u1275",
+      "regionStandard": "{0} \u1218\u12f0\u1260\u129b \u1230\u12d3\u1275"
+    }
+  }
+}

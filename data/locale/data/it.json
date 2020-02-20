@@ -1,0 +1,405 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "gen",
+          "feb",
+          "mar",
+          "apr",
+          "mag",
+          "giu",
+          "lug",
+          "ago",
+          "set",
+          "ott",
+          "nov",
+          "dic"
+        ],
+        "narrow": [
+          "G",
+          "F",
+          "M",
+          "A",
+          "M",
+          "G",
+          "L",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "gennaio",
+          "febbraio",
+          "marzo",
+          "aprile",
+          "maggio",
+          "giugno",
+          "luglio",
+          "agosto",
+          "settembre",
+          "ottobre",
+          "novembre",
+          "dicembre"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "gen",
+          "feb",
+          "mar",
+          "apr",
+          "mag",
+          "giu",
+          "lug",
+          "ago",
+          "set",
+          "ott",
+          "nov",
+          "dic"
+        ],
+        "narrow": [
+          "G",
+          "F",
+          "M",
+          "A",
+          "M",
+          "G",
+          "L",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "gennaio",
+          "febbraio",
+          "marzo",
+          "aprile",
+          "maggio",
+          "giugno",
+          "luglio",
+          "agosto",
+          "settembre",
+          "ottobre",
+          "novembre",
+          "dicembre"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "dom",
+          "lun",
+          "mar",
+          "mer",
+          "gio",
+          "ven",
+          "sab"
+        ],
+        "narrow": [
+          "D",
+          "L",
+          "M",
+          "M",
+          "G",
+          "V",
+          "S"
+        ],
+        "short": [
+          "dom",
+          "lun",
+          "mar",
+          "mer",
+          "gio",
+          "ven",
+          "sab"
+        ],
+        "wide": [
+          "domenica",
+          "luned\u00ec",
+          "marted\u00ec",
+          "mercoled\u00ec",
+          "gioved\u00ec",
+          "venerd\u00ec",
+          "sabato"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "dom",
+          "lun",
+          "mar",
+          "mer",
+          "gio",
+          "ven",
+          "sab"
+        ],
+        "narrow": [
+          "D",
+          "L",
+          "M",
+          "M",
+          "G",
+          "V",
+          "S"
+        ],
+        "short": [
+          "dom",
+          "lun",
+          "mar",
+          "mer",
+          "gio",
+          "ven",
+          "sab"
+        ],
+        "wide": [
+          "domenica",
+          "luned\u00ec",
+          "marted\u00ec",
+          "mercoled\u00ec",
+          "gioved\u00ec",
+          "venerd\u00ec",
+          "sabato"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "T1",
+          "T2",
+          "T3",
+          "T4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1\u00ba trimestre",
+          "2\u00ba trimestre",
+          "3\u00ba trimestre",
+          "4\u00ba trimestre"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "T1",
+          "T2",
+          "T3",
+          "T4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1\u00ba trimestre",
+          "2\u00ba trimestre",
+          "3\u00ba trimestre",
+          "4\u00ba trimestre"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "mezzanotte",
+          "am": "AM",
+          "noon": "mezzogiorno",
+          "pm": "PM",
+          "morning1": "di mattina",
+          "afternoon1": "di pomeriggio",
+          "evening1": "di sera",
+          "night1": "di notte"
+        },
+        "narrow": {
+          "midnight": "mezzanotte",
+          "am": "m.",
+          "noon": "mezzogiorno",
+          "pm": "p.",
+          "morning1": "di mattina",
+          "afternoon1": "di pomeriggio",
+          "evening1": "di sera",
+          "night1": "di notte"
+        },
+        "wide": {
+          "midnight": "mezzanotte",
+          "am": "AM",
+          "noon": "mezzogiorno",
+          "pm": "PM",
+          "morning1": "di mattina",
+          "afternoon1": "del pomeriggio",
+          "evening1": "di sera",
+          "night1": "di notte"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "mezzanotte",
+          "am": "AM",
+          "noon": "mezzogiorno",
+          "pm": "PM",
+          "morning1": "mattina",
+          "afternoon1": "pomeriggio",
+          "evening1": "sera",
+          "night1": "notte"
+        },
+        "narrow": {
+          "midnight": "mezzanotte",
+          "am": "m.",
+          "noon": "mezzogiorno",
+          "pm": "p.",
+          "morning1": "mattina",
+          "afternoon1": "pomeriggio",
+          "evening1": "sera",
+          "night1": "notte"
+        },
+        "wide": {
+          "midnight": "mezzanotte",
+          "am": "AM",
+          "noon": "mezzogiorno",
+          "pm": "PM",
+          "morning1": "mattina",
+          "afternoon1": "pomeriggio",
+          "evening1": "sera",
+          "night1": "notte"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "avanti Cristo",
+        "preAlt": "avanti Era Volgare",
+        "post": "dopo Cristo",
+        "postAlt": "Era Volgare"
+      },
+      "abbr": {
+        "pre": "a.C.",
+        "preAlt": "a.E.V.",
+        "post": "d.C.",
+        "postAlt": "E.V."
+      },
+      "narrow": {
+        "pre": "aC",
+        "preAlt": "a.E.V.",
+        "post": "dC",
+        "postAlt": "E.V."
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "18:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "24:00",
+      "_from": "18:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "12:00",
+      "_from": "06:00"
+    },
+    "night1": {
+      "_before": "06:00",
+      "_from": "00:00"
+    },
+    "noon": {
+      "_at": "12:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "EEEE d MMMM y",
+      "long": "d MMMM y",
+      "medium": "d MMM y",
+      "short": "dd/MM/yy"
+    },
+    "time": {
+      "full": "HH:mm:ss zzzz",
+      "long": "HH:mm:ss z",
+      "medium": "HH:mm:ss",
+      "short": "HH:mm"
+    },
+    "datetime": {
+      "full": "HH:mm:ss zzzz EEEE d MMMM y",
+      "long": "HH:mm:ss z d MMMM y",
+      "medium": "HH:mm:ss, d MMM y",
+      "short": "HH:mm, dd/MM/yy"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "E d",
+      "Ehm": "E h:mm a",
+      "EHm": "E HH:mm",
+      "Ehms": "E h:mm:ss a",
+      "EHms": "E HH:mm:ss",
+      "Gy": "y G",
+      "GyMMM": "MMM y G",
+      "GyMMMd": "d MMM y G",
+      "GyMMMEd": "E d MMM y G",
+      "h": "h a",
+      "H": "HH",
+      "hm": "h:mm a",
+      "Hm": "HH:mm",
+      "hms": "h:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a v",
+      "Hmsv": "HH:mm:ss v",
+      "hmv": "h:mm a v",
+      "Hmv": "HH:mm v",
+      "M": "L",
+      "Md": "d/M",
+      "MEd": "E d/M",
+      "MMM": "LLL",
+      "MMMd": "d MMM",
+      "MMMEd": "E d MMM",
+      "MMMMd": "d MMMM",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "M/y",
+      "yMd": "d/M/y",
+      "yMEd": "E d/M/y",
+      "yMMM": "MMM y",
+      "yMMMd": "d MMM y",
+      "yMMMEd": "E d MMM y",
+      "yMMMM": "MMMM y",
+      "yQQQ": "QQQ y",
+      "yQQQQ": "QQQQ y",
+      "MMMMWCountOther": "'settimana' W 'di' MMMM",
+      "MMMMWCountOne": "'settimana' W 'di' MMMM",
+      "ywCountOther": "'settimana' w 'del' Y",
+      "ywCountOne": "'settimana' w 'del' Y"
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "Ora {0}",
+      "regionDaylight": "Ora legale: {0}",
+      "regionStandard": "Ora standard: {0}"
+    }
+  }
+}

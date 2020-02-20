@@ -1,0 +1,422 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "1\uc6d4",
+          "2\uc6d4",
+          "3\uc6d4",
+          "4\uc6d4",
+          "5\uc6d4",
+          "6\uc6d4",
+          "7\uc6d4",
+          "8\uc6d4",
+          "9\uc6d4",
+          "10\uc6d4",
+          "11\uc6d4",
+          "12\uc6d4"
+        ],
+        "narrow": [
+          "1\uc6d4",
+          "2\uc6d4",
+          "3\uc6d4",
+          "4\uc6d4",
+          "5\uc6d4",
+          "6\uc6d4",
+          "7\uc6d4",
+          "8\uc6d4",
+          "9\uc6d4",
+          "10\uc6d4",
+          "11\uc6d4",
+          "12\uc6d4"
+        ],
+        "wide": [
+          "1\uc6d4",
+          "2\uc6d4",
+          "3\uc6d4",
+          "4\uc6d4",
+          "5\uc6d4",
+          "6\uc6d4",
+          "7\uc6d4",
+          "8\uc6d4",
+          "9\uc6d4",
+          "10\uc6d4",
+          "11\uc6d4",
+          "12\uc6d4"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "1\uc6d4",
+          "2\uc6d4",
+          "3\uc6d4",
+          "4\uc6d4",
+          "5\uc6d4",
+          "6\uc6d4",
+          "7\uc6d4",
+          "8\uc6d4",
+          "9\uc6d4",
+          "10\uc6d4",
+          "11\uc6d4",
+          "12\uc6d4"
+        ],
+        "narrow": [
+          "1\uc6d4",
+          "2\uc6d4",
+          "3\uc6d4",
+          "4\uc6d4",
+          "5\uc6d4",
+          "6\uc6d4",
+          "7\uc6d4",
+          "8\uc6d4",
+          "9\uc6d4",
+          "10\uc6d4",
+          "11\uc6d4",
+          "12\uc6d4"
+        ],
+        "wide": [
+          "1\uc6d4",
+          "2\uc6d4",
+          "3\uc6d4",
+          "4\uc6d4",
+          "5\uc6d4",
+          "6\uc6d4",
+          "7\uc6d4",
+          "8\uc6d4",
+          "9\uc6d4",
+          "10\uc6d4",
+          "11\uc6d4",
+          "12\uc6d4"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "\uc77c",
+          "\uc6d4",
+          "\ud654",
+          "\uc218",
+          "\ubaa9",
+          "\uae08",
+          "\ud1a0"
+        ],
+        "narrow": [
+          "\uc77c",
+          "\uc6d4",
+          "\ud654",
+          "\uc218",
+          "\ubaa9",
+          "\uae08",
+          "\ud1a0"
+        ],
+        "short": [
+          "\uc77c",
+          "\uc6d4",
+          "\ud654",
+          "\uc218",
+          "\ubaa9",
+          "\uae08",
+          "\ud1a0"
+        ],
+        "wide": [
+          "\uc77c\uc694\uc77c",
+          "\uc6d4\uc694\uc77c",
+          "\ud654\uc694\uc77c",
+          "\uc218\uc694\uc77c",
+          "\ubaa9\uc694\uc77c",
+          "\uae08\uc694\uc77c",
+          "\ud1a0\uc694\uc77c"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\uc77c",
+          "\uc6d4",
+          "\ud654",
+          "\uc218",
+          "\ubaa9",
+          "\uae08",
+          "\ud1a0"
+        ],
+        "narrow": [
+          "\uc77c",
+          "\uc6d4",
+          "\ud654",
+          "\uc218",
+          "\ubaa9",
+          "\uae08",
+          "\ud1a0"
+        ],
+        "short": [
+          "\uc77c",
+          "\uc6d4",
+          "\ud654",
+          "\uc218",
+          "\ubaa9",
+          "\uae08",
+          "\ud1a0"
+        ],
+        "wide": [
+          "\uc77c\uc694\uc77c",
+          "\uc6d4\uc694\uc77c",
+          "\ud654\uc694\uc77c",
+          "\uc218\uc694\uc77c",
+          "\ubaa9\uc694\uc77c",
+          "\uae08\uc694\uc77c",
+          "\ud1a0\uc694\uc77c"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "1\ubd84\uae30",
+          "2\ubd84\uae30",
+          "3\ubd84\uae30",
+          "4\ubd84\uae30"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "\uc81c 1/4\ubd84\uae30",
+          "\uc81c 2/4\ubd84\uae30",
+          "\uc81c 3/4\ubd84\uae30",
+          "\uc81c 4/4\ubd84\uae30"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "1\ubd84\uae30",
+          "2\ubd84\uae30",
+          "3\ubd84\uae30",
+          "4\ubd84\uae30"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "\uc81c 1/4\ubd84\uae30",
+          "\uc81c 2/4\ubd84\uae30",
+          "\uc81c 3/4\ubd84\uae30",
+          "\uc81c 4/4\ubd84\uae30"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "\uc790\uc815",
+          "am": "AM",
+          "noon": "\uc815\uc624",
+          "pm": "PM",
+          "morning1": "\uc0c8\ubcbd",
+          "morning2": "\uc624\uc804",
+          "afternoon1": "\uc624\ud6c4",
+          "evening1": "\uc800\ub141",
+          "night1": "\ubc24"
+        },
+        "narrow": {
+          "midnight": "\uc790\uc815",
+          "am": "AM",
+          "noon": "\uc815\uc624",
+          "pm": "PM",
+          "morning1": "\uc0c8\ubcbd",
+          "morning2": "\uc624\uc804",
+          "afternoon1": "\uc624\ud6c4",
+          "evening1": "\uc800\ub141",
+          "night1": "\ubc24"
+        },
+        "wide": {
+          "midnight": "\uc790\uc815",
+          "am": "\uc624\uc804",
+          "noon": "\uc815\uc624",
+          "pm": "\uc624\ud6c4",
+          "morning1": "\uc0c8\ubcbd",
+          "morning2": "\uc624\uc804",
+          "afternoon1": "\uc624\ud6c4",
+          "evening1": "\uc800\ub141",
+          "night1": "\ubc24"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "\uc790\uc815",
+          "am": "AM",
+          "noon": "\uc815\uc624",
+          "pm": "PM",
+          "morning1": "\uc0c8\ubcbd",
+          "morning2": "\uc624\uc804",
+          "afternoon1": "\uc624\ud6c4",
+          "evening1": "\uc800\ub141",
+          "night1": "\ubc24"
+        },
+        "narrow": {
+          "midnight": "\uc790\uc815",
+          "am": "AM",
+          "noon": "\uc815\uc624",
+          "pm": "PM",
+          "morning1": "\uc0c8\ubcbd",
+          "morning2": "\uc624\uc804",
+          "afternoon1": "\uc624\ud6c4",
+          "evening1": "\uc800\ub141",
+          "night1": "\ubc24"
+        },
+        "wide": {
+          "midnight": "\uc790\uc815",
+          "am": "\uc624\uc804",
+          "noon": "\uc815\uc624",
+          "pm": "\uc624\ud6c4",
+          "morning1": "\uc0c8\ubcbd",
+          "morning2": "\uc624\uc804",
+          "afternoon1": "\uc624\ud6c4",
+          "evening1": "\uc800\ub141",
+          "night1": "\ubc24"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "\uae30\uc6d0\uc804",
+        "preAlt": "BCE",
+        "post": "\uc11c\uae30",
+        "postAlt": "CE"
+      },
+      "abbr": {
+        "pre": "BC",
+        "preAlt": "BCE",
+        "post": "AD",
+        "postAlt": "CE"
+      },
+      "narrow": {
+        "pre": "BC",
+        "preAlt": "BCE",
+        "post": "AD",
+        "postAlt": "CE"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "18:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "21:00",
+      "_from": "18:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "06:00",
+      "_from": "03:00"
+    },
+    "morning2": {
+      "_before": "12:00",
+      "_from": "06:00"
+    },
+    "night1": {
+      "_before": "03:00",
+      "_from": "21:00"
+    },
+    "noon": {
+      "_at": "12:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "y\ub144 M\uc6d4 d\uc77c EEEE",
+      "long": "y\ub144 M\uc6d4 d\uc77c",
+      "medium": "y. M. d.",
+      "short": "yy. M. d."
+    },
+    "time": {
+      "full": "a h\uc2dc m\ubd84 s\ucd08 zzzz",
+      "long": "a h\uc2dc m\ubd84 s\ucd08 z",
+      "medium": "a h:mm:ss",
+      "short": "a h:mm"
+    },
+    "datetime": {
+      "full": "a h\uc2dc m\ubd84 s\ucd08 zzzz y\ub144 M\uc6d4 d\uc77c EEEE",
+      "long": "a h\uc2dc m\ubd84 s\ucd08 z y\ub144 M\uc6d4 d\uc77c",
+      "medium": "a h:mm:ss y. M. d.",
+      "short": "a h:mm yy. M. d."
+    },
+    "builtIn": {
+      "Bh": "B h\uc2dc",
+      "Bhm": "B h:mm",
+      "Bhms": "B h:mm:ss",
+      "d": "d\uc77c",
+      "E": "ccc",
+      "EBhm": "(E) B h:mm",
+      "EBhms": "(E) B h:mm:ss",
+      "Ed": "d\uc77c (E)",
+      "EEEEd": "d\uc77c EEEE",
+      "Ehm": "(E) a h:mm",
+      "EHm": "(E) HH:mm",
+      "Ehms": "(E) a h:mm:ss",
+      "EHms": "(E) HH:mm:ss",
+      "Gy": "G y\ub144",
+      "GyMMM": "G y\ub144 MMM",
+      "GyMMMd": "G y\ub144 MMM d\uc77c",
+      "GyMMMEd": "G y\ub144 MMM d\uc77c (E)",
+      "GyMMMEEEEd": "G y\ub144 MMM d\uc77c EEEE",
+      "h": "a h\uc2dc",
+      "H": "H\uc2dc",
+      "HHmmss": "HH:mm:ss",
+      "hm": "a h:mm",
+      "Hm": "HH:mm",
+      "hms": "a h:mm:ss",
+      "Hms": "H\uc2dc m\ubd84 s\ucd08",
+      "hmsv": "a h:mm:ss v",
+      "Hmsv": "H\uc2dc m\ubd84 s\ucd08 v",
+      "hmv": "a h:mm v",
+      "Hmv": "HH:mm v",
+      "M": "M\uc6d4",
+      "Md": "M. d.",
+      "MEd": "M. d. (E)",
+      "MEEEEd": "M. d. EEEE",
+      "MMM": "LLL",
+      "MMMd": "MMM d\uc77c",
+      "MMMEd": "MMM d\uc77c (E)",
+      "MMMEEEEd": "MMM d\uc77c EEEE",
+      "MMMMd": "MMMM d\uc77c",
+      "mmss": "mm:ss",
+      "ms": "mm:ss",
+      "y": "y\ub144",
+      "yM": "y. M.",
+      "yMd": "y. M. d.",
+      "yMEd": "y. M. d. (E)",
+      "yMEEEEd": "y. M. d. EEEE",
+      "yMM": "y. M.",
+      "yMMM": "y\ub144 MMM",
+      "yMMMd": "y\ub144 MMM d\uc77c",
+      "yMMMEd": "y\ub144 MMM d\uc77c (E)",
+      "yMMMEEEEd": "y\ub144 MMM d\uc77c EEEE",
+      "yMMMM": "y\ub144 MMMM",
+      "yQQQ": "y\ub144 QQQ",
+      "yQQQQ": "y\ub144 QQQQ",
+      "MMMMWCountOther": "MMMM W\ubc88\uc9f8 \uc8fc",
+      "ywCountOther": "Y\ub144 w\ubc88\uc9f8 \uc8fc"
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "{0} \uc2dc\uac04",
+      "regionDaylight": "{0} \ud558\uacc4 \ud45c\uc900\uc2dc",
+      "regionStandard": "{0} \ud45c\uc900\uc2dc"
+    }
+  }
+}

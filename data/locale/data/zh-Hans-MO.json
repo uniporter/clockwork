@@ -1,0 +1,417 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "1\u6708",
+          "2\u6708",
+          "3\u6708",
+          "4\u6708",
+          "5\u6708",
+          "6\u6708",
+          "7\u6708",
+          "8\u6708",
+          "9\u6708",
+          "10\u6708",
+          "11\u6708",
+          "12\u6708"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "wide": [
+          "\u4e00\u6708",
+          "\u4e8c\u6708",
+          "\u4e09\u6708",
+          "\u56db\u6708",
+          "\u4e94\u6708",
+          "\u516d\u6708",
+          "\u4e03\u6708",
+          "\u516b\u6708",
+          "\u4e5d\u6708",
+          "\u5341\u6708",
+          "\u5341\u4e00\u6708",
+          "\u5341\u4e8c\u6708"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "1\u6708",
+          "2\u6708",
+          "3\u6708",
+          "4\u6708",
+          "5\u6708",
+          "6\u6708",
+          "7\u6708",
+          "8\u6708",
+          "9\u6708",
+          "10\u6708",
+          "11\u6708",
+          "12\u6708"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "wide": [
+          "\u4e00\u6708",
+          "\u4e8c\u6708",
+          "\u4e09\u6708",
+          "\u56db\u6708",
+          "\u4e94\u6708",
+          "\u516d\u6708",
+          "\u4e03\u6708",
+          "\u516b\u6708",
+          "\u4e5d\u6708",
+          "\u5341\u6708",
+          "\u5341\u4e00\u6708",
+          "\u5341\u4e8c\u6708"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "\u5468\u65e5",
+          "\u5468\u4e00",
+          "\u5468\u4e8c",
+          "\u5468\u4e09",
+          "\u5468\u56db",
+          "\u5468\u4e94",
+          "\u5468\u516d"
+        ],
+        "narrow": [
+          "\u65e5",
+          "\u4e00",
+          "\u4e8c",
+          "\u4e09",
+          "\u56db",
+          "\u4e94",
+          "\u516d"
+        ],
+        "short": [
+          "\u5468\u65e5",
+          "\u5468\u4e00",
+          "\u5468\u4e8c",
+          "\u5468\u4e09",
+          "\u5468\u56db",
+          "\u5468\u4e94",
+          "\u5468\u516d"
+        ],
+        "wide": [
+          "\u661f\u671f\u65e5",
+          "\u661f\u671f\u4e00",
+          "\u661f\u671f\u4e8c",
+          "\u661f\u671f\u4e09",
+          "\u661f\u671f\u56db",
+          "\u661f\u671f\u4e94",
+          "\u661f\u671f\u516d"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u5468\u65e5",
+          "\u5468\u4e00",
+          "\u5468\u4e8c",
+          "\u5468\u4e09",
+          "\u5468\u56db",
+          "\u5468\u4e94",
+          "\u5468\u516d"
+        ],
+        "narrow": [
+          "\u65e5",
+          "\u4e00",
+          "\u4e8c",
+          "\u4e09",
+          "\u56db",
+          "\u4e94",
+          "\u516d"
+        ],
+        "short": [
+          "\u5468\u65e5",
+          "\u5468\u4e00",
+          "\u5468\u4e8c",
+          "\u5468\u4e09",
+          "\u5468\u56db",
+          "\u5468\u4e94",
+          "\u5468\u516d"
+        ],
+        "wide": [
+          "\u661f\u671f\u65e5",
+          "\u661f\u671f\u4e00",
+          "\u661f\u671f\u4e8c",
+          "\u661f\u671f\u4e09",
+          "\u661f\u671f\u56db",
+          "\u661f\u671f\u4e94",
+          "\u661f\u671f\u516d"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "1\u5b63\u5ea6",
+          "2\u5b63\u5ea6",
+          "3\u5b63\u5ea6",
+          "4\u5b63\u5ea6"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "\u7b2c\u4e00\u5b63\u5ea6",
+          "\u7b2c\u4e8c\u5b63\u5ea6",
+          "\u7b2c\u4e09\u5b63\u5ea6",
+          "\u7b2c\u56db\u5b63\u5ea6"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "1\u5b63\u5ea6",
+          "2\u5b63\u5ea6",
+          "3\u5b63\u5ea6",
+          "4\u5b63\u5ea6"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "\u7b2c\u4e00\u5b63\u5ea6",
+          "\u7b2c\u4e8c\u5b63\u5ea6",
+          "\u7b2c\u4e09\u5b63\u5ea6",
+          "\u7b2c\u56db\u5b63\u5ea6"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "\u5348\u591c",
+          "am": "\u4e0a\u5348",
+          "pm": "\u4e0b\u5348",
+          "morning1": "\u65e9\u4e0a",
+          "morning2": "\u4e0a\u5348",
+          "afternoon1": "\u4e2d\u5348",
+          "afternoon2": "\u4e0b\u5348",
+          "evening1": "\u665a\u4e0a",
+          "night1": "\u51cc\u6668"
+        },
+        "narrow": {
+          "midnight": "\u5348\u591c",
+          "am": "\u4e0a\u5348",
+          "pm": "\u4e0b\u5348",
+          "morning1": "\u65e9\u4e0a",
+          "morning2": "\u4e0a\u5348",
+          "afternoon1": "\u4e2d\u5348",
+          "afternoon2": "\u4e0b\u5348",
+          "evening1": "\u665a\u4e0a",
+          "night1": "\u51cc\u6668"
+        },
+        "wide": {
+          "midnight": "\u5348\u591c",
+          "am": "\u4e0a\u5348",
+          "pm": "\u4e0b\u5348",
+          "morning1": "\u6e05\u6668",
+          "morning2": "\u4e0a\u5348",
+          "afternoon1": "\u4e2d\u5348",
+          "afternoon2": "\u4e0b\u5348",
+          "evening1": "\u665a\u4e0a",
+          "night1": "\u51cc\u6668"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "\u5348\u591c",
+          "am": "\u4e0a\u5348",
+          "pm": "\u4e0b\u5348",
+          "morning1": "\u65e9\u4e0a",
+          "morning2": "\u4e0a\u5348",
+          "afternoon1": "\u4e2d\u5348",
+          "afternoon2": "\u4e0b\u5348",
+          "evening1": "\u665a\u4e0a",
+          "night1": "\u51cc\u6668"
+        },
+        "narrow": {
+          "midnight": "\u5348\u591c",
+          "am": "\u4e0a\u5348",
+          "pm": "\u4e0b\u5348",
+          "morning1": "\u65e9\u4e0a",
+          "morning2": "\u4e0a\u5348",
+          "afternoon1": "\u4e2d\u5348",
+          "afternoon2": "\u4e0b\u5348",
+          "evening1": "\u665a\u4e0a",
+          "night1": "\u51cc\u6668"
+        },
+        "wide": {
+          "midnight": "\u5348\u591c",
+          "am": "\u4e0a\u5348",
+          "pm": "\u4e0b\u5348",
+          "morning1": "\u65e9\u4e0a",
+          "morning2": "\u4e0a\u5348",
+          "afternoon1": "\u4e2d\u5348",
+          "afternoon2": "\u4e0b\u5348",
+          "evening1": "\u665a\u4e0a",
+          "night1": "\u51cc\u6668"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "\u516c\u5143\u524d",
+        "preAlt": "BCE",
+        "post": "\u516c\u5143",
+        "postAlt": "CE"
+      },
+      "abbr": {
+        "pre": "\u516c\u5143\u524d",
+        "preAlt": "BCE",
+        "post": "\u516c\u5143",
+        "postAlt": "CE"
+      },
+      "narrow": {
+        "pre": "\u516c\u5143\u524d",
+        "preAlt": "BCE",
+        "post": "\u516c\u5143",
+        "postAlt": "CE"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "13:00",
+      "_from": "12:00"
+    },
+    "afternoon2": {
+      "_before": "19:00",
+      "_from": "13:00"
+    },
+    "evening1": {
+      "_before": "24:00",
+      "_from": "19:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "08:00",
+      "_from": "05:00"
+    },
+    "morning2": {
+      "_before": "12:00",
+      "_from": "08:00"
+    },
+    "night1": {
+      "_before": "05:00",
+      "_from": "00:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 1
+  },
+  "format": {
+    "date": {
+      "full": "y\u5e74M\u6708d\u65e5EEEE",
+      "long": "y\u5e74M\u6708d\u65e5",
+      "medium": "y\u5e74M\u6708d\u65e5",
+      "short": "d/M/yy"
+    },
+    "time": {
+      "full": "zzzz ah:mm:ss",
+      "long": "z ah:mm:ss",
+      "medium": "ah:mm:ss",
+      "short": "ah:mm"
+    },
+    "datetime": {
+      "full": "zzzz ah:mm:ss y\u5e74M\u6708d\u65e5EEEE",
+      "long": "z ah:mm:ss y\u5e74M\u6708d\u65e5",
+      "medium": "ah:mm:ss y\u5e74M\u6708d\u65e5",
+      "short": "ah:mm d/M/yy"
+    },
+    "builtIn": {
+      "Bh": "Bh\u65f6",
+      "Bhm": "Bh:mm",
+      "Bhms": "Bh:mm:ss",
+      "d": "d\u65e5",
+      "E": "ccc",
+      "EBhm": "EBh:mm",
+      "EBhms": "EBh:mm:ss",
+      "Ed": "d\u65e5E",
+      "Ehm": "Eah:mm",
+      "EHm": "EHH:mm",
+      "Ehms": "Eah:mm:ss",
+      "EHms": "EHH:mm:ss",
+      "Gy": "Gy\u5e74",
+      "GyMMM": "Gy\u5e74M\u6708",
+      "GyMMMd": "Gy\u5e74M\u6708d\u65e5",
+      "GyMMMEd": "Gy\u5e74M\u6708d\u65e5E",
+      "h": "ah\u65f6",
+      "H": "H\u65f6",
+      "hm": "ah:mm",
+      "Hm": "HH:mm",
+      "hms": "ah:mm:ss",
+      "Hms": "HH:mm:ss",
+      "hmsv": "v ah:mm:ss",
+      "Hmsv": "v HH:mm:ss",
+      "hmv": "v ah:mm",
+      "Hmv": "v HH:mm",
+      "M": "M\u6708",
+      "Md": "d/M",
+      "MEd": "E, d/M",
+      "MMdd": "dd/MM",
+      "MMM": "LLL",
+      "MMMd": "M\u6708d\u65e5",
+      "MMMEd": "M\u6708d\u65e5E",
+      "MMMMd": "M\u6708d\u65e5",
+      "MMMMdd": "M\u6708d\u65e5",
+      "ms": "mm:ss",
+      "y": "y\u5e74",
+      "yM": "y\u5e74M\u6708",
+      "yMd": "y\u5e74M\u6708d\u65e5",
+      "yMEd": "y\u5e74M\u6708d\u65e5\uff0cE",
+      "yMM": "y\u5e74M\u6708",
+      "yMMM": "y\u5e74M\u6708",
+      "yMMMd": "y\u5e74M\u6708d\u65e5",
+      "yMMMEd": "y\u5e74M\u6708d\u65e5E",
+      "yMMMM": "y\u5e74M\u6708",
+      "yQQQ": "y\u5e74\u7b2cQ\u5b63\u5ea6",
+      "yQQQQ": "y\u5e74\u7b2cQ\u5b63\u5ea6",
+      "MMMMWCountOther": "MMMM\u7b2cW\u5468",
+      "ywCountOther": "Y\u5e74\u7b2cw\u5468"
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "{0}\u65f6\u95f4",
+      "regionDaylight": "{0}\u590f\u4ee4\u65f6\u95f4",
+      "regionStandard": "{0}\u6807\u51c6\u65f6\u95f4"
+    }
+  }
+}

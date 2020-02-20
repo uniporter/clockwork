@@ -1,0 +1,425 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "\u0da2\u0db1",
+          "\u0db4\u0dd9\u0db6",
+          "\u0db8\u0dcf\u0dbb\u0dca\u0dad\u0dd4",
+          "\u0d85\u0db4\u0dca\u200d\u0dbb\u0dda\u0dbd\u0dca",
+          "\u0db8\u0dd0\u0dba\u0dd2",
+          "\u0da2\u0dd6\u0db1\u0dd2",
+          "\u0da2\u0dd6\u0dbd\u0dd2",
+          "\u0d85\u0d9c\u0ddd",
+          "\u0dc3\u0dd0\u0db4\u0dca",
+          "\u0d94\u0d9a\u0dca",
+          "\u0db1\u0ddc\u0dc0\u0dd0",
+          "\u0daf\u0dd9\u0dc3\u0dd0"
+        ],
+        "narrow": [
+          "\u0da2",
+          "\u0db4\u0dd9",
+          "\u0db8\u0dcf",
+          "\u0d85",
+          "\u0db8\u0dd0",
+          "\u0da2\u0dd6",
+          "\u0da2\u0dd6",
+          "\u0d85",
+          "\u0dc3\u0dd0",
+          "\u0d94",
+          "\u0db1\u0dd9",
+          "\u0daf\u0dd9"
+        ],
+        "wide": [
+          "\u0da2\u0db1\u0dc0\u0dcf\u0dbb\u0dd2",
+          "\u0db4\u0dd9\u0db6\u0dbb\u0dc0\u0dcf\u0dbb\u0dd2",
+          "\u0db8\u0dcf\u0dbb\u0dca\u0dad\u0dd4",
+          "\u0d85\u0db4\u0dca\u200d\u0dbb\u0dda\u0dbd\u0dca",
+          "\u0db8\u0dd0\u0dba\u0dd2",
+          "\u0da2\u0dd6\u0db1\u0dd2",
+          "\u0da2\u0dd6\u0dbd\u0dd2",
+          "\u0d85\u0d9c\u0ddd\u0dc3\u0dca\u0dad\u0dd4",
+          "\u0dc3\u0dd0\u0db4\u0dca\u0dad\u0dd0\u0db8\u0dca\u0db6\u0dbb\u0dca",
+          "\u0d94\u0d9a\u0dca\u0dad\u0ddd\u0db6\u0dbb\u0dca",
+          "\u0db1\u0ddc\u0dc0\u0dd0\u0db8\u0dca\u0db6\u0dbb\u0dca",
+          "\u0daf\u0dd9\u0dc3\u0dd0\u0db8\u0dca\u0db6\u0dbb\u0dca"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u0da2\u0db1",
+          "\u0db4\u0dd9\u0db6",
+          "\u0db8\u0dcf\u0dbb\u0dca",
+          "\u0d85\u0db4\u0dca\u200d\u0dbb\u0dda\u0dbd\u0dca",
+          "\u0db8\u0dd0\u0dba\u0dd2",
+          "\u0da2\u0dd6\u0db1\u0dd2",
+          "\u0da2\u0dd6\u0dbd\u0dd2",
+          "\u0d85\u0d9c\u0ddd",
+          "\u0dc3\u0dd0\u0db4\u0dca",
+          "\u0d94\u0d9a\u0dca",
+          "\u0db1\u0ddc\u0dc0\u0dd0",
+          "\u0daf\u0dd9\u0dc3\u0dd0"
+        ],
+        "narrow": [
+          "\u0da2",
+          "\u0db4\u0dd9",
+          "\u0db8\u0dcf",
+          "\u0d85",
+          "\u0db8\u0dd0",
+          "\u0da2\u0dd6",
+          "\u0da2\u0dd6",
+          "\u0d85",
+          "\u0dc3\u0dd0",
+          "\u0d94",
+          "\u0db1\u0dd9",
+          "\u0daf\u0dd9"
+        ],
+        "wide": [
+          "\u0da2\u0db1\u0dc0\u0dcf\u0dbb\u0dd2",
+          "\u0db4\u0dd9\u0db6\u0dbb\u0dc0\u0dcf\u0dbb\u0dd2",
+          "\u0db8\u0dcf\u0dbb\u0dca\u0dad\u0dd4",
+          "\u0d85\u0db4\u0dca\u200d\u0dbb\u0dda\u0dbd\u0dca",
+          "\u0db8\u0dd0\u0dba\u0dd2",
+          "\u0da2\u0dd6\u0db1\u0dd2",
+          "\u0da2\u0dd6\u0dbd\u0dd2",
+          "\u0d85\u0d9c\u0ddd\u0dc3\u0dca\u0dad\u0dd4",
+          "\u0dc3\u0dd0\u0db4\u0dca\u0dad\u0dd0\u0db8\u0dca\u0db6\u0dbb\u0dca",
+          "\u0d94\u0d9a\u0dca\u0dad\u0ddd\u0db6\u0dbb\u0dca",
+          "\u0db1\u0ddc\u0dc0\u0dd0\u0db8\u0dca\u0db6\u0dbb\u0dca",
+          "\u0daf\u0dd9\u0dc3\u0dd0\u0db8\u0dca\u0db6\u0dbb\u0dca"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "\u0d89\u0dbb\u0dd2\u0daf\u0dcf",
+          "\u0dc3\u0db3\u0dd4\u0daf\u0dcf",
+          "\u0d85\u0d9f\u0dc4",
+          "\u0db6\u0daf\u0dcf\u0daf\u0dcf",
+          "\u0db6\u0dca\u200d\u0dbb\u0dc4\u0dc3\u0dca",
+          "\u0dc3\u0dd2\u0d9a\u0dd4",
+          "\u0dc3\u0dd9\u0db1"
+        ],
+        "narrow": [
+          "\u0d89",
+          "\u0dc3",
+          "\u0d85",
+          "\u0db6",
+          "\u0db6\u0dca\u200d\u0dbb",
+          "\u0dc3\u0dd2",
+          "\u0dc3\u0dd9"
+        ],
+        "short": [
+          "\u0d89\u0dbb\u0dd2",
+          "\u0dc3\u0db3\u0dd4",
+          "\u0d85\u0d9f",
+          "\u0db6\u0daf\u0dcf",
+          "\u0db6\u0dca\u200d\u0dbb\u0dc4",
+          "\u0dc3\u0dd2\u0d9a\u0dd4",
+          "\u0dc3\u0dd9\u0db1"
+        ],
+        "wide": [
+          "\u0d89\u0dbb\u0dd2\u0daf\u0dcf",
+          "\u0dc3\u0db3\u0dd4\u0daf\u0dcf",
+          "\u0d85\u0d9f\u0dc4\u0dbb\u0dd4\u0dc0\u0dcf\u0daf\u0dcf",
+          "\u0db6\u0daf\u0dcf\u0daf\u0dcf",
+          "\u0db6\u0dca\u200d\u0dbb\u0dc4\u0dc3\u0dca\u0db4\u0dad\u0dd2\u0db1\u0dca\u0daf\u0dcf",
+          "\u0dc3\u0dd2\u0d9a\u0dd4\u0dbb\u0dcf\u0daf\u0dcf",
+          "\u0dc3\u0dd9\u0db1\u0dc3\u0dd4\u0dbb\u0dcf\u0daf\u0dcf"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u0d89\u0dbb\u0dd2\u0daf\u0dcf",
+          "\u0dc3\u0db3\u0dd4\u0daf\u0dcf",
+          "\u0d85\u0d9f\u0dc4",
+          "\u0db6\u0daf\u0dcf\u0daf\u0dcf",
+          "\u0db6\u0dca\u200d\u0dbb\u0dc4\u0dc3\u0dca",
+          "\u0dc3\u0dd2\u0d9a\u0dd4",
+          "\u0dc3\u0dd9\u0db1"
+        ],
+        "narrow": [
+          "\u0d89",
+          "\u0dc3",
+          "\u0d85",
+          "\u0db6",
+          "\u0db6\u0dca\u200d\u0dbb",
+          "\u0dc3\u0dd2",
+          "\u0dc3\u0dd9"
+        ],
+        "short": [
+          "\u0d89\u0dbb\u0dd2",
+          "\u0dc3\u0db3\u0dd4",
+          "\u0d85\u0d9f",
+          "\u0db6\u0daf\u0dcf",
+          "\u0db6\u0dca\u200d\u0dbb\u0dc4",
+          "\u0dc3\u0dd2\u0d9a\u0dd4",
+          "\u0dc3\u0dd9\u0db1"
+        ],
+        "wide": [
+          "\u0d89\u0dbb\u0dd2\u0daf\u0dcf",
+          "\u0dc3\u0db3\u0dd4\u0daf\u0dcf",
+          "\u0d85\u0d9f\u0dc4\u0dbb\u0dd4\u0dc0\u0dcf\u0daf\u0dcf",
+          "\u0db6\u0daf\u0dcf\u0daf\u0dcf",
+          "\u0db6\u0dca\u200d\u0dbb\u0dc4\u0dc3\u0dca\u0db4\u0dad\u0dd2\u0db1\u0dca\u0daf\u0dcf",
+          "\u0dc3\u0dd2\u0d9a\u0dd4\u0dbb\u0dcf\u0daf\u0dcf",
+          "\u0dc3\u0dd9\u0db1\u0dc3\u0dd4\u0dbb\u0dcf\u0daf\u0dcf"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "\u0d9a\u0dcf\u0dbb\u0dca:1",
+          "\u0d9a\u0dcf\u0dbb\u0dca:2",
+          "\u0d9a\u0dcf\u0dbb\u0dca:3",
+          "\u0d9a\u0dcf\u0dbb\u0dca:4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1 \u0dc0\u0db1 \u0d9a\u0dcf\u0dbb\u0dca\u0dad\u0dd4\u0dc0",
+          "2 \u0dc0\u0db1 \u0d9a\u0dcf\u0dbb\u0dca\u0dad\u0dd4\u0dc0",
+          "3 \u0dc0\u0db1 \u0d9a\u0dcf\u0dbb\u0dca\u0dad\u0dd4\u0dc0",
+          "4 \u0dc0\u0db1 \u0d9a\u0dcf\u0dbb\u0dca\u0dad\u0dd4\u0dc0"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "\u0d9a\u0dcf\u0dbb\u0dca:1",
+          "\u0d9a\u0dcf\u0dbb\u0dca:2",
+          "\u0d9a\u0dcf\u0dbb\u0dca:3",
+          "\u0d9a\u0dcf\u0dbb\u0dca:4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "1 \u0dc0\u0db1 \u0d9a\u0dcf\u0dbb\u0dca\u0dad\u0dd4\u0dc0",
+          "2 \u0dc0\u0db1 \u0d9a\u0dcf\u0dbb\u0dca\u0dad\u0dd4\u0dc0",
+          "3 \u0dc0\u0db1 \u0d9a\u0dcf\u0dbb\u0dca\u0dad\u0dd4\u0dc0",
+          "4 \u0dc0\u0db1 \u0d9a\u0dcf\u0dbb\u0dca\u0dad\u0dd4\u0dc0"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "midnight": "\u0db8\u0dd0\u0daf\u0dd2\u0dba\u0db8",
+          "am": "\u0db4\u0dd9.\u0dc0.",
+          "noon": "\u0db8\u0db0\u0dca\u200d\u0dba\u0dcf\u0dc4\u0dca\u0db1\u0dba",
+          "pm": "\u0db4.\u0dc0.",
+          "morning1": "\u0db4\u0dcf\u0db1\u0dca\u0daf\u0dbb",
+          "morning2": "\u0d8b\u0daf\u0dda",
+          "afternoon1": "\u0daf\u0dc0\u0dbd\u0dca",
+          "evening1": "\u0dc4\u0dc0\u0dc3",
+          "night1": "\u0dbb\u0dd1",
+          "night2": "\u0db8\u0dd0\u0daf\u0dd2\u0dba\u0db8\u0da7 \u0db4\u0dc3\u0dd4"
+        },
+        "narrow": {
+          "midnight": "\u0db8\u0dd0",
+          "am": "\u0db4\u0dd9",
+          "noon": "\u0db8",
+          "pm": "\u0db4",
+          "morning1": "\u0db4\u0dcf",
+          "morning2": "\u0d8b",
+          "afternoon1": "\u0daf",
+          "evening1": "\u0dc4",
+          "night1": "\u0dbb\u0dd1",
+          "night2": "\u0db8\u0dd0"
+        },
+        "wide": {
+          "midnight": "\u0db8\u0dd0\u0daf\u0dd2\u0dba\u0db8",
+          "am": "\u0db4\u0dd9.\u0dc0.",
+          "noon": "\u0db8\u0db0\u0dca\u200d\u0dba\u0dcf\u0dc4\u0dca\u0db1\u0dba",
+          "pm": "\u0db4.\u0dc0.",
+          "morning1": "\u0db4\u0dcf\u0db1\u0dca\u0daf\u0dbb",
+          "morning2": "\u0d8b\u0daf\u0dda",
+          "afternoon1": "\u0daf\u0dc0\u0dbd\u0dca",
+          "evening1": "\u0dc4\u0dc0\u0dc3",
+          "night1": "\u0dbb\u0dd1",
+          "night2": "\u0db8\u0dd0\u0daf\u0dd2\u0dba\u0db8\u0da7 \u0db4\u0dc3\u0dd4"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "midnight": "\u0db8\u0dd0\u0daf\u0dd2\u0dba\u0db8",
+          "am": "\u0db4\u0dd9.\u0dc0.",
+          "noon": "\u0db8\u0db0\u0dca\u200d\u0dba\u0dcf\u0dc4\u0dca\u0db1\u0dba",
+          "pm": "\u0db4.\u0dc0.",
+          "morning1": "\u0db4\u0dcf\u0db1\u0dca\u0daf\u0dbb",
+          "morning2": "\u0d8b\u0daf\u0dda",
+          "afternoon1": "\u0daf\u0dc0\u0dbd\u0dca",
+          "evening1": "\u0dc4\u0dc0\u0dc3",
+          "night1": "\u0dbb\u0dd1",
+          "night2": "\u0db8\u0dd0\u0daf\u0dd2\u0dba\u0db8\u0da7 \u0db4\u0dc3\u0dd4"
+        },
+        "narrow": {
+          "midnight": "\u0db8\u0dd0\u0daf\u0dd2\u0dba\u0db8",
+          "am": "\u0db4\u0dd9.\u0dc0.",
+          "noon": "\u0db8\u0db0\u0dca\u200d\u0dba\u0dcf\u0dc4\u0dca\u0db1\u0dba",
+          "pm": "\u0db4.\u0dc0.",
+          "morning1": "\u0db4\u0dcf\u0db1\u0dca\u0daf\u0dbb",
+          "morning2": "\u0d8b\u0daf\u0dda",
+          "afternoon1": "\u0daf\u0dc0\u0dbd\u0dca",
+          "evening1": "\u0dc4\u0dc0\u0dc3",
+          "night1": "\u0dbb\u0dd1",
+          "night2": "\u0db8\u0dd0\u0daf\u0dd2\u0dba\u0db8\u0da7 \u0db4\u0dc3\u0dd4"
+        },
+        "wide": {
+          "midnight": "\u0db8\u0dd0\u0daf\u0dd2\u0dba\u0db8",
+          "am": "\u0db4\u0dd9.\u0dc0.",
+          "noon": "\u0db8\u0db0\u0dca\u200d\u0dba\u0dcf\u0dc4\u0dca\u0db1\u0dba",
+          "pm": "\u0db4.\u0dc0.",
+          "morning1": "\u0db4\u0dcf\u0db1\u0dca\u0daf\u0dbb",
+          "morning2": "\u0d8b\u0daf\u0dda",
+          "afternoon1": "\u0daf\u0dc0\u0dbd\u0dca",
+          "evening1": "\u0dc4\u0dc0\u0dc3",
+          "night1": "\u0dbb\u0dd1",
+          "night2": "\u0db8\u0dd0\u0daf\u0dd2\u0dba\u0db8\u0da7 \u0db4\u0dc3\u0dd4"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "\u0d9a\u0dca\u200d\u0dbb\u0dd2\u0dc3\u0dca\u0dad\u0dd4 \u0db4\u0dd6\u0dbb\u0dca\u0dc0",
+        "preAlt": "\u0db4\u0ddc\u0daf\u0dd4 \u0dba\u0dd4\u0d9c\u0dba\u0da7 \u0db4\u0dd9\u0dbb",
+        "post": "\u0d9a\u0dca\u200d\u0dbb\u0dd2\u0dc3\u0dca\u0dad\u0dd4 \u0dc0\u0dbb\u0dca\u0dc2",
+        "postAlt": "\u0db4\u0ddc\u0daf\u0dd4 \u0dba\u0dd4\u0d9c\u0dba"
+      },
+      "abbr": {
+        "pre": "\u0d9a\u0dca\u200d\u0dbb\u0dd2.\u0db4\u0dd6.",
+        "preAlt": "\u0db4\u0ddc\u0db4\u0dd9",
+        "post": "\u0d9a\u0dca\u200d\u0dbb\u0dd2.\u0dc0.",
+        "postAlt": "\u0db4\u0ddc.\u0dba\u0dd4"
+      },
+      "narrow": {
+        "pre": "\u0d9a\u0dca\u200d\u0dbb\u0dd2.\u0db4\u0dd6.",
+        "preAlt": "\u0db4\u0ddc\u0db4\u0dd9",
+        "post": "\u0d9a\u0dca\u200d\u0dbb\u0dd2.\u0dc0.",
+        "postAlt": "\u0db4\u0ddc.\u0dba\u0dd4"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "14:00",
+      "_from": "12:00"
+    },
+    "evening1": {
+      "_before": "18:00",
+      "_from": "14:00"
+    },
+    "midnight": {
+      "_at": "00:00"
+    },
+    "morning1": {
+      "_before": "06:00",
+      "_from": "01:00"
+    },
+    "morning2": {
+      "_before": "12:00",
+      "_from": "06:00"
+    },
+    "night1": {
+      "_before": "24:00",
+      "_from": "18:00"
+    },
+    "night2": {
+      "_before": "01:00",
+      "_from": "00:00"
+    },
+    "noon": {
+      "_at": "12:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "y MMMM d, EEEE",
+      "long": "y MMMM d",
+      "medium": "y MMM d",
+      "short": "y-MM-dd"
+    },
+    "time": {
+      "full": "HH.mm.ss zzzz",
+      "long": "HH.mm.ss z",
+      "medium": "HH.mm.ss",
+      "short": "HH.mm"
+    },
+    "datetime": {
+      "full": "HH.mm.ss zzzz y MMMM d, EEEE",
+      "long": "HH.mm.ss z y MMMM d",
+      "medium": "HH.mm.ss y MMM d",
+      "short": "HH.mm y-MM-dd"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "d E",
+      "Ehm": "E a h.mm",
+      "EHm": "E HH.mm",
+      "Ehms": "E a h.mm.ss",
+      "EHms": "E HH.mm.ss",
+      "Gy": "G y",
+      "GyMMM": "G y MMM",
+      "GyMMMd": "G y MMM d",
+      "GyMMMEd": "G y MMM d, E",
+      "h": "a h",
+      "H": "HH",
+      "hm": "a h.mm",
+      "Hm": "HH.mm",
+      "hms": "a h.mm.ss",
+      "Hms": "HH.mm.ss",
+      "hmsv": "h.mm.ss a v",
+      "Hmsv": "HH.mm.ss v",
+      "hmv": "h.mm a v",
+      "Hmv": "HH.mm v",
+      "M": "L",
+      "Md": "M-d",
+      "MEd": "M-d, E",
+      "MMM": "LLL",
+      "MMMd": "MMM d",
+      "MMMEd": "MMM d E",
+      "MMMMd": "MMMM d",
+      "ms": "mm.ss",
+      "y": "y",
+      "yM": "y-M",
+      "yMd": "y-M-d",
+      "yMEd": "y-M-d, E",
+      "yMMM": "y MMM",
+      "yMMMd": "y MMM d",
+      "yMMMEd": "y MMM d, E",
+      "yMMMM": "y MMMM",
+      "yQQQ": "y QQQ",
+      "yQQQQ": "y QQQQ",
+      "MMMMWCountOther": "MMMM \u0dc3\u0dad\u0dd2\u0dba W",
+      "MMMMWCountOne": "MMMM \u0dc3\u0dad\u0dd2\u0dba W",
+      "ywCountOther": "Y \u0dc3\u0dad\u0dd2\u0dba w",
+      "ywCountOne": "Y \u0dc3\u0dad\u0dd2\u0dba w"
+    },
+    "timezone": {
+      "gmt": "\u0d9c\u0dca\u200d\u0dbb\u0dd2\u0db8\u0dc0\u0dda{0}+H.m.s",
+      "gmtZero": "\u0d9c\u0dca\u200d\u0dbb\u0dd2\u0db8\u0dc0\u0dda",
+      "region": "{0} \u0dc0\u0dda\u0dbd\u0dcf\u0dc0",
+      "regionDaylight": "{0} \u0daf\u0dd2\u0dc0\u0dcf\u0d86\u0dbd\u0ddd\u0d9a \u0dc0\u0dda\u0dbd\u0dcf\u0dc0",
+      "regionStandard": "{0} \u0dc3\u0db8\u0dca\u0db8\u0dad \u0dc0\u0dda\u0dbd\u0dcf\u0dc0"
+    }
+  }
+}

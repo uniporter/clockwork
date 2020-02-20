@@ -1,6 +1,8 @@
 .dart_tool/
 .packages
 .vscode/
+.metals/
 *.lock
 .DS_Store
-bin
+bin/*
+!bin/fetch_data.sh

@@ -9,20 +9,23 @@ class Instant implements Comparable<Instant> {
 
     const Instant(this._microSecondsSinceEpoch);
 
+    /// Returns the Linux epoch instant, `Midnight, January 1st, 1970, UTC`.
     factory Instant.epoch() => const Instant(0);
+    /// Returns an instant representing now.
     factory Instant.now() => clock.now();
+    /// Returns an instant representing the moment of a [DateTime] object.
     factory Instant.fromDateTime(DateTime val) => Instant(val.microsecondsSinceEpoch);
 
     /// Returns the number of microseconds since the Unix Epoch time, 1970-01-01T00:00:00Z (UTC).
     int microsecondsSinceEpoch() => _microSecondsSinceEpoch;
 
-    /// Returns an `Interval` representing the difference of this from `other`.
+    /// Returns an [Interval] representing the difference of this from [other].
     Interval difference(Instant other) => Interval(microseconds: microsecondsSinceEpoch() - other.microsecondsSinceEpoch());
 
-    /// Returns `this + dur`. Wrapper for the `+` operator.
+    /// Returns `this + dur`. Wrapper for the [+] operator.
     Instant add(Interval dur) => this + dur;
 
-    /// Returns `this - dur`. Wrapper for the `-` operator.
+    /// Returns `this - dur`. Wrapper for the [-] operator.
     Instant subtract(Interval dur) => this - dur;
 
     /// Returns a timestamp representing this instance of time in the `Etf/UTC` timezone.

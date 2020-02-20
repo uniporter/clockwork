@@ -1,0 +1,347 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Abr",
+          "May",
+          "Jun",
+          "Lul",
+          "Ogs",
+          "Seb",
+          "Okt",
+          "Nof",
+          "Dis"
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "L",
+          "O",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "Bisha Koobaad",
+          "Bisha Labaad",
+          "Bisha Saddexaad",
+          "Bisha Afraad",
+          "Bisha Shanaad",
+          "Bisha Lixaad",
+          "Bisha Todobaad",
+          "Bisha Sideedaad",
+          "Bisha Sagaalaad",
+          "Bisha Tobnaad",
+          "Bisha Kow iyo Tobnaad",
+          "Bisha Laba iyo Tobnaad"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Abr",
+          "May",
+          "Jun",
+          "Lul",
+          "Ogs",
+          "Seb",
+          "Okt",
+          "Nof",
+          "Dis"
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "L",
+          "O",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "Jannaayo",
+          "Febraayo",
+          "Maarso",
+          "Abriil",
+          "May",
+          "Juun",
+          "Luuliyo",
+          "Ogost",
+          "Sebtembar",
+          "Oktoobar",
+          "Nofembar",
+          "Desembar"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "Axd",
+          "Isn",
+          "Tldo",
+          "Arbc",
+          "Khms",
+          "Jmc",
+          "Sbti"
+        ],
+        "narrow": [
+          "A",
+          "I",
+          "T",
+          "A",
+          "Kh",
+          "J",
+          "S"
+        ],
+        "short": [
+          "Axd",
+          "Isn",
+          "Tldo",
+          "Arbc",
+          "Khms",
+          "Jmc",
+          "Sbti"
+        ],
+        "wide": [
+          "Axad",
+          "Isniin",
+          "Talaado",
+          "Arbaco",
+          "Khamiis",
+          "Jimco",
+          "Sabti"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Axd",
+          "Isn",
+          "Tldo",
+          "Arbc",
+          "Khms",
+          "Jmc",
+          "Sbti"
+        ],
+        "narrow": [
+          "A",
+          "I",
+          "T",
+          "A",
+          "Kh",
+          "J",
+          "S"
+        ],
+        "short": [
+          "Axd",
+          "Isn",
+          "Tldo",
+          "Arbc",
+          "Khms",
+          "Jmc",
+          "Sbti"
+        ],
+        "wide": [
+          "Axad",
+          "Isniin",
+          "Talaado",
+          "Arbaco",
+          "Khamiis",
+          "Jimco",
+          "Sabti"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "Rubaca 1aad",
+          "Rubaca 2aad",
+          "Rubaca 3aad",
+          "Rubaca 4aad"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "Rubaca 1aad",
+          "Rubaca 2aad",
+          "Rubaca 3aad",
+          "Rubaca 4aad"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "am": "GH",
+          "pm": "GD"
+        },
+        "narrow": {
+          "am": "h",
+          "pm": "d"
+        },
+        "wide": {
+          "am": "GH",
+          "pm": "GD"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "am": "GH",
+          "pm": "GD"
+        },
+        "narrow": {
+          "am": "GH",
+          "pm": "GD"
+        },
+        "wide": {
+          "am": "GH",
+          "pm": "GD"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "Ciise Hortii",
+        "preAlt": "Ka Hor Taariikhda Miilaadiga",
+        "post": "Ciise Dabadii",
+        "postAlt": "Taariikhda Miilaadiga"
+      },
+      "abbr": {
+        "pre": "CH",
+        "preAlt": "KTM",
+        "post": "CD",
+        "postAlt": "TM"
+      },
+      "narrow": {
+        "pre": "CH",
+        "preAlt": "KTM",
+        "post": "CD",
+        "postAlt": "TM"
+      }
+    }
+  },
+  "dayPeriodsRule": {},
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 1
+  },
+  "format": {
+    "date": {
+      "full": "EEEE, MMMM dd, y",
+      "long": "dd MMMM y",
+      "medium": "dd-MMM-y",
+      "short": "dd/MM/yy"
+    },
+    "time": {
+      "full": "h:mm:ss a zzzz",
+      "long": "h:mm:ss a z",
+      "medium": "h:mm:ss a",
+      "short": "h:mm a"
+    },
+    "datetime": {
+      "full": "h:mm:ss a zzzz EEEE, MMMM dd, y",
+      "long": "h:mm:ss a z dd MMMM y",
+      "medium": "h:mm:ss a dd-MMM-y",
+      "short": "h:mm a dd/MM/yy"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "d, E",
+      "Ehm": "E h:mm a",
+      "EHm": "E HH:mm",
+      "Ehms": "E h:mm:ss a",
+      "EHms": "E HH:mm:ss",
+      "Gy": "y G",
+      "GyMMM": "MMM y G",
+      "GyMMMd": "MMM d, y G",
+      "GyMMMEd": "E, MMM d, y G",
+      "h": "h a",
+      "H": "HH",
+      "hm": "h:mm a",
+      "Hm": "HH:mm",
+      "hms": "h:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a v",
+      "Hmsv": "HH:mm:ss v",
+      "hmv": "h:mm a v",
+      "Hmv": "HH:mm v",
+      "M": "L",
+      "Md": "M/d",
+      "MEd": "E, M/d",
+      "MMM": "LLL",
+      "MMMd": "MMM d",
+      "MMMEd": "E, MMM d",
+      "MMMMd": "MMMM d",
+      "MMMMEd": "E, MMMM d",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "M/y",
+      "yMd": "M/d/y",
+      "yMEd": "E, M/d/y",
+      "yMMM": "MMM y",
+      "yMMMd": "MMM d, y",
+      "yMMMEd": "E, MMM d, y",
+      "yMMMM": "MMMM y",
+      "yQQQ": "QQQ y",
+      "yQQQQ": "QQQQ y",
+      "MMMMWCountOther": "'toddobaadka' W 'ee' MMMM",
+      "MMMMWCountOne": "'toddobaadka' W 'ee' MMMM",
+      "ywCountOther": "'toddobaadka' w 'ee' Y",
+      "ywCountOne": "'toddobaadka' w 'ee' Y"
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "Waqtiga {0}",
+      "regionDaylight": "Waqtiga Dharaarta ee {0}",
+      "regionStandard": "Waqtiga Caadiga Ah ee {0}"
+    }
+  }
+}

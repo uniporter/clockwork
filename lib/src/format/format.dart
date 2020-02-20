@@ -1,6 +1,7 @@
 import '../calendar/calendar.dart';
 import '../core/timestamp.dart';
 import '../locale/locale.dart';
+import '../utils/exception.dart';
 import 'formattable.dart';
 import 'parser.dart';
 import 'tokens/format_token.dart';
@@ -12,7 +13,10 @@ class Format<F extends Formattable> {
     const Format(this.tokens);
 
     /// Returns a [Format] based on [pattern] and the selected [parser]. If no [Parser] is provided, the [DefaultParser] is used.
-    factory Format.parse(String pattern, [Parser? parser]) => parser?.parse<F>(pattern) ?? DefaultParser().parse<F>(pattern);
+    factory Format.parse(String? pattern, [Parser? parser]) {
+        if (pattern == null) throw InvalidArgumentException("pattern", "pattern shouldn't be null");
+        return parser?.parse<F>(pattern) ?? DefaultParser().parse<F>(pattern);
+    }
 
     /// Returns a [Format] by concatenating the [Format]s in [it].
     Format.concat(Iterable<Format<F>> it) : tokens = [for (var format in it) ...format.tokens];
@@ -53,6 +57,7 @@ abstract class TimestampFormats {
     static Format<Timestamp> Ehms([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.Ehms);
     static Format<Timestamp> EHms([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.EHms);
     static Format<Timestamp> Gy([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.Gy);
+    static Format<Timestamp> GyM([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.GyM);
     static Format<Timestamp> GyMMM([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.GyMMM);
     static Format<Timestamp> GyMMMd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.GyMMMd);
     static Format<Timestamp> GyMMMEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.GyMMMEd);
@@ -73,8 +78,10 @@ abstract class TimestampFormats {
     static Format<Timestamp> MMMd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMd);
     static Format<Timestamp> MMMEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMEd);
     static Format<Timestamp> MMMMd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMd);
-    static Format<Timestamp> MMMMW([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMW);
-    static Format<Timestamp> MMMMWAlt([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMWAlt);
+    static Format<Timestamp> MMMMWCountOne([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMWCountOne);
+    static Format<Timestamp> MMMMWCountTwo([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMWCountTwo);
+    static Format<Timestamp> MMMMWCountFew([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMWCountFew);
+    static Format<Timestamp> MMMMWCountOther([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMWCountOther);
     static Format<Timestamp> ms([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.ms);
     static Format<Timestamp> y([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.y);
     static Format<Timestamp> yM([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yM);
@@ -86,6 +93,48 @@ abstract class TimestampFormats {
     static Format<Timestamp> yMMMM([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMMMM);
     static Format<Timestamp> yQQQ([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yQQQ);
     static Format<Timestamp> yQQQQ([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yQQQQ);
-    static Format<Timestamp> yw([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yw);
-    static Format<Timestamp> ywAlt([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.ywAlt);
+    static Format<Timestamp> ywCountOne([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.ywCountOne);
+    static Format<Timestamp> ywCountTwo([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.ywCountTwo);
+    static Format<Timestamp> ywCountFew([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.ywCountFew);
+    static Format<Timestamp> ywCountOther([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.ywCountOther);
+    static Format<Timestamp> GyMMMMd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.GyMMMMd);
+    static Format<Timestamp> MMMMEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMEd);
+    static Format<Timestamp> MMMMWCountMany([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMWCountMany);
+    static Format<Timestamp> mmss([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.mmss);
+    static Format<Timestamp> yMMMMd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMMMMd);
+    static Format<Timestamp> ywCountMany([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.ywCountMany);
+    static Format<Timestamp> MMdd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMdd);
+    static Format<Timestamp> yMM([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMM);
+    static Format<Timestamp> HHmmZ([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.HHmmZ);
+    static Format<Timestamp> yMMMMEEEEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMMMMEEEEd);
+    static Format<Timestamp> MMd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMd);
+    static Format<Timestamp> yMMdd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMMdd);
+    static Format<Timestamp> GyMMMM([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.GyMMMM);
+    static Format<Timestamp> GyMMMMEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.GyMMMMEd);
+    static Format<Timestamp> yMMMMEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMMMMEd);
+    static Format<Timestamp> MMMMWCountZero([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMWCountZero);
+    static Format<Timestamp> ywCountZero([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.ywCountZero);
+    static Format<Timestamp> hmsvvvv([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.hmsvvvv);
+    static Format<Timestamp> Hmsvvvv([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.Hmsvvvv);
+    static Format<Timestamp> yMMMEEEEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMMMEEEEd);
+    static Format<Timestamp> EEEEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.EEEEd);
+    static Format<Timestamp> GyMMMEEEEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.GyMMMEEEEd);
+    static Format<Timestamp> HHmmss([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.HHmmss);
+    static Format<Timestamp> MEEEEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MEEEEd);
+    static Format<Timestamp> MMMEEEEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMEEEEd);
+    static Format<Timestamp> yMEEEEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMEEEEd);
+    static Format<Timestamp> MMMdd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMdd);
+    static Format<Timestamp> MMMMdd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMdd);
+    static Format<Timestamp> MdAlt([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MdAlt);
+    static Format<Timestamp> MEdAlt([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MEdAlt);
+    static Format<Timestamp> MMddAlt([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMddAlt);
+    static Format<Timestamp> yMAlt([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMAlt);
+    static Format<Timestamp> yMdAlt([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMdAlt);
+    static Format<Timestamp> yMEdAlt([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMEdAlt);
+    static Format<Timestamp> Mdd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.Mdd);
+    static Format<Timestamp> MMMM([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMM);
+    static Format<Timestamp> yMMMMccccd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yMMMMccccd);
+    static Format<Timestamp> yQ([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.yQ);
+    static Format<Timestamp> HHmm([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.HHmm);
+    static Format<Timestamp> MMMMEEEEd([Locale? locale]) => Format.parse(nonNullLocale(locale).format.builtIn.MMMMEEEEd);
 }

@@ -1,0 +1,397 @@
+{
+  "gregorianCalendar": {
+    "months": {
+      "format": {
+        "abbreviated": [
+          "Jan",
+          "Feb",
+          "Mas",
+          "Eph",
+          "Mey",
+          "Jun",
+          "Jul",
+          "Aga",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Dis"
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "E",
+          "M",
+          "J",
+          "J",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "Januwari",
+          "Februwari",
+          "Mashi",
+          "Ephreli",
+          "Meyi",
+          "Juni",
+          "Julayi",
+          "Agasti",
+          "Septhemba",
+          "Okthoba",
+          "Novemba",
+          "Disemba"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Jan",
+          "Feb",
+          "Mas",
+          "Eph",
+          "Mey",
+          "Jun",
+          "Jul",
+          "Aga",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Dis"
+        ],
+        "narrow": [
+          "J",
+          "F",
+          "M",
+          "A",
+          "M",
+          "J",
+          "J",
+          "A",
+          "S",
+          "O",
+          "N",
+          "D"
+        ],
+        "wide": [
+          "Januwari",
+          "Februwari",
+          "Mashi",
+          "Ephreli",
+          "Meyi",
+          "Juni",
+          "Julayi",
+          "Agasti",
+          "Septhemba",
+          "Okthoba",
+          "Novemba",
+          "Disemba"
+        ]
+      }
+    },
+    "weekdays": {
+      "format": {
+        "abbreviated": [
+          "Son",
+          "Mso",
+          "Bil",
+          "Tha",
+          "Sin",
+          "Hla",
+          "Mgq"
+        ],
+        "narrow": [
+          "S",
+          "M",
+          "B",
+          "T",
+          "S",
+          "H",
+          "M"
+        ],
+        "short": [
+          "Son",
+          "Mso",
+          "Bil",
+          "Tha",
+          "Sin",
+          "Hla",
+          "Mgq"
+        ],
+        "wide": [
+          "ISonto",
+          "UMsombuluko",
+          "ULwesibili",
+          "ULwesithathu",
+          "ULwesine",
+          "ULwesihlanu",
+          "UMgqibelo"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Son",
+          "Mso",
+          "Bil",
+          "Tha",
+          "Sin",
+          "Hla",
+          "Mgq"
+        ],
+        "narrow": [
+          "S",
+          "M",
+          "B",
+          "T",
+          "S",
+          "H",
+          "M"
+        ],
+        "short": [
+          "Son",
+          "Mso",
+          "Bil",
+          "Tha",
+          "Sin",
+          "Hla",
+          "Mgq"
+        ],
+        "wide": [
+          "ISonto",
+          "UMsombuluko",
+          "ULwesibili",
+          "ULwesithathu",
+          "ULwesine",
+          "ULwesihlanu",
+          "UMgqibelo"
+        ]
+      }
+    },
+    "quarters": {
+      "format": {
+        "abbreviated": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "ikota yesi-1",
+          "ikota yesi-2",
+          "ikota yesi-3",
+          "ikota yesi-4"
+        ]
+      },
+      "standalone": {
+        "abbreviated": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "narrow": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wide": [
+          "ikota yesi-1",
+          "ikota yesi-2",
+          "ikota yesi-3",
+          "ikota yesi-4"
+        ]
+      }
+    },
+    "dayPeriods": {
+      "format": {
+        "abbreviated": {
+          "am": "AM",
+          "pm": "PM",
+          "morning1": "entathakusa",
+          "morning2": "ekuseni",
+          "afternoon1": "emini",
+          "evening1": "ntambama",
+          "night1": "ebusuku"
+        },
+        "narrow": {
+          "am": "a",
+          "pm": "p",
+          "morning1": "entathakusa",
+          "morning2": "ekuseni",
+          "afternoon1": "emini",
+          "evening1": "ntambama",
+          "night1": "ebusuku"
+        },
+        "wide": {
+          "am": "AM",
+          "pm": "PM",
+          "morning1": "entathakusa",
+          "morning2": "ekuseni",
+          "afternoon1": "emini",
+          "evening1": "ntambama",
+          "night1": "ebusuku"
+        }
+      },
+      "standalone": {
+        "abbreviated": {
+          "am": "AM",
+          "pm": "PM",
+          "morning1": "entathakusa",
+          "morning2": "ekuseni",
+          "afternoon1": "emini",
+          "evening1": "ntambama",
+          "night1": "ebusuku"
+        },
+        "narrow": {
+          "am": "AM",
+          "pm": "PM",
+          "morning1": "entathakusa",
+          "morning2": "ekuseni",
+          "afternoon1": "emini",
+          "evening1": "ntambama",
+          "night1": "ebusuku"
+        },
+        "wide": {
+          "am": "AM",
+          "pm": "PM",
+          "morning1": "entathakusa",
+          "morning2": "ekuseni",
+          "afternoon1": "emini",
+          "evening1": "ntambama",
+          "night1": "ebusuku"
+        }
+      }
+    },
+    "eras": {
+      "name": {
+        "pre": "BC",
+        "preAlt": "BCE",
+        "post": "AD",
+        "postAlt": "CE"
+      },
+      "abbr": {
+        "pre": "BC",
+        "preAlt": "BCE",
+        "post": "AD",
+        "postAlt": "CE"
+      },
+      "narrow": {
+        "pre": "BC",
+        "preAlt": "BCE",
+        "post": "AD",
+        "postAlt": "CE"
+      }
+    }
+  },
+  "dayPeriodsRule": {
+    "afternoon1": {
+      "_before": "13:00",
+      "_from": "10:00"
+    },
+    "evening1": {
+      "_before": "19:00",
+      "_from": "13:00"
+    },
+    "morning1": {
+      "_before": "06:00",
+      "_from": "00:00"
+    },
+    "morning2": {
+      "_before": "10:00",
+      "_from": "06:00"
+    },
+    "night1": {
+      "_before": "24:00",
+      "_from": "19:00"
+    }
+  },
+  "weekData": {
+    "minDaysInWeek": 1,
+    "firstDayOfWeek": 2
+  },
+  "format": {
+    "date": {
+      "full": "EEEE, MMMM d, y",
+      "long": "MMMM d, y",
+      "medium": "MMM d, y",
+      "short": "M/d/yy"
+    },
+    "time": {
+      "full": "HH:mm:ss zzzz",
+      "long": "HH:mm:ss z",
+      "medium": "HH:mm:ss",
+      "short": "HH:mm"
+    },
+    "datetime": {
+      "full": "HH:mm:ss zzzz EEEE, MMMM d, y",
+      "long": "HH:mm:ss z MMMM d, y",
+      "medium": "HH:mm:ss MMM d, y",
+      "short": "HH:mm M/d/yy"
+    },
+    "builtIn": {
+      "Bh": "h B",
+      "Bhm": "h:mm B",
+      "Bhms": "h:mm:ss B",
+      "d": "d",
+      "E": "ccc",
+      "EBhm": "E h:mm B",
+      "EBhms": "E h:mm:ss B",
+      "Ed": "d E",
+      "Ehm": "E h:mm a",
+      "EHm": "E HH:mm",
+      "Ehms": "E h:mm:ss a",
+      "EHms": "E HH:mm:ss",
+      "Gy": "G y",
+      "GyMMM": "G y MMM",
+      "GyMMMd": "G y MMM d",
+      "GyMMMEd": "G y MMM d, E",
+      "h": "h a",
+      "H": "HH",
+      "hm": "h:mm a",
+      "Hm": "HH:mm",
+      "hms": "h:mm:ss a",
+      "Hms": "HH:mm:ss",
+      "hmsv": "h:mm:ss a v",
+      "Hmsv": "HH:mm:ss v",
+      "hmv": "h:mm a v",
+      "Hmv": "HH:mm v",
+      "M": "L",
+      "Md": "MM-dd",
+      "MEd": "MM-dd, E",
+      "MMM": "LLL",
+      "MMMd": "MMM d",
+      "MMMEd": "E, MMM d",
+      "MMMMd": "MMMM d",
+      "ms": "mm:ss",
+      "y": "y",
+      "yM": "y-MM",
+      "yMd": "y-MM-dd",
+      "yMEd": "y-MM-dd, E",
+      "yMMM": "MMM y",
+      "yMMMd": "MMM d, y",
+      "yMMMEd": "E, MMM d, y",
+      "yMMMM": "MMMM y",
+      "yQQQ": "QQQ y",
+      "yQQQQ": "QQQQ y",
+      "MMMMWCountOther": "'week' W 'of' MMMM",
+      "MMMMWCountOne": "'week' W 'of' MMMM",
+      "ywCountOther": "'week' w 'of' Y",
+      "ywCountOne": "'week' w 'of' Y"
+    },
+    "timezone": {
+      "gmt": "GMT{0}+H:m:s",
+      "gmtZero": "GMT",
+      "region": "Isikhathi sase-{0}",
+      "regionDaylight": "{0} Isikhathi sasemini",
+      "regionStandard": "{0} isikhathi esivamile"
+    }
+  }
+}
