@@ -1,5 +1,8 @@
 import 'dart:math';
 
+import '../../core/interval.dart';
+import '../format.dart';
+
 import '../../core/timestamp.dart' show Timestamp;
 import '../../units/unit.dart';
 import 'format_token.dart' show StatefulToken;
@@ -87,7 +90,7 @@ final StatefulToken<Timestamp> EEEE = StatefulToken((ts, c, l) => c.weekday(ts).
 final StatefulToken<Timestamp> EEEEE = StatefulToken((ts, c, l) => c.weekday(ts).toNarrow(l), 'EEEEE');
 final StatefulToken<Timestamp> EEEEEE = StatefulToken((ts, c, l) => c.weekday(ts).toShort(l), 'EEEEEE');
 
-final StatefulToken<Timestamp> e = StatefulToken((ts, c, l) => c.weekday(ts).toString(), 'e');
+final StatefulToken<Timestamp> e = StatefulToken((ts, c, l) => c.weekday(ts).toString(l), 'e');
 final StatefulToken<Timestamp> ee = e.withMinLength(2, true, 'ee');
 final StatefulToken<Timestamp> eee = EEE.clone('eee');
 final StatefulToken<Timestamp> eeee = EEEE.clone('eeee');
@@ -157,12 +160,26 @@ StatefulToken<Timestamp> SPlus(int len) => StatefulToken((ts, _, __) {
     return (microseconds / pow(10, len - 6)).truncate().toString();
 }, 'SPlus');
 
-// TODO final StatefulToken<Timestamp> A
+// TODO final StatefulToken<Timestamp> A;
+
+// TODO z, zz, zzz, zzzz
+
+// TODO O
+final StatefulToken<Timestamp> OOOO = StatefulToken((ts, _, l) {
+    if (ts.timezone.offset(ts.instant.microsecondsSinceEpoch()) == Interval(microseconds: 0)) {
+        return l.format.timezone.gmtZero;
+    } else {
+        final fmt = Format<Interval>.parse(l.format.timezone.gmt);
+        return fmt.format(ts.timezone.offset(ts.instant.microsecondsSinceEpoch()), l);
+    }
+}, "OOOO");
+
+// TODO v, vvvv, V, VV, VVV, VVVV
 
 final StatefulToken<Timestamp> Z = xxxx.clone('Z');
 final StatefulToken<Timestamp> ZZ = xxxx.clone('ZZ');
 final StatefulToken<Timestamp> ZZZ = xxxx.clone('ZZZ');
-// final StatefulToken<Timestamp> ZZZZ = OOOO.clone('ZZZZ');
+final StatefulToken<Timestamp> ZZZZ = OOOO.clone('ZZZZ');
 final StatefulToken<Timestamp> ZZZZZ = XXXXX.clone('ZZZZZ');
 
 final StatefulToken<Timestamp> X = x.conditional(string('Z'), (str) => str == '+00');

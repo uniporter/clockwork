@@ -414,7 +414,7 @@
       "ywCountMany": "w. 't\u00fdden' 'roku' Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+H:mm",
       "gmtZero": "GMT",
       "region": "\u010casov\u00e9 p\u00e1smo {0}",
       "regionDaylight": "{0} (+1)",

@@ -16,7 +16,7 @@ class GregorianWeekOfYear extends Week {
 class GregorianWeekOfMonth extends Week {
     @override late final UnitBuilder<GregorianWeekOfMonth> builder;
 
-    GregorianWeekOfMonth(int value, GregorianMonth month, GregorianYear year): super(value, Range(1, GregorianMonth.weeksPer(month, year)), GregorianMonth.weeksPer(month, year)) {
+    GregorianWeekOfMonth(int value, GregorianMonth month, GregorianYear year): super(value, const Range(1, 6), 5) {
         builder = (value) => GregorianWeekOfMonth(value, month, year);
     }
 

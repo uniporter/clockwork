@@ -394,7 +394,7 @@
       "ywCountOther": "'minggu' 'ke'-w Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H.m.s",
+      "gmt": "<GMT>+HH.mm",
       "gmtZero": "GMT",
       "region": "Waktu {0}",
       "regionDaylight": "Waktu Musim Panas {0}",

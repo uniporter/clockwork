@@ -334,7 +334,7 @@
       "ywCountOther": "'pekan' w 'ing' Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "Wektu {0}",
       "regionDaylight": "Wektu Ketigo {0}",

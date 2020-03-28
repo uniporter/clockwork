@@ -149,8 +149,6 @@ class GregorianCalendarComponents {
         final finalDay = dayOfYear - (153 * internalMonth + 2) ~/ 5 + 1;
         final finalYear = (yearOfEra + era * 400) + (finalMonth <= 2 ? 1 : 0);
 
-        print("$finalYear $finalMonth $finalDay");
-
         return GregorianCalendarComponents(
             year: GregorianYear(finalYear),
             month: GregorianMonth(finalMonth),

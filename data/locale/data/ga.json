@@ -342,7 +342,7 @@
       "ywCountMany": "'seachtain' 'a' w 'i' Y"
     },
     "timezone": {
-      "gmt": "MAG{0}+H:m:s",
+      "gmt": "<MAG>+HH:mm",
       "gmtZero": "MAG",
       "region": "{0}",
       "regionDaylight": "{0} (+1)",

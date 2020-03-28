@@ -418,7 +418,7 @@
       "ywCountOne": "Y 'y\u0131l\u0131n\u0131n' w. 'haftas\u0131'"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0} Saati",
       "regionDaylight": "{0} Yaz Saati",

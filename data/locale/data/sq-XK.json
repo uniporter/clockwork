@@ -407,7 +407,7 @@
       "ywCountOne": "'java' w 'e' Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "Ora: {0}",
       "regionDaylight": "Ora verore: {0}",

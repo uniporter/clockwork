@@ -407,7 +407,7 @@
       "ywCountOther": "Y\u5e74\u7b2cw\u5468"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0}\u65f6\u95f4",
       "regionDaylight": "{0}\u590f\u4ee4\u65f6\u95f4",

@@ -1,6 +1,7 @@
 import os
 import json
 from typing import List, Dict, Union
+import re
 
 # Load the day periods rule and makes sure that each locale has a corresponding entry.
 def loadDayPeriodsRule(localeNameList: List[str]) -> dict:
@@ -83,9 +84,9 @@ def loadFormatData(data: Dict[str, Union[Dict, str]], localeName: str) -> Dict[s
 
     with open(f"locale/raw/gregorian/{localeName}/timeZoneNames.json") as fp:
         data: Dict[str, str] = json.load(fp)['main'][localeName]['dates']['timeZoneNames']
-        patternTemp: str = data['hourFormat'].split(';')[0].lstrip('\u200e').replace('HH', 'H').replace('mm', 'm')
+        patternTemp: str = data['hourFormat'].split(';')[0].lstrip('\u200e')
         timezone = {
-            "gmt": data['gmtFormat'] + patternTemp + patternTemp[2:].replace('m', 's'),
+            "gmt": re.sub(r"[^\{0\}]+", lambda m: "<" + m.group(0) + ">", data['gmtFormat']).replace('{0}', patternTemp),
             "gmtZero": data['gmtZeroFormat'],
             "region": data['regionFormat'],
             "regionDaylight": data['regionFormat-type-daylight'],

@@ -395,7 +395,7 @@
       "ywCountOne": "'week' w 'of' Y"
     },
     "timezone": {
-      "gmt": "\u1302 \u12a4\u121d \u1272{0}+Hms",
+      "gmt": "<\u1302 \u12a4\u121d \u1272>+HHmm",
       "gmtZero": "\u1302 \u12a4\u121d \u1272",
       "region": "{0} \u130a\u12dc",
       "regionDaylight": "{0} \u12e8\u1240\u1295 \u1265\u122d\u1203\u1295 \u1230\u12d3\u1275",

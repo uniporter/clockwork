@@ -1,4 +1,3 @@
-import '../core/interval.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../units/unit.dart';
@@ -208,30 +207,12 @@ class Format {
 
 @JsonSerializable()
 class TimezoneFormat {
-    /// A function that takes in the hour, minute, and second component of the offset and returns the GMT pattern of the locale.
-    /// If any of the parameters is null, 
-    @JsonKey(fromJson: _patternFromJson)
-    final String Function(int?, int?, int?) gmt;
+    final String gmt;
     final String gmtZero;
-    @JsonKey(fromJson: _patternFromJson)
-    final String Function(String) region;
-    @JsonKey(fromJson: _patternFromJson)
-    final String Function(String) regionDaylight;
-    @JsonKey(fromJson: _patternFromJson)
-    final String Function(String) regionStandard;
 
-    const TimezoneFormat(this.gmt, this.gmtZero, this.region, this.regionDaylight, this.regionStandard);
+    const TimezoneFormat(this.gmt, this.gmtZero);
 
     factory TimezoneFormat.fromJson(Map<String, dynamic> json) => _$TimezoneFormatFromJson(json);
-
-    /// Currently this must return dynamic. If we specify its return type the json_serializable package crashes.
-    static dynamic _patternFromJson(String data) => (Interval i, bool isLong) {
-        final hour = i.hour;
-        final minute = i.minute;
-        final second = i.second;
-
-        return null;
-    };
 }
 
 @JsonSerializable()

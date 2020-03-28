@@ -12,6 +12,8 @@ abstract class Weekday extends Unit {
     @override Weekday operator +(int other) => (super + other) as Weekday;
     @override Weekday operator -(int other) => (super - other) as Weekday;
 
+    @override String toString([Locale? locale]);
+
     /// Returns the locale-sensitive abbreviated name of the weekday.
     String toAbbr([Locale? locale]);
     /// Returns the locale-sensitive narrow name of the weekday.

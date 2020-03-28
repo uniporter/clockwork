@@ -395,7 +395,7 @@
       "ywCountOne": "'semaine' w 'de' Y"
     },
     "timezone": {
-      "gmt": "UTC{0}+H:m:s",
+      "gmt": "<UTC>+HH:mm",
       "gmtZero": "UTC",
       "region": "heure : {0}",
       "regionDaylight": "{0} (heure d\u2019\u00e9t\u00e9)",

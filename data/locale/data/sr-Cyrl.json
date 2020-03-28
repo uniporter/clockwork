@@ -402,7 +402,7 @@
       "ywCountFew": "w. '\u0441\u0435\u0434\u043c\u0438\u0446\u0430' '\u0443' Y."
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0}",
       "regionDaylight": "{0}, \u043b\u0435\u0442\u045a\u0435 \u0432\u0440\u0435\u043c\u0435",

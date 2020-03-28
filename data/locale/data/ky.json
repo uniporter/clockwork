@@ -395,7 +395,7 @@
       "ywCountOne": "Y-'\u0436\u044b\u043b\u0434\u044b\u043d' w-'\u0430\u043f\u0442\u0430\u0441\u044b'"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0} \u0443\u0431\u0430\u043a\u0442\u044b\u0441\u044b",
       "regionDaylight": "{0} (+1)",

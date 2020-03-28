@@ -338,7 +338,7 @@
       "ywCountOne": "'hepde' w, Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0} wagty",
       "regionDaylight": "{0} tomusky wagty",

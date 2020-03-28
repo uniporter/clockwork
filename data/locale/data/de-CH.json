@@ -411,7 +411,7 @@
       "ywCountOne": "'Woche' w 'des' 'Jahres' Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0} Zeit",
       "regionDaylight": "{0} Sommerzeit",

@@ -415,7 +415,7 @@
       "ywCountMany": "Y, 'tydz'. w"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "czas: {0}",
       "regionDaylight": "{0} (czas letni)",

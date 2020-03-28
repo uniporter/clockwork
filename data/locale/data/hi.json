@@ -390,7 +390,7 @@
       "ywCountOne": "Y \u0915\u093e \u0938\u092a\u094d\u0924\u093e\u0939 w"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0} \u0938\u092e\u092f",
       "regionDaylight": "{0} \u0921\u0947\u0932\u093e\u0907\u091f \u0938\u092e\u092f",

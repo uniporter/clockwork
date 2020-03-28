@@ -412,7 +412,7 @@
       "ywCountOne": "'vuoden' Y 'viikko' w"
     },
     "timezone": {
-      "gmt": "UTC{0}+H.m.s",
+      "gmt": "<UTC>+H.mm",
       "gmtZero": "UTC",
       "region": "aikavy\u00f6hyke: {0}",
       "regionDaylight": "{0} (kes\u00e4aika)",

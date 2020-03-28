@@ -399,7 +399,7 @@
       "ywCountOne": "Y. 'g'. w. 'ned\u0113\u013ca'"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "Laika josla: {0}",
       "regionDaylight": "{0}: vasaras laiks",

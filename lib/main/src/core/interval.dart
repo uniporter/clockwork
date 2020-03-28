@@ -24,37 +24,37 @@ class Interval with Formattable implements Comparable<Interval> {
     factory Interval.fromDuration(Duration duration) => Interval(microseconds: duration.inMicroseconds);
 
     /// Returns the microsecond component of this Interval. This result is unsigned.
-    int get microsecond => _len % Millisecond.microsecondsPer;
+    int get microsecond => (_len.remainder(Millisecond.microsecondsPer) ~/ 1).abs();
     /// Returns the number of microseconds spanned by this Interval. This result is signed.
     int asMicroseconds() => _len;
 
     /// Returns the millisecond component of this Interval. This result is unsigned.
-    int get millisecond => _len % Second.microsecondsPer;
+    int get millisecond => (_len.remainder(Second.microsecondsPer) ~/ Millisecond.microsecondsPer).abs();
     /// Returns the number of milliseconds spanned by this Interval. This result is signed.
     double asMilliseconds() => _len / Millisecond.microsecondsPer;
 
     /// Returns the second component of this Interval. This result is unsigned.
-    int get second => _len % Minute.microsecondsPer;
+    int get second => (_len.remainder(Minute.microsecondsPer) ~/ Second.microsecondsPer).abs();
     /// Returns the number of seconds spanned by this Interval. This result is signed.
     double asSeconds() => _len / Second.microsecondsPer;
 
     /// Returns the minute component of this Interval. This result is unsigned.
-    int get minute => _len % Hour.microsecondsPer;
+    int get minute => (_len.remainder(Hour.microsecondsPer) ~/ Minute.microsecondsPer).abs();
     /// Returns the number of minutes spanned by this Interval. This result is signed.
     double asMinutes() => _len / Minute.microsecondsPer;
 
-    /// Returns the hour component of this Interval. This result is unsigned.
-    int get hour => _len % Day.microsecondsPer;
+    /// Returns the hour component of this Interval. This result is signed.
+    int get hour => (_len.remainder(Day.microsecondsPer) ~/ Hour.microsecondsPer).abs();
     /// Returns the number of hours spanned by this Interval. This result is signed.
     double asHours() => _len / Hour.microsecondsPer;
 
     /// Returns the day component of this Interval. This result is unsigned.
-    int get day => _len ~/ Day.microsecondsPer;
+    int get day => (_len ~/ Day.microsecondsPer).abs();
     /// Returns the number of days spanned by this Interval. This result is signed.
     double asDays() => _len / Day.microsecondsPer;
 
     /// Returns the sign of this Interval. It gives 1 if this is positive, 0 if this is 0, and -1 if this is negative.
-    int get sign => microsecond == 0 ? 0 : microsecond ~/ microsecond.abs();
+    int get sign => _len == 0 ? 0 : _len > 0 ? 1 : -1;
 
     /// Returns the absolute value of this [Interval].
     Interval abs() => Interval(microseconds: asMicroseconds().abs());

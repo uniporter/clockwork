@@ -412,7 +412,7 @@
       "ywCountOne": "'setmana' w 'de' Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "Hora de: {0}",
       "regionDaylight": "Hora d\u2019estiu, {0}",

@@ -398,7 +398,7 @@
       "ywCountOne": "'semana' w 'de' Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "hora de {0}",
       "regionDaylight": "hora de verano de {0}",

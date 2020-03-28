@@ -400,7 +400,7 @@
       "ywCountOne": "Y \u098f\u09b0 w\u09a4\u09ae \u09b8\u09aa\u09cd\u09a4\u09be\u09b9"
     },
     "timezone": {
-      "gmt": "GMT {0}+H:m:s",
+      "gmt": "<GMT >+HH:mm",
       "gmtZero": "GMT",
       "region": "{0} \u09b8\u09ae\u09af\u09bc",
       "regionDaylight": "{0} \u09a6\u09bf\u09ac\u09be\u09b2\u09cb\u0995 \u09b8\u09ae\u09af\u09bc",

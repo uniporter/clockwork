@@ -411,7 +411,7 @@
       "ywCountMany": "\u05e9\u05d1\u05d5\u05e2 w \u05d1\u05e9\u05e0\u05ea Y"
     },
     "timezone": {
-      "gmt": "GMT{0}\u200e+H:m:s",
+      "gmt": "<GMT>+HH:mm<\u200e>",
       "gmtZero": "GMT",
       "region": "\u05e9\u05e2\u05d5\u05df {0}",
       "regionDaylight": "\u05e9\u05e2\u05d5\u05df {0} (\u05e7\u05d9\u05e5)",

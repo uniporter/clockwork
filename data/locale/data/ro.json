@@ -400,7 +400,7 @@
       "ywCountFew": "'s\u0103pt\u0103m\u00e2na' w 'din' Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "Ora din {0}",
       "regionDaylight": "Ora de var\u0103 din {0}",

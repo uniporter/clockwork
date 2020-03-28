@@ -412,7 +412,7 @@
       "ywCountOther": "Y\ub144 w\ubc88\uc9f8 \uc8fc"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0} \uc2dc\uac04",
       "regionDaylight": "{0} \ud558\uacc4 \ud45c\uc900\uc2dc",

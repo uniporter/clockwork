@@ -114,11 +114,8 @@ Format _$FormatFromJson(Map<String, dynamic> json) {
 
 TimezoneFormat _$TimezoneFormatFromJson(Map<String, dynamic> json) {
   return TimezoneFormat(
-    TimezoneFormat._patternFromJson(json['gmt'] as String),
+    json['gmt'] as String,
     json['gmtZero'] as String,
-    TimezoneFormat._patternFromJson(json['region'] as String),
-    TimezoneFormat._patternFromJson(json['regionDaylight'] as String),
-    TimezoneFormat._patternFromJson(json['regionStandard'] as String),
   );
 }
 

@@ -428,7 +428,7 @@
       "ywCountOne": "Y-\u0d32\u0d46 \u0d06\u0d34\u0d4d\u0d1a w"
     },
     "timezone": {
-      "gmt": "\u0d1c\u0d3f\u0d0e\u0d02\u0d1f\u0d3f {0}+H:m:s",
+      "gmt": "<\u0d1c\u0d3f\u0d0e\u0d02\u0d1f\u0d3f >+HH:mm",
       "gmtZero": "\u0d1c\u0d3f\u0d0e\u0d02\u0d1f\u0d3f",
       "region": "{0} \u0d38\u0d2e\u0d2f\u0d02",
       "regionDaylight": "{0} \u0d21\u0d47\u0d32\u0d48\u0d31\u0d4d\u0d31\u0d4d \u0d38\u0d2e\u0d2f\u0d02",

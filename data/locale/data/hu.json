@@ -416,7 +416,7 @@
       "ywCountOne": "Y w. 'hete'"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0} id\u0151",
       "regionDaylight": "{0} ny\u00e1ri id\u0151",

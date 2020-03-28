@@ -39,8 +39,11 @@ class DefaultParser implements Parser {
 
     @override
     Format<F> parse<F extends Formattable>(String pattern) {
-        if (_formatCache[F]?.[pattern] == null) {
-            _formatCache[F][pattern] = Format(_parseHelper(pattern, 0));
+        if (_formatCache[F] == null) {
+            _formatCache[F] = Map<String, Format<F>>();
+        }
+        if (_formatCache[F][pattern] == null) {
+            _formatCache[F][pattern] = Format<F>(_parseHelper(pattern, 0));
         }
         return _formatCache[F][pattern] as Format<F>;
     }
@@ -53,25 +56,28 @@ class DefaultParser implements Parser {
     static final Map<Type, List<Map<String, _PatternSpec>>> tokenMap = {
         Interval: <Map<String, _PatternSpec<Interval>>>[
             {
-                "str": _PatternSpec(RegExp(r"<[^<>]*?>"), "str", lambdaTokenizer((match) => string(match.input.substring(match.start, match.end)))),
-                "space": _PatternSpec(RegExp(r"\s+?"), "space", lambdaTokenizer((match) => space(match.end - match.start))),
+                "str": _PatternSpec(RegExp(r"<[^<>]*?>"), "str", lambdaTokenizer((match) => string(match.input.substring(match.start + 1, match.end - 1)))),
+                "space": _PatternSpec(RegExp(r"\s+?"), "space", lambdaTokenizer((match) => string(match.input.substring(match.start, match.end)))),
             },
             {
                 "HH": _PatternSpec("HH", "HH", constTokenizer(IntervalTokens.HH)),
                 "mm": _PatternSpec("mm", "mm", constTokenizer(IntervalTokens.mm)),
-                "+": _PatternSpec("+", "+", constTokenizer(IntervalTokens.plus)),
+                "ss": _PatternSpec("ss", "ss", constTokenizer(IntervalTokens.ss)),
+                "plus": _PatternSpec(RegExp(r"\+"), "plus", constTokenizer(IntervalTokens.plus)),
             },
             {
                 "H": _PatternSpec("H", "H", constTokenizer(IntervalTokens.H)),
                 "m": _PatternSpec("m", "m", constTokenizer(IntervalTokens.m)),
+                "s": _PatternSpec("s", "s", constTokenizer(IntervalTokens.s)),
             },
         ],
         Timestamp: <Map<String, _PatternSpec<Timestamp>>>[
             {
-                "str": _PatternSpec(RegExp(r"<[^<>]*?>"), "str", lambdaTokenizer((match) => string(match.input.substring(match.start, match.end)))),
-                "space": _PatternSpec(RegExp(r"\s+?"), "space", lambdaTokenizer((match) => space(match.end - match.start))),
+                "str": _PatternSpec(RegExp(r"<[^<>]*?>"), "str", lambdaTokenizer((match) => string(match.input.substring(match.start + 1, match.end - 1)))),
+                "space": _PatternSpec(RegExp(r"\s+?"), "space", lambdaTokenizer((match) => string(match.input.substring(match.start, match.end)))),
             },
             {
+                "OOOO": _PatternSpec("OOOO", "OOOO", constTokenizer(TimestampTokens.OOOO)),
                 "GGGGG": _PatternSpec("GGGGG", "GGGGG", constTokenizer(TimestampTokens.GGGGG)),
                 "YPlus": _PatternSpec(RegExp(r"Y{3,}"), "YPlus", lambdaTokenizer((match) => TimestampTokens.YPlus(match.end - match.start))),
                 "yPlus": _PatternSpec(RegExp(r"y{3,}"), "yPlus", lambdaTokenizer((match) => TimestampTokens.yPlus(match.end - match.start))),
@@ -127,7 +133,7 @@ class DefaultParser implements Parser {
                 "s": _PatternSpec("s", "s", constTokenizer(TimestampTokens.s)),
                 "XXXX": _PatternSpec("XXXX", "XXXX", constTokenizer(TimestampTokens.XXXX)),
                 "xxxx": _PatternSpec("xxxx", "xxxx", constTokenizer(TimestampTokens.xxxx)),
-                // "ZZZZ": _PatternSpec("ZZZZ", "ZZZZ", constTokenizer(TimestampTokens.ZZZZ)),
+                "ZZZZ": _PatternSpec("ZZZZ", "ZZZZ", constTokenizer(TimestampTokens.ZZZZ)),
             },
             {
                 "GGG": _PatternSpec("GGG", "GGG", constTokenizer(TimestampTokens.GGG)),
@@ -194,8 +200,8 @@ class DefaultParser implements Parser {
     }).toList()));
 
     List<StatefulToken<F>> _parseHelper<F extends Formattable>(String str, int progress) {
-        final List tm = tokenMap[Timestamp];
-        final List po = parseOrder[Timestamp];
+        final List tm = tokenMap[F];
+        final List po = parseOrder[F];
         if (str == '' || progress >= tm.length) return [string<F>(str)];
         Iterable<RegExpMatch> matches;
         while ((matches = po[progress].allMatches(str)).isEmpty) {

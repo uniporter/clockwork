@@ -393,7 +393,7 @@
       "ywCountOther": "\u0ead\u0eb2\u0e97\u0eb4\u0e94\u0e97\u0eb5\u0ec8 w \u0e82\u0ead\u0e87\u0e9b\u0eb5 Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "\u0ec0\u0ea7\u0ea5\u0eb2 {0}",
       "regionDaylight": "\u0ec0\u0ea7\u0ea5\u0eb2\u0e81\u0eb2\u0e87\u0ec0\u0ea7\u0eb1\u0e99 {0}",

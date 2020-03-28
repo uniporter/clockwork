@@ -415,7 +415,7 @@
       "ywCountOne": "Y, w 'h\u0259ft\u0259'"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0} Vaxt\u0131",
       "regionDaylight": "{0} Yay Vaxt\u0131",

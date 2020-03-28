@@ -415,7 +415,7 @@
       "yMEdAlt": "E, d/M/y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0} Time",
       "regionDaylight": "{0} Daylight Saving Time",

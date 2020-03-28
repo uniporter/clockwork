@@ -407,7 +407,7 @@
       "ywCountMany": "Y w 'sav'."
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "Laikas: {0}",
       "regionDaylight": "Vasaros laikas: {0}",

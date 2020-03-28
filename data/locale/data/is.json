@@ -396,7 +396,7 @@
       "ywCountOne": "'viku' w 'af' Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H:m:s",
+      "gmt": "<GMT>+HH:mm",
       "gmtZero": "GMT",
       "region": "{0}",
       "regionDaylight": "{0} (sumart\u00edmi)",

@@ -410,7 +410,7 @@
       "ywCountFew": "w. 'teden' 'leta' Y"
     },
     "timezone": {
-      "gmt": "GMT{0}+H.m.s",
+      "gmt": "<GMT>+HH.mm",
       "gmtZero": "GMT",
       "region": "{0} \u010das",
       "regionDaylight": "{0} poletni \u010das",
