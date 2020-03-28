@@ -1,4 +1,4 @@
-import 'package:clockwork_gregorian_calendar/clockwork_gregorian_calendar.dart';
+import '../../../gregorian_calendar/gregorian_calendar.dart';
 
 import '../core/timestamp.dart';
 import '../locale/locale.dart';
@@ -70,7 +70,7 @@ abstract class Calendar extends Object {
 
     /// Returns the flexible day period of [ts]. If the given locale doesn't support flexible day periods, then the
     /// fixed day period is returned.
-    DayPeriod dayPeriod(Timestamp ts, [Locale? locale]) => ts.flexibleDayPeriod(locale) ?? ts.fixedDayPeriod;
+    DayPeriod? dayPeriod(Timestamp ts, [Locale? locale]) => ts.flexibleDayPeriod(locale);
 
     @override bool operator ==(covariant Calendar other) => name == other.name;
     @override int get hashCode => name.hashCode;

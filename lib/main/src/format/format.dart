@@ -25,7 +25,7 @@ class Format<F extends Formattable> {
     String format(F f, [Locale? locale, Calendar? calendar]) {
         /// We purify all tokens before using them to format [f].
         final pureTokens = tokens.map((token) => (F f) => token(f, nonNullCalendar(calendar), nonNullLocale(locale)));
-        return pureTokens.map((token) => token(f)).join();
+        return pureTokens.map((token) => (token as PureToken<F>)(f)).join();
     }
 }
 

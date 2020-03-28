@@ -70,10 +70,10 @@ class TimeZone {
     /// Parse a timezone string. The string must be in the format of `Continent/Region`, i.e. `America/New_York`.
     factory TimeZone.parse(String name) {
         TimeZoneData.checkIfLoaded();
-        final res = TimeZoneData.data[name];
-        if (res == null) throw InvalidArgumentException(name);
-
-        return res;
+        if (!TimeZoneData.data.containsKey(name)) {
+            throw InvalidArgumentException(name);
+        }
+        return TimeZoneData.data[name];
     }
 
     /// Returns the canonical utc timezone.
@@ -119,7 +119,7 @@ class TimeZoneHistory {
 
     const TimeZoneHistory(this.index, this.until, this.dst);
 
-    static num _untilFromJson(int data) => data == null ? double.infinity : data * Millisecond.microsecondsPer;
+    static num _untilFromJson(int? data) => data == null ? double.infinity : data * Millisecond.microsecondsPer;
 
     factory TimeZoneHistory._fromJson(Map<String, dynamic> json) => _$TimeZoneHistoryFromJson(json);
 }

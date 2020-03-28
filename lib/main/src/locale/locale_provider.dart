@@ -12,17 +12,35 @@ abstract class LocaleProvider {
     /// Get the data for [localeName]. If such data isn't loaded, an exception is thrown.
     Locale call(String localeName);
     /// Get the data for [localeName]. If such data isn't loaded, null is returned.
-    Locale operator [](String localeName);
+    Locale? operator [](String localeName);
+
+    /// The currently registered locale provider list. When calling [LocaleProvider.loadAll], the function will
+    /// go through this list and loads data of the locale one by one.
+    static final Set<LocaleProvider> providerList = {DefaultLocaleProvider()};
+
+    /// Register a locale provider to the list of providers.
+    static void register(LocaleProvider provider) {
+        providerList.add(provider);
+    }
+
+    /// Load locale info for [localeName] from all providers.
+    static void loadAll(String localeName) async {
+        return await Future.forEach<LocaleProvider>(providerList, (provider) async => await provider.load(localeName));
+    }
+
+    /// All [LocaleProvider] are assumed to be singletons. This equality relation ensures that only unique [LocaleProvider]s are registered.
+    @override operator ==(covariant LocaleProvider other) => this.runtimeType == other.runtimeType;
 }
 
+/// This is the default locale provider for all generic and Gregorian-calendar based data.
 class DefaultLocaleProvider implements LocaleProvider {
     static final DefaultLocaleProvider _singleton = DefaultLocaleProvider._internal();
     factory DefaultLocaleProvider() => _singleton;
     DefaultLocaleProvider._internal();
 
-    final Map<String, Locale> data = {'en': en};
-
     String? _dataPath;
+
+    final Map<String, Locale> data = {'en': en};
 
     /// Set the path of data on disk. Without having called this function, all operations inside this class will fail.
     void setDataPath(String dataPath) {
@@ -48,5 +66,5 @@ class DefaultLocaleProvider implements LocaleProvider {
     }
 
     @override Locale call(String localeName) => data.containsKey(localeName) ? data[localeName] : throw DataNotLoadedException('Locale Data');
-    @override Locale operator [](String localeName) => data.containsKey(localeName) ? data[localeName] : null;
+    @override Locale? operator [](String localeName) => data.containsKey(localeName) ? data[localeName] : null;
 }

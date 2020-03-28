@@ -39,7 +39,9 @@ class DefaultParser implements Parser {
 
     @override
     Format<F> parse<F extends Formattable>(String pattern) {
-        if (_formatCache[F]?.[pattern] == null) _formatCache[F][pattern] = Format(_parseHelper(pattern, 0));
+        if (_formatCache[F]?.[pattern] == null) {
+            _formatCache[F][pattern] = Format(_parseHelper(pattern, 0));
+        }
         return _formatCache[F][pattern] as Format<F>;
     }
 
@@ -71,11 +73,11 @@ class DefaultParser implements Parser {
             },
             {
                 "GGGGG": _PatternSpec("GGGGG", "GGGGG", constTokenizer(TimestampTokens.GGGGG)),
-                "YPlus": _PatternSpec("Y{3,}", "YPlus", lambdaTokenizer((match) => TimestampTokens.YPlus(match.end - match.start))),
-                "yPlus": _PatternSpec("y{3,}", "yPlus", lambdaTokenizer((match) => TimestampTokens.yPlus(match.end - match.start))),
-                "uPlus": _PatternSpec("u{2,}", "uPlus", lambdaTokenizer((match) => TimestampTokens.uPlus(match.end - match.start))),
+                "YPlus": _PatternSpec(RegExp(r"Y{3,}"), "YPlus", lambdaTokenizer((match) => TimestampTokens.YPlus(match.end - match.start))),
+                "yPlus": _PatternSpec(RegExp(r"y{3,}"), "yPlus", lambdaTokenizer((match) => TimestampTokens.yPlus(match.end - match.start))),
+                "uPlus": _PatternSpec(RegExp(r"u{2,}"), "uPlus", lambdaTokenizer((match) => TimestampTokens.uPlus(match.end - match.start))),
                 "UUUUU": _PatternSpec("UUUUU", "UUUUU", constTokenizer(TimestampTokens.UUUUU)),
-                "rPlus": _PatternSpec("r{2,}", "rPlus", lambdaTokenizer((match) => TimestampTokens.rPlus(match.end - match.start))),
+                "rPlus": _PatternSpec(RegExp(r"r{2,}"), "rPlus", lambdaTokenizer((match) => TimestampTokens.rPlus(match.end - match.start))),
                 "QQQQQ": _PatternSpec("QQQQQ", "QQQQQ", constTokenizer(TimestampTokens.QQQQQ)),
                 "qqqqq": _PatternSpec("qqqqq", "qqqqq", constTokenizer(TimestampTokens.qqqqq)),
                 "MMMMM": _PatternSpec("MMMMM", "MMMMM", constTokenizer(TimestampTokens.MMMMM)),
@@ -94,7 +96,7 @@ class DefaultParser implements Parser {
                 "KK": _PatternSpec("KK", "KK", constTokenizer(TimestampTokens.KK)),
                 "mm": _PatternSpec("mm", "mm", constTokenizer(TimestampTokens.mm)),
                 "ss": _PatternSpec("ss", "ss", constTokenizer(TimestampTokens.ss)),
-                "SPlus": _PatternSpec("S+", "SPlus", lambdaTokenizer((match) => TimestampTokens.SPlus(match.end - match.start))),
+                "SPlus": _PatternSpec(RegExp(r"S+"), "SPlus", lambdaTokenizer((match) => TimestampTokens.SPlus(match.end - match.start))),
                 "XXXXX": _PatternSpec("XXXXX", "XXXXX", constTokenizer(TimestampTokens.XXXXX)),
                 "xxxxx": _PatternSpec("xxxxx", "xxxxx", constTokenizer(TimestampTokens.xxxxx)),
                 "ZZZZZ": _PatternSpec("ZZZZZ", "ZZZZZ", constTokenizer(TimestampTokens.ZZZZZ)),
@@ -125,7 +127,7 @@ class DefaultParser implements Parser {
                 "s": _PatternSpec("s", "s", constTokenizer(TimestampTokens.s)),
                 "XXXX": _PatternSpec("XXXX", "XXXX", constTokenizer(TimestampTokens.XXXX)),
                 "xxxx": _PatternSpec("xxxx", "xxxx", constTokenizer(TimestampTokens.xxxx)),
-                "ZZZZ": _PatternSpec("ZZZZ", "ZZZZ", constTokenizer(TimestampTokens.ZZZZ)),
+                // "ZZZZ": _PatternSpec("ZZZZ", "ZZZZ", constTokenizer(TimestampTokens.ZZZZ)),
             },
             {
                 "GGG": _PatternSpec("GGG", "GGG", constTokenizer(TimestampTokens.GGG)),

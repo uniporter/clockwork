@@ -1,5 +1,7 @@
 import '../core/instant.dart';
 
+Clock _clock = DefaultClock();
+
 /// An interface that represents a clock. Its only function is to return the current time as an [Instant].
 ///
 /// By default, all clockwork constructs use [DefaultClock], which uses Dart's native methods to find the
@@ -12,14 +14,12 @@ abstract class Clock {
 
 /// The default [Clock] that uses Dart's native methods to find the current time. This is a singleton class.
 class DefaultClock implements Clock {
-    static final DefaultClock _singleton = DefaultClock._internal();
     factory DefaultClock() => _singleton;
     DefaultClock._internal();
+    static final DefaultClock _singleton = DefaultClock._internal();
 
     @override Instant now() => Instant(DateTime.now().microsecondsSinceEpoch);
 }
-
-Clock _clock = DefaultClock();
 
 /// The current [Clock] used by the system.
 Clock get clock => _clock;

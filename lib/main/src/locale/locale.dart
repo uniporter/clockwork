@@ -230,8 +230,8 @@ class TimezoneFormat {
         final minute = i.minute;
         final second = i.second;
 
-        
-    }
+        return null;
+    };
 }
 
 @JsonSerializable()

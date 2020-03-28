@@ -3,7 +3,7 @@ import '../../locale/locale.dart';
 import '../formattable.dart';
 import 'utility.tokens.dart';
 
-/// A Token that doesn't depend on any external states: that is, given an [Formattable], the token's output is
+/// A Token that doesn't depend on any external states: that is, given an [Formattable] alone, the token's output is
 /// deterministic.
 class PureToken<F extends Formattable> {
     final String? Function(F f) _formatter;

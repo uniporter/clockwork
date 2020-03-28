@@ -21474,6 +21474,26 @@
             {
                 "dst": false,
                 "index": 2,
+                "until": -80506740000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": -68666400000
+            },
+            {
+                "dst": false,
+                "index": 2,
+                "until": -52938000000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": -37216800000
+            },
+            {
+                "dst": false,
+                "index": 2,
                 "until": 104914800000
             },
             {
@@ -22255,26 +22275,6 @@
                 "dst": false,
                 "index": 2,
                 "until": -702489600000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": -84380400000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": -68659200000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": -21481200000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": -5760000000
             },
             {
                 "dst": false,
@@ -33058,36 +33058,6 @@
             {
                 "dst": false,
                 "index": 0,
-                "until": -747244800000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": -733942800000
-            },
-            {
-                "dst": false,
-                "index": 0,
-                "until": -526492800000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": -513190800000
-            },
-            {
-                "dst": false,
-                "index": 0,
-                "until": -495043200000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": -481741200000
-            },
-            {
-                "dst": false,
-                "index": 0,
                 "until": -462996000000
             },
             {
@@ -33143,7 +33113,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": -289414800000
+                "until": -292438800000
             },
             {
                 "dst": false,
@@ -33153,7 +33123,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": -260989200000
+                "until": -257965200000
             },
             {
                 "dst": false,
@@ -33183,7 +33153,22 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": -21488400000
+                "until": -68662800000
+            },
+            {
+                "dst": false,
+                "index": 0,
+                "until": -52934400000
+            },
+            {
+                "dst": false,
+                "index": 1,
+                "until": -37213200000
+            },
+            {
+                "dst": false,
+                "index": 0,
+                "until": -21484800000
             },
             {
                 "dst": false,
@@ -38016,7 +38001,7 @@
             {
                 "dst": false,
                 "index": 0,
-                "until": -757360800000
+                "until": -747251940000
             },
             {
                 "dst": false,
@@ -38026,7 +38011,7 @@
             {
                 "dst": false,
                 "index": 0,
-                "until": -715795200000
+                "until": -620841600000
             },
             {
                 "dst": false,
@@ -41557,7 +41542,7 @@
             {
                 "dst": false,
                 "index": 0,
-                "until": -757360800000
+                "until": -747251940000
             },
             {
                 "dst": false,
@@ -41567,7 +41552,7 @@
             {
                 "dst": false,
                 "index": 0,
-                "until": -715795200000
+                "until": -620841600000
             },
             {
                 "dst": false,
@@ -70747,7 +70732,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": -732726000000
+                "until": -733935600000
             },
             {
                 "dst": false,
@@ -87761,7 +87746,7 @@
             "LMT",
             "HKT",
             "HKST",
-            "HKT"
+            "HKWT"
         ],
         "possibleOffsets": [
             -456.7,
@@ -88459,12 +88444,12 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": -931140000000
+                "until": -931053600000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": -922762800000
+                "until": -922676400000
             },
             {
                 "dst": false,
@@ -88480,16 +88465,6 @@
                 "dst": false,
                 "index": 1,
                 "until": -875844000000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": -857358000000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": -781063200000
             },
             {
                 "dst": false,
@@ -88539,7 +88514,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": -621828000000
+                "until": -622087200000
             },
             {
                 "dst": false,
@@ -88554,7 +88529,7 @@
             {
                 "dst": false,
                 "index": 2,
-                "until": -575434800000
+                "until": -575521200000
             },
             {
                 "dst": false,
@@ -88564,7 +88539,7 @@
             {
                 "dst": false,
                 "index": 2,
-                "until": -228279600000
+                "until": -194842800000
             },
             {
                 "dst": false,
@@ -88579,42 +88554,12 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 10533600000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 23835600000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": 41983200000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 55285200000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": 74037600000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 87339600000
-            },
-            {
-                "dst": false,
-                "index": 1,
                 "until": 107910000000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 121219200000
+                "until": 121215600000
             },
             {
                 "dst": false,
@@ -88624,102 +88569,72 @@
             {
                 "dst": false,
                 "index": 2,
-                "until": 152676000000
+                "until": 152665200000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 165362400000
+                "until": 164678400000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 183502800000
+                "until": 184114800000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 202428000000
+                "until": 196214400000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 215557200000
+                "until": 215564400000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 228866400000
+                "until": 228873600000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 245797200000
+                "until": 245804400000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 260316000000
+                "until": 260323200000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 277246800000
+                "until": 267915600000
+            },
+            {
+                "dst": false,
+                "index": 2,
+                "until": 428454000000
             },
             {
                 "dst": false,
                 "index": 3,
-                "until": 308779200000
+                "until": 433893600000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 323827200000
+                "until": 468111600000
             },
             {
                 "dst": false,
-                "index": 3,
-                "until": 340228800000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 354672000000
-            },
-            {
-                "dst": false,
-                "index": 3,
-                "until": 371678400000
+                "index": 1,
+                "until": 482799600000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 386121600000
-            },
-            {
-                "dst": false,
-                "index": 3,
-                "until": 403128000000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 428446800000
-            },
-            {
-                "dst": false,
-                "index": 3,
-                "until": 433886400000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 482792400000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 496702800000
+                "until": 496710000000
             },
             {
                 "dst": false,
@@ -95946,6 +95861,46 @@
             {
                 "dst": false,
                 "index": 2,
+                "until": -681210000000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": -672228000000
+            },
+            {
+                "dst": false,
+                "index": 2,
+                "until": -654771600000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": -640864800000
+            },
+            {
+                "dst": false,
+                "index": 2,
+                "until": -623408400000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": -609415200000
+            },
+            {
+                "dst": false,
+                "index": 2,
+                "until": -588848400000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": -577965600000
+            },
+            {
+                "dst": false,
+                "index": 2,
                 "until": -498128400000
             },
             {
@@ -95955,7 +95910,7 @@
             },
             {
                 "dst": false,
-                "index": 3,
+                "index": 4,
                 "until": -451733400000
             },
             {
@@ -95965,7 +95920,7 @@
             },
             {
                 "dst": false,
-                "index": 3,
+                "index": 4,
                 "until": -418296600000
             },
             {
@@ -95975,7 +95930,7 @@
             },
             {
                 "dst": false,
-                "index": 3,
+                "index": 4,
                 "until": -387451800000
             },
             {
@@ -95985,7 +95940,7 @@
             },
             {
                 "dst": false,
-                "index": 3,
+                "index": 4,
                 "until": -356002200000
             },
             {
@@ -95995,7 +95950,7 @@
             },
             {
                 "dst": false,
-                "index": 3,
+                "index": 4,
                 "until": -324552600000
             },
             {
@@ -96005,7 +95960,7 @@
             },
             {
                 "dst": false,
-                "index": 3,
+                "index": 4,
                 "until": -293103000000
             },
             {
@@ -96020,7 +95975,7 @@
             },
             {
                 "dst": false,
-                "index": 4,
+                "index": 3,
                 "until": 560883600000
             },
             {
@@ -96030,7 +95985,7 @@
             },
             {
                 "dst": false,
-                "index": 4,
+                "index": 3,
                 "until": 592333200000
             },
             {
@@ -96051,8 +96006,8 @@
             -507.8667,
             -510,
             -540,
-            -570,
-            -600
+            -600,
+            -570
         ]
     },
     {
@@ -130547,12 +130502,12 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": -931140000000
+                "until": -931053600000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": -922762800000
+                "until": -922676400000
             },
             {
                 "dst": false,
@@ -130568,16 +130523,6 @@
                 "dst": false,
                 "index": 1,
                 "until": -875844000000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": -857358000000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": -781063200000
             },
             {
                 "dst": false,
@@ -130627,7 +130572,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": -621828000000
+                "until": -622087200000
             },
             {
                 "dst": false,
@@ -130642,7 +130587,7 @@
             {
                 "dst": false,
                 "index": 2,
-                "until": -575434800000
+                "until": -575521200000
             },
             {
                 "dst": false,
@@ -130652,7 +130597,7 @@
             {
                 "dst": false,
                 "index": 2,
-                "until": -228279600000
+                "until": -194842800000
             },
             {
                 "dst": false,
@@ -130667,42 +130612,12 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 10533600000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 23835600000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": 41983200000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 55285200000
-            },
-            {
-                "dst": false,
-                "index": 1,
-                "until": 74037600000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 87339600000
-            },
-            {
-                "dst": false,
-                "index": 1,
                 "until": 107910000000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 121219200000
+                "until": 121215600000
             },
             {
                 "dst": false,
@@ -130712,102 +130627,72 @@
             {
                 "dst": false,
                 "index": 2,
-                "until": 152676000000
+                "until": 152665200000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 165362400000
+                "until": 164678400000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 183502800000
+                "until": 184114800000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 202428000000
+                "until": 196214400000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 215557200000
+                "until": 215564400000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 228866400000
+                "until": 228873600000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 245797200000
+                "until": 245804400000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 260316000000
+                "until": 260323200000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 277246800000
+                "until": 267915600000
+            },
+            {
+                "dst": false,
+                "index": 2,
+                "until": 428454000000
             },
             {
                 "dst": false,
                 "index": 3,
-                "until": 308779200000
+                "until": 433893600000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 323827200000
+                "until": 468111600000
             },
             {
                 "dst": false,
-                "index": 3,
-                "until": 340228800000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 354672000000
-            },
-            {
-                "dst": false,
-                "index": 3,
-                "until": 371678400000
+                "index": 1,
+                "until": 482799600000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 386121600000
-            },
-            {
-                "dst": false,
-                "index": 3,
-                "until": 403128000000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 428446800000
-            },
-            {
-                "dst": false,
-                "index": 3,
-                "until": 433886400000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 482792400000
-            },
-            {
-                "dst": false,
-                "index": 2,
-                "until": 496702800000
+                "until": 496710000000
             },
             {
                 "dst": false,
@@ -132429,7 +132314,12 @@
             {
                 "dst": false,
                 "index": 0,
-                "until": -788922000000
+                "until": -781052400000
+            },
+            {
+                "dst": false,
+                "index": 1,
+                "until": -780372000000
             },
             {
                 "dst": false,
@@ -132444,7 +132334,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": -757389600000
+                "until": -749095200000
             },
             {
                 "dst": false,
@@ -132766,7 +132656,7 @@
         "possibleAbbrs": [
             "CET",
             "CEST",
-            "CEST",
+            "EEST",
             "MSD"
         ],
         "possibleOffsets": [
@@ -155767,7 +155657,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": -733359600000
+                "until": -733273200000
             },
             {
                 "dst": false,
@@ -163258,17 +163148,17 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1572703200000
+                "until": 1573308000000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 1579356000000
+                "until": 1578751200000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 1604152800000
+                "until": 1604757600000
             },
             {
                 "dst": false,
@@ -163278,7 +163168,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1636207200000
+                "until": 1636812000000
             },
             {
                 "dst": false,
@@ -163288,7 +163178,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1667656800000
+                "until": 1668261600000
             },
             {
                 "dst": false,
@@ -163298,7 +163188,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1699106400000
+                "until": 1699711200000
             },
             {
                 "dst": false,
@@ -163308,17 +163198,17 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1730556000000
+                "until": 1731160800000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 1737208800000
+                "until": 1736604000000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 1762005600000
+                "until": 1762610400000
             },
             {
                 "dst": false,
@@ -163328,7 +163218,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1793455200000
+                "until": 1794060000000
             },
             {
                 "dst": false,
@@ -163338,7 +163228,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1825509600000
+                "until": 1826114400000
             },
             {
                 "dst": false,
@@ -163348,7 +163238,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1856959200000
+                "until": 1857564000000
             },
             {
                 "dst": false,
@@ -163358,7 +163248,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1888408800000
+                "until": 1889013600000
             },
             {
                 "dst": false,
@@ -163368,17 +163258,17 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1919858400000
+                "until": 1920463200000
             },
             {
                 "dst": false,
                 "index": 2,
-                "until": 1926511200000
+                "until": 1925906400000
             },
             {
                 "dst": false,
                 "index": 1,
-                "until": 1951308000000
+                "until": 1951912800000
             },
             {
                 "dst": false,
@@ -163388,7 +163278,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 1983362400000
+                "until": 1983967200000
             },
             {
                 "dst": false,
@@ -163398,7 +163288,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 2014812000000
+                "until": 2015416800000
             },
             {
                 "dst": false,
@@ -163408,7 +163298,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 2046261600000
+                "until": 2046866400000
             },
             {
                 "dst": false,
@@ -163418,7 +163308,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 2077711200000
+                "until": 2078316000000
             },
             {
                 "dst": false,
@@ -163428,7 +163318,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 2109160800000
+                "until": 2109765600000
             },
             {
                 "dst": false,
@@ -163438,7 +163328,7 @@
             {
                 "dst": false,
                 "index": 1,
-                "until": 2140610400000
+                "until": 2141215200000
             },
             {
                 "dst": false,
@@ -164101,7 +163991,7 @@
             {
                 "dst": false,
                 "index": 2,
-                "until": 162912600000
+                "until": 162916200000
             },
             {
                 "dst": false,
@@ -164111,6 +164001,191 @@
             {
                 "dst": false,
                 "index": 3,
+                "until": 1570287600000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1586012400000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1601737200000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1617462000000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1633186800000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1648911600000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1664636400000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1680361200000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1696086000000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1712415600000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1728140400000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1743865200000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1759590000000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1775314800000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1791039600000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1806764400000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1822489200000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1838214000000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1853938800000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1869663600000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1885993200000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1901718000000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1917442800000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1933167600000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1948892400000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1964617200000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 1980342000000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 1996066800000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 2011791600000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 2027516400000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 2043241200000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 2058966000000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 2075295600000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 2091020400000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 2106745200000
+            },
+            {
+                "dst": false,
+                "index": 4,
+                "until": 2122470000000
+            },
+            {
+                "dst": false,
+                "index": 3,
+                "until": 2138194800000
+            },
+            {
+                "dst": false,
+                "index": 4,
                 "until": null
             }
         ],
@@ -164119,13 +164194,15 @@
             "+1112",
             "+1130",
             "+1230",
-            "+11"
+            "+11",
+            "+12"
         ],
         "possibleOffsets": [
             -672,
             -690,
             -750,
-            -660
+            -660,
+            -720
         ]
     },
     {
